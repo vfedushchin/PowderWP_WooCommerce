@@ -1,0 +1,28 @@
+Когда экспортнул дамп нужно в sql заменить:
+http://www.charactercountonline.com/ - сервис чтоб считать количество символов
+s:90:"http://cms.devoffice.com/dok/JanesStyle/wp-content/themes/JaneStyle/assets/images/logo.png"
+s:25:"%s/assets/images/logo.png"
+
+
+s:97:"http://cms.devoffice.com/dok/JanesStyle/wp-content/themes/JaneStyle/assets/images/footer-logo.png"
+s:32:"%s/assets/images/footer-logo.png"
+
+
+http://cms.devoffice.com/dok/JanesStyle/
+http://192.168.9.75/march/powder/wordpress/
+
+http://192.168.9.75/wordpress/king-news/wordpress
+your_website_url_here
+
+demo@demo.org
+
+
+Для вставки перевода:
+<?php esc_html_e( 'Search', 'king_news' ); ?>
+<?php __( 'Search', 'king_news' ); ?>
+
+'next_text' => __( 'Next', 'king_news' ) . '<i class="material-icons">navigate_next</i>'
+
+
+номера постов для featured posts:
+1851, 1818, 1848, 2024, 1852

@@ -1,0 +1,70 @@
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+		> a {
+			display: inline-block;
+			vertical-align: top;
+			&:before {
+				@include material-icon();
+				font-size: 20px;
+				content: '\E408';
+				vertical-align: top;
+			}
+		}
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+		> a {
+			display: inline-block;
+			vertical-align: top;
+			&:after {
+				@include material-icon();
+				font-size: 20px;
+				content: '\E409';
+				vertical-align: top;
+			}
+		}
+	}
+}
+
+.pagination {
+	padding: 0 0 25px;
+	.page-numbers {
+		display: inline-block;
+		min-width: 50px;
+		height: 50px;
+		padding: 5px;
+		//border: 1px solid $color__background-hr;
+		border: 1px solid ;
+		margin: 0 5px 5px 0;
+		//border-radius: $border__radius;
+		border-radius: 4px;
+		@include font-size(1);
+		line-height: 38px;
+		text-align: center;
+		&.dots {
+			border: none;
+			min-width: 30px;
+		}
+		&.next,
+		&.prev {
+			border: none;
+			line-height: 40px;
+			i {
+				vertical-align: middle;
+			}
+		}
+	}
+}

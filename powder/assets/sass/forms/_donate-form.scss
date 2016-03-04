@@ -1,0 +1,95 @@
+form[id*='give-form'] {
+	margin: 0;
+	padding: 8px 0;
+	.form-row {
+		input.give-input {
+			border-radius: $border__radius;
+			&:focus {
+				box-shadow: none;
+			}
+		}
+	}
+	#give-final-total-wrap {
+		.give-donation-total-label,
+		.give-final-total-amount {
+			height: 48px;
+			line-height: 48px;
+			background-color: #fff;
+		}
+		.give-donation-total-label {
+			width: 60%;
+			font-size: 14px;
+			border-radius: $border__radius 0 0 $border__radius;
+		}
+		.give-final-total-amount {
+			width: 40%;
+			font-size: 14px;
+			border-radius: 0 $border__radius $border__radius 0;
+		}
+	}
+	.give-display-modal & {
+		overflow: hidden;
+	}
+	.give-donation-amount {
+		.give-currency-symbol {
+			padding: 0;
+			height: 50px;
+			font-size: 14px;
+			line-height: 50px;
+			border: 1px solid $color__border-input;
+			background-color: #fff;
+			border-radius: $border__radius 0 0 $border__radius;
+		}
+		#give-amount {
+			padding: 0 5px 0 10px;
+			height: 50px;
+			width: calc( 100% - 47px);
+			font-size: 14px;
+			line-height: 50px;
+			color: #7e7e90;
+			border: 1px solid $color__border-input;
+			border-right: none;
+			background-color: #fff;
+			border-radius: 0 $border__radius $border__radius 0;
+			&:focus {
+				box-shadow: none;
+			}
+			@include media-breakpoint-up(lg) {
+				.give-display-modal & {
+					border-radius: 0;
+				}
+			}
+		}
+		.give-display-modal & {
+			margin: 0;
+		}
+	}
+	.give-btn {
+		&.give-btn-modal {
+			margin: 0;
+			@include media-breakpoint-up(lg) {
+				width: 50%;
+				float: right;
+				border-radius: 0 $border__radius $border__radius 0;
+			}
+		}
+	}
+}
+.give-total-wrap {
+	.give-display-modal & {
+		@include media-breakpoint-up(lg) {
+			width: 50%;
+			float: left;
+		}
+	}
+}
+.give-currency-symbol {
+	width: 47px;
+	text-align: center;
+}
+.give-btn {
+	@include button();
+	width: 100%;
+	padding: 15px 5px;
+	margin: 0;
+}

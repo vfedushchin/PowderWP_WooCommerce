@@ -1,0 +1,389 @@
+.sidebar-primary, .sidebar-secondary {
+	.powder-smartslider {
+		.sp-title {
+			font-size: 30px;
+			line-height: 30px;
+			text-align: center;
+		}
+	}
+}
+
+.widget_smart_slider {
+	h4 {
+		margin-top: 25px;
+		margin-bottom: 25px;
+		text-align: center;
+	}
+}
+
+.powder-smartslider {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+
+	&__instance {
+		.sp-full-screen-button {
+			right: 15px;
+			transition: all .3s ease;
+		}
+		.sp-bottom-thumbnails {
+			position: absolute;
+			right: 0;
+			bottom: 72px;
+			left: 0;
+		}
+		.sp-thumbnail-container {
+			margin-left: 5px;
+			margin-right: 5px;
+
+			.sp-thumbnail {
+				position: relative;
+
+				&:before, &:after {
+					content: '';
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					z-index: 1;
+					transition: all .3s ease;
+					opacity: 1;
+				}
+				&:after {
+					opacity: 0;
+				}
+			}
+
+			.sp-selected-thumbnail {
+				box-shadow: inset 2px 2px 0 0 rgba(255, 255, 255, 1);
+			}
+
+			&:hover, &.sp-selected-thumbnail {
+				.sp-thumbnail {
+					&:before {
+						opacity: 0;
+					}
+					&:after {
+						opacity: 1;
+					}
+				}
+			}
+		}
+		.sp-arrows {
+			margin-top: -25px;
+
+			.sp-arrow {
+				width: 50px;
+				height: 50px;
+				background-image: none;
+				background-color: #2b8ffb;
+				border-radius: 0;
+				transition: all .3s ease;
+
+				&:before {
+					@include material-icon();
+					transform: none;
+					background-color: transparent;
+					position: relative;
+					width: 1em;
+					height: 1em;
+					margin: 16px 15px;
+					right: 0;
+					top: 0;
+					left: 0;
+					bottom: 0;
+					font-size: 18px;
+				}
+
+				&:after {
+					display: none;
+				}
+
+				&.sp-previous-arrow {
+					left: 29px;
+				}
+
+				&.sp-next-arrow {
+					right: 29px;
+				}
+			}
+		}
+
+		&.sp-horizontal {
+			.sp-previous-arrow {
+				left: 0;
+				&:before {
+					content: "keyboard_arrow_left";
+				}
+			}
+			.sp-next-arrow {
+				right: 0;
+				&:before {
+					content: "keyboard_arrow_right";
+				}
+			}
+		}
+		&.sp-vertical {
+			.sp-arrows {
+				margin-top: 0;
+				margin-left: -25px;
+
+				.sp-arrow.sp-previous-arrow {
+					top: 10px;
+					left: 0;
+					right: 0;
+					&:before {
+						content: "keyboard_arrow_left";
+					}
+				}
+				.sp-arrow.sp-next-arrow {
+					bottom: 10px;
+					left: 0;
+					right: 0;
+					&:before {
+						content: "keyboard_arrow_right";
+					}
+				}
+			}
+		}
+		.sp-buttons {
+			position: absolute;
+			bottom: 14%;
+
+			.sp-button {
+				width: 16px;
+				height: 16px;
+				border-color: #fff;
+				margin: 4px 5px;
+				box-sizing: border-box;
+				transition: all .3s ease;
+
+				&.sp-selected-button {
+					background-color: #fff;
+				}
+			}
+		}
+		h2.sp-title, p.sp-content, div.sp-more {
+			text-align: left;
+			right: 0;
+			max-width: 1400px;
+			margin-left: auto;
+			margin-right: auto;
+			padding-left: 115px;
+			padding-right: 115px;
+		}
+
+		h2.sp-title {
+			font-size: 80px;
+			line-height: 80px;
+			margin-top: 2px;
+
+			a {
+				position: relative;
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: -23px;
+					left: 0;
+					width: 132px;
+					height: 2px;
+					display: block;
+					pointer-events: none;
+				}
+			}
+		}
+		p.sp-content {
+
+		}
+		div.sp-more {
+			a {
+				margin-top: -1px;
+				color: #fff;
+				padding: 15px 22px;
+				transition: all .3s ease !important;
+			}
+		}
+		.sp-slide {
+			&:nth-child(2) {
+				h2.sp-title, p.sp-content, div.sp-more, a {
+					text-align: center;
+					color: #fff;
+				}
+
+				h2.sp-title {
+					a:before {
+						left: 50%;
+						@include transform(translateX(-50%));
+						background: #fff;
+					}
+				}
+			}
+			&:nth-child(3) {
+				h2.sp-title, p.sp-content, div.sp-more {
+					text-align: right;
+				}
+			}
+		}
+
+		.sp-bottom-thumbnails .sp-previous-thumbnail-arrow,
+		.sp-top-thumbnails .sp-previous-thumbnail-arrow {
+			left: 10px;
+			z-index: 2;
+
+			&:hover {
+				opacity: .8;
+			}
+		}
+		.sp-bottom-thumbnails .sp-next-thumbnail-arrow,
+		.sp-top-thumbnails .sp-next-thumbnail-arrow {
+			right: 10px;
+			z-index: 2;
+
+			&:hover {
+				opacity: .8;
+			}
+		}
+		.sp-next-thumbnail-arrow:after,
+		.sp-next-thumbnail-arrow:before,
+		.sp-previous-thumbnail-arrow:after,
+		.sp-previous-thumbnail-arrow:before {
+			transition: all .3s ease;
+		}
+		.sp-bottom-thumbnails .sp-thumbnail-arrows,
+		.sp-top-thumbnails .sp-thumbnail-arrows {
+			opacity: 1;
+		}
+
+		.sp-top-thumbnails {
+			left: 0;
+			right: 0;
+			margin-bottom: 0;
+			padding: 20px 0;
+		}
+
+		.sp-left-thumbnails {
+			padding-right: 6px;
+		}
+
+		.sp-thumbnails-container {
+			+ .sp-buttons {
+				margin-bottom: 25px;
+			}
+		}
+		@media (max-width: 1199px) {
+			.sp-bottom-thumbnails {
+				+ .sp-buttons {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		@media (min-width: 769px) and (max-width: 1199px) {
+			.sp-bottom-thumbnails {
+				bottom: 10px;
+
+				+ .sp-buttons {
+					margin-bottom: 0;
+				}
+			}
+			&.sp-vertical .sp-arrows{
+				left: 10px;
+				margin-left: 0;
+			}
+		}
+
+		@media (min-width: 768px) and (max-width: 1199px) {
+			h2.sp-title {
+				font-size: 60px;
+				line-height: 1.2;
+
+				a:before {
+					top: -15px;
+				}
+			}
+		}
+
+		@media (min-width: 768px) and (max-width: 991px) {
+			[data-thumbnails-position*="bottom"] &.sp-vertical .sp-arrows{
+				display: none;
+			}
+		}
+
+		@media (min-width: 480px) and (max-width: 768px) {
+			h2.sp-title {
+				font-size: 40px;
+				line-height: 40px;
+				margin-top: -15px;
+
+				a:before {
+					top: -10px;
+				}
+			}
+			p.sp-content.sp-layer {
+				font-size: 30px;
+				margin-top: -15px;
+			}
+			div.sp-more {
+				margin-top: -13px;
+			}
+		}
+		@media (max-width: 479px) {
+			h2.sp-title {
+				font-size: 30px;
+				line-height: 30px;
+				margin-top: -15px;
+
+				a:before {
+					top: -10px;
+					width: 85px;
+				}
+			}
+			p.sp-content.sp-layer {
+				font-size: 20px;
+				margin-top: -20px;
+			}
+			div.sp-more {
+				margin-top: -25px;
+
+				a {
+					font-size: 12px;
+					line-height: 14px;
+					padding: 10px 18px;
+				}
+			}
+		}
+
+		@media (max-width: 768px) {
+			.sp-bottom-thumbnails {
+				position: relative;
+				padding: 30px 0;
+				bottom: 0;
+			}
+			.sp-arrows {
+				display: none;
+			}
+			.powder-smartslider[data-thumbnails="true"] & .sp-buttons {
+				bottom: 10px;
+			}
+			h2.sp-title, p.sp-content, div.sp-more {
+				padding: 0 15px;
+			}
+		}
+	}
+
+	&__thumbnails {
+		.sp-thumbnail-container {
+			cursor: pointer;
+			&.sp-selected-thumbnail {
+
+			}
+		}
+	}
+	&[data-thumbnails="true"] {
+		.sp-buttons {
+			bottom: 20%;
+		}
+	}
+}

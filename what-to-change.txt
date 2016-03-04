@@ -1,0 +1,13 @@
+Что менялось:
+
+
+в файле dynamic.css:
+
+.motoslider_wrapper .ms_bullet_wrapper .ms_bullet.ms_active,
+.motoslider_wrapper .ms_bullet_wrapper .ms_bullet:hover{
+  background: $regular_accent_color_1;
+}
+.motoslider_wrapper .ms_bullet_wrapper .ms_bullet.ms_active:before,
+.motoslider_wrapper .ms_bullet_wrapper .ms_bullet:hover:before{
+  background: $regular_accent_color_1;
+}

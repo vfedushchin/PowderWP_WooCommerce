@@ -1,0 +1,40 @@
+#toTop {
+	display: none;
+	text-decoration: none;
+	position: fixed;
+	bottom: 20px;
+	left:-100px;
+	overflow: hidden;
+	width: 70px;
+	height: 70px;
+	border: none;
+	text-indent: 0%;
+	background-color: #fff;
+	z-index: 999;
+	border-radius: 50px;
+	@include box-shadow();
+	text-align: center;
+	&:before{
+		@include material-icon();
+		width: 70px;
+		margin: 10px 0 0 0;
+		top: 0;
+		left: 0;
+		position: relative;
+		display: block;
+		font-size: 24px;
+		content: "arrow_upward";
+	}
+	
+	@include media-breakpoint-up(sm) {
+		left:auto;
+		right: 20px;
+	}
+	@include media-breakpoint-up(md) {
+		bottom: 80px;
+	}
+}
+
+#toTop:active, #toTop:focus {
+	outline: none;
+}

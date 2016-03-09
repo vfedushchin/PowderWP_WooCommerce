@@ -516,7 +516,7 @@ function powder_get_customizer_options() {
 				'title'       => esc_html__( 'Line Height', 'powder' ),
 				'description' => esc_html__( 'Relative to the font-size of the element', 'powder' ),
 				'section'     => 'h1_typography',
-				'default'     => '1.15',
+				'default'     => '1.18571',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 1.0,

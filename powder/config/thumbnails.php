@@ -29,7 +29,7 @@ function _tm_register_image_sizes() {
 	add_image_size( '_tm-thumb-m', 400, 400, true );
 	add_image_size( '_tm-thumb-560-350', 560, 350, true );
 	add_image_size( '_tm-thumb-770-562', 770, 562, true );
-	add_image_size( '_tm-post-thumbnail-large', 770, 480, true );
+	add_image_size( '_tm-post-thumbnail-large', 983, 823, true );
 	add_image_size( '_tm-thumb-l', 1170, 780, true );
 	add_image_size( '_tm-thumb-xl', 1920, 1080, true );
 

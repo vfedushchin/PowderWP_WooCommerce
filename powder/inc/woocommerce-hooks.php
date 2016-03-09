@@ -466,3 +466,12 @@ function powder_woocommerce_open_order_wrap(){
 function powder_woocommerce_close_order_wrap() {
 	echo '</div></div>';
 }
+
+
+
+
+
+function powder_categories_carousel_widget_name( $cat_title, $cat_name ) {
+ return sprintf( '<h2 class="tm-categories-carousel-widget-title">%s</h2>', $cat_name );
+}
+add_filter('tm_categories_carousel_widget_name', 'powder_categories_carousel_widget_name', 10, 2 );

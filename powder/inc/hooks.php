@@ -30,6 +30,10 @@ add_filter( 'body_class', 'powder_extra_body_classes' );
 
 add_filter( 'comment_form_fields', 'powder_comment_form_fields' );
 
+
+//hook for categories carousel
+add_filter( 'tm_categories_carousel_widget_name' , sprintf( '<h5 class="tm-categories-carousel-widget-title">%s</h5>', $cat_name ), $cat_name );
+
 /**
  * Append description into nav items
  *

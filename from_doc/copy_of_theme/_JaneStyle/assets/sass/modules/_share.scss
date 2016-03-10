@@ -1,0 +1,49 @@
+.share-btns {
+	&__list {
+		.posts-list & {
+			float: left;
+			margin-top: 15px;
+			@include media-breakpoint-up(lg) {
+				margin-top: 35px;
+			}
+		}
+		&:before {
+			.posts-list & {
+				position: absolute;
+				top: 0;
+				right: 0;
+				left: 0;
+				display: block;
+				content: '';
+				height: 1px;
+				background-color: $color__background-hr;
+				pointer-events: none;
+			}
+		}
+		.single-post & {
+			margin-top: 6px;
+			@include media-breakpoint-up(sm) {
+				float: right;
+			}
+		}
+	}
+	&__item {
+		display: inline-block;
+		vertical-align: top;
+
+	}
+	&__link {
+		display: block;
+		width: 40px;
+		height: 40px;
+		@include font-size(1);
+		line-height: 40px;
+		text-decoration: none;
+		text-align: center;
+		border-radius: 50%;
+		opacity: .3;
+		&:hover {
+			opacity: 1;
+		}
+	}
+}

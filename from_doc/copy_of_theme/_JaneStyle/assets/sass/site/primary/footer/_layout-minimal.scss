@@ -1,0 +1,24 @@
+.site-footer.minimal {
+	.footer-copyright {
+		display: block;
+		vertical-align: middle;
+		
+		@include media-breakpoint-up(lg) {
+			display:inline-block;
+		}
+	}
+	.footer-menu {
+		display: block;
+		vertical-align: middle;
+		&__items {
+			@include media-breakpoint-up(xl) {
+				border-left: 1px solid rgba(255,255,255,.1);
+				margin-left: 25px;
+			}
+		}
+		
+		@include media-breakpoint-up(xl) {
+			display:inline-block;
+		}
+	}
+}

@@ -1,0 +1,227 @@
+.post__cats{
+	font-style: italic;
+}
+
+.post__cats a,
+.post__tags a,
+.sticky__label {
+	line-height: inherit;
+	color: $regular_link_color;
+	background: transparent;
+	font-style: normal;
+}
+.post__cats a:hover,
+.post__tags a:hover{
+	color: $regular_link_hover_color;
+	background: transparent;
+}
+.invert .post__cats a:hover{
+	color: $regular_link_color;
+}
+.post .material-icons{
+	color: @alpha($regular_accent_color_1, 30);
+}
+.post-author,
+.posted-by,
+.post-featured-content {
+	color: $regular_accent_color_2;
+}
+.post-featured-content.format-quote.invert {
+	color: $invert_text_color;
+	background-color: $regular_accent_color_2;
+}
+.post-author__title a:hover {
+	color:$invert_link_hover_color;
+}
+.post-format-link {
+	background: @alpha( $regular_text_color, 90 );
+	color: #fff;
+	font-style: $h4_font_style;
+	font-weight: $h4_font_weight;
+	font-size: @font_size($h4_font_size, multiple, ceil, 1)px;
+	line-height: $h4_line_height;
+	font-family: $h4_font_family;
+	letter-spacing: $h4_letter_spacing{px};
+	text-decoration: none;
+}
+.post-format-link:hover {
+	background: @alpha( $regular_accent_color_1, 90 );
+	color: #fff;
+}
+.post-format-link:focus {
+	background: @alpha( $regular_text_color, 90 );
+	color: #fff;
+}
+.post-format-quote {
+	color: $invert_text_color;
+}
+.post-format-quote:before,
+.post-format-quote cite,
+#cancel-comment-reply-link {
+	color: $regular_accent_color_1;
+}
+
+#cancel-comment-reply-link:hover {
+	color: $regular_accent_color_2;
+}
+
+.post__date .post-date__link {
+	color: #fff;
+	background: $regular_accent_color_1;
+}
+
+.post__date .post-date__link:hover {
+	color: #fff;
+	background: $regular_text_color;
+}
+
+.post__date .post-date__link time{
+	font-family: $h4_font_family;
+	font-size: 14px;
+	font-weight: 900;
+	font-style: $h4_font_style;
+	letter-spacing: 0;
+	line-height: 28px;
+}
+
+.post__date .post-date__link time:first-line{
+	font-size: 28px;
+	line-height: 28px;
+}
+
+.post .entry-title{
+	font-style: $h4_font_style;
+	font-weight: $h4_font_weight;
+	font-size: @font_size($h3_font_size, multiple, ceil, 1)px;
+	line-height: $h4_line_height;
+	font-family: $h4_font_family;
+	letter-spacing: $h4_letter_spacing{px};
+}
+
+.post h5.entry-title{
+	font-style: $h5_font_style;
+	font-weight: $h5_font_weight;
+	font-size: @font_size($h5_font_size, multiple, ceil, 1)px;
+	line-height: $h5_line_height;
+	font-family: $h5_font_family;
+	letter-spacing: $h5_letter_spacing{px};
+	text-transform: uppercase;
+}
+
+.post .entry-meta .post-author{
+	font-style: italic;
+	color: $regular_text_color;
+}
+
+.post .entry-meta .post-author a{
+	font-style: normal;
+}
+
+body .post-author__title{
+	color: $regular_text_color;
+}
+
+body .post-author__title a{
+	color: $regular_accent_color_1;
+}
+
+body .post-author__title a:hover{
+	color: $regular_text_color;
+}
+
+body .post-author__content{
+	color: $regular_text_color;
+}
+
+.posted-by{
+	font-style: italic;
+	color: $regular_text_color;
+}
+
+.fn{
+	color: $regular_accent_color_1;
+	font-weight: 400;
+}
+
+.comment-reply-link{
+	font-size: 18px;
+	color: $regular_accent_color_2;
+}
+
+.comment-reply-link:hover{
+	color: $regular_accent_color_1;
+}
+
+.comment-body .reply{
+	opacity: 1;
+}
+
+.comment-date{
+	color: $regular_accent_color_1;
+}
+
+.comment-date:hover{
+	color: $regular_text_color;
+}
+
+.comment-date:before{
+	color: $regular_text_color;
+}
+
+.comment-date:hover:before{
+	color: $regular_text_color;
+}
+
+#reply-title{
+	font-style: $h4_font_style;
+	font-weight: $h4_font_weight;
+	font-size: @font_size($h4_font_size, multiple, ceil, 1)px;
+	line-height: $h4_line_height;
+	font-family: $h4_font_family;
+	letter-spacing: $h4_letter_spacing{px};
+}
+
+.post-format-quote:before, .post_format-post-format-quote blockquote:before {
+	color: #ff4747;
+	font-family: Playfair Display;
+}
+
+.post-format-quote, .post_format-post-format-quote blockquote{
+	background: $regular_text_color;
+}
+
+.post-format-quote q, .post-format-quote cite, .post_format-post-format-quote blockquote q, .post_format-post-format-quote blockquote cite{
+	color: #fff;
+}
+
+.audio-player-wrap{
+	background: $regular_text_color;
+}
+
+.audio-player-wrap:before{
+	color: #fff;
+}
+
+.mejs-container, .mejs-embed, .mejs-embed body, .mejs-container .mejs-controls{
+	background: $regular_text_color !important;
+}
+
+.posts-list--grid-2-cols .hentry.post.post_format-post-format-image .post-thumbnail__link:before, .posts-list--grid-2-cols .hentry.post .post-gallery__link:before, .posts-list--grid-3-cols .hentry.post.post_format-post-format-image .post-thumbnail__link:before, .posts-list--grid-3-cols .hentry.post .post-gallery__link:before, .posts-list--masonry-2-cols .hentry.post.post_format-post-format-image .post-thumbnail__link:before, .posts-list--masonry-2-cols .hentry.post .post-gallery__link:before, .posts-list--masonry-3-cols .hentry.post.post_format-post-format-image .post-thumbnail__link:before, .posts-list--masonry-3-cols .hentry.post .post-gallery__link:before{
+	color: #fff;
+	background: $regular_text_color;
+}
+
+.post-gallery .swiper-button-next, .post-gallery .swiper-button-prev {
+	color: $regular_text_color;
+	background: #fff;
+	font-size: 18px;
+}
+
+.post-gallery .swiper-button-next:hover,.post-gallery .swiper-button-prev:hover {
+	color: #fff;
+	background: $regular_text_color;
+}
+
+.post-gallery .swiper-button-next:hover:after,.post-gallery .swiper-button-prev:hover:after {
+	color: #fff;
+}

@@ -1,0 +1,112 @@
+.jane_style-smartslider .sp-arrows .sp-arrow {
+	color: $regular_text_color;
+	background: #fff;
+}
+
+.jane_style-smartslider .sp-arrows .sp-next-arrow:hover {
+	color: #fff;
+	background: $regular_text_color;
+}
+
+.jane_style-smartslider .sp-arrows .sp-previous-arrow:hover {
+	color: #fff;
+	background: $regular_text_color;
+}
+
+.jane_style-smartslider__instance h2.sp-title a {
+	color: $regular_text_color;
+}
+
+.sp-image-container {
+	position: relative;
+}
+
+.jane_style-smartslider__instance p.sp-content {
+	font-style: $h4_font_style;
+	font-weight: $h4_font_weight;
+	font-size: @font_size($h4_font_size, multiple, ceil, 1.66)px;
+	line-height: $h4_line_height;
+	font-family: $h4_font_family;
+	color: $regular_text_color;
+}
+
+.jane_style-smartslider__instance h2.sp-title a:before {
+	background: $regular_accent_color_4;
+}
+
+.jane_style-smartslider__instance .sp-buttons .sp-button {
+	border-color: $regular_text_color;
+	background: transparent;
+}
+
+.jane_style-smartslider__instance .sp-buttons .sp-button:hover,
+.jane_style-smartslider__instance .sp-buttons .sp-button.sp-selected-button {
+	border-color: $regular_text_color;
+	background: $regular_text_color;
+}
+
+.sp-thumbnail-container .sp-thumbnail:before {
+	border: 1px solid $regular_text_color;
+}
+
+.sp-thumbnail-container .sp-thumbnail:after {
+	border: 3px solid $regular_accent_color_1;
+}
+
+.sp-next-thumbnail-arrow:after,
+.sp-next-thumbnail-arrow:before,
+.sp-previous-thumbnail-arrow:after,
+.sp-previous-thumbnail-arrow:before {
+	background: $regular_text_color;
+}
+
+.sp-next-thumbnail-arrow:hover:after,
+.sp-next-thumbnail-arrow:hover:before,
+.sp-previous-thumbnail-arrow:hover:after,
+.sp-previous-thumbnail-arrow:hover:before {
+	background: $regular_accent_color_1;
+}
+
+.jane_style-smartslider__instance div.sp-more a {
+	font-style: $h5_font_style;
+	font-weight: $h5_font_weight;
+	font-size: @font_size($h5_font_size, multiple, ceil, 1)px;
+	line-height: 20px;
+	font-family: $h5_font_family;
+	background: $regular_accent_color_1;
+	color: #fff;
+}
+
+.jane_style-smartslider__instance div.sp-more a:hover {
+	background: $regular_accent_color_4;
+	color: #fff;
+}
+
+.jane_style-smartslider__instance .sp-slide:nth-child(2) div.sp-more a:hover {
+	background: #fff;
+	color: $regular_text_color;
+}
+
+.sp-thumbnail-container,
+.sp-thumbnails {
+	height: 84px !important;
+}
+
+.jane_style-smartslider__instance .sp-full-screen-button {
+	color: $regular_text_color;
+}
+
+.jane_style-smartslider__instance .sp-full-screen-button:hover {
+	color: $regular_accent_color_1;
+}
+
+
+/*.sp-image-container:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: @alpha( $regular_accent_color_2, 50 );
+}*/

@@ -1,0 +1,124 @@
+.widget-custom-postson{
+	.custom-posts-holder{
+		.full-width-header-area &,
+		.after-content-full-width-area &,
+		.before-content-area &,
+		.after-content-area &{
+			.post:nth-last-child(-n+3) .post-inner{
+				border-bottom: none;
+				padding-bottom: 0;
+			}
+			@include media-breakpoint-up(md) {
+				.post{
+					.post-inner{
+						flex-direction: row;
+						.post-image{
+							flex: 0 0 150px;
+							margin: 0 20px 0 0px;
+						}
+						.post-content{
+							flex: 1 1 auto;
+						}
+					}
+				}
+			}
+		}
+		.before-loop-area &,
+		.after-loop-area &, {
+			.post:nth-last-child(-n+2) .post-inner{
+				border-bottom: none;
+				padding-bottom: 0;
+			}
+			@include media-breakpoint-up(xl) {
+				.post{
+					.post-inner{
+						flex-direction: row;
+						.post-image{
+							flex: 0 0 100px;
+							margin: 0 20px 0 0px;
+						}
+						.post-content{
+							flex: 1 1 auto;
+						}
+					}
+				}
+			}
+		}
+		.sidebar-primary &,
+		.sidebar-secondary &,
+		.footer-area & {
+			.post:last-child .post-inner{
+				border-bottom: none;
+				padding-bottom: 0;
+			}
+			@include media-breakpoint-up(xl) {
+				.post{
+					.post-inner{
+						flex-direction: row;
+						.post-image{
+							flex: 0 0 100px;
+							margin: 0 20px 0 0px;
+						}
+						.post-content{
+							flex: 1 1 auto;
+						}
+					}
+				}
+			}
+		}
+		.post{
+			padding: 0 30px;
+			display: flex;
+			.post-inner{
+				border-bottom: 1px dotted #d2d1d1;
+				padding: 30px 0 24px;
+				display: flex;
+				flex: 1 1 auto;
+				align-content: stretch;
+				flex-direction: column;
+				&:after {
+					content:'';
+					display: block;
+					clear: both;
+				}
+				.post-image{
+					flex: 0 0 100%;
+					@include media-breakpoint-up(xl) {
+						flex: 0 0 150px;
+					}
+					.wp-post-image{
+						width: 100%;
+						height: auto;
+					}
+				}
+
+				.post-content{
+					flex: 0 0 100%;
+					padding-top: 10px;
+					.widget-title{
+						margin: -6px 0 6px 0;
+						font-size: 20px;
+						line-height: 26px;
+					}
+				}
+			}
+			i{
+				@include font-size( 1.25 );
+				margin: 0px 6px 0 0px;
+				position: relative;
+				top: 6px;
+			}
+			.post-author, .post_comments, .category, .post_tag, .post-date{
+				margin-bottom:5px;
+			}
+			.category, .post_tag{
+				& a{
+					display: inline-block;
+					@include font-size( 1 );
+					margin-right: 8px;
+					padding: 0px 5px;
+				}
+			}
+		}
+	}
+}

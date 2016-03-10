@@ -1,0 +1,81 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+}
+
+blockquote, q {
+	quotes: "" "";
+
+	&:before,
+	&:after {
+		content: "";
+	}
+}
+blockquote {
+	position: relative;
+	margin:0;
+	padding:10px 10px 10px 50px;
+	@include font-size(1.25);
+	@include media-breakpoint-up(lg) {
+		padding: 16px 30px 10px 70px;
+	}
+	.posts-list--grid-2-cols & {
+		@include font-size(1);
+	}
+	cite {
+		display: block;
+		font-style: normal;
+		margin-top:7px;
+		@include font-size(0.875);
+		&:before {
+			content: "- ";
+		}
+	}
+	&:before {
+		content: "format_quote";
+		@include material-icon();
+		position: absolute;
+		font-size: 40px;
+		top: 20px;
+		left: 8px;
+		margin: -5px 0 0 0;
+		@include media-breakpoint-up(lg) {
+			font-size: 50px;
+			left: 20px;
+			top: 25px;
+		}
+	}
+}
+
+hr {
+	background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin: 20px -10px 25px;
+	@include media-breakpoint-up(lg) {
+		margin-right: -30px;
+		margin-left: -30px;
+	}
+}
+
+code {
+	padding:2px 5px;
+}
+
+@import "lists";
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+@import "tables";

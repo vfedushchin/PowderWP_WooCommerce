@@ -14,7 +14,7 @@
 	<div class="post-list__item-content">
 
 		<div class="post-featured-content invert">
-			<?php do_action( 'cherry_post_format_video', array( 'width'  => 770, 'height' => 480, ) ); ?>
+			<?php do_action( 'cherry_post_format_video', array( 'width'  => 1100, 'height' => 480, ) ); ?>
 			<?php powder_meta_categories( 'loop' ); ?>
 			<?php powder_sticky_label(); ?>
 		</div><!-- .post-featured-content -->

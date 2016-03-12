@@ -253,7 +253,7 @@
 	});
 
 	$(function () {
-		//$('#rd-navbar-shop-menu li').clone('#rd-navbar-shop-menu li').appendTo('.rd-mobilemenu_ul').addClass('rd-mobile-menu-shop');
+		$('#rd-navbar-shop-menu li').clone('#rd-navbar-shop-menu li').appendTo('.rd-mobilemenu_ul').addClass('rd-mobile-menu-shop');
 		//$('.currency_switcher').clone('.currency_switcher').appendTo('.rd-mobilemenu_ul').addClass('rd-mobile-currency');
 		if ($(window).width() < 767) {
 			$('.currency_switcher').appendTo('.rd-mobilemenu_ul').addClass('rd-mobile-currency');

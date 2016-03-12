@@ -27,12 +27,12 @@
 	<header id="masthead" <?php powder_header_class(); ?> role="banner">
 		<div class="top-panel">
 			<div <?php echo powder_get_container_classes( array( 'top-panel__wrap container' ) ); ?>>
-				<div class="div_dropdown_top_menu">
-					<i class="material-icons material-icons-menu"></i><?php powder_top_menu();?>
-				</div>
 				<?php
 				powder_top_message( '<div class="top-panel__message">%s</div>' );
 				?>
+				<div class="div_dropdown_top_menu">
+					<?php powder_top_menu();?>
+				</div>
 				<div class="search_switcher_block">
 					<?php
 					powder_product_search();

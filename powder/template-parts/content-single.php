@@ -10,38 +10,53 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-			powder_meta_date( 'single' );
 
-			the_title( '<h1 class="entry-title">', '</h1>' );
+	<div class="post-left-column">
+		<?php
+				powder_meta_categories( 'single', array(
+					//'before'    => esc_html__( 'Categories: ', 'powder' ),
+			));
 		?>
 
-		<?php if ( 'post' === get_post_type() ) : ?>
 
-			<div class="entry-meta">
+		<div class="post__date">
+			<i class="material-icons">access_time</i>
+			<span><?php echo esc_html__( 'Published on ', 'powder' ); ?></span>
+			<span class="post__date"><?php powder_meta_date( 'single' ); ?> </span>
+		</div>
 
-				<?php
+		<div class="post__author vcard">
+			<i class="material-icons">access_time</i>
+			<i class="material-icons">person</i>
+			<span><?php echo esc_html__( 'By ', 'powder' ); ?></span>
+			<?php
 					powder_meta_author(
 						'single',
 						array(
-							'before' => esc_html__( 'Posted by', 'powder' ) . ' ',
 						)
 					);
 				?>
+		</div>
 
-				<?php
-					powder_meta_comments( 'single', array(
-						'zero'   => '0' . esc_html__( ' Comment', 'powder' ),
-						'one'    => '1' . esc_html__( ' Comment', 'powder' ),
-						'plural' => '%' . esc_html__( ' Comments', 'powder' ),
-					) );
-				?>
+		<!-- this block in "post__tags" div -->
+			<?php
+				powder_meta_tags( 'single', array(
+					'before'    => '<span>Tags:</span>',
+					'separator' => ', ',
+				) );
+			?>
 
-			</div><!-- .entry-meta -->
+		<?php powder_share_buttons( 'single' ); ?>
+	</div>
 
-		<?php endif; ?>
+	<div class="post-right-column">
 
+
+
+	<header class="entry-header">
+		<?php
+			the_title( '<h1 class="entry-title">', '</h1>' );
+		?>
 	</header><!-- .entry-header -->
 
 	<figure class="post-thumbnail">
@@ -59,16 +74,8 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php
-			powder_meta_categories( 'single', array(
-				'before'    => esc_html__( 'Categories: ', 'powder' ),
-			));
 
-			powder_meta_tags( 'single', array(
-				'before'    => '<i class="material-icons">folder_open</i>',
-				'separator' => ', ',
-			) );
-		?>
-		<?php powder_share_buttons( 'single' ); ?>
 	</footer><!-- .entry-footer -->
+
+	</div><!-- .post-right-column -->
 </article><!-- #post-## -->

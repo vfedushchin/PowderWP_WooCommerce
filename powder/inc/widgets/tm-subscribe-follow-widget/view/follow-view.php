@@ -7,8 +7,8 @@
 ?>
 <div class="follow-block"><?php
 
-	echo $this->get_block_title( 'follow' );
-	echo $this->get_block_message( 'follow' );
 	echo $this->get_social_nav();
+  echo $this->get_block_title( 'follow' );
+  echo $this->get_block_message( 'follow' );
 
 ?></div>

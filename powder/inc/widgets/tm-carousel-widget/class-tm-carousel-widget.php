@@ -324,7 +324,7 @@ class Powder_Carousel_Widget extends Cherry_Abstract_Widget {
 					$image_size = apply_filters( 'powder_carousel_image_size', '_tm-thumb-560-350' );
 					$image = '<a class="post-thumbnail__link" href="' . $permalink . '">' . $this->get_image( $post_id, $image_size, $placeholder_args ) .'</a>';
 
-					$title = ( 'true' == $this->instance['post_title'] ) ? '<h5><a href="' . $permalink . '">' . $title . '</a></h5>' : '';
+					$title = ( 'true' == $this->instance['post_title'] ) ? '<h3><a href="' . $permalink . '">' . $title . '</a></h3>' : '';
 					$content = ( 'true' == $this->instance['content'] ) ? '<p class="post__excerpt">' . $this->get_trimed_content( get_the_content(), (int) $this->instance['trim_words'] ) . '</p>' : '';
 					$more_button = ( 'true' == $this->instance['more_button'] ) ? '<a class="btn" href="' . $permalink . '"><span class="text_btn"> ' . esc_html( $this->instance['more_button_text'] ) . '</span><i class="material-icons">trending_flat</i></a>' : '';
 

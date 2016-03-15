@@ -149,6 +149,18 @@ if ( ! class_exists( 'powder_Widget_Area' ) ) {
 					'is_global'      => true,
 					'conditional'    => array(),
 				),
+				'footer-area2' => array(
+					'name'           => esc_html__( 'Footer widget area 2', 'powder' ),
+					'description'    => '',
+					'before_widget'  => '<aside id="%1$s" class="widget %2$s">',
+					'after_widget'   => '</aside>',
+					'before_title'   => '<h4 class="widget-title">',
+					'after_title'    => '</h4>',
+					'before_wrapper' => '<section id="%1$s" %2$s>',
+					'after_wrapper'  => '</section>',
+					'is_global'      => true,
+					'conditional'    => array(),
+				),
 			) );
 			$this->widgets_settings = wp_parse_args( $widgets_settings, $widgets_default_settings );
 			// Register widget areas.

@@ -1174,3 +1174,29 @@ footer {
     }
   }
 }
+
+
+
+
+
+
+
+
+
+// Val Styles:
+.single {
+  .post-left-column {
+    font-size: 14px;
+    @include media-breakpoint-up(xl) {
+      float: left;
+      width: 240px;
+      margin-right: 60px;
+      overflow: hidden;
+    }
+  }
+  .post-right-column {
+    @include media-breakpoint-up(xl) {
+      overflow: hidden;
+    }
+  }
+}

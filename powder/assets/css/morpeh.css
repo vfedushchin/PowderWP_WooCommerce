@@ -3063,4 +3063,23 @@ footer {
   }
 }
 
+.single .post-left-column {
+  font-size: 14px;
+}
+
+@media (min-width: 1200px) {
+  .single .post-left-column {
+    float: left;
+    width: 240px;
+    margin-right: 60px;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 1200px) {
+  .single .post-right-column {
+    overflow: hidden;
+  }
+}
+
 /*# sourceMappingURL=morpeh.css.map */

@@ -77,8 +77,22 @@
 
 				.menu-toggle {
 					position:absolute;
-					top:-60px;
-					right:0;
+					top:0px;
+					left:0;
+					font-weight: 700;
+					padding: 0;
+					background: none;
+					color: #222;
+					.material-icons {
+						vertical-align: middle;
+						top: -1px;
+						position: relative;
+						margin-right: 5px;
+						font-size: 24px;
+					}
+					&:hover {
+						color: #555;
+					}
 				}
 			}
 		}

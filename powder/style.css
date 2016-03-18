@@ -4153,44 +4153,52 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 /*--------------------------------------------------------------
 # Widget calendar
 --------------------------------------------------------------*/
+.widget_calendar {
+  background: #f4f4f4 !important;
+}
+
 .widget_calendar h4 {
   margin: 0 0 24px 0;
 }
 
+.widget_calendar .calendar_wrap {
+  padding: 30px;
+  padding-top: 0;
+}
+
 .widget_calendar .calendar_wrap table {
-  margin: 0px 0 0 -2px;
+  margin: 0;
 }
 
 .widget_calendar .calendar_wrap caption {
   font-size: 16px;
   font-size: 1rem;
   padding: 13px 10px;
-  border-radius: 4px;
+  border-radius: 0;
+  border-bottom: 1px solid #fff;
   margin-bottom: 24px;
+  margin-left: -30px;
+  margin-right: -30px;
 }
 
 .widget_calendar .calendar_wrap th {
   font-size: 16px;
   font-size: 1rem;
   padding: 0 0 13px 0;
-  border-bottom: 1px #e0e0e8 solid;
   text-align: center;
   position: relative;
-  left: -15px;
 }
 
 .widget_calendar .calendar_wrap tbody td {
   padding: 0px 0 9px 0;
-  width: 15%;
+  /* width: 15%; */
   text-align: center;
   position: relative;
-  left: -15px;
 }
 
 .widget_calendar .calendar_wrap tbody td a {
   position: relative;
   display: inline-block;
-  width: 20px;
   z-index: 1;
   transition: all 0.5s ease;
 }
@@ -4238,10 +4246,6 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   .widget_calendar .calendar_wrap table {
     margin: 0;
   }
-}
-
-.footer-area .widget_calendar .calendar_wrap tbody td, .footer-area .widget_calendar .calendar_wrap th {
-  left: 0px;
 }
 
 .footer-area .widget_calendar .calendar_wrap td a::before {
@@ -4500,8 +4504,22 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   }
   header.site-header .header-container .main-navigation .menu-toggle {
     position: absolute;
-    top: -60px;
-    right: 0;
+    top: 0px;
+    left: 0;
+    font-weight: 700;
+    padding: 0;
+    background: none;
+    color: #222;
+  }
+  header.site-header .header-container .main-navigation .menu-toggle .material-icons {
+    vertical-align: middle;
+    top: -1px;
+    position: relative;
+    margin-right: 5px;
+    font-size: 24px;
+  }
+  header.site-header .header-container .main-navigation .menu-toggle:hover {
+    color: #555;
   }
 }
 

@@ -2,6 +2,7 @@
 	clear: both;
 	display: block;
 	width: 100%;
+	text-transform: uppercase;
 
 	ul {
 		display: none;
@@ -25,23 +26,25 @@
 			z-index: 99999;
 			transition: 300ms linear;
 			transition-property: top, opacity, visibility;
-			padding: 0 15px;
 			margin: 30px 0 0 -15.5px;
 			left: -9999px;
-			background: #f5f5f7;
+			background: #222;
 			border-radius: 0;
 			box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.12);
-			max-width: 194px;
-			width: 194px;
+			max-width: 217px;
+			width: 217px;
+			padding: 22px 0 22px;
+			@media (max-width: 991px) {
+				padding: 0;
+				margin-top: 0 !important;
+			}
+
 
 			li {
 				a {
-					text-transform: none;
+					text-transform: uppercase;
 				}
 
-				+ li{
-					border-top: 1px dotted #d5d5d9;
-				}
 
 				ul.sub-menu{
 					margin-top: 0;
@@ -62,8 +65,9 @@
 				}
 			}
 			@media screen and (min-width: 37.5em) {
-				padding: 0;
+
 			}
+
 			li {
 				border-top: 1px solid rgba(0, 0, 0, .1);
 				&:first-child {
@@ -76,7 +80,7 @@
 				&:hover > ul,
 				&.focus > ul,
 				&.menu-hover > ul {
-					top: 0;
+					top: -22px;
 					left: 100%;
 				}
 				> ul.in-transition {
@@ -117,13 +121,16 @@
 			.menu-item-has-children {
 				> a {
 					&:after {
-						content: "\e5cf";
+						content: "\e315";
 						font-family: "Material Icons";
-						position: absolute;
-						right: 15px;
+						position: relative;
+						margin-left: 5px;
 						@include font-size(1);
 						line-height: 1em;
 						@include transform(rotate(-90deg));
+						color: #fff !important;
+						vertical-align: bottom;
+						top: 1px;
 						//@media (max-width: 600px) {
 						//	content: "\f107";
 						//	position: static;
@@ -175,7 +182,7 @@
 				position: relative;
 				@include font-size(1);
 				@media screen and (min-width: 37.5em) {
-					padding: 10px 0 40px;
+					padding: 10px 0 10px;
 				}
 				&:before {
 					left: 50%;
@@ -290,13 +297,7 @@
 	}
 }
 
-.main-navigation {
-	&.toggled {
-		ul {
-			display: block;
-		}
-	}
-}
+
 
 .main-navigation ul {
 	display: none;
@@ -352,6 +353,61 @@
 			line-height: 40px;
 			i {
 				vertical-align: middle;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 37.5em) {
+	.main-navigation {
+		ul {
+			display: none !important;
+		}
+		&.toggled {
+			ul {
+				display: block !important;
+			}
+		}
+	}
+
+	.header-container{
+		.main-navigation ul.menu > li > a, .main-navigation ul.menu > li > a:visited, .main-navigation ul.menu > li > a:active, .rd-mobilepanel, .rd-mobilemenu_ul > li a, .rd-mobilemenu_ul > li a.rd-with-ul .rd-submenu-toggle, .rd-mobilemenu_ul > li a.rd-with-ul:hover .rd-submenu-toggle, .navbar-search-toggle:before, .navbar-search-toggle:after {
+			color: #fff;
+		}
+	}
+
+	.main-navigation {
+		ul.menu {
+			margin-top: 35px;
+			padding: 0;
+			background: #232222;
+			& > li > a {
+				color: #fff;
+			}
+
+			a {
+				padding: 14px 20px !important;
+				border-bottom: 1px solid #4f4e4e;
+				&:hover {
+					background: #111;
+				}
+			}
+
+			a:after {
+				display: none;
+			}
+
+			ul {
+				margin-left: 0 !important;
+				background: none;
+				width: 100%;
+				max-width: 100%;
+				a {
+					padding-left: 40px !important;
+				}
+				ul a {padding-left: 60px !important;}
+				ul ul a {padding-left: 80px !important;}
 			}
 		}
 	}

@@ -14,13 +14,11 @@
 
 <div class="footer-container">
 	<div <?php echo powder_get_container_classes( array( 'site-info' ) ); ?>>
-		<div class="site-info__flex">
 			<?php powder_footer_logo(); ?>
-			<div class="site-info__mid-box"><?php
+			<div class="site-info__mid-box2"><?php
 				powder_footer_copyright();
 				powder_footer_menu();
 			?></div>
-			<?php powder_social_list( 'footer' ); ?>
 		</div>
 	</div><!-- .site-info -->
 </div><!-- .container -->

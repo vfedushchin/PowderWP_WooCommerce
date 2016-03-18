@@ -26,7 +26,6 @@
 		</div>
 
 		<div class="post__author vcard">
-			<i class="material-icons">access_time</i>
 			<i class="material-icons">person</i>
 			<span><?php echo esc_html__( 'By ', 'powder' ); ?></span>
 			<?php

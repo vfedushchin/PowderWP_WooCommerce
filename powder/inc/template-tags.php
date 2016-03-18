@@ -422,6 +422,7 @@ function powder_footer_logo() {
 
 	$logo_url = get_theme_mod( 'footer_logo_url' );
 
+
 	if ( ! $logo_url ) {
 		return;
 	}
@@ -479,7 +480,7 @@ function powder_footer_text_center() {
 function powder_main_menu() {
 	?>
 	<nav id="site-navigation" class="main-navigation" role="navigation">
-		<button class="menu-toggle" aria-controls="main-menu" aria-expanded="false"><i class="material-icons">subject</i></button>
+		<button class="menu-toggle" aria-controls="main-menu" aria-expanded="false"><i class="material-icons">menu</i> Menu</button>
 		<?php
 			$args = apply_filters( 'powder_main_menu_args', array(
 				'theme_location'   => 'main',

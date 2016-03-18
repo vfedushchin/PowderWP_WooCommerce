@@ -1,6 +1,9 @@
 Что менялось:
 
+thumbnails.php
+_headings.scss  (стили для blockquote)
 
+motoslider
 в файле dynamic.css:
 
 .motoslider_wrapper .ms_bullet_wrapper .ms_bullet.ms_active,
@@ -11,3 +14,64 @@
 .motoslider_wrapper .ms_bullet_wrapper .ms_bullet:hover:before{
   background: $regular_accent_color_1;
 }
+
+
+
+файл:
+tm-carousel-view.php
+
+content-single.php
+
+for menu styles:
+main-navigation.css
+_menus.scss
+
+_header.scss:
+  .menu-toggle {
+          position:absolute;
+          top:0px;
+          left:0;
+          font-weight: 700;
+          padding: 0;
+          background: none;
+          color: #222;
+          .material-icons {
+            vertical-align: middle;
+            top: -1px;
+            position: relative;
+            margin-right: 5px;
+            font-size: 24px;
+          }
+          &:hover {
+            color: #555;
+          }
+        }
+
+
+
+_navbar.scss:
+  .main-navigation {
+    /* display: none !important; */
+  }
+
+
+class-tm-widget-area.php -
+
+'footer-area2' => array(
+          'name'           => esc_html__( 'Footer widget area 2', 'powder' ),
+          'description'    => '',
+          'before_widget'  => '<aside id="%1$s" class="widget %2$s">',
+          'after_widget'   => '</aside>',
+          'before_title'   => '<h4 class="widget-title">',
+          'after_title'    => '</h4>',
+          'before_wrapper' => '<section id="%1$s" %2$s>',
+          'after_wrapper'  => '</section>',
+          'is_global'      => true,
+          'conditional'    => array(),
+        ),
+
+
+
+_widget-default.scss :
+  .widget_calendar{
+    styles

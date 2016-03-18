@@ -1299,7 +1299,7 @@ function powder_get_customizer_options() {
 				'title'   => esc_html__( 'Logo upload', 'powder' ),
 				'section' => 'footer_options',
 				'field'   => 'image',
-				'default' => get_stylesheet_directory_uri() . '/assets/images/footer-logo.png',
+				'default' => get_stylesheet_directory_uri() . '',
 				'type'    => 'control',
 			),
 			'footer_copyright' => array(

@@ -53,20 +53,29 @@ blockquote {
 	color: $regular_accent_color_1;
 }
 
-blockquote q, blockquote p{
-	font-style: $h4_font_style;
-	font-weight: $h4_font_weight;
-	font-size: @font_size($h4_font_size, multiple, ceil, 1)px;
-	line-height: $h4_line_height;
-	font-family: $h4_font_family;
+blockquote q{
+	font-style: $h2_font_style;
+	font-weight: $h2_font_weight;
+	font-size: @font_size($h2_font_size, multiple, ceil, 1)px;
+	line-height: $h2_line_height;
+	font-family: $h2_font_family;
+	color: $regular_accent_color_1;
+}
+blockquote p{
+	font-style: $h6_font_style;
+	font-weight: $h6_font_weight;
+	font-size: @font_size($h6_font_size, multiple, ceil, 1)px;
+	line-height: $h6_line_height;
+	font-family: $h6_font_family;
 	color: $regular_text_color;
 }
 blockquote:before{
 	color: $regular_accent_color_1;
-	font-family: $h1_font_family;
+	font-family: $h2_font_family;
 }
 blockquote cite {
-	color: $regular_text_color;
+	text-transform: uppercase;
+	color: $regular_link_color;
 }
 @media (max-width: 479px) {
 	blockquote p, blockquote q {

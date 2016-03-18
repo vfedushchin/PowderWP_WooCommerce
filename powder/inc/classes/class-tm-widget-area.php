@@ -135,7 +135,7 @@ if ( ! class_exists( 'powder_Widget_Area' ) ) {
 					'before_wrapper' => '<section id="%1$s" %2$s>',
 					'after_wrapper'  => '</section>',
 					'is_global'      => false,
-					'conditional'    => array( 'is_home', 'is_front_page' ),
+					'conditional'    => array( 'is_front_page' ),
 				),
 				'footer-area' => array(
 					'name'           => esc_html__( 'Footer widget area', 'powder' ),

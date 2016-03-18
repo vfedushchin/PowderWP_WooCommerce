@@ -1092,10 +1092,6 @@ input.qty[type=number] {
 }
 
 @media (min-width: 992px) {
-  .single-post .site-main, .page .site-main, .single .site-main {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
   .woocommerce div.product form.cart div.quantity,
   .woocommerce-page div.product form.cart div.quantity {
     margin-right: 30px;

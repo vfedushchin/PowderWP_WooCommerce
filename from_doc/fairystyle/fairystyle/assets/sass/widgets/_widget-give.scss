@@ -1,0 +1,40 @@
+.widget_give_forms_widget {
+	form[id*='give-form']{
+		.give-total-wrap {
+			width: 50%;
+			float: left;
+			
+			#give-amount {
+				border-radius:0;
+			}
+			
+			@media (min-width: 768px) and (max-width: 992px) {
+				width: 100%;
+				
+				#give-amount {
+					border-top-right-radius: $border__radius;
+					border-bottom-right-radius: $border__radius;
+				}
+			}
+		}
+		.give-btn {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+			width: 50%;
+			float: right;
+			font-size: .8rem;
+			
+			@media (min-width: 768px) and (max-width: 992px) {
+				width: auto;
+				border-radius:$border__radius;
+				padding-left:15px;
+				padding-right:15px;
+				margin-top:5px;
+			}
+			
+			@include media-breakpoint-up(xl) {
+				font-size: 1rem;
+			}
+		}
+	}
+}

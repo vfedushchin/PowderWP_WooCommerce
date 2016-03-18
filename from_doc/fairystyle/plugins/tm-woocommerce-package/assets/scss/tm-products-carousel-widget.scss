@@ -1,0 +1,15 @@
+.tm-products-carousel-widget-container {
+	width: 100%;
+	height: 100%;
+}
+.tm-products-carousel-widget-slide {
+	text-align: center;
+	font-size: 18px;
+	float: left;
+	> a {
+		display: block;
+	}
+	.wp-post-image {
+		max-width: 100%;
+	}
+}

@@ -1,0 +1,34 @@
+.pagination .page-numbers,
+.woocommerce-pagination a.page-numbers {
+	color: $regular_text_color;
+	font-style: $h4_font_style;
+	font-weight: $h4_font_weight;
+	font-size: @font_size($h4_font_size, multiple, ceil, 1)px;
+	line-height: 1;
+	font-family: $h4_font_family;
+	letter-spacing: $h4_letter_spacing{px};
+}
+.pagination .page-numbers .material-icons,
+.woocommerce-pagination a.page-numbers {
+	font-size: 18px;
+}
+.pagination a.page-numbers:hover,
+.pagination span.page-numbers.current,
+.woocommerce-pagination a.page-numbers:hover,
+.woocommerce-pagination span.page-numbers.current {
+	color: $regular_accent_color_1;
+}
+.pagination .page-numbers.next,
+.pagination .page-numbers.prev,
+.woocommerce-pagination a.page-numbers.next,
+.woocommerce-pagination a.page-numbers.prev {
+	color: #fff;
+	background: $regular_text_color;
+}
+.pagination .page-numbers.next:hover,
+.pagination .page-numbers.prev:hover,
+.woocommerce-pagination a.page-numbers.next:hover,
+.woocommerce-pagination a.page-numbers.prev:hover {
+	color: #fff;
+	background: $regular_accent_color_1;
+}

@@ -1,0 +1,36 @@
+#toTop {
+	display: none;
+	text-decoration: none;
+	position: fixed;
+	bottom: 20px;
+	left:-100px;
+	overflow: hidden;
+	width: 50px;
+	height: 50px;
+	border: none;
+	text-indent: 0%;
+	background-color: #fff;
+	z-index: 999;
+	border-radius: 0;
+	text-align: center;
+	span{line-height: 50px;}
+	i{
+		color: white;
+		line-height: 50px;
+		font-size: 29px;
+		width: inherit;
+		height: inherit;
+		@include rotate(-90deg);
+	}
+	@include media-breakpoint-up(sm) {
+		left:auto;
+		right: 20px;
+	}
+	@include media-breakpoint-up(md) {
+		bottom: 80px;
+	}
+}
+
+#toTop:active, #toTop:focus {
+	outline: none;
+}

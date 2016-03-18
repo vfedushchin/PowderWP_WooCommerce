@@ -177,10 +177,7 @@ a:hover,
 .jssora11l,
 .jssora11r { color: $regular_link_hover_color; }
 
-mark, ins {
-	color: $invert_text_color;
-	background-color: $regular_link_color;
-}
+
 
 ::-webkit-input-placeholder { color: $regular_text_color; }
 ::-moz-placeholder          { color: $regular_text_color; }

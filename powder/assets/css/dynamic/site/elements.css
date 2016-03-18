@@ -7,11 +7,11 @@ a:hover, a:focus, a:active{
 }
 
 a[href*='callto:']{
-	color: $regular_link_hover_color;
+	color: $regular_h3_color;
 }
 
 a[href*='callto:']:hover{
-	color: $regular_link_color;
+	color: $regular_link_hover_color;
 }
 
 a[href*='mailto:']{
@@ -75,7 +75,7 @@ blockquote:before{
 }
 blockquote cite {
 	text-transform: uppercase;
-	color: $regular_link_color;
+	color: $regular_h3_color;
 }
 @media (max-width: 479px) {
 	blockquote p, blockquote q {

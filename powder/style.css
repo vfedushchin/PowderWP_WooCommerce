@@ -1760,13 +1760,13 @@ table {
   background-color: #fff;
   z-index: 999;
   border-radius: 50px;
-  box-shadow: 0 3px 15px rgba(103, 122, 141, 0.17);
+  box-shadow: 0 3px 15px rgba(103, 122, 141, 0.07);
   text-align: center;
 }
 
 @media (min-width: 992px) {
   #toTop {
-    box-shadow: 0 5px 32px rgba(103, 122, 141, 0.17);
+    box-shadow: 0 5px 32px rgba(103, 122, 141, 0.07);
   }
 }
 
@@ -1923,7 +1923,7 @@ input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 select:focus,
 textarea:focus {
-  box-shadow: 0 0 8px #e8e8eb;
+  /* box-shadow: 0 0 8px $color__border-input; */
   outline: none;
 }
 
@@ -2082,7 +2082,7 @@ form[id*='give-form'] {
 }
 
 form[id*='give-form'] .form-row input.give-input {
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 form[id*='give-form'] .form-row input.give-input:focus {
@@ -2099,13 +2099,13 @@ form[id*='give-form'] #give-final-total-wrap .give-final-total-amount {
 form[id*='give-form'] #give-final-total-wrap .give-donation-total-label {
   width: 60%;
   font-size: 14px;
-  border-radius: 4px 0 0 4px;
+  border-radius: 0 0 0 0;
 }
 
 form[id*='give-form'] #give-final-total-wrap .give-final-total-amount {
   width: 40%;
   font-size: 14px;
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 0 0 0;
 }
 
 .give-display-modal form[id*='give-form'] {
@@ -2119,7 +2119,7 @@ form[id*='give-form'] .give-donation-amount .give-currency-symbol {
   line-height: 50px;
   border: 1px solid #e8e8eb;
   background-color: #fff;
-  border-radius: 4px 0 0 4px;
+  border-radius: 0 0 0 0;
 }
 
 form[id*='give-form'] .give-donation-amount #give-amount {
@@ -2132,7 +2132,7 @@ form[id*='give-form'] .give-donation-amount #give-amount {
   border: 1px solid #e8e8eb;
   border-right: none;
   background-color: #fff;
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 0 0 0;
 }
 
 form[id*='give-form'] .give-donation-amount #give-amount:focus {
@@ -2157,7 +2157,7 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   form[id*='give-form'] .give-btn.give-btn-modal {
     width: 50%;
     float: right;
-    border-radius: 0 4px 4px 0;
+    border-radius: 0 0 0 0;
   }
 }
 
@@ -2590,21 +2590,24 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   vertical-align: top;
 }
 
+.share-btns__item + .share-btns__item {
+  margin-left: 20px;
+}
+
 .share-btns__link {
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 24px;
+  height: 24px;
   font-size: 16px;
   font-size: 1rem;
-  line-height: 40px;
+  line-height: 24px;
   text-decoration: none;
   text-align: center;
-  border-radius: 50%;
-  opacity: .3;
+  color: #d8d7d7;
 }
 
 .share-btns__link:hover {
-  opacity: 1;
+  color: #232222;
 }
 
 /*--------------------------------------------------------------
@@ -2713,9 +2716,9 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 .after-content-area .widget,
 .before-loop-area .widget,
 .after-loop-area .widget {
-  box-shadow: 0 3px 15px rgba(103, 122, 141, 0.17);
+  box-shadow: 0 3px 15px rgba(103, 122, 141, 0.07);
   background: #fff;
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 @media (min-width: 992px) {
@@ -2725,7 +2728,7 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   .after-content-area .widget,
   .before-loop-area .widget,
   .after-loop-area .widget {
-    box-shadow: 0 5px 32px rgba(103, 122, 141, 0.17);
+    box-shadow: 0 5px 32px rgba(103, 122, 141, 0.07);
   }
 }
 
@@ -2757,13 +2760,13 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 
 @media (min-width: 768px) {
   .widget-image-grid__holder:first-child .widget-image-grid__inner, .widget-image-grid__holder:first-child .widget-image-grid__inner .widget-image-grid__content:before {
-    border-radius: 4px 0 0 4px;
+    border-radius: 0 0 0 0;
   }
 }
 
 @media (min-width: 768px) {
   .widget-image-grid__holder:last-child .widget-image-grid__inner, .widget-image-grid__holder:last-child .widget-image-grid__inner .widget-image-grid__content:before {
-    border-radius: 0 4px 4px 0;
+    border-radius: 0 0 0 0;
   }
 }
 
@@ -2771,12 +2774,12 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   position: relative;
   display: block;
   overflow: hidden;
-  box-shadow: 0 3px 15px rgba(103, 122, 141, 0.17);
+  box-shadow: 0 3px 15px rgba(103, 122, 141, 0.07);
 }
 
 @media (min-width: 992px) {
   .widget-image-grid__inner {
-    box-shadow: 0 5px 32px rgba(103, 122, 141, 0.17);
+    box-shadow: 0 5px 32px rgba(103, 122, 141, 0.07);
   }
 }
 
@@ -2888,13 +2891,13 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 .widget-taxonomy-tiles__inner {
   position: relative;
   overflow: hidden;
-  border-radius: 4px;
-  box-shadow: 0 3px 15px rgba(103, 122, 141, 0.17);
+  border-radius: 0;
+  box-shadow: 0 3px 15px rgba(103, 122, 141, 0.07);
 }
 
 @media (min-width: 992px) {
   .widget-taxonomy-tiles__inner {
-    box-shadow: 0 5px 32px rgba(103, 122, 141, 0.17);
+    box-shadow: 0 5px 32px rgba(103, 122, 141, 0.07);
   }
 }
 
@@ -3172,13 +3175,13 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 }
 
 .swiper-wrapper .post {
-  box-shadow: 0 3px 15px rgba(103, 122, 141, 0.17);
+  box-shadow: 0 3px 15px rgba(103, 122, 141, 0.07);
   padding: 0;
 }
 
 @media (min-width: 992px) {
   .swiper-wrapper .post {
-    box-shadow: 0 5px 32px rgba(103, 122, 141, 0.17);
+    box-shadow: 0 5px 32px rgba(103, 122, 141, 0.07);
   }
 }
 
@@ -3190,7 +3193,7 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   width: 100%;
   background-color: #fff;
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -3696,8 +3699,8 @@ form[id*='give-form'] .give-btn.give-btn-modal {
     width: 100%;
   }
   .widget_give_forms_widget form[id*='give-form'] .give-total-wrap #give-amount {
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }
 
@@ -3712,7 +3715,7 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 @media (min-width: 768px) and (max-width: 992px) {
   .widget_give_forms_widget form[id*='give-form'] .give-btn {
     width: auto;
-    border-radius: 4px;
+    border-radius: 0;
     padding-left: 15px;
     padding-right: 15px;
     margin-top: 5px;
@@ -3746,11 +3749,11 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 
 .widget_tf_track_kickstarter .tf-tracker {
   padding: 30px;
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 .widget_tf_track_kickstarter .tf-tracker-wrap {
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 .widget_tf_track_kickstarter .tf-tracker-value {
@@ -4267,7 +4270,7 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   font-size: 1rem !important;
   padding: 12px 30px;
   border: 1px #e0e0e8 solid;
-  border-radius: 4px;
+  border-radius: 0;
   text-decoration: none;
   display: inline-block;
   margin: 5px 3px;
@@ -4382,9 +4385,9 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 .page .site-main,
 .single .site-main {
   padding: 10px;
-  box-shadow: 0 3px 15px rgba(103, 122, 141, 0.17);
+  box-shadow: 0 3px 15px rgba(103, 122, 141, 0.07);
   background: #fff;
-  border-radius: 4px;
+  border-radius: 0;
   margin: 0 0 10px;
 }
 
@@ -4392,7 +4395,7 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   .single-post .site-main,
   .page .site-main,
   .single .site-main {
-    box-shadow: 0 5px 32px rgba(103, 122, 141, 0.17);
+    box-shadow: 0 5px 32px rgba(103, 122, 141, 0.07);
   }
 }
 
@@ -4427,7 +4430,7 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 }
 
 .header-container {
-  box-shadow: 0 5px 32px rgba(103, 122, 141, 0.17);
+  box-shadow: 0 5px 32px rgba(103, 122, 141, 0.07);
 }
 
 .header-container {
@@ -4804,14 +4807,14 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   position: relative;
   margin: 0 0 10px;
   padding: 10px;
-  box-shadow: 0 3px 15px rgba(103, 122, 141, 0.17);
+  box-shadow: 0 3px 15px rgba(103, 122, 141, 0.07);
   background: #fff;
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 @media (min-width: 992px) {
   .hentry {
-    box-shadow: 0 5px 32px rgba(103, 122, 141, 0.17);
+    box-shadow: 0 5px 32px rgba(103, 122, 141, 0.07);
   }
 }
 
@@ -4949,7 +4952,7 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 }
 
 .posts-list .post-thumbnail--fullwidth:first-child img {
-  border-radius: 4px 4px 0 0;
+  border-radius: 0 0 0 0;
 }
 
 @media (min-width: 992px) {
@@ -5108,7 +5111,7 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 }
 
 .post-gallery img {
-  border-radius: 4px 4px 0 0;
+  border-radius: 0 0 0 0;
   display: block;
 }
 
@@ -5123,12 +5126,12 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 
 .post-gallery .swiper-button-prev {
   left: 0;
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 0 0 0;
 }
 
 .post-gallery .swiper-button-next {
   right: 0;
-  border-radius: 4px 0 0 4px;
+  border-radius: 0 0 0 0;
 }
 
 .post-gallery .material-icons {
@@ -5151,7 +5154,7 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 
 .post-format-link {
   display: inline-block;
-  border-radius: 4px;
+  border-radius: 0;
   margin: 10px 0;
   padding: 10px 20px 10px 15px;
 }
@@ -5220,7 +5223,7 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 }
 
 .post-featured-content {
-  border-radius: 4px 4px 0 0;
+  border-radius: 0 0 0 0;
   margin: -10px -10px 10px;
 }
 
@@ -5235,7 +5238,7 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 }
 
 .format-video .post-featured-content iframe {
-  border-radius: 4px 4px 0 0;
+  border-radius: 0 0 0 0;
 }
 
 .post-featured-content .post__cats {
@@ -5452,9 +5455,9 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 }
 
 .not-found {
-  box-shadow: 0 3px 15px rgba(103, 122, 141, 0.17);
+  box-shadow: 0 3px 15px rgba(103, 122, 141, 0.07);
   background: #fff;
-  border-radius: 4px;
+  border-radius: 0;
   padding: 10px;
   text-align: center;
   margin: 0 0 10px;
@@ -5462,7 +5465,7 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 
 @media (min-width: 992px) {
   .not-found {
-    box-shadow: 0 5px 32px rgba(103, 122, 141, 0.17);
+    box-shadow: 0 5px 32px rgba(103, 122, 141, 0.07);
   }
 }
 
@@ -5516,6 +5519,7 @@ embed,
 iframe,
 object {
   max-width: 100%;
+  width: 100%;
 }
 
 .img-pull-left {

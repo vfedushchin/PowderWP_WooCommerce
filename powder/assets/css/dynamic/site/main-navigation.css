@@ -51,7 +51,7 @@
 }
 
 .main-navigation ul.sub-menu {
-	background: $regular_accent_color_3;
+	background: $regular_h3_color;
 }
 
 .main-navigation ul.menu > li > a,

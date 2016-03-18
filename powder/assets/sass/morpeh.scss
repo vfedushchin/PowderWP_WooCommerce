@@ -1224,6 +1224,11 @@ h4, .widget-title {
 	position: relative;
 	letter-spacing: 1px;
 	padding-bottom: 15px;
+	letter-spacing: 0.7px;
+
+	.post-author-bio & {
+		&:before {display: none;}
+	}
 	&.no-line:before {display: none;}
 	&:before {
 		position: absolute;
@@ -1278,8 +1283,35 @@ ul, ol {
 	text-align: center;
 }
 
+.text-variants {
+	padding: 11px 0 12px;
+	p + p {
+		margin-top: 10px;
+	}
+
+}
+
+/* if about page */
+.postid-492 {
+	.post-author-bio {display: none;}
+}
+
+.page {
+	.alignleft {
+		margin-right: 60px;
+		margin-bottom: 75px;
+	}
+	.alignright {
+		margin-left: 60px;
+		margin-bottom: 75px;
+	}
+}
 
 //_elements.scss
+
+mark, ins {
+	background-color: #f4f4f4;
+}
 
 blockquote {
 	position: relative;
@@ -1326,6 +1358,51 @@ blockquote {
 
 		* + cite {
 			margin-top: 13px;
+		}
+	}
+}
+
+.line-height-big {
+	p {margin: 12px 0;}
+}
+div.wpcf7 {
+	margin-top: 40px;
+	max-width: 535px;
+	.contact-form-wrap {
+		p + p {
+			margin: 20px 0;
+		}
+		textarea {height: 190px;}
+		input, textarea {
+			font-size: 14px;
+			padding: 13px 15px;
+			background: #f4f4f4;
+			border-color: #f4f4f4;
+
+			&.wpcf7-submit {
+				margin-top: 21px;
+				background: #232222;
+				border-color: #232222;
+				padding: 14px 20px;
+				&:hover {
+					background: #777;
+					color: #fff;
+				}
+			}
+		}
+		.wpcf7-not-valid {
+		    border-color: #ffeef5;
+		    background: #ffeef5;
+		}
+		& > p {
+			position: relative;
+
+			.wpcf7-not-valid-tip {
+				position: absolute;
+				left: 15px;
+				bottom: -14px;
+				font-size: 12px;
+			}
 		}
 	}
 }

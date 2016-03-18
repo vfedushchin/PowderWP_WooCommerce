@@ -486,7 +486,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 .page .entry-content a {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /*--------------------------------------------------------------
@@ -3179,6 +3179,11 @@ h4, .widget-title {
   position: relative;
   letter-spacing: 1px;
   padding-bottom: 15px;
+  letter-spacing: 0.7px;
+}
+
+.post-author-bio h4:before, .post-author-bio .widget-title:before {
+  display: none;
 }
 
 h4.no-line:before, .widget-title.no-line:before {
@@ -3246,6 +3251,33 @@ ul, ol {
   text-align: center;
 }
 
+.text-variants {
+  padding: 11px 0 12px;
+}
+
+.text-variants p + p {
+  margin-top: 10px;
+}
+
+/* if about page */
+.postid-492 .post-author-bio {
+  display: none;
+}
+
+.page .alignleft {
+  margin-right: 60px;
+  margin-bottom: 75px;
+}
+
+.page .alignright {
+  margin-left: 60px;
+  margin-bottom: 75px;
+}
+
+mark, ins {
+  background-color: #f4f4f4;
+}
+
 blockquote {
   position: relative;
   margin: 0;
@@ -3294,6 +3326,58 @@ blockquote * + cite {
   blockquote * + cite {
     margin-top: 13px;
   }
+}
+
+.line-height-big p {
+  margin: 12px 0;
+}
+
+div.wpcf7 {
+  margin-top: 40px;
+  max-width: 535px;
+}
+
+div.wpcf7 .contact-form-wrap p + p {
+  margin: 20px 0;
+}
+
+div.wpcf7 .contact-form-wrap textarea {
+  height: 190px;
+}
+
+div.wpcf7 .contact-form-wrap input, div.wpcf7 .contact-form-wrap textarea {
+  font-size: 14px;
+  padding: 13px 15px;
+  background: #f4f4f4;
+  border-color: #f4f4f4;
+}
+
+div.wpcf7 .contact-form-wrap input.wpcf7-submit, div.wpcf7 .contact-form-wrap textarea.wpcf7-submit {
+  margin-top: 21px;
+  background: #232222;
+  border-color: #232222;
+  padding: 14px 20px;
+}
+
+div.wpcf7 .contact-form-wrap input.wpcf7-submit:hover, div.wpcf7 .contact-form-wrap textarea.wpcf7-submit:hover {
+  background: #777;
+  color: #fff;
+}
+
+div.wpcf7 .contact-form-wrap .wpcf7-not-valid {
+  border-color: #ffeef5;
+  background: #ffeef5;
+}
+
+div.wpcf7 .contact-form-wrap > p {
+  position: relative;
+}
+
+div.wpcf7 .contact-form-wrap > p .wpcf7-not-valid-tip {
+  position: absolute;
+  left: 15px;
+  bottom: -14px;
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=morpeh.css.map */

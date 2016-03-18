@@ -93,3 +93,14 @@
 .invert .widget_recent_entries ul li .post-date::before{
 	color: @alpha($regular_accent_color_1, 30);
 }
+
+
+
+
+/*--------------------------------------------------------------
+# Widget ABOUT OUR STORE
+--------------------------------------------------------------*/
+.site .tm_about_store_widget {
+	background: $regular_accent_color_1;
+	text-align: center;
+}

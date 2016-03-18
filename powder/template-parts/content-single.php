@@ -19,11 +19,11 @@
 		?>
 
 
-		<div class="post__date">
-			<i class="material-icons">access_time</i>
-			<span><?php echo esc_html__( 'Published on ', 'powder' ); ?></span>
-			<span class="post__date"><?php powder_meta_date( 'single' ); ?> </span>
-		</div>
+			<div class="post__date">
+				<i class="material-icons">access_time</i>
+				<span><?php echo esc_html__( 'Published on ', 'powder' ); ?></span>
+				<span class="post__date"><?php powder_meta_date( 'single' ); ?> </span>
+			</div>
 
 		<div class="post__author vcard">
 			<i class="material-icons">person</i>

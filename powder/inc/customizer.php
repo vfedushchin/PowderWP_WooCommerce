@@ -210,7 +210,7 @@ function powder_get_customizer_options() {
 			'regular_accent_color_3' => array(
 				'title'   => esc_html__( 'Accent color (3)', 'powder' ),
 				'section' => 'regular_scheme',
-				'default' => '#f5f5f7',
+				'default' => '#e0c4a9',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
@@ -231,7 +231,7 @@ function powder_get_customizer_options() {
 			'regular_link_color' => array(
 				'title'   => esc_html__( 'Link color', 'powder' ),
 				'section' => 'regular_scheme',
-				'default' => '#ff4747',
+				'default' => '#81dcdd',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
@@ -783,7 +783,7 @@ function powder_get_customizer_options() {
 			'h4_letter_spacing' => array(
 				'title'       => esc_html__( 'Letter Spacing, px', 'powder' ),
 				'section'     => 'h4_typography',
-				'default'     => '0',
+				'default'     => '0.7',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => -10,

@@ -73,12 +73,12 @@
 }
 
 .post .entry-title{
-	font-style: $h4_font_style;
-	font-weight: $h4_font_weight;
-	font-size: @font_size($h3_font_size, multiple, ceil, 1)px;
-	line-height: $h4_line_height;
-	font-family: $h4_font_family;
-	letter-spacing: $h4_letter_spacing{px};
+	font-style: $h1_font_style;
+	font-weight: $h1_font_weight;
+	font-size: @font_size($h1_font_size, multiple, ceil, 1)px;
+	line-height: $h1_line_height;
+	font-family: $h1_font_family;
+	letter-spacing: $h1_letter_spacing{px};
 }
 
 .post .entry-meta .post-author{

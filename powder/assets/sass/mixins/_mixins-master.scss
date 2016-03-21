@@ -108,10 +108,6 @@
 
 // .hentry, .widget
 @mixin card() {
-	@include box-shadow();
-
-	background: #fff;
-	border-radius: $border__radius;
 }
 
 // Resize anything

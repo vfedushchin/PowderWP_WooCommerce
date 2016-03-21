@@ -1,23 +1,9 @@
 .share-btns {
 	&__list {
 		.posts-list & {
-			float: left;
 			margin-top: 15px;
 			@include media-breakpoint-up(lg) {
 				margin-top: 35px;
-			}
-		}
-		&:before {
-			.posts-list & {
-				position: absolute;
-				top: 0;
-				right: 0;
-				left: 0;
-				display: block;
-				content: '';
-				height: 1px;
-				background-color: $color__background-hr;
-				pointer-events: none;
 			}
 		}
 		.single-post & {

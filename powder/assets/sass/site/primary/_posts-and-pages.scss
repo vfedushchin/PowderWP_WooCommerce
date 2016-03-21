@@ -148,18 +148,20 @@
 
 .hentry {
 	position: relative;
-	margin: 0 0 10px;
-	padding: 10px;
+	margin: 0 0 30px;
+	border-top: 1px solid #232222;
+	padding-top: 40px;
+
 	@include card;
-	@include media-breakpoint-up(lg) {
-		margin: 0 0 30px;
-		padding: 30px;
-	}
 	.single-post &,
 	.page & {
 		box-shadow: none;
 		border-radius: 0;
 		padding: 0;
+	}
+	& + .hentry {
+		border-top: 1px solid #232222;
+		padding-top: 40px;
 	}
 }
 
@@ -206,34 +208,13 @@
 	&-footer {
 		position: relative;
 		.posts-list & {
-			margin: 25px -10px 0;
-			padding-right: 10px;
-			padding-left: 10px;
-			@include media-breakpoint-up(lg) {
-				margin-right: -30px;
-				margin-left: -30px;
-				padding-right: 30px;
-				padding-left: 30px;
-			}
+			margin: 25px 0px 0;
+
 		}
 		.btn {
-			float: right;
 			margin-top: 10px;
 			@include media-breakpoint-up(lg) {
 				margin-top: 30px;
-			}
-			.posts-list & {
-				&:before {
-					position: absolute;
-					top: 0;
-					right: 0;
-					left: 0;
-					display: block;
-					content: '';
-					height: 1px;
-					background-color: $color__background-hr;
-					pointer-events: none;
-				}
 			}
 		}
 	}
@@ -249,7 +230,7 @@
 				text-align: center;
 				@include media-breakpoint-up(lg) {
 					float: left;
-					margin-right: 30px;
+					margin-right: 60px;
 					text-align: left;
 				}
 			}
@@ -271,15 +252,12 @@
 		&--fullwidth {
 			.posts-list & {
 				display: block;
-				margin: -10px -10px 10px;
 				&:first-child {
 					img {
 						border-radius: $border__radius $border__radius 0 0;
 					}
 				}
-				@include media-breakpoint-up(lg) {
-					margin: -30px -30px 25px;
-				}
+
 			}
 		}
 	}
@@ -323,7 +301,7 @@
 	&__date,
 	&__comments {
 		margin-right: 30px;
-		
+
 		@media (max-width: 1500px) {
 			margin-right: 15px;
 		}
@@ -333,11 +311,12 @@
 	}
 	&__date,
 	&__comments,
+	&-author,
 	&__tags {
 		.material-icons {
-			font-size: 16px;
+			font-size: 21px;
 			margin-right: 10px;
-			vertical-align: middle;
+			vertical-align: bottom;
 		}
 	}
 	&__tags {
@@ -391,5 +370,32 @@
 		#sidebar-primary {
 			order: 2;
 		}
+	}
+}
+
+
+
+
+
+
+
+.posts-list {
+	position: relative;
+	&:before {
+		position: absolute;
+		display: inline-block;
+		content: '';
+		height: 2px;
+		left: 0;
+		right: 0;
+		top: 0;
+		background: #fff;
+		z-index: 1;
+	}
+}
+.hentry {
+	overflow: hidden;
+	.post-body {
+		overflow: hidden;
 	}
 }

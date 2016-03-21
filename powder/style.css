@@ -2553,7 +2553,6 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 # Share Buttons
 --------------------------------------------------------------*/
 .posts-list .share-btns__list {
-  float: left;
   margin-top: 15px;
 }
 
@@ -2561,18 +2560,6 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   .posts-list .share-btns__list {
     margin-top: 35px;
   }
-}
-
-.posts-list .share-btns__list:before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  display: block;
-  content: '';
-  height: 1px;
-  background-color: #e0e0e8;
-  pointer-events: none;
 }
 
 .single-post .share-btns__list {
@@ -2707,28 +2694,6 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 @media (min-width: 992px) {
   .widget {
     margin-bottom: 30px;
-  }
-}
-
-.sidebar-primary .widget,
-.sidebar-secondary .widget,
-.before-content-area .widget,
-.after-content-area .widget,
-.before-loop-area .widget,
-.after-loop-area .widget {
-  box-shadow: 0 3px 15px rgba(103, 122, 141, 0.07);
-  background: #fff;
-  border-radius: 0;
-}
-
-@media (min-width: 992px) {
-  .sidebar-primary .widget,
-  .sidebar-secondary .widget,
-  .before-content-area .widget,
-  .after-content-area .widget,
-  .before-loop-area .widget,
-  .after-loop-area .widget {
-    box-shadow: 0 5px 32px rgba(103, 122, 141, 0.07);
   }
 }
 
@@ -4385,18 +4350,7 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 .page .site-main,
 .single .site-main {
   padding: 10px;
-  box-shadow: 0 3px 15px rgba(103, 122, 141, 0.07);
-  background: #fff;
-  border-radius: 0;
   margin: 0 0 10px;
-}
-
-@media (min-width: 992px) {
-  .single-post .site-main,
-  .page .site-main,
-  .single .site-main {
-    box-shadow: 0 5px 32px rgba(103, 122, 141, 0.07);
-  }
 }
 
 @media (min-width: 992px) {
@@ -4805,24 +4759,9 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 
 .hentry {
   position: relative;
-  margin: 0 0 10px;
-  padding: 10px;
-  box-shadow: 0 3px 15px rgba(103, 122, 141, 0.07);
-  background: #fff;
-  border-radius: 0;
-}
-
-@media (min-width: 992px) {
-  .hentry {
-    box-shadow: 0 5px 32px rgba(103, 122, 141, 0.07);
-  }
-}
-
-@media (min-width: 992px) {
-  .hentry {
-    margin: 0 0 30px;
-    padding: 30px;
-  }
+  margin: 0 0 30px;
+  border-top: 1px solid #232222;
+  padding-top: 40px;
 }
 
 .single-post .hentry,
@@ -4830,6 +4769,11 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   box-shadow: none;
   border-radius: 0;
   padding: 0;
+}
+
+.hentry + .hentry {
+  border-top: 1px solid #232222;
+  padding-top: 40px;
 }
 
 .entry-header .entry-title:first-child {
@@ -4877,22 +4821,10 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 }
 
 .posts-list .entry-footer {
-  margin: 25px -10px 0;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-
-@media (min-width: 992px) {
-  .posts-list .entry-footer {
-    margin-right: -30px;
-    margin-left: -30px;
-    padding-right: 30px;
-    padding-left: 30px;
-  }
+  margin: 25px 0px 0;
 }
 
 .entry-footer .btn {
-  float: right;
   margin-top: 10px;
 }
 
@@ -4900,18 +4832,6 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   .entry-footer .btn {
     margin-top: 30px;
   }
-}
-
-.posts-list .entry-footer .btn:before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  display: block;
-  content: '';
-  height: 1px;
-  background-color: #e0e0e8;
-  pointer-events: none;
 }
 
 .post-thumbnail__link.post-thumbnail--small {
@@ -4923,7 +4843,7 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 @media (min-width: 992px) {
   .post-thumbnail__link.post-thumbnail--small {
     float: left;
-    margin-right: 30px;
+    margin-right: 60px;
     text-align: left;
   }
 }
@@ -4948,17 +4868,10 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 
 .posts-list .post-thumbnail--fullwidth {
   display: block;
-  margin: -10px -10px 10px;
 }
 
 .posts-list .post-thumbnail--fullwidth:first-child img {
   border-radius: 0 0 0 0;
-}
-
-@media (min-width: 992px) {
-  .posts-list .post-thumbnail--fullwidth {
-    margin: -30px -30px 25px;
-  }
 }
 
 .posts-list .post__cats,
@@ -5025,10 +4938,11 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 
 .post__date .material-icons,
 .post__comments .material-icons,
+.post-author .material-icons,
 .post__tags .material-icons {
-  font-size: 16px;
+  font-size: 21px;
   margin-right: 10px;
-  vertical-align: middle;
+  vertical-align: bottom;
 }
 
 .single-post .post__tags {
@@ -5084,6 +4998,30 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   .position-two-sidebars #sidebar-primary {
     order: 2;
   }
+}
+
+.posts-list {
+  position: relative;
+}
+
+.posts-list:before {
+  position: absolute;
+  display: inline-block;
+  content: '';
+  height: 2px;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: #fff;
+  z-index: 1;
+}
+
+.hentry {
+  overflow: hidden;
+}
+
+.hentry .post-body {
+  overflow: hidden;
 }
 
 /*--------------------------------------------------------------
@@ -5455,18 +5393,9 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 }
 
 .not-found {
-  box-shadow: 0 3px 15px rgba(103, 122, 141, 0.07);
-  background: #fff;
-  border-radius: 0;
   padding: 10px;
   text-align: center;
   margin: 0 0 10px;
-}
-
-@media (min-width: 992px) {
-  .not-found {
-    box-shadow: 0 5px 32px rgba(103, 122, 141, 0.07);
-  }
 }
 
 .not-found .page-title {

@@ -118,13 +118,7 @@ code {
 	color: $regular_accent_color_1;
 }
 
-footer a{
-	color: $regular_accent_color_1;
-}
 
-footer a:hover{
-	color: #fff;
-}
 
 footer .invert .widget ul li a, footer .invert .widget ul li a{
 	color: $regular_accent_color_1;

@@ -620,7 +620,7 @@ function powder_read_more() {
  *
  * @return void
  */
-function powder_blog_content() {
+function powder_blog_content($length = 25) {
 
 	if ( ! is_singular() && wp_is_mobile() ) {
 		return;
@@ -638,7 +638,7 @@ function powder_blog_content() {
 			break;
 
 		case 'excerpt':
-			powder_post_excerpt( array( 'length' => 45, 'more' => '&hellip;' ) );
+			powder_post_excerpt( array( 'length' => $length, 'more' => '&hellip;' ) );
 			break;
 	}
 
@@ -701,7 +701,7 @@ function powder_post_thumbnail( $linked = false, $sizes = array() ) {
 	}
 
 	$sizes = wp_parse_args( $sizes, array(
-		'small'     => 'post-thumbnail',
+		'small'     => '_tm-thumb-536-449',
 		'fullwidth' => '_tm-post-thumbnail-large',
 	) );
 

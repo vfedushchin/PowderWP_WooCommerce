@@ -1,0 +1,68 @@
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+		> a {
+			display: inline-block;
+			vertical-align: top;
+			&:before {
+				@include material-icon();
+				font-size: 20px;
+				content: '\E408';
+				vertical-align: top;
+			}
+		}
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+		> a {
+			display: inline-block;
+			vertical-align: top;
+			&:after {
+				@include material-icon();
+				font-size: 20px;
+				content: '\E409';
+				vertical-align: top;
+			}
+		}
+	}
+}
+
+.pagination {
+	padding: 0 0 25px;
+	font-size: 14px;
+	line-height: 22px;
+	.page-numbers {
+		display: inline-block;
+		min-width: 20px;
+		text-transform: uppercase;
+		@include font-size(1);
+		text-align: center;
+		height: auto;
+		border: none;
+		margin: 0;
+		&.dots {
+			border: none;
+			min-width: 20px;
+		}
+		&.next,
+		&.prev {
+			border: none;
+			line-height: 22px;
+			i {
+				vertical-align: bottom;
+			}
+		}
+	}
+}

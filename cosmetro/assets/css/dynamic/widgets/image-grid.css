@@ -1,0 +1,29 @@
+.widget-image-grid__content::before{
+	background: $regular_accent_color_1;
+}
+.widget-image-grid__content .widget-image-grid__link{
+    color: #ffffff;
+    font-family: $h5_font_family;
+}
+.widget-image-grid__content .widget-image-grid__link:hover {
+	  color: $regular_h4_color;
+}
+.widget-image-grid__content .widget-image-grid__link i{
+	  color: #ffffff;
+}
+.widget-image-grid__content .widget-image-grid__title{
+    font-style: $h4_font_style;
+    font-weight: $h4_font_weight;
+    font-size: @font_size($h4_font_size, multiple, ceil, 0.8)px;
+    line-height: $h4_line_height;
+    font-family: $h4_font_family;
+    letter-spacing: $h4_letter_spacing{px};
+    text-align: $h4_text_align;
+    color: $regular_h4_color;
+}
+.widget-image-grid__content .widget-image-grid__title a{
+   color: #ffffff;
+}
+.widget-image-grid__content .widget-image-grid__title a:hover {
+    color: $regular_h4_color;
+}

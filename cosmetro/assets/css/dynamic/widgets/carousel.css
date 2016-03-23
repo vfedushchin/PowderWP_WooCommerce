@@ -1,0 +1,38 @@
+.swiper-pagination .swiper-pagination-bullet{
+	background: $regular_text_color;
+}
+.swiper-pagination .swiper-pagination-bullet:hover, .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background: $regular_accent_color_1;
+    opacity: 1;
+}
+.swiper-button-next, .swiper-button-prev{
+	color: $regular_text_color;
+	background: white;
+}
+.swiper-container .swiper-button-next i, .swiper-container .swiper-button-prev i {
+	color: $invert_link_color;
+}
+.swiper-button-next:hover{
+	color: $invert_link_color;
+	background: white;
+}
+.swiper-button-prev:hover{
+	color: $invert_link_color;
+	background: white;
+}
+
+.footer-area .swiper-wrapper .post .inner{
+	background: $regular_accent_color_2;
+}
+.footer-area .swiper-wrapper .post.swiper-slide .inner, .footer-area .swiper-wrapper .post.swiper-slide.hentry{
+	background: none;
+}
+.invert .footer-area .swiper-container .swiper-wrapper .swiper-slide .inner:hover{
+	background: none;
+}
+.footer-area .swiper-container .swiper-wrapper .swiper-slide .inner .entry-footer .btn, .footer-area .swiper-container .swiper-wrapper .swiper-slide .inner .entry-footer .btn i, .footer-area .swiper-container .swiper-wrapper .swiper-slide .inner .entry-footer .btn span, .footer-area .swiper-container .swiper-wrapper .swiper-slide .inner .entry-content a:hover, .footer-area .swiper-container .swiper-wrapper .swiper-slide .inner .entry-content a:hover{
+	color: $regular_accent_color_1;
+}
+.footer-area .swiper-container .swiper-wrapper .swiper-slide .inner .entry-header{
+	margin-bottom: 15px;
+}

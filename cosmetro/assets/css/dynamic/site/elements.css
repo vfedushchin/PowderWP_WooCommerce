@@ -1,0 +1,417 @@
+a {
+	color: $regular_link_color;
+}
+
+a:hover, a:focus, a:active{
+	color: $regular_link_hover_color;
+}
+
+a[href*='callto:']{
+	color: $regular_h3_color;
+}
+
+a[href*='callto:']:hover{
+	color: $regular_link_hover_color;
+}
+
+a[href*='mailto:']{
+	text-decoration: underline;
+}
+
+.btn,
+.comment-form .submit,
+.wpcf7-submit,
+.post-password-form label + input {
+	color: $invert_link_color;
+	background: $regular_accent_color_1;
+}
+.btn:hover,
+.comment-form .submit:hover,
+.wpcf7-submit:hover,
+.post-password-form label + input:hover {
+	color: $invert_link_color;
+	background: $regular_text_color;
+}
+.btn:focus,
+.wpcf7-submit:focus,
+.comment-form .submit:focus {
+	color: $invert_link_color;
+	background: $regular_accent_color_1;
+}
+
+.btn.btn-secondary {
+	background: $regular_accent_color_2;
+}
+.invert .btn.btn-secondary {
+	color: #fff;
+	background: $regular_accent_color_1;
+}
+.btn.btn-secondary:hover,
+.invert .btn:hover {
+	background: @darken( $invert_accent_color_2, 15 );
+	color: $invert_link_color;
+}
+.invert .btn:hover {
+	background: #fff;
+	color: $regular_text_color;
+}
+
+blockquote {
+	color: $regular_accent_color_1;
+}
+
+body blockquote, blockquote q, blockquote p, body blockquote.single-format-quote, .posts-list--grid-2-cols blockquote, .posts-list--grid-2-cols .post-format-quote {
+	font-style: $h4_font_style;
+	font-weight: $h4_font_weight;
+	font-size: @font_size($h4_font_size, multiple, ceil, 1)px !important;
+	line-height: $h4_line_height;
+	font-family: $h4_font_family;
+	color: $regular_text_color;
+}
+blockquote:before{
+	color: $regular_accent_color_1;
+	font-family: $h1_font_family;
+}
+blockquote cite {
+	color: $regular_text_color;
+}
+@media (max-width: 479px) {
+	blockquote p, blockquote q, blockquote.single-format-quote, .posts-list--grid-2-cols blockquote, .posts-list--grid-2-cols .post-format-quote {
+		font-size: 22px;
+	}
+	.post_format-post-format-quote blockquote{
+		padding: 83px 50px 67px;
+	}
+	.post_format-post-format-quote blockquote:before{
+		right: 0;
+		left: 0;
+	}
+}
+
+blockquote.single-format-quote, .posts-list--grid-2-cols .post-format-quote, .post_format-post-format-quote blockquote p{
+	color: $invert_text_color;
+	background-color: $regular_text_color;
+}
+
+blockquote.single-format-quote:before,
+blockquote.single-format-quote cite {
+	color: $regular_accent_color_1;
+}
+
+ul, ol {
+	color: $regular_text_color;
+}
+
+ul li:before, ol li:before {
+	color: $regular_accent_color_1;
+}
+
+ul li a, ol  li a{
+	color: $regular_text_color;
+}
+
+ul li a:hover, ol  li a:hover{
+	color: $regular_accent_color_1;
+}
+
+code {
+	color: $invert_text_color;
+	background: $regular_accent_color_1;
+}
+
+.contact-form-wrap span{
+	color: $regular_accent_color_1;
+}
+
+footer a{
+	color: $regular_accent_color_1;
+}
+
+footer a:hover{
+	color: #fff;
+}
+
+footer .invert .widget ul li a, footer .invert .widget ul li a{
+	color: $regular_accent_color_2;
+	font-style: $h5_font_style;
+	font-weight: $h5_font_weight;
+	font-size: @font_size($h5_font_size, multiple, ceil, 1)px;
+	line-height: $h5_line_height;
+	font-family: $h5_font_family;
+	letter-spacing: $h5_letter_spacing{px};
+
+}
+
+footer .invert .widget ul li a:hover, footer .invert .widget ul li a:hover{
+	color: $regular_accent_color_1;
+}
+
+footer .comment-author-link{
+	color: $regular_accent_color_1;
+}
+
+footer .widget ul li.recentcomments{
+	color: $regular_accent_color_2;
+}
+
+footer .widget ul li.recentcomments a{
+	color: #fff;
+	font-size: 16px;
+}
+
+footer .widget ul li.recentcomments a:hover{
+	color: $regular_accent_color_1;
+}
+
+footer .footer-text-center{
+	color: #fff;
+}
+
+footer .widget.widget_recent_entries ul li > a{
+	color: #fff;
+}
+
+footer .widget.widget_recent_entries ul li > a:hover{
+	color: $regular_accent_color_1;
+}
+
+footer.site-footer .widget_recent_entries ul li .post-date:before{
+	color: $regular_accent_color_1;
+}
+
+.rd-material-tab.rd-material-tab-active a{
+	color: $regular_accent_color_1;
+}
+
+.tm-products-smart-box-widget__rd-material-tabs{
+	border-top: 2px solid $regular_text_color;
+}
+
+.tm-products-smart-box-widget__rd-material-tabs > .row > .col-lg-3{
+	background: #f5f5f7;
+	-webkit-background-clip: content-box;
+	-moz-background-clip: content-box;
+	background-clip: content-box;
+}
+
+.tm-products-smart-box-widget__rd-material-tabs .product h3{
+	font-style: $h6_font_style;
+	font-weight: $h6_font_weight;
+	font-size: @font_size($h6_font_size, multiple, ceil, 1)px;
+	line-height: $h6_line_height;
+	font-family: $h6_font_family;
+	letter-spacing: $h6_letter_spacing{px};
+	text-align: $h6_text_align;
+	color: $regular_h6_color;
+	text-transform: none;
+}
+
+.tm-products-smart-box-widget__rd-material-tabs .product .price .amount{
+	font-style: normal;
+	font-weight: 700;
+	font-size: @font_size($h4_font_size, multiple, ceil, 0.8333333333333333)px;
+	line-height: $h4_line_height;
+	font-family: $h4_font_family;
+	letter-spacing: $h4_letter_spacing{px};
+	text-align: $h4_text_align;
+	text-transform: none;
+}
+.tm-products-smart-box-widget__rd-material-tabs .product .price del .amount{
+	font-size: @font_size($h4_font_size, multiple, ceil, 0.5333333333333333)px;
+}
+.tm-products-smart-box-widget__rd-material-tabs .product .price del .amount, .tm-products-smart-box-widget__rd-material-tabs .product .price del{
+	font-weight: 300;
+	font-family: $body_font_family;
+}
+
+.tm-products-smart-box-widget__rd-material-tabs .widget-title{
+	font-style: $h3_font_style;
+	font-weight: $h3_font_weight;
+	font-size: @font_size($h3_font_size, multiple, ceil, 1)px;
+	line-height: $h3_line_height;
+	font-family: $h3_font_family;
+	letter-spacing: $h3_letter_spacing{px};
+	text-align: $h3_text_align;
+	text-transform: none;
+	text-transform: uppercase;
+}
+
+.tm_custom_menu_widget{
+	border-top-width: 2px;
+	border-top-style: solid;
+	border-top-color: solid $regular_text_color;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: solid $regular_text_color;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: solid $regular_text_color;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: solid $regular_text_color;
+}
+
+.tm_custom_menu_widget .widget-title:first-line {
+	font-style: $h3_font_style;
+	font-weight: $h3_font_weight;
+	font-size: @font_size($h3_font_size, multiple, ceil, 1)px;
+	line-height: $h3_line_height;
+	font-family: $h3_font_family;
+	letter-spacing: $h3_letter_spacing{px};
+	text-align: $h3_text_align;
+	text-transform: none;
+	text-transform: uppercase;
+}
+
+.tm_custom_menu_widget .widget-title {
+	font-size: @font_size($h3_font_size, multiple, ceil, 1)px;
+	line-height: $h3_line_height;
+}
+
+.breadcrumbs .breadcrumbs__item .breadcrumbs__item-link:hover{
+	color: $regular_accent_color_1;
+}
+
+.sidebar-primary .widget > ul li a, .sidebar-secondary .widget > ul li a {
+	color: $regular_accent_color_1;
+}
+
+.sidebar-primary .widget > ul li a:hover, .sidebar-secondary .widget > ul li a:hover {
+	color: $regular_text_color;
+}
+
+.posts-list--grid-2-cols .hentry.post .btn, .posts-list--grid-3-cols .hentry.post .btn, .posts-list--masonry-2-cols .hentry.post .btn, .posts-list--masonry-3-cols .hentry.post .btn,.posts-list--grid-2-cols .hentry.post .btn .btn__text, .posts-list--grid-3-cols .hentry.post .btn .btn__text, .posts-list--masonry-2-cols .hentry.post .btn .btn__text, .posts-list--masonry-3-cols .hentry.post .btn .btn__text{
+	color: $regular_accent_color_1;
+}
+.widget_tag_cloud .tagcloud a:hover, .widget_product_tag_cloud .tagcloud a:hover{
+	color: $regular_text_color;
+}
+
+.top-panel .chosen-container .chosen-drop {
+	background: $regular_text_color;
+	color: #fff;
+}
+
+.top-panel .chosen-container-active.chosen-with-drop .chosen-single, .top-panel .chosen-container-single .chosen-single {
+	background: $regular_text_color;
+	color: #fff;
+}
+
+.chosen-container-single .chosen-single{
+	color: $regular_text_color;
+}
+
+.chosen-container .chosen-results{
+	color: $regular_text_color;
+	background: #fff;
+	border: 1px solid #e8e8eb;
+}
+
+.chosen-container .chosen-results li.highlighted{
+	background: $regular_accent_color_1;
+	color: #fff;
+}
+
+.currency_switcher .chosen-container .chosen-results{
+	color: $regular_h3_color;
+	border: none;
+	margin: 0;
+}
+
+.currency_switcher .chosen-container{
+	color: $regular_h3_color;
+	border: none;
+}
+
+.currency_switcher .chosen-container .chosen-single{
+	color: $regular_h3_color;
+}
+
+.rd-mobile-currency .currency_switcher .chosen-container .chosen-single:hover{
+	color: $regular_accent_color_1;
+}
+
+.currency_switcher .chosen-container .chosen-single:before{
+	color: $regular_h3_color;
+}
+
+.currency_switcher .chosen-container .chosen-results li,
+.currency_switcher .chosen-container .chosen-results li.result-selected:hover{
+	color: $regular_h3_color;
+
+}
+
+.currency_switcher .chosen-container .chosen-results li:hover,
+.currency_switcher .chosen-container .chosen-results li.result-selected{
+	color: $regular_h3_color;
+}
+
+.currency_switcher .chosen-container .chosen-results li + li {
+	border-top: 1px dotted #eee;
+}
+
+.widget_recent_entries ul li .post-date:before{
+	color: $regular_text_color;
+}
+
+.motoslider_wrapper .text-white {
+	color: #fff;
+}
+
+.site-footer input[type="text"]:focus,
+.site-footer input[type="email"]:focus,
+.site-footer input[type="url"]:focus,
+.site-footer input[type="password"]:focus,
+.site-footer input[type="search"]:focus,
+.site-footer input[type="number"]:focus,
+.site-footer input[type="tel"]:focus,
+.site-footer input[type="range"]:focus,
+.site-footer input[type="date"]:focus,
+.site-footer input[type="month"]:focus,
+.site-footer input[type="week"]:focus,
+.site-footer input[type="time"]:focus,
+.site-footer input[type="datetime"]:focus,
+.site-footer input[type="datetime-local"]:focus,
+.site-footer input[type="color"]:focus,
+.site-footer select:focus,
+.site-footer textarea:focus {
+	box-shadow: none;
+	outline: none;
+}
+
+div.invert .widget .tagcloud a,
+div.invert .widget .tagcloud a:focus,
+div.invert .widget .tagcloud a:active{
+	color: $regular_accent_color_1;
+	background: transparent;
+}
+
+div.invert .widget .tagcloud a:hover{
+	color: #fff;
+	background: transparent;
+}
+
+.site-footer .widget_price_filter .ui-slider .ui-slider-handle{
+	background: #fff;
+}
+
+.site-footer .widget_price_filter .price_slider_wrapper .ui-widget-content {
+	background: #a2a2a2;
+}
+
+.site-footer .star-rating:before{
+	color: #fff;
+}
+
+.site-footer .star-rating span:before{
+	color: $regular_accent_color_1;
+}
+
+.site-footer .star-rating:before, .site-footer .star-rating:before{
+	color: #fff;
+}
+
+.site-footer .widget_product_search form button:hover {
+	color: $regular_text_color;
+	background: #fff;
+}

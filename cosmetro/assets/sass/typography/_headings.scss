@@ -1,0 +1,43 @@
+h1, h2, h3, h4, h5, h6 {
+	margin: 12px 0;
+}
+
+.page {
+	h1, h2, h3, h4, h5, h6 {
+		margin-top: 0;
+	}
+	h1 {
+		margin-bottom: 5px;
+	}
+	h2 {
+		margin-bottom: 5px;
+		letter-spacing: -1px;
+	}
+	h3 {
+		margin-bottom: 12px;
+		text-transform: uppercase;
+	}
+	h4 {
+		margin-bottom: 31px;
+		&.no-line {
+			margin-bottom: -6px;
+		}
+	}
+	h5 {
+		margin-bottom: 5px;
+		text-transform: uppercase;
+	}
+	h6 {
+		margin-bottom: 5px;
+	}
+
+	p {
+		margin: 5px 0;
+	}
+
+	p + h2 {margin-top: 16px;}
+	p + h3 {margin-top: 25px;}
+	p + h4 {margin-top: 29px;}
+	p + h5 {margin-top: 28px;}
+	p + h6 {margin-top: 30px;}
+}

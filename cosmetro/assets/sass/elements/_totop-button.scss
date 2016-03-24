@@ -20,7 +20,6 @@
 		font-size: 29px;
 		width: inherit;
 		height: inherit;
-		@include rotate(-90deg);
 	}
 	@include media-breakpoint-up(sm) {
 		left:auto;

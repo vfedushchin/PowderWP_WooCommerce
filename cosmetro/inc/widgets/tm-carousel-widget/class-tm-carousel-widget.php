@@ -291,7 +291,7 @@ class Cosmetro_Carousel_Widget extends Cherry_Abstract_Widget {
 	 */
 	public function get_carousel_loop( $posts_query ) {
 		$image_size = apply_filters( 'cosmetro_carousel_image_size',
-			'cosmetro-thumb-370-270',
+			'_tm-thumb-536-449',
 			$this->instance,
 			$this->args
 		);
@@ -316,7 +316,7 @@ class Cosmetro_Carousel_Widget extends Cherry_Abstract_Widget {
 			) );
 
 			$image            = '<a class="post-thumbnail__link" href="' . esc_url( $permalink ) . '">' . $this->get_image( $post_id, $image_size, $placeholder_args ) .'</a>';
-			$title            = ( 'true' == $this->instance['post_title'] ) ? '<h5><a href="' . esc_url( $permalink ) . '">' . $title . '</a></h5>' : '';
+			$title            = ( 'true' == $this->instance['post_title'] ) ? '<h3><a href="' . esc_url( $permalink ) . '">' . $title . '</a></h3>' : '';
 			$content          = ( 'true' == $this->instance['content'] ) ? '<p class="post__excerpt">' . $this->get_trimed_content( get_the_content(), (int) $this->instance['trim_words'] ) . '</p>' : '';
 			$more_button_text = $this->use_wpml_translate( 'more_button_text' );
 			$more_button      = ( 'true' == $this->instance['more_button'] ) ? '<a class="btn" href="' . esc_url( $permalink ) . '"><span class="text_btn">' . esc_html( $more_button_text ) . '</span><i class="material-icons">trending_flat</i></a>' : '';

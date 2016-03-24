@@ -7,7 +7,7 @@
 	@include make-container-max-widths();
 
 	@media (max-width: 991px) {
-		//@include make-container($gutter: $grid-gutter-width/2);
+		@include make-container($gutter: $grid-gutter-width/2);
 	}
 }
 
@@ -16,7 +16,7 @@
 .container-fluid {
 	@include make-container();
 	@media (max-width: 991px) {
-		//@include make-container($gutter: $grid-gutter-width/2);
+		@include make-container($gutter: $grid-gutter-width/2);
 	}
 }
 
@@ -26,7 +26,7 @@
 	flex-wrap: wrap;
 	@include make-row();
 	@media (max-width: 991px) {
-		//@include make-row($gutter: $grid-gutter-width/2);
+		@include make-row($gutter: $grid-gutter-width/2);
 	}
 }
 
@@ -39,7 +39,7 @@
 @include make-grid-columns();
 
 @media (max-width: 991px) {
-	//@include make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width/2, $breakpoints: $grid-breakpoints)
+	@include make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width/2, $breakpoints: $grid-breakpoints)
 }
 
 // Flex column reordering

@@ -322,14 +322,14 @@ header .navbar-search-toggle {
 */
 @media (max-width: 767px) {
 	body .navbar-header-cart {
-		position: fixed;
+		/* position: fixed;
 		top: 0;
 		right: 11px;
 		margin: 0;
 		height: $rd-mobilepanel-height;
 		z-index: 99999994;
 		transition: all .3s ease-in-out;
-		transition-delay: 0.3s;
+		transition-delay: 0.3s; */
 
 		.count {
 			padding-top: 9px;
@@ -584,8 +584,12 @@ li.rd-mobile-menu-shop {
 		/* display: none !important; */
 	}
 
-	.currency_switcher, .div_dropdown_top_menu, .social-list.social-list--header, .rd-mobilemenu_ul .menu-item_description, header.site-header div.social-list--header.social-list {
-		display: none;
+	.header-container .currency_switcher, .div_dropdown_top_menu, .rd-mobilemenu_ul .menu-item_description {
+		display: none !important;
+	}
+
+	.rd-mobilemenu #lang_sel{
+		display: block;
 	}
 
 	.rd-mobilemenu, .rd-mobilepanel, header .navbar-search-toggle, .social-list.social-list--header.rd-mobile-social-list, .currency_switcher.rd-mobile-currency {

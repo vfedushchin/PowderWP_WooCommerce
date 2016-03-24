@@ -416,7 +416,6 @@ a:focus {
 
 .site-header-cart {
 	position: relative;
-	float: right;
 
 	.cart-contents {
 		display: inline-block;
@@ -434,12 +433,8 @@ a:focus {
 
 			span {
 				display: inline-block;
-				min-width: 26px;
-				min-height: 26px;
 				text-align: center;
-				border-radius: 50%;
 				vertical-align: middle;
-				color: #fff;
 				padding: 0 5px;
 			}
 
@@ -734,113 +729,7 @@ a:focus {
 	}
 }
 
-.site-header.centered {
-	.header-container {
-		padding-top: 19px;
-		padding-bottom: 16px;
-	}
 
-	.site-header-cart {
-		margin-top: 4px;
-		margin-bottom: 0;
-		margin-left: 0;
-
-		+ .site-branding .site-logo {
-			margin-left: 61px;
-		}
-	}
-
-	.site-branding {
-		text-align: center;
-	}
-
-	.social-list {
-		padding: 14px 0;
-	}
-
-	.main-navigation {
-		text-align: center;
-		padding: 12px 0 0 0;
-
-		ul.menu {
-			> li {
-				margin: 0 0 0px;
-
-				+ li {
-					@media (min-width: 37.5em) {
-						margin-left: 31px;
-					}
-					margin-right: 0;
-				}
-			}
-			ul {
-				a {
-					padding: 12px 18px 13px;
-				}
-			}
-			> li:hover > ul, > li > ul {
-				margin-top: 26px;
-			}
-		}
-	}
-
-	.header-container_wrap {
-		@include flexbox;
-		@include justify-content(space-between);
-		@include flex-direction(row);
-		@include flex-wrap(wrap);
-		@include align-content(flex-end);
-		@include align-items(flex-start);
-
-		.social-list {
-			float: none;
-
-			text-align: left;
-			margin-right: 0;
-			margin-left: 0;
-			@include flex(0 1 25%);
-			@include align-self(auto);
-		}
-
-		.site-branding {
-			float: none;
-
-			text-align: center;
-			margin-right: 0;
-			margin-left: 0;
-			@include flex(0 1 100%);
-			@include align-self(auto);
-		}
-
-		.site-header-cart {
-			float: none;
-
-			text-align: right;
-			margin-right: 0;
-			margin-left: 0;
-			@include flex(0 1 25%);
-			@include align-self(auto);
-		}
-
-		.main-navigation {
-			text-align: center;
-			@include flex(0 1 100%);
-			@include align-self(auto);
-		}
-
-		@media (min-width: 768px) {
-			.site-branding {
-				@include flex(0 1 49%);
-			}
-		}
-	}
-
-	@media (max-width: 767px) {
-		.site-header-cart + .site-branding .site-logo {
-			margin-left: 0;
-		}
-	}
-}
 
 .site-header.minimal {
 	.header-container_wrap {
@@ -1007,7 +896,6 @@ header.site-header .header-container .menu-item_description {
 }
 
 #lang_sel {
-	display: block;
 	width: auto;
 	max-width: 300px;
 	height: 50px;
@@ -1016,13 +904,12 @@ header.site-header .header-container .menu-item_description {
 			position: absolute;
 			top: 50%;
 			@include transform(translateY(-50%));
-			right: 16px;
+			right: 4px;
 			font-family: Material Icons;
 			content: '\e5cf';
 			font: 400 16px/39px "Material Icons";
 			position: absolute;
 			z-index: 1;
-			color: #fff;
 			pointer-events: none;
 		}
 	}
@@ -1037,7 +924,8 @@ header.site-header .header-container .menu-item_description {
 			a {
 				font-size: 14px;
 				line-height: 22px;
-				padding: 14px 21px;
+				padding: 2px;
+				padding-right: 25px;
 				border-color: #e8e8eb;
 				&:hover {
 					background: none;
@@ -2194,60 +2082,8 @@ textarea.comment-form__field {
 		}
 	}
 }
-.post__date {
-	.post-date__link {
-		min-width: 59px;
-		padding: 0 10px;
-		height: 59px;
-		display: block;
-		border-radius: 50%;
-		text-align: center;
-		box-sizing: border-box;
-		time {
-			display: inline-block;
-			word-wrap: normal;
-			-moz-hyphens: none;
-			hyphens: none;
-			font-size: 14px;
-			line-height: 1em;
-			span{
-				font-size: 28px;
-				line-height: 1em;
-				display: block;
-				padding-bottom: 4px;
-			}
-		}
-	}
-}
+
 .post{
-	.post__date {
-		float: left;
-		margin-top: 10px;
-		margin-right: 29px;
-		.post-date__link {
-			min-width: 59px;
-			padding: 0 10px;
-			height: 59px;
-			display: block;
-			border-radius: 50%;
-			text-align: center;
-			box-sizing: border-box;
-			time {
-				display: inline-block;
-				word-wrap: normal;
-				-moz-hyphens: none;
-				hyphens: none;
-				font-size: 14px;
-				line-height: 1em;
-				span{
-					font-size: 28px;
-					line-height: 1em;
-					display: block;
-					padding-bottom: 4px;
-				}
-			}
-		}
-	}
 
 	.post-thumbnail, .format-quote {
 		position: relative;
@@ -2295,10 +2131,6 @@ textarea.comment-form__field {
 
 		a {
 			padding: 0;
-
-			&:after {
-				content: ',';
-			}
 
 			&:last-child {
 
@@ -2366,7 +2198,7 @@ body [class*='posts-'] {
 
 	footer.entry-footer {
 		a.btn {
-			padding: 15px 22px;
+			padding: 15px 19px;
 		}
 	}
 }
@@ -2429,9 +2261,9 @@ body .post-gallery {
 
 .posts-list--grid-2-cols, .posts-list--grid-3-cols, .posts-list--masonry-2-cols, .posts-list--masonry-3-cols {
 	.hentry.post {
-		margin-right: 15px;
+		margin-right: 30px;
 		margin-bottom: 35px;
-		margin-left: 15px;
+		margin-left: 30px;
 		padding-bottom: 40px;
 		text-align: center;
 
@@ -2450,72 +2282,7 @@ body .post-gallery {
 		.entry-content {
 			margin: 19px 0 0;
 		}
-		.btn {
-			background: none;
-			padding: 0;
-			margin: 0;
-			float: none;
-			position: relative;
-			width: auto;
-			@include transition(all 0.3s ease);
-			background-color: transparent;
-			padding-right: 34px;
-			@include media-breakpoint-up(lg) {
-				height: 34px;
-				line-height: 34px;
-			}
-			.btn__text {
-				position: relative;
-				display: block;
-				overflow: hidden;
-				height: 34px;
-				line-height: 34px;
-				@include transition(all 0.3s ease);
-				//@include media-breakpoint-up(lg) {
-				text-indent: -300px;
-				//}
-			}
-			.btn__icon {
-				font-size: 29px;
-				line-height: 34px;
-				width: 34px;
 
-				position: absolute;
-				margin: 0;
-				right: 0;
-				top: 0;
-				bottom: 0;
-				@include transition(all 0.3s ease);
-				font-size: 29px;
-				line-height: 34px;
-				width: 34px;
-				position: absolute;
-				margin: 0;
-				right: 0;
-				top: 0;
-				bottom: 0;
-				transition: all 0.3s ease;
-
-				&:before {
-					content: '\e8e4';
-				}
-
-				//@include media-breakpoint-up(lg) {
-				//
-				//}
-			}
-			&:hover {
-				//@include media-breakpoint-up(lg) {
-				width: auto;
-				left: auto;
-				@include transition(all 0.3s ease);
-				span {
-					width: auto;
-					text-indent: 0;
-				}
-			}
-			//}
-		}
 		.post__date {
 			float: none;
 			margin-left: auto;
@@ -3312,12 +3079,6 @@ body .post-gallery {
 			}
 		}
 
-		.widget_calendar #calendar_wrap tbody td a:before {
-			width: 23px;
-			height: 23px;
-			top: -1px;
-			left: -2px;
-		}
 
 		.widget.widget_search {
 			.search-form {
@@ -3328,14 +3089,6 @@ body .post-gallery {
 			}
 		}
 
-		.sidebar-1-4 & {
-			.widget_calendar #calendar_wrap tbody td a:before {
-				width: 20px;
-				height: 20px;
-				top: -1px;
-				left: 0px;
-			}
-		}
 	}
 
 	@media (min-width: 768px) and (max-width: 1199px) {
@@ -3439,7 +3192,7 @@ body .post-gallery {
 
 	a.compare.button {
 		float: left;
-		padding: 15px 22px;
+		padding: 15px 19px;
 
 		&:before {
 			display: none;
@@ -3479,117 +3232,7 @@ body .post-gallery {
 }
 
 // widget-default.scss
-/*--------------------------------------------------------------
-# Widget calendar
---------------------------------------------------------------*/
-.widget_calendar {
-	max-width: 546px;
 
-	h4.widget-title {
-		margin: 0 0 24px 0;
-	}
-
-	#calendar_wrap {
-		table {
-			margin: 0;
-		}
-
-		caption {
-			@include font-size(1);
-			padding: 15px 10px;
-			border-radius: 0;
-			margin-bottom: 15px;
-		}
-
-		th {
-			font-size: 14px;
-			font-weight: 300;
-			padding: 0 0 13px 0;
-			border-bottom: none;
-			text-align: center;
-			position: relative;
-			left: -12px;
-		}
-
-		thead {
-			th {
-				font-weight: 500;
-				padding-bottom: 0;
-			}
-		}
-
-		tbody {
-			td {
-				padding: 0px 0 10px 0;
-				width: 15%;
-				text-align: center;
-				position: relative;
-				left: -12px;
-
-				a {
-					position: relative;
-					display: inline-block;
-					width: 20px;
-					z-index: 1;
-					@include transition(all 0.5s ease);
-
-					&:before {
-						content: '';
-						position: absolute;
-						width: 33px;
-						height: 33px;
-						top: -7px;
-						left: -6px;
-						z-index: -1;
-						border-radius: 50%;
-						display: block;
-						opacity: 1;
-						margin-left: 0px;
-						transition: all .3s ease;
-						@include transform(scale(1, 1));
-					}
-
-					&:hover {
-						&:before {
-							opacity: 1;
-							transition: all .3s ease;
-							@include transform(scale(1, 1));
-						}
-					}
-				}
-			}
-
-			tr:first-child > td {
-				padding: 8px 0 10px 0;
-			}
-		}
-
-		#prev, #next {
-			font-size: 14px;;
-			padding: 1px 0 0 0;
-		}
-
-		#prev {
-
-		}
-
-		#next {
-			text-align: right;
-		}
-	}
-
-	@media (max-width: 992px) {
-		h4 {
-			margin: 0 0 15px 0;
-		}
-
-		#calendar_wrap {
-			table {
-				margin: 0;
-			}
-		}
-	}
-}
 
 /*--------------------------------------------------------------
 # Widget Tag Cloud

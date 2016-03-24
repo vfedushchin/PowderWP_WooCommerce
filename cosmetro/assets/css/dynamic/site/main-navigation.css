@@ -204,12 +204,11 @@
 }
 
 .site-header-cart .cart-contents .count span{
-	color: #fff;
-	background: $regular_accent_color_1;
+	color: $regular_h3_color;
 }
 
 .site-header-cart .cart-contents .count i{
-	color: $regular_accent_color_1;
+	color: $regular_h3_color;
 }
 
 .site-header-cart .header-cart-dropdown .shopping_cart-dropdown-wrap .cart_list li a.remove, .site-header-cart .header-cart-dropdown .shopping_cart-dropdown-wrap .cart_list li a.remove:before{

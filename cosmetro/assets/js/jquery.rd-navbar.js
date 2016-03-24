@@ -164,7 +164,7 @@
 			$rdMobileMenuUl = $('.rd-mobilemenu_ul'),
 			$navbarSearch = $('.navbar-search'),
 			$navbarSearchToggle = $('.navbar-search-toggle'),
-			$navbarHeaderCart = $('.navbar-header-cart'),
+			$navbarHeaderCart = $('.navbar-header-cart 7777'),
 			rdMobilePanelisStuck = 'rd-mobilepanel-isStuck',
 			searchSwitcherBlock = '.search_switcher_block',
 			SearchActive = 'search-active';

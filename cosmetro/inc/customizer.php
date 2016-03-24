@@ -1489,14 +1489,14 @@ function cosmetro_get_customizer_options() {
 			'single_post_categories' => array(
 				'title'   => esc_html__( 'Show categories', 'cosmetro' ),
 				'section' => 'blog_post',
-				'default' => false,
+				'default' => true,
 				'field'   => 'checkbox',
 				'type'    => 'control',
 			),
 			'single_post_tags' => array(
 				'title'   => esc_html__( 'Show tags', 'cosmetro' ),
 				'section' => 'blog_post',
-				'default' => false,
+				'default' => true,
 				'field'   => 'checkbox',
 				'type'    => 'control',
 			),

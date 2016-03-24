@@ -4,16 +4,147 @@
 	}
 	.social-list {
 		text-align: center;
-		padding: 15px 0 0 0;
+		padding: 49px 0 0 0;
 	}
 	.main-navigation {
 		text-align: center;
 		padding: 15px 0 0 0;
-		
+
 		ul.menu {
 			> li:last-child {
 				margin-right: 0;
 			}
 		}
 	}
+}
+
+
+
+
+.site-header.centered {
+	.header-container {
+		padding: 40px 10px 34px;
+	}
+
+	.site-branding {
+		text-align: center;
+	}
+
+
+	.main-navigation {
+		text-align: center;
+		padding: 8px 0 0 0;
+
+		ul.menu {
+			> li {
+				margin: 0 0 0px;
+
+				+ li {
+					@media (min-width: 37.5em) {
+						margin-left: 31px;
+					}
+					margin-right: 0;
+				}
+			}
+			ul {
+				a {
+					padding: 12px 18px 13px;
+				}
+			}
+			> li:hover > ul, > li > ul {
+				margin-top: 26px;
+			}
+		}
+	}
+
+	.header-container_wrap {
+		@include flexbox;
+		@include justify-content(space-between);
+		@include flex-direction(row);
+		@include flex-wrap(wrap);
+		@include align-content(flex-end);
+		@include align-items(flex-start);
+
+		.social-list {
+			float: none;
+			text-align: left;
+			margin-right: 0;
+			margin-left: 0;
+			@include flex(1 1 100%);
+			@include align-self(auto);
+			order: 1;
+
+			.social-list__items {
+				text-align: center;
+				@media (min-width: 768px) {
+					text-align: left;
+				}
+			}
+		}
+
+		.site-branding {
+			float: none;
+			text-align: center;
+			margin-right: 0;
+			margin-left: 0;
+			@include flex(1 1 100%);
+			@include align-self(auto);
+			order: 2;
+		}
+
+		.site-shop-elements {
+			float: none;
+			text-align: right;
+			margin-right: 0;
+			margin-left: 0;
+			@include flex(1 1 100%);
+			@include align-self(auto);
+			padding-top: 20px;
+			text-align: center;
+			order: 3;
+
+			.site-header-cart {
+				margin-bottom: 10px;
+				padding-bottom: 0;
+				margin-left: 20px;
+			}
+			.widget {
+				margin-bottom: 10px;
+			}
+
+			.currency_switcher {
+				text-align: left;
+			}
+			.currency_switcher + #lang_sel {margin-left: 5px;}
+		}
+
+		.main-navigation {
+			text-align: center;
+			@include flex(0 1 100%);
+			@include align-self(auto);
+			order: 4;
+		}
+
+
+
+		@media (min-width: 768px) {
+			.header-container_wrap {
+				text-align: center;
+			}
+			.social-list {
+				@include flex(1 1 33.333%);
+			}
+			.site-branding {
+				@include flex(1 2 33.333%);
+			}
+			.site-shop-elements {
+				@include flex(1 1 33.333%);
+				text-align: right;
+			}
+		}
+
+
+
+	}
+
 }

@@ -444,6 +444,7 @@ if ( ! class_exists( 'Cosmetro_Theme_Setup' ) ) {
 			wp_register_style( 'font-awesome', COSMETRO_THEME_CSS . '/font-awesome.min.css', array(), '4.5.0' );
 			wp_register_style( 'material-icons', COSMETRO_THEME_CSS . '/material-icons.min.css', array(), '2.1.0' );
 			wp_register_style( 'fl-line-icon-set', COSMETRO_THEME_CSS . '/fl-line-icon-set.css', array(), '1.0.0', 'all' );
+			wp_register_style( 'fl-flat-icons-set-2', COSMETRO_THEME_CSS . '/fl-flat-icons-set-2.css', array(), '1.0.0', 'all' );
 		}
 
 		/**
@@ -460,7 +461,7 @@ if ( ! class_exists( 'Cosmetro_Theme_Setup' ) ) {
 				$action = $yith_woocompare->obj->action_view;
 			}
 
-			wp_enqueue_style( 'cosmetro-theme-style', get_stylesheet_uri(), array( 'font-awesome', 'material-icons', 'magnific-popup', 'fl-line-icon-set' ), COSMETRO_THEME_VERSION );
+			wp_enqueue_style( 'cosmetro-theme-style', get_stylesheet_uri(), array( 'font-awesome', 'material-icons', 'magnific-popup', 'fl-line-icon-set', 'fl-flat-icons-set-2' ), COSMETRO_THEME_VERSION );
 
 			/**
 			 * Filter the depends on main theme script.
@@ -479,7 +480,7 @@ if ( ! class_exists( 'Cosmetro_Theme_Setup' ) ) {
 			 * @var   array
 			 */
 			$labels = apply_filters( 'cosmetro_theme_localize_labels', array(
-				'totop_button' =>__( '<i class="material-icons">trending_flat</i>', 'cosmetro' ),
+				'totop_button' =>__( '<i class="material-icons">keyboard_arrow_up</i>', 'cosmetro' ),
 			) );
 
 			wp_localize_script( 'cosmetro-theme-script', 'cosmetro', array(

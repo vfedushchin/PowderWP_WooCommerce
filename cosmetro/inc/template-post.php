@@ -91,8 +91,8 @@ function cosmetro_post_thumbnail( $linked = false, $sizes = array() ) {
 	}
 
 	$sizes = wp_parse_args( $sizes, array(
-		'small'     => 'post-thumbnail',
-		'fullwidth' => 'cosmetro-thumb-1170-854',
+		'small'     => '_tm-thumb-536-449',
+		'fullwidth' => '_tm-post-thumbnail-large',
 	) );
 
 	$linked_format = apply_filters(

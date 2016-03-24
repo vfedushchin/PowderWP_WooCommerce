@@ -64,6 +64,8 @@ if ( have_posts() ) :
 				$layout .= '-' . $format;
 			}
 		}
+
+		// echo "page layout = " . $layout;
 		get_template_part( 'template-parts/content', $layout );
 
 	endwhile; ?>

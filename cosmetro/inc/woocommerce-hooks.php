@@ -1,6 +1,6 @@
 <?php
 /**
- * jane_tyle WooCommerce Theme hooks.
+ * cosmetro WooCommerce Theme hooks.
  *
  * @package cosmetro
  */
@@ -366,7 +366,7 @@ function cosmetro_woocommerce_loop_add_to_cart_link( $link, $product ) {
 					$product->is_purchasable() && $product->is_in_stock() ? 'add_to_cart_button' : '',
 					$product->supports( 'ajax_add_to_cart' ) ? 'ajax_add_to_cart' : ''
 			) ) ),
-			( $product->is_purchasable() && $product->is_in_stock() && $product->is_type( 'simple' ) ) ? '<span class="fl-line-icon-set-shopping63 add"></span>'
+			( $product->is_purchasable() && $product->is_in_stock() && $product->is_type( 'simple' ) ) ? '<span class="fl-flat-icons-set-2-shopping191 add"></span>'
 			. '<span class="fl-line-icon-set-rounded25 added"></span>'
 			. '<span class="product_actions_tip add_to_cart_button__text add">' . esc_html( $product->add_to_cart_text() ) . '</span>'
 			. '<span class="product_actions_tip add_to_cart_button__text added">' . __( 'Added to cart! ', 'cosmetro' ) . '</span>' : '<span class="material-icons">visibility</span><span class="product_actions_tip add_to_cart_button__text select">' . esc_html( $product->add_to_cart_text() ) . '</span>'
@@ -556,3 +556,9 @@ function cosmetro_yith_wcwl_wishlist_title() {
 // function cosmetro_woocommerce_close_container_order_wrap() {
 // 	echo '</section>';
 // }
+
+
+function powder_categories_carousel_widget_name( $cat_title, $cat_name ) {
+ return sprintf( '<h2 class="tm-categories-carousel-widget-title">%s</h2>', $cat_name );
+}
+add_filter('tm_categories_carousel_widget_name', 'powder_categories_carousel_widget_name', 10, 2 );

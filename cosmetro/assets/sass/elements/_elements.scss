@@ -79,3 +79,10 @@ img {
 }
 
 @import "tables";
+
+
+.btn {
+	i, .btn__icon {
+		display: none;
+	}
+}

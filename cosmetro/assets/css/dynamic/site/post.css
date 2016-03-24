@@ -6,19 +6,25 @@
 .post__tags a,
 .sticky__label {
 	line-height: inherit;
-	color: $regular_link_color;
+	color: $regular_accent_color_1;
 	background: transparent;
 	font-style: normal;
 }
 .post__cats a:hover,
 .post__tags a:hover{
-	color: $regular_link_hover_color;
+	color: $regular_accent_color_2;
 	background: transparent;
 }
 .invert .post__cats a:hover{
 	color: $regular_link_color;
 }
 .post .material-icons{
+	color: $regular_accent_color_4;
+}
+.post__author a {
+	color: $regular_h3_color;
+}
+.post__author a:hover {
 	color: $regular_accent_color_1;
 }
 .post-author,
@@ -76,28 +82,13 @@
 }
 
 .post__date .post-date__link {
-	color: #fff;
-	background: $regular_accent_color_1;
+	color: $regular_accent_color_2;
 }
 
 .post__date .post-date__link:hover {
-	color: #fff;
-	background: $regular_text_color;
+	color: $regular_accent_color_1;
 }
 
-.post__date .post-date__link time{
-	font-family: $h4_font_family;
-	font-size: 14px;
-	font-weight: 700;
-	font-style: $h4_font_style;
-	letter-spacing: 0;
-	line-height: 28px;
-}
-
-.post__date .post-date__link time:first-line{
-	font-size: 28px;
-	line-height: 28px;
-}
 
 .post .entry-title{
 	font-style: $h4_font_style;
@@ -234,4 +225,9 @@ body .post-author__content{
 
 .post-gallery .swiper-button-next:hover:after,.post-gallery .swiper-button-prev:hover:after {
 	color: #fff;
+}
+
+.post__author,
+.post__date {
+	color: $regular_h3_color;
 }

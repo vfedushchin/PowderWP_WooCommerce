@@ -16,11 +16,12 @@ input[type="color"],
 select,
 textarea {
 	padding: 15px;
-	background: white;
-	border: 1px solid #e8e8eb;
+	background: #f4f4f4;
 	border-radius: 0;
+	border: none;
+	line-height: 20px;
 	&:focus {
-		box-shadow: 0 0 8px $color__border-input;
+		box-shadow: 0 0 1px $color__border-input;
 		outline: none;
 	}
 	&:-input-placeholder{

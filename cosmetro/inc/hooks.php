@@ -167,9 +167,9 @@ function cosmetro_get_footer_widget_layout( $params ) {
 
 	switch ( $columns ) {
 		case 4:
-			$md_col = 3;
+			$md_col = 6;
 			$sm_col = 6;
-			$extra  = '';
+			$extra  = 'col-lg-3';
 			break;
 
 		case 3:

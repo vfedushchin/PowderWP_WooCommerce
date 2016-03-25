@@ -51,13 +51,14 @@
 				border-bottom: none;
 				padding-bottom: 0;
 			}
-			@include media-breakpoint-up(xl) {
+
+			@include media-breakpoint-up(xxl) {
 				.post{
 					.post-inner{
 						flex-direction: row;
 						.post-image{
-							flex: 0 0 100px;
-							margin: 0 20px 0 0px;
+							flex: 0 0 149px;
+							margin: 0 30px 0 0px;
 						}
 						.post-content{
 							flex: 1 1 auto;
@@ -71,8 +72,8 @@
 			padding-bottom: 0;
 			display: flex;
 			.post-inner{
-				border-bottom: 1px dotted #d2d1d1;
-				padding: 30px 0 24px;
+				border-bottom: 1px solid #232222;
+				padding: 40px 0 21px;
 				display: flex;
 				flex: 1 1 auto;
 				align-content: stretch;
@@ -84,8 +85,8 @@
 				}
 				.post-image{
 					flex: 0 0 100%;
-					@include media-breakpoint-up(xl) {
-						flex: 0 0 150px;
+					@include media-breakpoint-up(xxl) {
+						flex: 0 0 149px;
 					}
 					.wp-post-image{
 						width: 100%;
@@ -109,7 +110,6 @@
 			}
 			.post-author{
 				span{
-					font-style: italic;
 				}
 			}
 			.meta{
@@ -161,6 +161,25 @@
 				// 	padding: 0px 5px;
 				// }
 			}
+		}
+	}
+
+	h6 {
+		padding-bottom: 0;
+		&:before {
+			display: none;
+		}
+	}
+}
+
+.widget-custom-postson {
+	.widget-title {
+		margin-bottom: 0;
+	}
+
+	.category {
+		@include media-breakpoint-up(xl) {
+			margin-top: -7px;
 		}
 	}
 }

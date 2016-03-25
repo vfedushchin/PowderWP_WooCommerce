@@ -20,8 +20,8 @@
 		-webkit-flex-wrap: nowrap;
 		flex-wrap: nowrap;
 		-ms-flex-pack: justify;
-		-webkit-justify-content: space-between;
-		justify-content: space-between;
+		-webkit-justify-content: center;
+		justify-content: center;
 		-ms-flex-line-pack: stretch;
 		-webkit-align-content: stretch;
 		align-content: stretch;
@@ -32,7 +32,7 @@
 			-webkit-flex-direction: row;
 			flex-direction: row;
 		}
-		
+
 		.footer-logo {
 			-webkit-order: 0;
 			order: 0;
@@ -49,7 +49,7 @@
 			-webkit-align-self: center;
 			align-self: center;
 			white-space: nowrap;
-			
+
 			@include media-breakpoint-up(md) {
 				-webkit-order: 2;
 				order: 2;
@@ -63,7 +63,7 @@
 			-webkit-align-self: center;
 			align-self: center;
 			text-align: center;
-			
+
 			@include media-breakpoint-up(md) {
 				-webkit-order: 1;
 				order: 1;

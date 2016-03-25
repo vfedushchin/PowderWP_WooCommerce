@@ -558,7 +558,7 @@ function cosmetro_yith_wcwl_wishlist_title() {
 // }
 
 
-function powder_categories_carousel_widget_name( $cat_title, $cat_name ) {
+function cosmetro_categories_carousel_widget_name( $cat_title, $cat_name ) {
  return sprintf( '<h2 class="tm-categories-carousel-widget-title">%s</h2>', $cat_name );
 }
-add_filter('tm_categories_carousel_widget_name', 'powder_categories_carousel_widget_name', 10, 2 );
+add_filter('tm_categories_carousel_widget_name', 'cosmetro_categories_carousel_widget_name', 10, 2 );

@@ -98,7 +98,7 @@
 # Widget Tag Cloud
 --------------------------------------------------------------*/
 .widget_tag_cloud .tagcloud a, .widget_product_tag_cloud .tagcloud a{
-	color: $regular_accent_color_1;
+	color: $regular_text_color;
 }
 .widget_tag_cloud .tagcloud a:hover, .widget_product_tag_cloud .tagcloud a:hover{
 	color: $regular_accent_color_1;
@@ -182,11 +182,10 @@
 }
 
 .sidebar-primary .widget_recent_comments .recentcomments, .sidebar-secondary .widget_recent_comments .recentcomments{
-	color: $regular_text_color;
-	font-style: italic;
+	color: $regular_h3_color;
 }
 .sidebar-primary .widget_recent_comments .recentcomments a, .sidebar-secondary .widget_recent_comments .recentcomments a{
-	color: $regular_text_color;
+	color: $regular_h3_color;
 	font-style: normal;
 }
 .sidebar-primary .widget_recent_comments .recentcomments span, .sidebar-secondary .widget_recent_comments .recentcomments span{
@@ -229,10 +228,6 @@
 	color: $regular_text_color;
 }
 
-.sidebar-primary .widget.widget_recent_entries ul li > a, .sidebar-secondary .widget.widget_recent_entries ul li > a{
-	color: $regular_text_color;
-	font-size: 16px;
-}
 
 .sidebar-primary .widget.widget_recent_entries ul li > a:hover, .sidebar-secondary .widget.widget_recent_entries ul li > a:hover{
 	color: $regular_accent_color_1;
@@ -287,7 +282,6 @@
 }
 
 .widget.woocommerce.widget_shopping_cart .widget_shopping_cart_content .total strong {
-	font-style: italic;
 	color: $regular_text_color;
 	font-weight: 400;
 }
@@ -373,7 +367,21 @@
 }
 
 .widget-area .widget-subscribe{
-	background: #f5f5f7;
+	background: $regular_h3_color;
+}
+.widget-area .widget-subscribe input{
+	font-size: 14px;
+	background: #393939;
+}
+.widget-area .widget-subscribe .btn{
+	background: $regular_accent_color_1;
+}
+.widget-area .widget-subscribe .btn{
+	color: #fff;
+}
+.widget-area .widget-subscribe .btn:hover{
+	color: #fff;
+	background: $regular_accent_color_2;
 }
 
 .footer-area.widget-area .widget-subscribe{

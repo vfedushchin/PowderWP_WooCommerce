@@ -400,7 +400,6 @@ div#primary {
 	}
 	.widget-title {
 		position: relative;
-		font-style: italic;
 		margin-bottom: 34px;
 		padding-bottom: 15px;
 		span {
@@ -439,7 +438,6 @@ div#primary {
 			}
 			&.label {
 				display: block;
-				font-style: italic;
 				font-weight: 300;
 				&:after {
 					content: ":";
@@ -644,7 +642,6 @@ div#primary {
 	}
 	.product_title {
 		font-weight: 400;
-		font-style: italic;
 	}
 }
 
@@ -763,7 +760,6 @@ a.compare.button {
 	}
 	label,
 	span.for_rating {
-		font-style: italic;
 		font-weight: 300;
 	}
 	input[type=text] {
@@ -880,7 +876,6 @@ input.qty[type=number] {
 		line-height: 24px;
 		min-height: inherit;
 		min-width: inherit;
-		font-style: italic;
 		font-weight: 900;
 		border-radius: 0;
 		-webkit-transform: translatez(0);
@@ -1079,7 +1074,6 @@ input.qty[type=number] {
 			margin: 0 0 20px;
 			> span {
 				display: block;
-				font-style: italic;
 				font-weight: 300;
 				a {
 					font-style: normal;
@@ -1126,7 +1120,6 @@ input.qty[type=number] {
 					padding: 0;
 					p.meta {
 						font: inherit;
-						font-style: italic;
 						color: inherit;
 						span,
 						time {
@@ -1496,12 +1489,7 @@ input.qty[type=number] {
 
 .breadcrumbs {
 	.breadcrumbs__item {
-		font-style: italic;
-		.breadcrumbs__item-target {
-			font-style: normal;
-			font-weight: 700;
-			text-transform: uppercase;
-		}
+
 		.breadcrumbs__item-link {
 			color: inherit;
 		}
@@ -2564,35 +2552,6 @@ div.products {
 	}
 }
 
-/*Styles for subscribe widget*/
-.widget-subscribe {
-	text-align: center;
-	.follow-block {
-		.follow-block__message {
-			padding-bottom: 10px;
-		}
-	}
-	.subscribe-block, .follow-block {
-		padding: 25px 20px 20px;
-	}
-	h4.widget-title {
-		margin-bottom: 6px;
-	}
-	.subscribe-block__message {
-	}
-	.subscribe-block__form {
-		@include media-breakpoint-up(md) {
-			width: 60%;
-			margin: 0 auto;
-		}
-		.subscribe-block__input-group {
-			input.subscribe-block__input {
-			}
-			a.subscribe-block__submit {
-			}
-		}
-	}
-}
 
 /*Sytles for widget Recent Post*/
 .widget_recent_entries ul li {
@@ -2604,7 +2563,6 @@ div.products {
 	&:nth
 	.post-author {
 		display: block;
-		font-style: italic;
 		margin-bottom: 1px;
 
 		a {
@@ -2678,7 +2636,6 @@ div.products {
 						background: #ff4747;
 						z-index: 2;
 						margin: 0;
-						font-style: italic;
 						font-weight: 700;
 						a {
 							font-size: 14px;

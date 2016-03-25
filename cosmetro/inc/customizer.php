@@ -149,7 +149,7 @@ function cosmetro_get_customizer_options() {
 			'breadcrumbs_path_type' => array(
 				'title'   => esc_html__( 'Show full/minified breadcrumbs path', 'cosmetro' ),
 				'section' => 'breadcrumbs',
-				'default' => 'full',
+				'default' => 'minified',
 				'field'   => 'select',
 				'choices' => array(
 					'full'     => esc_html__( 'Full', 'cosmetro' ),
@@ -160,7 +160,7 @@ function cosmetro_get_customizer_options() {
 			'breadcrumbs_page_title' => array(
 				'title'   => esc_html__( 'Enable page title in breadcrumbs area', 'cosmetro' ),
 				'section' => 'breadcrumbs',
-				'default' => true,
+				'default' => false,
 				'field'   => 'checkbox',
 				'type'    => 'control',
 			),
@@ -1309,13 +1309,7 @@ function cosmetro_get_customizer_options() {
 				'field'   => 'textarea',
 				'type'    => 'control',
 			),
-			'footer_text_center' => array(
-				'title'   => esc_html__( 'Text layout style 2', 'cosmetro' ),
-				'section' => 'footer_options',
-				'default' => cosmetro_get_default_footer_custom_text(),
-				'field'   => 'textarea',
-				'type'    => 'control',
-			),
+
 			'footer_widget_columns' => array(
 				'title'   => esc_html__( 'Widget Area Columns', 'cosmetro' ),
 				'section' => 'footer_options',
@@ -1848,15 +1842,6 @@ function cosmetro_get_default_top_panel_text() {
 	);
 }
 
-/**
- * Get default footer copyright.
- *
- * @since  1.0.0
- * @return string
- */
-function cosmetro_get_default_footer_custom_text() {
-	return "With the company's history dating 10 years back, we always felt desire to tell some kind of complete story with our clothes. So the original style mixed with an androgynous feel of a modern day makes us what we actually are.";
-}
 
 /**
  * Get default footer copyright.
@@ -1865,5 +1850,5 @@ function cosmetro_get_default_footer_custom_text() {
  * @return string
  */
 function cosmetro_get_default_footer_copyright() {
-	return '<strong>Cosmetro</strong> is proudly powered by WordPress Entries (RSS) and Comments (RSS) <a href="%%privacy-policy%%">Privacy Policy</a>';
+	return '<em>Cosmetro</em> is proudly powered by WordPress Entries (RSS) and Comments (RSS) <a href="%%privacy-policy%%">Privacy Policy</a>';
 }

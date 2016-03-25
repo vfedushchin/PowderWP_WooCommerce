@@ -1,6 +1,7 @@
 .breadcrumbs{
 	position: relative;
 	margin: 0 0 20px;
+	text-align: center;
 		&__title{
 			float: left;
 			margin-right: 30px;
@@ -11,7 +12,7 @@
 				}
 		}
 		&__items{
-			float: left;
+			display: inline-block;
 		}
 		&__browse{
 			float: left;

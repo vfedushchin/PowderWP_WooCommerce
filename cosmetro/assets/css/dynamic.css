@@ -131,6 +131,7 @@ input[type="submit"],
 	font-family: $h5_font_family;
 	background: $regular_accent_color_1;
 	color: #fff;
+	line-height: 20px;
 }
 a.button:hover,
 input[type="button"]:hover,
@@ -182,7 +183,7 @@ input[type="color"],
 textarea{
 	font-weight: $body_font_weight;
 	font-size: $body_font_size{px};
-	line-height: $body_line_height;
+	line-height: 20px;
 	font-family: $body_font_family;
 	letter-spacing: $body_letter_spacing{px};
 	text-align: $body_text_align;
@@ -249,7 +250,7 @@ mark, ins {
 }
 
 /* Invert Color Scheme */
-.invert { color: $invert_text_color; }
+/* .invert { color: $invert_text_color; } */
 .invert h1 { color: $invert_h1_color; }
 .invert h2 { color: $invert_h2_color; }
 .invert h3 { color: $invert_h3_color; }
@@ -329,7 +330,7 @@ mark, ins {
 .widget-custom-postson .custom-posts-holder .post .post-author,
 .widget-custom-postson .custom-posts-holder .post .btn,
 .widget-area .widget .product_list_widget > li .reviewer span{
-	color: $regular_text_color;
+	color: $regular_h3_color;
 }
 .widget-custom-postson .custom-posts-holder .post .post-author span,
 .widget-area .widget .product_list_widget > li .reviewer{
@@ -403,19 +404,13 @@ mark, ins {
 	font-family: $body_font_family;
 }
 .tm_about_store_widget{
-	background-color: $regular_accent_color_3 !important;
+	background-color: $regular_accent_color_2 !important;
 }
 .tm_about_store_widget_bg,
 .tm_about_store_widget{
-	background-color: $regular_accent_color_3;
+	background-color: $regular_accent_color_2;
 }
-.tm_about_store_widget_bg h4, .tm_about_store_widget h4{
-	font-style: $h3_font_style;
-	font-size: $h3_font_size{px};
-	font-family: $h4_font_family;
-	letter-spacing: $h4_letter_spacing{px};
-	color: $regular_h4_color;
-}
+
 .tm_about_store_widget_bg h4:after, .widget_product_categories_image h4:after,
 .widget_carousel h4:after,
 .tm_products_carousel_widget h4:after,
@@ -477,10 +472,10 @@ mark, ins {
 }
 .widget-area .widget .product_list_widget > li .product-widget-categories li a,
 .widget-area .widget .product_list_widget > li .product-widget-categories li, .woocommerce div.product .product-widget-categories li, .woocommerce div.product .product-widget-categories li a, .woocommerce div.product .product-widget-tags li a, .woocommerce div.product .product-widget-tags li, .widget-custom-postson .custom-posts-holder .post .category a, .widget-custom-postson .custom-posts-holder .post .post_tag a{
-	color: $regular_link_color;
+	color: $regular_accent_color_1;
 }
 .widget-area .widget .product_list_widget > li .product-widget-categories li a:hover, .woocommerce div.product .product-widget-categories li a:hover, .woocommerce div.product .product-widget-tags li a:hover, .widget-custom-postson .custom-posts-holder .post .category a:hover, .widget-custom-postson .custom-posts-holder .post .post_tag a:hover{
-	color: $regular_link_hover_color;
+	color: $regular_accent_color_2;
 }
 
 body.woocommerce button.single_add_to_cart_button.alt{

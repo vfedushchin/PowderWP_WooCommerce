@@ -4,10 +4,13 @@
 .footer-area-wrap {
 	background-color: $footer_widgets_bg;
 }
-.footer-copyright{
-	color: $regular_accent_color_2;
-}
 
+.site-footer a {
+  color: $regular_accent_color_2;
+}
+.site-footer .footer-copyright em {
+  text-transform: uppercase;
+}
 .site-footer a:hover, .site-footer a:focus, .site-footer a:active { color: #fff; }
 
 .footer-menu__items li a {

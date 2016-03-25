@@ -13,14 +13,14 @@
 			<?php echo $image; ?>
 		</div>
 		<div class="post-content">
-			<?php echo $author; ?>
+			<?php echo $category; ?>
 			<?php echo $title; ?>
+			<?php echo $excerpt; ?>
+			<?php echo $author; ?>
 			<div class="meta">
 				<?php echo $date; ?>
 				<?php echo $count; ?>
 			</div>
-			<?php echo $excerpt; ?>
-			<?php echo $category; ?>
 			<?php echo $tag; ?>
 			<?php echo $button; ?>
 		</div>

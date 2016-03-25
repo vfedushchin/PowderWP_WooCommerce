@@ -386,8 +386,8 @@ class Cosmetro_Custom_Posts_Widget extends Cherry_Abstract_Widget {
 			global $post;
 
 			$holder_view_dir = locate_template( 'inc/widgets/custom-posts/views/custom-post-view.php' );
-			$image_size = apply_filters( 'cosmetro_playlist_thumbnail_image_size', 'cosmetro-thumb-m' );
-			$image_mobile_size = apply_filters( 'cosmetro_playlist_thumbnail_size_mobile', 'cosmetro-thumb-s' );
+			$image_size = apply_filters( 'cosmetro_playlist_thumbnail_image_size', '_tm-thumb-536-449' );
+			$image_mobile_size = apply_filters( 'cosmetro_playlist_thumbnail_size_mobile', '_tm-thumb-149-126' );
 
 			echo '<div class="custom-posts-holder row" >';
 

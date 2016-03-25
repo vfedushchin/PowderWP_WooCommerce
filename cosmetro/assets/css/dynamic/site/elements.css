@@ -272,18 +272,22 @@ footer.site-footer .widget_recent_entries ul li .post-date:before{
 	color: $regular_accent_color_1;
 }
 
-.sidebar-primary .widget > ul li a, .sidebar-secondary .widget > ul li a {
+.widget > ul li a {
+	color: $regular_h3_color;
+	font-style: $h5_font_style;
+	font-weight: $h5_font_weight;
+	font-size: @font_size($h5_font_size, multiple, ceil, 1)px;
+	line-height: $h5_line_height;
+	font-family: $h5_font_family;
+	letter-spacing: $h5_letter_spacing{px};
+	text-transform: none;
+	text-transform: uppercase;
+}
+
+.widget > ul li a:hover {
 	color: $regular_accent_color_1;
 }
 
-.sidebar-primary .widget > ul li a:hover, .sidebar-secondary .widget > ul li a:hover {
-	color: $regular_text_color;
-}
-
-
-.widget_tag_cloud .tagcloud a:hover, .widget_product_tag_cloud .tagcloud a:hover{
-	color: $regular_text_color;
-}
 
 .top-panel .chosen-container .chosen-drop {
 	background: $regular_text_color;
@@ -412,4 +416,8 @@ div.invert .widget .tagcloud a:hover{
 .site-footer .widget_product_search form button:hover {
 	color: $regular_text_color;
 	background: #fff;
+}
+
+.breadcrumbs .breadcrumbs__item .breadcrumbs__item-target {
+	color: $regular_accent_color_1;
 }

@@ -24,10 +24,10 @@
 			float: none;
 			position: absolute;
 			top: 10px;
-			right: 0;
+			right: 10px;
 			z-index: 99;
 			@include media-breakpoint-up(lg) {
-				top: 30px;
+				top: 10px;
 			}
 		}
 	}
@@ -229,17 +229,22 @@
 
 .post {
 	&-thumbnail {
-		&__link {
-			&.post-thumbnail--small {
-				display: block;
-				margin-bottom: 15px;
-				text-align: center;
-				@include media-breakpoint-up(lg) {
-					float: left;
-					margin-right: 60px;
-					text-align: left;
-				}
+		&.post-thumbnail--small {
+			display: block;
+			margin-bottom: 15px;
+			text-align: center;
+			@include media-breakpoint-up(xl) {
+				max-width: 40%;
+				float: left;
+				margin-right: 60px;
+				text-align: left;
 			}
+			@include media-breakpoint-up(xxl) {
+				max-width: 536px;
+				min-width: 536px;
+			}
+		}
+		&__link {
 		}
 		&__img {
 			display: inline-block;
@@ -320,11 +325,12 @@
 	}
 	&__date,
 	&__comments,
+	&-author,
 	&__tags {
 		.material-icons {
-			font-size: 16px;
+			font-size: 21px;
 			margin-right: 10px;
-			vertical-align: middle;
+			vertical-align: bottom;
 		}
 	}
 	&__tags {
@@ -380,3 +386,56 @@
 		}
 	}
 }
+
+
+
+@include media-breakpoint-up(xl) {
+	.posts-list {
+		.hentry {
+			overflow: hidden;
+			.post-body {
+				overflow: hidden;
+			}
+		}
+	}
+}
+
+.single {
+	.post_format-post-format-gallery {
+		.post-thumbnail {
+			display: none;
+		}
+	}
+}
+
+
+.posts-list--default {
+	.hentry {
+		.post__cats {
+			margin-top: -4px;
+		}
+		.entry-title {
+			margin-top: 4px;
+			margin-bottom: 4px;
+		}
+		.entry-content {
+			margin-top: 0;
+		}
+		.btn {
+			float: none;
+		}
+		.share-btns__list {
+			float: none;
+		}
+		* + .entry-meta {
+			margin-top: 26px;
+		}
+		&.post_format-post-format-quote .post-thumbnail {
+			max-width: 100%;
+			margin-right: 0;
+			float: none;
+		}
+	}
+
+}
+

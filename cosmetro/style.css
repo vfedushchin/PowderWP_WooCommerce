@@ -5249,8 +5249,8 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 .footer-area .widget.widget_meta > ul > li,
 .footer-area .widget.widget_pages > ul > li {
   text-transform: uppercase;
-  margin-top: 4px;
-  padding-top: 4px;
+  margin-top: 3px;
+  padding-top: 3px;
 }
 
 .sidebar-primary .widget.widget_categories > ul > li .children li, .sidebar-primary .widget.widget_archive > ul > li .children li, .sidebar-primary .widget.yith-woocompare-widget > ul > li .children li, .sidebar-primary .widget.widget_product_categories > ul > li .children li, .sidebar-primary .widget.widget_meta > ul > li .children li, .sidebar-primary .widget.widget_pages > ul > li .children li,
@@ -6020,6 +6020,10 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   color: #f4f4f4;
 }
 
+.widget-area .widget.widget_categories .widget-title {
+  margin-bottom: 29px;
+}
+
 .full-width-header-area .widget-custom-postson .custom-posts-holder .post:nth-last-child(-n+3) .post-inner,
 .after-content-full-width-area .widget-custom-postson .custom-posts-holder .post:nth-last-child(-n+3) .post-inner,
 .before-content-area .widget-custom-postson .custom-posts-holder .post:nth-last-child(-n+3) .post-inner,
@@ -6725,13 +6729,13 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   float: none;
   position: absolute;
   top: 10px;
-  right: 0;
+  right: 10px;
   z-index: 99;
 }
 
 @media (min-width: 992px) {
   .has-post-thumbnail .sticky__label {
-    top: 30px;
+    top: 10px;
   }
 }
 
@@ -6950,17 +6954,25 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   pointer-events: none;
 }
 
-.post-thumbnail__link.post-thumbnail--small {
+.post-thumbnail.post-thumbnail--small {
   display: block;
   margin-bottom: 15px;
   text-align: center;
 }
 
-@media (min-width: 992px) {
-  .post-thumbnail__link.post-thumbnail--small {
+@media (min-width: 1200px) {
+  .post-thumbnail.post-thumbnail--small {
+    max-width: 40%;
     float: left;
     margin-right: 60px;
     text-align: left;
+  }
+}
+
+@media (min-width: 1600px) {
+  .post-thumbnail.post-thumbnail--small {
+    max-width: 536px;
+    min-width: 536px;
   }
 }
 
@@ -7056,10 +7068,10 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   }
 }
 
-.post__date .material-icons, .post__comments .material-icons, .post__tags .material-icons {
-  font-size: 16px;
+.post__date .material-icons, .post__comments .material-icons, .post-author .material-icons, .post__tags .material-icons {
+  font-size: 21px;
   margin-right: 10px;
-  vertical-align: middle;
+  vertical-align: bottom;
 }
 
 .single-post .post__tags {
@@ -7115,6 +7127,50 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   .position-two-sidebars #sidebar-primary {
     order: 2;
   }
+}
+
+@media (min-width: 1200px) {
+  .posts-list .hentry {
+    overflow: hidden;
+  }
+  .posts-list .hentry .post-body {
+    overflow: hidden;
+  }
+}
+
+.single .post_format-post-format-gallery .post-thumbnail {
+  display: none;
+}
+
+.posts-list--default .hentry .post__cats {
+  margin-top: -4px;
+}
+
+.posts-list--default .hentry .entry-title {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.posts-list--default .hentry .entry-content {
+  margin-top: 0;
+}
+
+.posts-list--default .hentry .btn, .posts-list--default .hentry .woocommerce .button, .woocommerce .posts-list--default .hentry .button, .posts-list--default .hentry .woocommerce-account .button, .woocommerce-account .posts-list--default .hentry .button, .posts-list--default .hentry .woocommerce .wishlist_table td.product-add-to-cart a.button, .woocommerce .wishlist_table td.product-add-to-cart .posts-list--default .hentry a.button, .posts-list--default .hentry .woocommerce-account .wishlist_table td.product-add-to-cart a.button, .woocommerce-account .wishlist_table td.product-add-to-cart .posts-list--default .hentry a.button, .posts-list--default .hentry .yith-woocompare-widget a.compare.button, .yith-woocompare-widget .posts-list--default .hentry a.compare.button {
+  float: none;
+}
+
+.posts-list--default .hentry .share-btns__list {
+  float: none;
+}
+
+.posts-list--default .hentry * + .entry-meta {
+  margin-top: 26px;
+}
+
+.posts-list--default .hentry.post_format-post-format-quote .post-thumbnail {
+  max-width: 100%;
+  margin-right: 0;
+  float: none;
 }
 
 /*--------------------------------------------------------------
@@ -7309,7 +7365,7 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 }
 
 .embed-wrapper .twitter-tweet {
-  margin: 10px auto !important;
+  /* margin: 10px auto !important; */
   max-width: 90% !important;
 }
 
@@ -9547,7 +9603,7 @@ input.qty[type=number] {
 }
 
 .breadcrumbs .breadcrumbs__item .breadcrumbs__item-sep {
-  margin: 0 5px;
+  margin: 0 19px;
 }
 
 .cleasrfix {
@@ -11141,7 +11197,7 @@ table.compare-list td.even {
 
 .preview-container_bg {
   position: absolute;
-  top: 3091px;
+  top: -694px;
   height: 11000px;
   width: 2050px;
   left: 50%;
@@ -11158,7 +11214,7 @@ table.compare-list td.even {
 }
 
 .pr-bg-1 .preview-container_bg {
-  background: url(../cosmetro/assets/images/4.jpg) 50% 0 no-repeat;
+  background: url(../cosmetro/assets/images/3.jpg) 50% 0 no-repeat;
 }
 
 .develop {

@@ -10,7 +10,7 @@
  *
  * @return void
  */
-function cosmetro_blog_content() {
+function cosmetro_blog_content($length = 45) {
 
 	if ( ! is_singular() && wp_is_mobile() ) {
 		return;
@@ -28,7 +28,7 @@ function cosmetro_blog_content() {
 			break;
 
 		case 'excerpt':
-			cosmetro_post_excerpt( array( 'length' => 45, 'more' => '&hellip;' ) );
+			cosmetro_post_excerpt( array( 'length' => $length, 'more' => '&hellip;' ) );
 			break;
 	}
 
@@ -78,6 +78,21 @@ function cosmetro_post_content() {
 	) );
 
 }
+
+
+/**
+ * Print class of image small or fullwidth
+ *
+ * @return void
+ */
+function cosmetro_post_thumbnail_size_class( ) {
+	$size = get_theme_mod(
+		'blog_featured_image',
+		cosmetro_theme()->customizer->get_default( 'blog_featured_image' )
+	);
+	echo 'post-thumbnail--' . $size;
+}
+
 
 /**
  * Show post thumbnail.

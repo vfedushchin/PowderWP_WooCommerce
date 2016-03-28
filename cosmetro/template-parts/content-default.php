@@ -12,7 +12,7 @@
 
 
 
-		<figure class="post-thumbnail">
+		<figure class="post-thumbnail <?php cosmetro_post_thumbnail_size_class() ?> ">
 			<?php cosmetro_post_thumbnail( true ); ?>
 			<?php cosmetro_sticky_label(); ?>
 		</figure><!-- .post-thumbnail -->

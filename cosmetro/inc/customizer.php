@@ -1365,12 +1365,12 @@ function cosmetro_get_customizer_options() {
 				'type'            => 'section',
 				'active_callback' => 'is_home',
 			),
-			/*'blog_title' => array(
+			'blog_title' => array(
 				'title'   => __( 'Title', 'cosmetro' ),
 				'section' => 'blog',
 				'field'   => 'text',
 				'type'    => 'control',
-			),*/
+			),
 			'blog_layout_type' => array(
 				'title'   => esc_html__( 'Layout', 'cosmetro' ),
 				'section' => 'blog',

@@ -115,7 +115,7 @@ function cosmetro_register_sidebars() {
 			'conditional'    => array( 'is_home', 'is_front_page' ),
 		),
 		'footer-area' => array(
-			'name'           => esc_html__( 'Footer widget area', 'cosmetro' ),
+			'name'           => esc_html__( 'Footer style 1 widget area', 'cosmetro' ),
 			'description'    => '',
 			'before_widget'  => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget'   => '</aside>',
@@ -126,7 +126,7 @@ function cosmetro_register_sidebars() {
 			'is_global'      => true,
 		),
 		'footer-area2' => array(
-			'name'           => esc_html__( 'Footer widget area 2', 'powder' ),
+			'name'           => esc_html__( 'Footer style 2 widget area', 'powder' ),
 			'description'    => '',
 			'before_widget'  => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget'   => '</aside>',

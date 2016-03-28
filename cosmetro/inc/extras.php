@@ -177,6 +177,7 @@ function cosmetro_post_formats_gallery() {
 	if ( ! in_array( get_theme_mod( 'blog_layout_type' ), array( 'masonry-2-cols', 'masonry-3-cols' ) ) ) {
 		return do_action( 'cherry_post_format_gallery', array(
 			// 'size' => cosmetro_get_thumbnail_size(),
+			'size' => '_tm-thumb-536-449',
 		) );
 	}
 

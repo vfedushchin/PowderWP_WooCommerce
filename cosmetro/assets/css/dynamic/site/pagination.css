@@ -1,14 +1,10 @@
 .pagination .page-numbers,
 .woocommerce nav.woocommerce-pagination ul li .page-numbers {
+	font-size: 14px;
 	color: $regular_text_color;
-	font-style: $h4_font_style;
-	font-weight: $h4_font_weight;
-	font-size: @font_size($h4_font_size, multiple, ceil, 1)px;
-	font-family: $h4_font_family;
-	letter-spacing: $h4_letter_spacing{px};
 }
 .pagination .page-numbers .material-icons{
-	font-size: 18px;
+	font-size: 16px;
 }
 .bne-testimonial-slider.bne-flexslider .flex-control-nav li a{
 	background: $regular_text_color;
@@ -27,13 +23,13 @@
 .pagination .page-numbers.prev,
 .woocommerce nav.woocommerce-pagination ul li .page-numbers.next,
 .woocommerce nav.woocommerce-pagination ul li .page-numbers.prev {
-	color: #fff;
-	background: $regular_text_color;
+	font-size: 14px;
+	color: $regular_h3_color;
+	font-family: $h3_font_family;
 }
 .pagination .page-numbers.next:hover,
 .pagination .page-numbers.prev:hover,
 .woocommerce nav.woocommerce-pagination ul li .page-numbers.next:hover,
 .woocommerce nav.woocommerce-pagination ul li .page-numbers.prev:hover {
-	color: #fff;
-	background: $regular_accent_color_1;
+	color: $regular_accent_color_1;
 }

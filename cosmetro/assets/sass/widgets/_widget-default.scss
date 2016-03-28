@@ -37,8 +37,8 @@
 			> ul{
 				> li{
 					text-transform: uppercase;
-					margin-top: 4px;
-					padding-top: 4px;
+					margin-top: 3px;
+					padding-top: 3px;
 					.children{
 
 
@@ -518,4 +518,8 @@
 			color: #f4f4f4;
 		}
 	}
+}
+
+.widget-area .widget.widget_categories {
+	.widget-title {margin-bottom: 29px;}
 }

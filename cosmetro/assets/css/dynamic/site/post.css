@@ -27,7 +27,7 @@
 .post-author,
 .posted-by,
 .post-featured-content {
-	color: $regular_accent_color_2;
+	color: $regular_h3_color;
 }
 .post-featured-content.format-quote.invert {
 	color: $invert_text_color;
@@ -37,15 +37,15 @@
 	color:$invert_link_hover_color;
 }
 .post-format-link {
-	background: @alpha( $regular_text_color, 90 );
+	background: @alpha( $regular_accent_color_2, 80 );
 	color: #fff;
-	font-style: $h4_font_style;
-	font-weight: $h4_font_weight;
-	font-size: @font_size($h4_font_size, multiple, ceil, 1)px;
-	line-height: $h4_line_height;
-	font-family: $h4_font_family;
-	letter-spacing: $h4_letter_spacing{px};
+	font-style: $h6_font_style;
+	font-weight: $h6_font_weight;
+	font-size: @font_size($h6_font_size, multiple, ceil, 1)px;
+	font-family: $h6_font_family;
+	letter-spacing: $h6_letter_spacing{px};
 	text-decoration: none;
+	text-transform: uppercase;
 }
 .post-format-link:hover {
 	background: @alpha( $regular_accent_color_1, 90 );
@@ -178,16 +178,21 @@ body .post-author__content{
 }
 
 .post-format-quote:before, .post_format-post-format-quote blockquote:before {
-	color: #ff4747;
+	color: #fff;
 	font-family: Playfair Display;
 }
 
 .post-format-quote, .post_format-post-format-quote blockquote{
-	background: $regular_text_color;
+	background: $regular_accent_color_1;
 }
 
 .post-format-quote q, .post-format-quote cite, .post_format-post-format-quote blockquote q, .post_format-post-format-quote blockquote cite{
 	color: #fff;
+}
+.site .post-format-quote cite,
+blockquote cite {
+	font-family: $h3_font_family;
+	color: $regular_h3_color;
 }
 
 .audio-player-wrap{
@@ -198,13 +203,9 @@ body .post-author__content{
 	color: #fff;
 }
 
-.mejs-container, .mejs-embed, .mejs-embed body, .mejs-container .mejs-controls{
-	background: $regular_text_color !important;
-}
 
 .posts-list--grid-2-cols .hentry.post.post_format-post-format-image .post-thumbnail__link:before, .posts-list--grid-2-cols .hentry.post .post-gallery__link:before, .posts-list--grid-3-cols .hentry.post.post_format-post-format-image .post-thumbnail__link:before, .posts-list--grid-3-cols .hentry.post .post-gallery__link:before, .posts-list--masonry-2-cols .hentry.post.post_format-post-format-image .post-thumbnail__link:before, .posts-list--masonry-2-cols .hentry.post .post-gallery__link:before, .posts-list--masonry-3-cols .hentry.post.post_format-post-format-image .post-thumbnail__link:before, .posts-list--masonry-3-cols .hentry.post .post-gallery__link:before, .hentry.post .post-gallery__link:before, .hentry.post.post_format-post-format-image .post-thumbnail__link:before{
-	color: #fff;
-	background: $regular_text_color;
+	color: $regular_accent_color_1;
 }
 
 .post-gallery .swiper-button-next, .post-gallery .swiper-button-prev {

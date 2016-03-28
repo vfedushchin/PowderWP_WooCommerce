@@ -1135,15 +1135,16 @@ blockquote {
 
 .post-format-quote, .post_format-post-format-quote blockquote {
 	position: relative;
-	padding: 33px 50px 41px 101px;
+	padding: 41px 50px 57px 126px;
+	margin-bottom: -4px;
 
 	&:before {
 		content: "\201C";
 		position: absolute;
-		top: 23px;
-		left: 37px;
+		top: 24px;
+		left: 33px;
 		margin: 0;
-		font-size: 100px;
+		font-size: 170px;
 		line-height: 1;
 		font-weight: 900;
 	}
@@ -1151,7 +1152,7 @@ blockquote {
 	cite {
 		display: block;
 		font-style: normal;
-		margin-top: 18px;
+		margin-top: 11px;
 		font-size: 14px;
 
 		&:before {
@@ -1542,11 +1543,7 @@ footer {
 
 // _layout.scss
 .site-content {
-	padding-top: 15px;
-
-	@include media-breakpoint-up(md) {
-		padding-top: 46px;
-	}
+	padding-top: 17px;
 }
 
 .single-post .site-main, .page .site-main, .single .site-main {
@@ -1561,7 +1558,7 @@ footer {
 
 // _breadcrumbs.scss
 .breadcrumbs {
-	margin: 0 0 32px;
+	margin: 0 0 50px;
 
 	> .container {
 		padding-left: 0;
@@ -2107,7 +2104,7 @@ textarea.comment-form__field {
 	.hentry.post {
 
 		+ .post {
-			margin-top: 49px;
+			margin-top: 40px;
 		}
 	}
 }
@@ -2115,8 +2112,8 @@ textarea.comment-form__field {
 .blog, .single {
 	.hentry.post {
 		margin: 0;
-		padding-bottom: 61px;
-		border-bottom: 1px solid #e8e8eb;
+		padding-bottom: 25px;
+		border-bottom: 1px solid #232222;
 		border-radius: 0;
 
 		+ .post {
@@ -2147,6 +2144,7 @@ body [class*='posts-'] {
 	margin-left: 0;
 	padding-right: 0;
 	padding-left: 0;
+	font-size: 14px;
 }
 
 .posts-list .share-btns__list:before, .posts-list .entry-footer .btn:before {
@@ -2155,6 +2153,7 @@ body [class*='posts-'] {
 
 .posts-list .share-btns__list {
 	margin-top: 23px;
+	margin-bottom: 15px;
 }
 
 .entry-footer .btn {
@@ -2162,11 +2161,8 @@ body [class*='posts-'] {
 }
 
 body .post-gallery {
-	margin: 25px 0 0;
+	margin: 0;
 
-	img {
-		border-radius: 0;
-	}
 }
 
 .hentry.post {
@@ -2174,24 +2170,40 @@ body .post-gallery {
 		position: relative;
 
 		&:before {
-			content: '\e03d';
+			content: '\e8ff';
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			font-family: "fl-line-icon-set";
+			font-family: "Material Icons";
 			width: 50px;
 			height: 50px;
 			font-size: 29px;
 			line-height: 50px;
-			border-radius: 50%;
 			text-align: center;
 			transition: all .3s ease;
 			@include transform(translate(-50%, -50%) scale(0));
+			z-index: 2;
+			background: none;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: rgba(#000,0.8);
+			opacity: 0;
+			z-index: 1;
+			transition: .4s all ease;
 		}
 
 		&:hover {
 			&:before {
 				@include transform(translate(-50%, -50%) scale(1));
+			}
+			&:after {
+				opacity: 1;
 			}
 		}
 	}
@@ -2199,10 +2211,12 @@ body .post-gallery {
 
 .posts-list--grid-2-cols, .posts-list--grid-3-cols, .posts-list--masonry-2-cols, .posts-list--masonry-3-cols {
 	.hentry.post {
-		margin-right: 30px;
+		margin-right: 0px;
 		margin-bottom: 35px;
-		margin-left: 30px;
+		margin-left: 0px;
 		padding-bottom: 40px;
+		padding-left: 30px;
+		padding-right: 30px;
 		text-align: center;
 
 		.entry-header {
@@ -2563,15 +2577,16 @@ body .post-gallery {
 .post .post-format-link {
 	text-decoration: none;
 	border-radius: 0;
-	padding: 7px 22px 8px;
+	padding: 11px 22px 8px;
+	max-width: 100%;
 
 	&:before {
-		content: '\e06e';
-		font-family: "fl-line-icon-set";
+		content: '\e250';
+		font-family: "Material Icons";
+		font-size: 21px;
 		position: relative;
 		top: -2px;
 		left: -1px;
-		font-size: 34px;
 	}
 }
 
@@ -2586,29 +2601,13 @@ body .post-gallery {
 
 .audio-player-wrap {
 	position: relative;
-	padding: 22px 20px 22px 70px;
-
-	&:before {
-		content: '\e022';
-		font-family: 'fl-line-icon-set';
-		position: absolute;
-		top: 22px;
-		left: 22px;
-		font-size: 34px;
-		line-height: 1;
-	}
+	padding: 0;
 
 	.entry-content & {
 		margin-top: 13px;
 		margin-bottom: 15px;
 	}
-	@media (max-width: 479px) {
-		padding: 0;
 
-		&:before {
-			display: none;
-		}
-	}
 }
 
 .blog .post_format-post-format-aside header * + .entry-meta {
@@ -2621,10 +2620,10 @@ body .post-gallery {
 }
 
 .pagination, .woocommerce nav.woocommerce-pagination {
-	margin-top: 60px;
+	margin-top: 30px;
 	padding: 0 0 56px;
 	.nav-links {
-		margin-left: -20px;
+		margin-left: 0;
 	}
 	ul.page-numbers {
 		border: none;
@@ -2633,12 +2632,13 @@ body .post-gallery {
 			margin-right: 0;
 			a.next.page-numbers {
 				text-indent: 1000px;
+				line-height: 20px;
 				position: relative;
 				&:after {
 					font-family: 'Material Icons';
 					content: "\e409";
-					font-size: 18px;
-					line-height: 50px;
+					font-size: 16px;
+					line-height: 20px;
 					text-indent: 0;
 					color: #fff;
 					display: block;
@@ -2653,7 +2653,7 @@ body .post-gallery {
 		}
 	}
 	.material-icons {
-		line-height: 13px;
+		line-height: 16px;
 	}
 	a.page-numbers, span.page-numbers, ul li {
 		width: auto;
@@ -2661,14 +2661,12 @@ body .post-gallery {
 		min-width: 0;
 		padding: 0;
 		border: none;
-		line-height: 50px;
-		margin: 0 20px 0 0;
+		margin: 0 10px 0 0;
 		border-radius: 0;
+		line-height: 20px;
 		&.prev, &.next {
 			padding: 0;
-			line-height: 50px;
-			width: 50px;
-			height: 50px;
+			line-height: 20px;
 		}
 		&.next {
 			margin: 0 25px 0 0;
@@ -3331,7 +3329,7 @@ input[type="search"] {
 
 .mfp-wrap {
 	.mfp-close {
-		top: 39px !important;
+		top: 32px !important;
 		right: 0 !important;
 	}
 }
@@ -3385,7 +3383,7 @@ input[type="search"] {
 		font-size: 14px;
 		@include media-breakpoint-up(xl) {
 			float: left;
-			width: 240px;
+			width: 238px;
 			margin-right: 60px;
 			overflow: hidden;
 		}
@@ -3598,7 +3596,7 @@ blockquote {
 		content: "\201C";
 		position: absolute;
 		top: -12px;
-		left: -25px;
+		left: -5px;
 		margin: 0;
 		font-size: 200px;
 		line-height: 1;
@@ -3692,4 +3690,8 @@ div.wpcf7 {
 	.site-header-cart {
 		display: inline-block;
 	}
+}
+
+.posts-list .blog-title {
+	margin-bottom: 38px;
 }

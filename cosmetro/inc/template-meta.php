@@ -83,7 +83,7 @@ function cosmetro_meta_date( $context = 'loop', $args = array() ) {
 	$time_string = '<time class="post-date__time" datetime="%1$s">%2$s</time>';
 
 	$time_string = sprintf( $time_string,
-		esc_attr( get_the_date( 'c' ) ), '<span>' . get_the_date( 'j' ) . '</span>' . get_the_date( 'M' ) );
+		esc_attr( get_the_date( 'c' ) ), '<span>' . get_the_date( 'j' ) . ' </span>' . get_the_date( 'M' ) . ', ' . get_the_date( 'Y' ) );
 
 
 	/**

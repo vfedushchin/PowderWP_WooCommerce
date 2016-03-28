@@ -10,42 +10,56 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-			cosmetro_meta_date( 'single' );
 
-			the_title( '<h1 class="entry-title">', '</h1>' );
+	<div class="post-left-column">
+		<?php
+				cosmetro_meta_categories( 'single', array(
+					//'before'    => esc_html__( 'Categories: ', 'cosmetro' ),
+			));
 		?>
 
-		<?php if ( 'post' === get_post_type() ) : ?>
 
-			<div class="entry-meta">
+			<div class="post__date">
+				<i class="material-icons">access_time</i>
+				<span><?php echo esc_html__( 'Published on ', 'cosmetro' ); ?></span>
+				<span class="post__date"><?php cosmetro_meta_date( 'single' ); ?> </span>
+			</div>
 
-				<?php
+		<div class="post__author vcard">
+			<i class="material-icons">person</i>
+			<span><?php echo esc_html__( 'By ', 'cosmetro' ); ?></span>
+			<?php
 					cosmetro_meta_author(
 						'single',
 						array(
-							'before' => esc_html__( 'Posted by', 'cosmetro' ) . ' ',
 						)
 					);
 				?>
+		</div>
 
-				<?php
-					cosmetro_meta_comments( 'single', array(
-						'zero'   => '0' . esc_html__( ' Comment', 'cosmetro' ),
-						'one'    => '1' . esc_html__( ' Comment', 'cosmetro' ),
-						'plural' => '%' . esc_html__( ' Comments', 'cosmetro' ),
-					) );
-				?>
+		<!-- this block in "post__tags" div -->
+			<?php
+				cosmetro_meta_tags( 'single', array(
+					'before'    => '<span>Tags:</span>',
+					'separator' => ', ',
+				) );
+			?>
 
-			</div><!-- .entry-meta -->
+		<?php cosmetro_share_buttons( 'single' ); ?>
+	</div>
 
-		<?php endif; ?>
+	<div class="post-right-column">
 
+
+
+	<header class="entry-header">
+		<?php
+			the_title( '<h1 class="entry-title">', '</h1>' );
+		?>
 	</header><!-- .entry-header -->
 
 	<figure class="post-thumbnail">
-		<?php cosmetro_post_thumbnail( false ); ?>
+	<?php cosmetro_post_thumbnail( false ); ?>
 		<div class="post-thumbnail__format-link">
 			<?php do_action( 'cherry_post_format_link', array( 'render' => true, 'class' => 'invert' ) ); ?>
 		</div>
@@ -62,13 +76,20 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php
-			cosmetro_meta_categories( 'single', array(
-				'before'    => esc_html__( 'Categories: ', 'cosmetro' ),
-			));
 
-			cosmetro_meta_tags( 'single' );
-		?>
-		<?php cosmetro_share_buttons( 'single' ); ?>
 	</footer><!-- .entry-footer -->
+
+
+	<?php
+		// the_post_navigation();
+
+	cosmetro_post_author_bio();
+
+	// If comments are open or we have at least one comment, load up the comment template.
+	if ( comments_open() || get_comments_number() ) :
+		comments_template();
+	endif;
+	?>
+
+	</div><!-- .post-right-column -->
 </article><!-- #post-## -->

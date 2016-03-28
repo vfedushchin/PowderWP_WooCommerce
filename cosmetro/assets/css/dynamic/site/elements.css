@@ -61,12 +61,15 @@ blockquote {
 }
 
 body blockquote, blockquote q, blockquote p, body blockquote.single-format-quote, .posts-list--grid-2-cols blockquote, .posts-list--grid-2-cols .post-format-quote {
-	font-style: $h4_font_style;
-	font-weight: $h4_font_weight;
-	font-size: @font_size($h4_font_size, multiple, ceil, 1)px !important;
-	line-height: $h4_line_height;
-	font-family: $h4_font_family;
-	color: $regular_text_color;
+	font-style: $h2_font_style;
+	font-weight: $h2_font_weight;
+	font-size: @font_size($h2_font_size, multiple, ceil, 1)px !important;
+	line-height: $h2_line_height;
+	font-family: $h2_font_family;
+	color: #fff;
+}
+.single.single-post blockquote, .single.single-post blockquote q {
+	color: $regular_h3_color;
 }
 blockquote:before{
 	color: $regular_accent_color_1;
@@ -89,8 +92,7 @@ blockquote cite {
 }
 
 blockquote.single-format-quote, .posts-list--grid-2-cols .post-format-quote, .post_format-post-format-quote blockquote p{
-	color: $invert_text_color;
-	background-color: $regular_text_color;
+	background: $regular_accent_color_1;
 }
 
 blockquote.single-format-quote:before,
@@ -124,11 +126,11 @@ code {
 }
 
 footer a{
-	color: $regular_accent_color_1;
+	color: $regular_h3_color;
 }
 
 footer a:hover{
-	color: #fff;
+	color: $regular_accent_color_1;
 }
 
 footer .invert .widget ul li a, footer .invert .widget ul li a{
@@ -419,5 +421,5 @@ div.invert .widget .tagcloud a:hover{
 }
 
 .breadcrumbs .breadcrumbs__item .breadcrumbs__item-target {
-	color: $regular_accent_color_1;
+	color: $regular_accent_color_2;
 }

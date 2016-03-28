@@ -88,11 +88,19 @@ function cosmetro_set_thumb_sizes( $size ) {
 	$layout = get_theme_mod( 'blog_layout_type', cosmetro_theme()->customizer->get_default( 'blog_layout_type' ) );
 
 	if ( 'grid-2-cols' === $layout && ! ( is_sticky() && is_home() && ! is_paged() ) ) {
-		return 'cosmetro-post-thumbnail-large';
+		return '_tm-thumb-536-449';
 	}
 
 	if ( 'grid-3-cols' === $layout && ! ( is_sticky() && is_home() && ! is_paged() ) ) {
-		return 'cosmetro-thumb-370-270';
+		return '_tm-thumb-536-449';
+	}
+
+	if ( 'masonry-2-cols' === $layout && ! ( is_sticky() && is_home() && ! is_paged() ) ) {
+		return '_tm-thumb-536-449';
+	}
+
+	if ( 'masonry-3-cols' === $layout && ! ( is_sticky() && is_home() && ! is_paged() ) ) {
+		return '_tm-thumb-536-449';
 	}
 
 	if ( 'default' === $layout && ! ( is_sticky() && is_home() && ! is_paged() ) ) {

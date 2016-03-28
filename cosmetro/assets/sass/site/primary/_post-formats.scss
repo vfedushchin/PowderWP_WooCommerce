@@ -9,7 +9,8 @@
 			margin-top: 10px;
 		}
 		img {
-			border-radius: $border__radius $border__radius 0 0;
+			border-radius: 0;
+			width: 100%;
 			display: block;
 			.entry-content & {
 				border-radius: 0;

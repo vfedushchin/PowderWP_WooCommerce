@@ -3,7 +3,7 @@
 .card {
 	display: block;
 	@include word-wrap;
-	
+
 	@media (min-width: 768px) and (max-width: 992px) {
 		.entry-meta {
 			> span {
@@ -72,16 +72,30 @@
 @include media-breakpoint-up(md) {
 	.card-columns {
 		column-gap: $card-deck-margin;
+		-moz-column-gap: $card-deck-margin;
+		-webkit-column-gap: $card-deck-margin;
 		.card {
 			display: inline-block;
 			width: 100%; // Don't let them exceed the column width
 		}
 	}
-	.posts-list--masonry-2-cols { column-count: 2; }
-	.posts-list--masonry-3-cols { column-count: 3; }
+	.posts-list--masonry-2-cols {
+		column-count: 2;
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+	}
+	.posts-list--masonry-3-cols {
+		column-count: 3;
+		-moz-column-count: 3;
+		-webkit-column-count: 3;
+	}
 	.two-sidebars {
 		column-gap: normal;
+		-moz-column-gap: normal;
+		-webkit-column-gap: normal;
 		column-count: auto;
+		-moz-column-count: auto;
+		-webkit-column-count: auto;
 		.card {
 			display: block;
 		}

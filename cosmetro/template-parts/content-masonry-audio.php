@@ -6,84 +6,85 @@
  *
  * @package cosmetro
  */
-
 ?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'posts-list__item card' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'posts-list__item card hentry' ); ?>>
 	<div class="post-list__item-content">
 
-		<?php cosmetro_meta_date( 'loop' ); ?>
-
-		<header class="entry-header">
-			<?php
-				if ( is_single() ) {
-					the_title( '<h5 class="entry-title">', '</h5>' );
-				} else {
-					the_title( '<h5 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h5>' );
-				}
-			?>
-
-			<?php if ( 'post' === get_post_type() ) : ?>
-
-				<div class="entry-meta">
-
-					<?php
-						cosmetro_meta_author(
-							'loop',
-							array(
-								'before' => esc_html__( 'Posted by', 'cosmetro' ) . ' ',
-							)
-						);
-					?>
-
-					<?php
-						cosmetro_meta_comments( 'loop', array(
-							'zero'   => '0' . esc_html__( ' Comment', 'cosmetro' ),
-							'one'    => '1' . esc_html__( ' Comment', 'cosmetro' ),
-							'plural' => '%' . esc_html__( ' Comments', 'cosmetro' ),
-						) );
-					?>
-
-				</div><!-- .entry-meta -->
-
-			<?php endif; ?>
-
-		</header><!-- .entry-header -->
-
-		<div class="post-featured-content invert">
-			<?php cosmetro_sticky_label(); ?>
+		<figure class="post-thumbnail">
 			<?php do_action( 'cherry_post_format_audio' ); ?>
-		</div><!-- .post-featured-content -->
+			<?php cosmetro_sticky_label(); ?>
+		</figure><!-- .post-thumbnail -->
 
-		<div class="entry-content">
-			<?php
+		<div class="post-body">
 
-				$embed_args = array(
-					'fields' => array( 'soundcloud' ),
-					'height' => 310,
-					'width'  => 310,
-				);
-				$embed_content = apply_filters( 'cherry_get_embed_post_formats', false, $embed_args );
+			<header class="entry-header">
+				<?php
+					if ( is_single() ) {
+						the_title( '<h1 class="entry-title">', '</h1>' );
+					} else {
+						the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
+					}
+				?>
+			</header><!-- .entry-header -->
 
-				if ( false === $embed_content ) {
-					cosmetro_blog_content();
-				} else {
-					printf( '<div class="embed-wrapper">%s</div>', $embed_content );
-				}
-			?>
-		</div><!-- .entry-content -->
+			<div class="entry-content">
+				<?php cosmetro_blog_content(50); ?>
+			</div><!-- .entry-content -->
+
+
+			<footer class="entry-footer">
+
+				<?php
+					cosmetro_meta_date( 'loop', array(
+						'before' => ' <i class="material-icons">access_time</i><span>' . esc_html__( 'Published on', 'cosmetro' ) . '</span> ',
+						'after' => '',
+					) );
+				?>
+
+				<?php
+					cosmetro_meta_author(
+						'loop',
+						array(
+							'before' => '<i class="material-icons">person</i>' . esc_html__( 'By', 'cosmetro' ) . ' ',
+							'after' => '',
+						)
+					);
+				?>
+
+				<?php if ( 'post' === get_post_type() ) : ?>
+					<div class="entry-meta">
+						<?php
+							cosmetro_meta_comments( 'loop', array(
+								'before' => '<i class="material-icons">mode_comment</i>',
+								'zero'   => '0',
+								'one'    => '1',
+								'plural' => '%',
+							) );
+
+							cosmetro_meta_tags( 'loop', array(
+								'before'    => '<i class="material-icons">folder_open</i>',
+								'separator' => ', ',
+							) );
+						?>
+					</div><!-- .entry-meta -->
+				<?php endif; ?>
+
+
+				<?php cosmetro_read_more(); ?>
+				<?php cosmetro_share_buttons( 'loop' ); ?>
+			</footer><!-- .entry-footer -->
+
+
+
+
+		</div>
+
+
+
+
+
+
 
 	</div>
-	<footer class="entry-footer">
-		<?php
-			cosmetro_meta_categories( 'loop', array(
-				'before'    => esc_html__( 'Categories: ', 'cosmetro' ),
-			));
 
-			cosmetro_meta_tags( 'loop', array(
-				'before'    => esc_html__( 'Tags: ', 'cosmetro' ),
-			));
-		?>
-		<?php cosmetro_read_more(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

@@ -193,18 +193,11 @@
 	&-footer {
 		position: relative;
 		.posts-list & {
-			margin: 25px -10px 0;
-			padding-right: 10px;
-			padding-left: 10px;
-			@include media-breakpoint-up(lg) {
-				margin-right: -30px;
-				margin-left: -30px;
-				padding-right: 30px;
-				padding-left: 30px;
-			}
+			margin-top: 25px;
+			margin: 0;
 		}
 		.btn {
-			float: right;
+			float: left;
 			margin-top: 10px;
 			@include media-breakpoint-up(lg) {
 				margin-top: 30px;
@@ -233,6 +226,17 @@
 			display: block;
 			margin-bottom: 15px;
 			text-align: center;
+
+			.posts-list--grid-2-cols &,
+			.posts-list--grid-3-cols &,
+			.posts-list--masonry-3-cols &,
+			.posts-list--masonry-2-cols & {
+				width: 100%;
+				max-width: 100%;
+				float: none;
+				margin-right: 0;
+			}
+
 			@include media-breakpoint-up(xl) {
 				max-width: 40%;
 				float: left;
@@ -242,6 +246,8 @@
 			@include media-breakpoint-up(xxl) {
 				max-width: 536px;
 				min-width: 536px;
+
+
 			}
 		}
 		&__link {
@@ -263,15 +269,12 @@
 		&--fullwidth {
 			.posts-list & {
 				display: block;
-				margin: -10px -10px 10px;
 				&:first-child {
 					img {
 						border-radius: $border__radius $border__radius 0 0;
 					}
 				}
-				@include media-breakpoint-up(lg) {
-					margin: -30px -30px 25px;
-				}
+
 			}
 		}
 	}
@@ -395,6 +398,12 @@
 			overflow: hidden;
 			.post-body {
 				overflow: hidden;
+			}
+
+			&.post_format-post-format-quote {
+				.post-body {
+					overflow: visible;
+				}
 			}
 		}
 	}

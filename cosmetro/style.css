@@ -3974,6 +3974,8 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 @media (min-width: 768px) {
   .card-columns {
     column-gap: 3.75rem;
+    -moz-column-gap: 3.75rem;
+    -webkit-column-gap: 3.75rem;
   }
   .card-columns .card {
     display: inline-block;
@@ -3981,13 +3983,21 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   }
   .posts-list--masonry-2-cols {
     column-count: 2;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
   }
   .posts-list--masonry-3-cols {
     column-count: 3;
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
   }
   .two-sidebars {
     column-gap: normal;
+    -moz-column-gap: normal;
+    -webkit-column-gap: normal;
     column-count: auto;
+    -moz-column-count: auto;
+    -webkit-column-count: auto;
   }
   .two-sidebars .card {
     display: block;
@@ -6917,22 +6927,12 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 }
 
 .posts-list .entry-footer {
-  margin: 25px -10px 0;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-
-@media (min-width: 992px) {
-  .posts-list .entry-footer {
-    margin-right: -30px;
-    margin-left: -30px;
-    padding-right: 30px;
-    padding-left: 30px;
-  }
+  margin-top: 25px;
+  margin: 0;
 }
 
 .entry-footer .btn, .entry-footer .woocommerce .button, .woocommerce .entry-footer .button, .entry-footer .woocommerce-account .button, .woocommerce-account .entry-footer .button, .entry-footer .woocommerce .wishlist_table td.product-add-to-cart a.button, .woocommerce .wishlist_table td.product-add-to-cart .entry-footer a.button, .entry-footer .woocommerce-account .wishlist_table td.product-add-to-cart a.button, .woocommerce-account .wishlist_table td.product-add-to-cart .entry-footer a.button, .entry-footer .yith-woocompare-widget a.compare.button, .yith-woocompare-widget .entry-footer a.compare.button {
-  float: right;
+  float: left;
   margin-top: 10px;
 }
 
@@ -6958,6 +6958,16 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   display: block;
   margin-bottom: 15px;
   text-align: center;
+}
+
+.posts-list--grid-2-cols .post-thumbnail.post-thumbnail--small,
+.posts-list--grid-3-cols .post-thumbnail.post-thumbnail--small,
+.posts-list--masonry-3-cols .post-thumbnail.post-thumbnail--small,
+.posts-list--masonry-2-cols .post-thumbnail.post-thumbnail--small {
+  width: 100%;
+  max-width: 100%;
+  float: none;
+  margin-right: 0;
 }
 
 @media (min-width: 1200px) {
@@ -6996,17 +7006,10 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 
 .posts-list .post-thumbnail--fullwidth {
   display: block;
-  margin: -10px -10px 10px;
 }
 
 .posts-list .post-thumbnail--fullwidth:first-child img {
   border-radius: 4px 4px 0 0;
-}
-
-@media (min-width: 992px) {
-  .posts-list .post-thumbnail--fullwidth {
-    margin: -30px -30px 25px;
-  }
 }
 
 .posts-list .post__cats,
@@ -7136,6 +7139,9 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   .posts-list .hentry .post-body {
     overflow: hidden;
   }
+  .posts-list .hentry.post_format-post-format-quote .post-body {
+    overflow: visible;
+  }
 }
 
 .single .post_format-post-format-gallery .post-thumbnail {
@@ -7198,7 +7204,8 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 }
 
 .post-gallery img {
-  border-radius: 4px 4px 0 0;
+  border-radius: 0;
+  width: 100%;
   display: block;
 }
 
@@ -11197,7 +11204,7 @@ table.compare-list td.even {
 
 .preview-container_bg {
   position: absolute;
-  top: -694px;
+  top: 30px;
   height: 11000px;
   width: 2050px;
   left: 50%;
@@ -11214,7 +11221,7 @@ table.compare-list td.even {
 }
 
 .pr-bg-1 .preview-container_bg {
-  background: url(../cosmetro/assets/images/3.jpg) 50% 0 no-repeat;
+  background: url(../cosmetro/assets/images/5.jpg) 50% 0 no-repeat;
 }
 
 .develop {

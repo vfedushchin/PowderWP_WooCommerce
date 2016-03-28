@@ -22,13 +22,14 @@ if ( have_posts() ) :
 	<?php
 	endif; ?>
 
-	<div <?php cosmetro_posts_list_class(); ?>>
-
-
 	<?php
 		$blog_title_txt = get_theme_mod( 'blog_title', 'Blog' );
 		echo '<h4 class="blog-title">' . $blog_title_txt . '</h4>'
 	?>
+
+	<div <?php cosmetro_posts_list_class(); ?>>
+
+
 
 	<?php /* Start the Loop */
 	while ( have_posts() ) : the_post();

@@ -141,19 +141,31 @@ function cosmetro_render_theme_url( $url ) {
  * @return string
  */
 function cosmetro_get_thumbnail_size() {
+		if ( is_single() ) {
+		return $size;
+	}
+
 	$layout = get_theme_mod( 'blog_layout_type', cosmetro_theme()->customizer->get_default( 'blog_layout_type' ) );
 
-	// if ( 'grid-2-cols' === $layout && ! ( is_sticky() && is_home() && ! is_paged() ) ) {
-	// 	return 'cosmetro-post-thumbnail-large';
-	// }
+	if ( 'grid-2-cols' === $layout && ! ( is_sticky() && is_home() && ! is_paged() ) ) {
+		return '_tm-thumb-536-449';
+	}
 
-	// if ( 'grid-3-cols' === $layout && ! ( is_sticky() && is_home() && ! is_paged() ) ) {
-	// 	return 'cosmetro-thumb-370-270';
-	// }
+	if ( 'grid-3-cols' === $layout && ! ( is_sticky() && is_home() && ! is_paged() ) ) {
+		return '_tm-thumb-536-449';
+	}
 
-	// if ( 'default' === $layout && ! ( is_sticky() && is_home() && ! is_paged() ) ) {
-	// 	return $size;
-	// }
+	if ( 'masonry-2-cols' === $layout && ! ( is_sticky() && is_home() && ! is_paged() ) ) {
+		return '_tm-thumb-536-449';
+	}
+
+	if ( 'masonry-3-cols' === $layout && ! ( is_sticky() && is_home() && ! is_paged() ) ) {
+		return '_tm-thumb-536-449';
+	}
+
+	if ( 'default' === $layout && ! ( is_sticky() && is_home() && ! is_paged() ) ) {
+		return '_tm-thumb-536-449';
+	}
 
 	return 'cosmetro-thumb-1170-854';
 }

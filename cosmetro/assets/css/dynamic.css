@@ -443,17 +443,18 @@ mark, ins {
 .woocommerce span.onsale,
 .woocommerce span.new,
 .woocommerce span.featured{
-	font-family: $h1_font_family;
+	font-family: $h3_font_family;
 	background: $regular_accent_color_1;
+	color: #fff;
+	text-transform: uppercase;
 }
 
 .woocommerce span.new{
-	background: $regular_text_color;
+	background: $regular_accent_color_2;
 }
 
 .woocommerce span.featured{
-	color: $regular_link_color;
-	background: #fff;
+	background: $regular_accent_color_2;
 }
 
 .single-product-images .enlarge{
@@ -577,8 +578,8 @@ a.compare.button:hover{
 .woocommerce ul.order_details li strong,
 .woocommerce-page ul.order_details li strong{
 	background: none;
-	font-family: $h4_font_family;
-	color: $regular_accent_color_1;
+	font-family: $h3_font_family;
+	color: $regular_h3_color;
 }
 .compare-list.products .price td,
 .compare-list.products .price ins{
@@ -691,13 +692,7 @@ a.compare.button:hover{
 	text-align: $h4_text_align;
 	color: white;
 }
-@media (min-width: 534px) {
-	.tm_custom_style.bne-element-container .bne-testimonial-slider .slides li .bne-testimonial-description{
-		font-weight: $h4_font_weight;
-		font-size: $h4_font_size{px};
-		line-height: $h4_line_height;
-	}
-}
+
 
 .woocommerce table.shop_table thead th,
 .woocommerce .cart-collaterals .cart_totals tr th,
@@ -758,4 +753,9 @@ a.compare.button:hover{
 .woocommerce .woocommerce-result-count span,
 .woocommerce-page .woocommerce-result-count span{
 	color: $regular_accent_color_1;
+}
+
+
+.woocommerce table {
+	color: $regular_h3_color;
 }

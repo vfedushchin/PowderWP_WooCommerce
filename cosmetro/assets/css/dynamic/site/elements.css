@@ -239,36 +239,30 @@ footer.site-footer .widget_recent_entries ul li .post-date:before{
 }
 
 .tm_custom_menu_widget{
+	border: 1px solid $regular_h3_color;
 	border-top-width: 2px;
-	border-top-style: solid;
-	border-top-color: solid $regular_text_color;
-	border-right-width: 1px;
-	border-right-style: solid;
-	border-right-color: solid $regular_text_color;
-	border-left-width: 1px;
-	border-left-style: solid;
-	border-left-color: solid $regular_text_color;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: solid $regular_text_color;
 }
 
-.tm_custom_menu_widget .widget-title:first-line {
-	font-style: $h3_font_style;
-	font-weight: $h3_font_weight;
-	font-size: @font_size($h3_font_size, multiple, ceil, 1)px;
-	line-height: $h3_line_height;
-	font-family: $h3_font_family;
-	letter-spacing: $h3_letter_spacing{px};
-	text-align: $h3_text_align;
+.tm_custom_menu_widget .menu {
+	color: $regular_h3_color;
+	font-style: $h5_font_style;
+	font-weight: $h5_font_weight;
+	font-size: @font_size($h5_font_size, multiple, ceil, 1)px;
+	line-height: $h5_line_height;
+	font-family: $h5_font_family;
+	letter-spacing: $h5_letter_spacing{px};
 	text-transform: none;
 	text-transform: uppercase;
 }
-
-.tm_custom_menu_widget .widget-title {
-	font-size: @font_size($h3_font_size, multiple, ceil, 1)px;
-	line-height: $h3_line_height;
+.tm_custom_menu_widget .menu li + li {margin-top: 7px;}
+.tm_custom_menu_widget .menu a {
+	color: $regular_h3_color;
 }
+.tm_custom_menu_widget .menu a:hover {
+	color: $regular_accent_color_1;
+}
+
+
 
 .breadcrumbs .breadcrumbs__item .breadcrumbs__item-link:hover{
 	color: $regular_accent_color_1;
@@ -403,6 +397,7 @@ div.invert .widget .tagcloud a:hover{
 	background: #a2a2a2;
 }
 
+
 .site-footer .star-rating:before{
 	color: #fff;
 }
@@ -422,4 +417,15 @@ div.invert .widget .tagcloud a:hover{
 
 .breadcrumbs .breadcrumbs__item .breadcrumbs__item-target {
 	color: $regular_accent_color_2;
+}
+
+
+
+
+/* WOO */
+.woocommerce .star-rating:before {
+	color: #b9bdcd;
+}
+.woocommerce .star-rating, .woocommerce-page .star-rating, .single-product.woocommerce .star-rating {
+	color: $regular_accent_color_3;
 }

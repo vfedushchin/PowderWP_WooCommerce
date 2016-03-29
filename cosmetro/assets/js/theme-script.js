@@ -480,7 +480,7 @@
 
 	$('h4').each(function () {
 		var me = $(this);
-		me.html(me.html().replace(/^(\w+)/, '<span>$1</span>'));
+		// me.html(me.html().replace(/^(\w+)/, '<span>$1</span>'));
 	});
 
 	$('.wp-audio-shortcode').wrap('<div class="audio-player-wrap"></div>')

@@ -457,6 +457,11 @@ a:focus {
 			width: 270px;
 			max-width: 270px;
 			padding: 13px 22px 10px;
+			@include media-breakpoint-up(lg) {
+				max-width: 390px;
+				width: 390px;
+				padding: 13px 30px 10px;
+			}
 			background: #fff;
 			box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.12);
 			transition: all .3s ease;
@@ -1647,7 +1652,7 @@ footer {
 			width: auto;
 			max-width: none;
 			margin-left: -50%;
-			max-height: 663px;
+			max-height: 816px;
 		}
 	}
 	> .row > .col-lg-3 {
@@ -1764,10 +1769,15 @@ body .tm_custom_menu_widget {
 	}
 
 	.widget-title {
-		padding-right: 60%;
 		word-wrap: normal;
 		-moz-hyphens: none;
 		hyphens: none;
+		text-align: left;
+
+		&:before {
+			left: 0;
+			margin-left: 0;
+		}
 	}
 }
 

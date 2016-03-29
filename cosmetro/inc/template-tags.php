@@ -165,7 +165,7 @@ if ( ! function_exists( 'cosmetro_header_cart' ) ) {
 			</li>
 			<li class="header-cart-dropdown">
 				<div class="shopping_cart-dropdown-wrap">
-					<h4><?php echo __( 'My Cart', 'cosmetro' ) ?></h4>
+					<h4><?php echo __( 'Cart', 'cosmetro' ) ?></h4>
 					<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
 				</div>
 			</li>

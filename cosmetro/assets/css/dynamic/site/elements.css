@@ -306,13 +306,12 @@ footer.site-footer .widget_recent_entries ul li .post-date:before{
 }
 
 .chosen-container .chosen-results li.highlighted{
-	background: $regular_accent_color_1;
+	background: $regular_accent_color_4;
 	color: #fff;
 }
 
 .currency_switcher .chosen-container .chosen-results{
 	color: $regular_h3_color;
-	border: none;
 	margin: 0;
 }
 

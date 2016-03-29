@@ -15,9 +15,15 @@
 	color: white;
 }
 
-.woocommerce-currency-switcher-form .dd-selected, #lang_sel ul li a{
+.woocommerce-currency-switcher-form .dd-selected{
 	background: $regular_text_color;
 	color: #fff;
+}
+.rd-mobilemenu .lang_sel_sel, .rd-mobilemenu #lang_sel ul li a{
+	background: $regular_h3_color !important;
+}
+.rd-mobilemenu #lang_sel ul ul {
+  border-top: none;
 }
 
 .site-header .top-panel__wrap .widget_product_search form button {
@@ -28,12 +34,6 @@
 	color: $regular_accent_color_1;
 }
 
-@media (max-width: 767px) {
-	.site-header .top-panel__wrap .widget_product_search form.navbar-search button,
-	.site-header .top-panel__wrap .widget_product_search form.navbar-search button i {
-		color: $regular_text_color;
-	}
-}
 
 .dd-options{
 	background: $regular_text_color;

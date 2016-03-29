@@ -22,7 +22,8 @@
 	}
 }
 
-@media (max-width: 37.5em) {
+@media (max-width: 767px) {
+/* @media (max-width: 37.5em) { */
 	header.site-header {
 		&.centered, &.default {
 			.header-container_wrap {

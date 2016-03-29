@@ -40,7 +40,7 @@
 			var menu = $('<ul>', {'class': settings.menuClass}),
 				li = this.$source.children();
 
-			for (var i = 0; i < li.length; i++) {
+			/*for (var i = 0; i < li.length; i++) {
 				var o = li[i].children,
 					item = null;
 
@@ -95,7 +95,7 @@
 				if (item) {
 					menu.append(item);
 				}
-			}
+			}*/
 
 			return menu;
 		},
@@ -113,7 +113,7 @@
 				$(this).toggleClass('active');
 			});
 
-			$('.navbar-header-cart').on((isTouch ? 'touchstart' : 'click'), function () {
+			$('.navbar-header-cart777').on((isTouch ? 'touchstart' : 'click'), function () {
 				$('.' + settings.cntClass).removeClass('active');
 				$('.' + settings.toggleClass).removeClass('active');
 			});
@@ -164,7 +164,7 @@
 			$rdMobileMenuUl = $('.rd-mobilemenu_ul'),
 			$navbarSearch = $('.navbar-search'),
 			$navbarSearchToggle = $('.navbar-search-toggle'),
-			$navbarHeaderCart = $('.navbar-header-cart 7777'),
+			$navbarHeaderCart = $('.navbar-header-cart777'),
 			rdMobilePanelisStuck = 'rd-mobilepanel-isStuck',
 			searchSwitcherBlock = '.search_switcher_block',
 			SearchActive = 'search-active';
@@ -175,7 +175,7 @@
 			$('#rd-navbar-shop-menu li').clone().appendTo('.' + settings.menuClass).addClass('rd-mobile-menu-shop');
 			$('.currency_switcher').clone().appendTo('.' + settings.menuClass).addClass('rd-mobile-currency');
 			$('#lang_sel').clone().appendTo('.' + settings.menuClass).addClass('rd-mobile-lang');
-			$('.social-list.social-list--header').clone().appendTo('.' + settings.menuClass).addClass('rd-mobile-social-list');
+			// $('.social-list.social-list--header').clone().appendTo('.' + settings.menuClass).addClass('rd-mobile-social-list');
 			$navbarHeaderCart.addClass('navbar-header-cart-active');
 		};
 
@@ -202,6 +202,7 @@
 
 		function wpadminbarActive() {
 			var offsetNavbarwpAdminBarActive = 'offset-navbar-adminbar-active',
+				offsetNavbarwpAdminBarActiveSearch = 'offset-navbar-adminbar-active-search',
 				posAbsolute = 'absolute',
 				wpAdminBarActive = 'wpadminbar-active',
 				wpadminbarHeight = $('#wpadminbar').height();
@@ -212,7 +213,7 @@
 				$rdMobilepanelToggle.addClass(posAbsolute);
 				$rdMobileMenu.addClass(offsetNavbarwpAdminBarActive);
 				$rdMobileMenuUl.addClass(posAbsolute);
-				$navbarSearch.addClass(offsetNavbarwpAdminBarActive);
+				$navbarSearch.addClass(offsetNavbarwpAdminBarActiveSearch);
 				$navbarSearchToggle.addClass(offsetNavbarwpAdminBarActive);
 				$navbarHeaderCart.addClass(offsetNavbarwpAdminBarActive);
 			}
@@ -236,6 +237,16 @@
 							wpAdminBarActiveAddClass();
 						}
 					}
+
+					var margin_offset;
+					var search_element = $('form.offset-navbar-adminbar-active-search');
+					if ($(this).scrollTop() < wpadminbarHeight) {
+						margin_offset = 46 - $(this).scrollTop();
+					}
+					else {
+						margin_offset = 0;
+					}
+					search_element.css( "margin-top", margin_offset );
 				});
 			}
 

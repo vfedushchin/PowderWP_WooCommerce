@@ -138,7 +138,7 @@ if ( ! function_exists( 'cosmetro_cart_link' ) ) {
 	function cosmetro_cart_link() {
 		?>
 		<div class="cart-contents">
-			<span class="count"><i class="fl-flat-icons-set-2-shopping191"></i><span><?php echo WC()->cart->get_cart_contents_count();?></span></span>
+			<span class="count"><i class="fl-flat-icons-set-2-shopping191"></i><span><?php echo WC()->cart->get_cart_contents_count();?></span><span class="item_txt"><?php echo __( 'items', 'cosmetro' ) ?></span></span>
 		</div>
 		<?php
 	}

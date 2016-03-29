@@ -298,7 +298,7 @@ mark, ins {
 .woocommerce .woocommerce-error,
 .woocommerce .woocommerce-info,
 .woocommerce .woocommerce-message{
-	background-color: $regular_accent_color_3;
+	background-color: #efefef;
 	color: $regular_text_color;
 	border-top: 3px solid $regular_accent_color_1;
 }
@@ -758,4 +758,7 @@ a.compare.button:hover{
 
 .woocommerce table {
 	color: $regular_h3_color;
+}
+.woocommerce .woocommerce-info:before {
+	color: $regular_accent_color_1;
 }

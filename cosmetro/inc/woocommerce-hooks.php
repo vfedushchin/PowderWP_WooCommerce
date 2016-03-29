@@ -38,7 +38,7 @@ add_action( 'widgets_init', 'cosmetro_override_woocommerce_widgets', 15 );
 add_action( 'woocommerce_before_shop_loop_item_title', 'cosmetro_woocommerce_show_flash' );
 
 remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
-add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_rating', 11 );
+add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_rating', 6 );
 
 remove_action( 'tm_carousel_woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
 add_action( 'tm_carousel_woocommerce_after_shop_loop_item', 'woocommerce_template_loop_rating', 11 );
@@ -50,7 +50,7 @@ remove_action( 'tm_carousel_woocommerce_after_shop_loop_item', 'woocommerce_temp
 add_action( 'tm_carousel_woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_add_to_cart', 11 );
 
 remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
-add_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_add_to_cart', 11 );
+add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 7 );
 
 add_action( 'tm_carousel_woocommerce_before_shop_loop_item_title', 'cosmetro_product_image_wrap_open', 2 );
 add_action( 'tm_carousel_woocommerce_before_shop_loop_item_title', 'cosmetro_product_image_wrap_close', 11 );
@@ -68,6 +68,9 @@ add_action( 'woocommerce_after_shop_loop_item', 'cosmetro_product_add_to_wishlis
 
 add_action( 'woocommerce_after_shop_loop_item', 'cosmetro_wishlist_compare_wrap_open', 11 );
 add_action( 'woocommerce_after_shop_loop_item', 'cosmetro_wishlist_compare_wrap_close', 20 );
+
+add_action( 'woocommerce_after_shop_loop_item', 'cosmetro_compare_tocart_wrap_open', 4 );
+add_action( 'woocommerce_after_shop_loop_item', 'cosmetro_compare_tocart_wrap_close', 21 );
 
 add_filter( 'woocommerce_show_page_title', 'cosmetro_woocommerce_show_page_title' );
 
@@ -316,6 +319,26 @@ function cosmetro_product_image_wrap_open() {
 function cosmetro_product_image_wrap_close() {
 	echo "</div>";
 }
+
+
+/**
+ * Open wrap wishlist compare and add to cart
+ *
+ * @return string
+ */
+function cosmetro_compare_tocart_wrap_open() {
+	echo "<div class='block_compare_tocart'>";
+}
+
+/**
+ * Close wrap wishlist compare and add to cart
+ *
+ * @return string
+ */
+function cosmetro_compare_tocart_wrap_close() {
+	echo "</div>";
+}
+
 
 /**
  * Open wrap wishlist and compare buttons

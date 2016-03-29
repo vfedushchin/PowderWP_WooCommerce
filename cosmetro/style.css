@@ -6311,7 +6311,8 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   }
 }
 
-@media (max-width: 37.5em) {
+@media (max-width: 767px) {
+  /* @media (max-width: 37.5em) { */
   header.site-header.centered .header-container_wrap, header.site-header.default .header-container_wrap {
     display: -webkit-flex;
     display: flex;
@@ -6331,13 +6332,13 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   }
 }
 
-@media screen and (max-width: 37.5em) and (min-width: 37.5em) {
+@media screen and (max-width: 767px) and (min-width: 37.5em) {
   header.site-header.centered .header-container_wrap, header.site-header.default .header-container_wrap {
     flex-wrap: no-wrap;
   }
 }
 
-@media (max-width: 37.5em) {
+@media (max-width: 767px) {
   header.site-header .top-panel__message {
     display: none;
   }
@@ -6550,14 +6551,32 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   -ms-flex-item-align: auto;
   align-self: auto;
   padding-top: 20px;
-  text-align: center;
   order: 3;
+}
+
+@media (min-width: 37.5em) {
+  .site-header.centered .header-container_wrap .site-shop-elements {
+    text-align: center;
+  }
 }
 
 .site-header.centered .header-container_wrap .site-shop-elements .site-header-cart {
   margin-bottom: 10px;
   padding-bottom: 0;
-  margin-left: 20px;
+  margin-left: 44px;
+}
+
+@media (max-width: 767px) {
+  .site-header.centered .header-container_wrap .site-shop-elements .site-header-cart {
+    margin-left: 10px;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .site-header.centered .header-container_wrap .site-shop-elements .site-header-cart {
+    margin-bottom: -12px;
+  }
 }
 
 .site-header.centered .header-container_wrap .site-shop-elements .widget {
@@ -6585,6 +6604,12 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   -ms-flex-item-align: auto;
   align-self: auto;
   order: 4;
+}
+
+@media (max-width: 37.5em) {
+  .site-header.centered .header-container_wrap .main-navigation {
+    top: -17px !important;
+  }
 }
 
 @media (min-width: 768px) {

@@ -144,6 +144,7 @@
 			$(window).on('resize', function () {
 				$('.' + settings.cntClass).removeClass('active');
 				$('.' + settings.toggleClass).removeClass('active');
+
 			});
 		}
 	};
@@ -228,6 +229,19 @@
 				$navbarHeaderCart.removeClass(offsetNavbarwpAdminBarActive);
 			}
 
+
+			function fixSearchOffset() {
+				var margin_offset;
+				var search_element = $('form.offset-navbar-adminbar-active-search');
+				if ($(window).scrollTop() < wpadminbarHeight && $(window).width() < 768) {
+					margin_offset = 46 - $(this).scrollTop();
+				}
+				else {
+					margin_offset = 0;
+				}
+				search_element.css( "margin-top", margin_offset );
+			}
+
 			function wpAdminBarActiveScroll() {
 				$(window).scroll(function () {
 					if ($(window).width() < 768) {
@@ -238,15 +252,7 @@
 						}
 					}
 
-					var margin_offset;
-					var search_element = $('form.offset-navbar-adminbar-active-search');
-					if ($(this).scrollTop() < wpadminbarHeight) {
-						margin_offset = 46 - $(this).scrollTop();
-					}
-					else {
-						margin_offset = 0;
-					}
-					search_element.css( "margin-top", margin_offset );
+					fixSearchOffset();
 				});
 			}
 
@@ -263,6 +269,7 @@
 					$('body').removeClass(wpAdminBarActive);
 					wpAdminBarActiveRemoveClass();
 				}
+				fixSearchOffset();
 			};
 
 			wpadminbarActiveAdd();

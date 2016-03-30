@@ -76,5 +76,20 @@
 
 	</footer><!-- .entry-footer -->
 
+
+	<?php
+		// the_post_navigation();
+
+		cosmetro_post_author_bio();
+
+		// If comments are open or we have at least one comment, load up the comment template.
+		if ( comments_open() || get_comments_number() ) :
+			comments_template();
+		endif;
+	?>
+
 	</div><!-- .post-right-column -->
 </article><!-- #post-## -->
+
+
+

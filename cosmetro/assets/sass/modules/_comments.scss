@@ -12,20 +12,13 @@
 	}
 	&-title {
 
-		&:before {
-			display: block;
-			content: '';
-			position: absolute;
-			top: 0;
-			right: 0;
-			left: 0;
-			height: 1px;
-			background-color: $color__background-hr;
-		}
 	}
 }
 
 .comment {
+	.comment-author {
+		max-width: 88px;
+	}
 	&-list {
 		list-style: none;
 		padding: 0 0 20px;
@@ -36,8 +29,14 @@
 			margin-left: 0;
 			border-top: 1px solid $color__background-hr;
 			@include media-breakpoint-up(lg) {
-				padding-left: 30px;
+				padding-left: 122px;
 			}
+			.children {
+				@include media-breakpoint-up(lg) {
+					padding-left: 30px;
+				}
+			}
+
 		}
 		> .comment {
 			margin-bottom: 10px;

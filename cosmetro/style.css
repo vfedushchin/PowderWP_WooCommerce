@@ -2781,7 +2781,7 @@ blockquote:before, .post-format-quote:before {
 }
 
 hr {
-  background-color: #e0e0e8;
+  background-color: #232222;
   border: 0;
   height: 1px;
   margin: 20px -10px 25px;
@@ -2855,23 +2855,23 @@ table {
 .entry-content table {
   margin: 0 0 1.5em;
   max-width: 100%;
-  border: 1px solid #e0e0e8;
+  border: 1px solid #232222;
 }
 
 .entry-content table th,
 .entry-content table td {
   padding: 5px;
   vertical-align: top;
-  border: 1px solid #e0e0e8;
+  border: 1px solid #232222;
 }
 
 .entry-content table thead th {
   vertical-align: bottom;
-  border-bottom: 1px solid #e0e0e8;
+  border-bottom: 1px solid #232222;
 }
 
 .entry-content table tbody + tbody {
-  border-top: 1px solid #e0e0e8;
+  border-top: 1px solid #232222;
 }
 
 .btn i, .woocommerce .button i, .woocommerce-account .button i, .woocommerce .wishlist_table td.product-add-to-cart a.button i, .woocommerce-account .wishlist_table td.product-add-to-cart a.button i, .yith-woocompare-widget a.compare.button i, .btn .btn__icon, .woocommerce .button .btn__icon, .woocommerce-account .button .btn__icon, .woocommerce .wishlist_table td.product-add-to-cart a.button .btn__icon, .woocommerce-account .wishlist_table td.product-add-to-cart a.button .btn__icon, .yith-woocompare-widget a.compare.button .btn__icon {
@@ -3336,7 +3336,7 @@ textarea {
 .comment-respond {
   margin: 0 -10px;
   padding: 12px 10px 0;
-  border-top: 1px solid #e0e0e8;
+  border-top: 1px solid #232222;
 }
 
 @media (min-width: 992px) {
@@ -3356,6 +3356,10 @@ textarea {
   }
 }
 
+.comment-form {
+  max-width: 535px;
+}
+
 .comment-form-comment, .comment-form-author, .comment-form-email, .comment-form-url {
   margin: 10px 0 0 0;
 }
@@ -3371,10 +3375,6 @@ textarea {
 .comment-form__field {
   width: 100%;
   vertical-align: top;
-}
-
-.comment-list .comment-form__field {
-  background-color: #fff;
 }
 
 .comment-form .logged-in-as,
@@ -3666,15 +3666,8 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   }
 }
 
-.comments-title:before {
-  display: block;
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 1px;
-  background-color: #e0e0e8;
+.comment .comment-author {
+  max-width: 88px;
 }
 
 .comment-list {
@@ -3687,11 +3680,17 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   list-style: none;
   padding-left: 10px;
   margin-left: 0;
-  border-top: 1px solid #e0e0e8;
+  border-top: 1px solid #232222;
 }
 
 @media (min-width: 992px) {
   .comment-list .children {
+    padding-left: 122px;
+  }
+}
+
+@media (min-width: 992px) {
+  .comment-list .children .children {
     padding-left: 30px;
   }
 }
@@ -3817,17 +3816,27 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 # Author Bio
 --------------------------------------------------------------*/
 .post-author-bio {
-  margin: 0 -10px;
-  padding: 10px;
-  border-top: 1px solid #e0e0e8;
+  position: relative;
+  padding: 12px 8px;
+  background: #f4f4f4;
+  margin-top: 81px;
+  margin-bottom: 81px;
 }
 
-@media (min-width: 992px) {
-  .post-author-bio {
-    margin-right: -30px;
-    margin-left: -30px;
-    padding: 30px;
-  }
+.post-author-bio:before, .post-author-bio:after {
+  position: absolute;
+  display: inline-block;
+  content: '';
+  width: 100%;
+  height: 1px;
+  left: 0;
+  top: -81px;
+  background: #232222;
+}
+
+.post-author-bio:after {
+  top: auto;
+  bottom: -81px;
 }
 
 .post-author__holder {
@@ -3836,7 +3845,7 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 
 @media (min-width: 992px) {
   .post-author__holder {
-    padding: 30px 30px 20px;
+    padding: 30px 30px 37px;
   }
 }
 
@@ -3847,7 +3856,7 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 
 @media (min-width: 992px) {
   .post-author__avatar {
-    margin: 0 30px 10px 0;
+    margin: 18px 30px 10px 0;
   }
 }
 
@@ -3859,8 +3868,13 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 
 @media (min-width: 992px) {
   .post-author__avatar .avatar {
-    width: auto;
+    width: 100%;
+    width: 108px;
   }
+}
+
+.post-author__content {
+  margin-top: 30px;
 }
 
 /*--------------------------------------------------------------
@@ -3885,7 +3899,7 @@ form[id*='give-form'] .give-btn.give-btn-modal {
   display: block;
   content: '';
   height: 1px;
-  background-color: #e0e0e8;
+  background-color: #232222;
   pointer-events: none;
 }
 
@@ -4798,7 +4812,7 @@ form[id*='give-form'] .give-btn.give-btn-modal {
 }
 
 .about-author_btn_box {
-  border-top: 1px solid #e0e0e8;
+  border-top: 1px solid #232222;
   padding: 15px 0 5px;
 }
 
@@ -7432,7 +7446,7 @@ footer .footer-area-wrap .footer-area2 .widget.widget-subscribe .subscribe-block
 
 @media (min-width: 992px) {
   .entry-title {
-    font-size: 30px;
+    /* font-size: 30px; */
   }
 }
 
@@ -7492,7 +7506,7 @@ footer .footer-area-wrap .footer-area2 .widget.widget-subscribe .subscribe-block
   display: block;
   content: '';
   height: 1px;
-  background-color: #e0e0e8;
+  background-color: #232222;
   pointer-events: none;
 }
 
@@ -7719,6 +7733,10 @@ footer .footer-area-wrap .footer-area2 .widget.widget-subscribe .subscribe-block
   max-width: 100%;
   margin-right: 0;
   float: none;
+}
+
+.single .entry-content {
+  padding-bottom: 85px;
 }
 
 /*--------------------------------------------------------------
@@ -8161,6 +8179,7 @@ embed,
 iframe,
 object {
   max-width: 100%;
+  width: 100%;
 }
 
 .img-pull-left {
@@ -11713,7 +11732,7 @@ table.compare-list td.even {
 
 .preview-container_bg {
   position: absolute;
-  top: 30px;
+  top: 456px;
   height: 11000px;
   width: 2050px;
   left: 50%;
@@ -11730,7 +11749,7 @@ table.compare-list td.even {
 }
 
 .pr-bg-1 .preview-container_bg {
-  background: url(../cosmetro/assets/images/5.jpg) 50% 0 no-repeat;
+  background: url(../cosmetro/assets/images/6.jpg) 50% 0 no-repeat;
 }
 
 .develop {

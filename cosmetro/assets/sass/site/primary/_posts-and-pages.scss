@@ -159,7 +159,7 @@
 			}
 		}
 		@include media-breakpoint-up(lg) {
-			font-size: 30px;
+			/* font-size: 30px; */
 		}
 		.posts-list--grid-2-cols &,
 		.posts-list--grid-3-cols &,
@@ -448,3 +448,6 @@
 
 }
 
+.single .entry-content {
+	padding-bottom: 85px;
+}

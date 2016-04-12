@@ -2716,8 +2716,8 @@ body .post-gallery {
 	body.woocommerce-page {
 		&.position-one-right-sidebar, &.position-one-left-sidebar{
 			#primary.col-md-8{
-				padding-left: 0.9375rem;
-				padding-right: 0.9375rem;
+				/* padding-left: 0.9375rem;
+				padding-right: 0.9375rem; */
 			}
 		}
 		[class*='sidebar-'] {

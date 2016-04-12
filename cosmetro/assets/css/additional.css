@@ -5031,8 +5031,8 @@ body .post-gallery {
 
 @media (min-width: 1200px) {
   body.woocommerce-page.position-one-right-sidebar #primary.col-md-8, body.woocommerce-page.position-one-left-sidebar #primary.col-md-8 {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+    /* padding-left: 0.9375rem;
+				padding-right: 0.9375rem; */
   }
   body.woocommerce-page [class*='sidebar-']:before {
     display: none;

@@ -33,21 +33,14 @@ if ( empty( $woocommerce_loop['columns'] ) ) {
 
 // Increase loop count.
 $woocommerce_loop['loop']++;
-if ( function_exists( 'is_shop' ) && function_exists( 'is_product_category' ) ) {
-if ( is_shop() ) { ?>
-<div <?php wc_product_cat_class( 'col-lg-3 col-md-4 col-sm-6 col-xs-12', $category ); ?>>
-<?php } elseif ( is_product_category() ) {
 	$sidebar_position = get_theme_mod( 'sidebar_position' );
 	if ( 'fullwidth' === $sidebar_position ) { ?>
 	<div <?php wc_product_cat_class( 'col-lg-3 col-md-4 col-xs-12 col-sm-6', $category ); ?>>
 	<?php }	else{ ?>
 	<div <?php wc_product_cat_class( 'col-lg-4 col-md-6 col-xs-12 col-sm-6', $category ); ?>>
-	<?php }
-}
-} else { ?>
-<li <?php wc_product_cat_class( '', $category ); ?>>
+	<?php } ?>
 	<?php
-}
+
 	/**
 	 * woocommerce_before_subcategory hook.
 	 *
@@ -80,10 +73,5 @@ if ( is_shop() ) { ?>
 	 * @hooked woocommerce_template_loop_category_link_close - 10
 	 */
 	do_action( 'woocommerce_after_subcategory', $category );
-if ( function_exists( 'is_shop' ) && function_exists( 'is_product_category' ) ) {
-	if ( is_shop() || is_product_category() ) { ?>
+ ?>
 </div>
-<?php }
-} else { ?>
-</li>
-<?php } ?>

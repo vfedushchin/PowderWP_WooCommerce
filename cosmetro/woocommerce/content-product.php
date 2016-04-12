@@ -41,24 +41,13 @@ $woocommerce_loop['loop']++;
 
 // Extra post classes
 $classes = array();
-if ( function_exists( 'is_shop' ) && function_exists( 'is_product_category' ) && function_exists( 'is_product' ) ) {
-	if ( is_shop() || is_product_category() ) {
-		$sidebar_position = get_theme_mod( 'sidebar_position' );
-		if ( 'fullwidth' === $sidebar_position ) {
-			$classes[] = 'col-lg-3 col-md-4 col-xs-12 col-sm-6';
-		}
-		else{
-			$classes[] = 'col-lg-4 col-md-6 col-xs-12 col-sm-6';
-		}
-		// $sidebar_width    = get_theme_mod( 'sidebar_width' );
-		// var_dump($sidebar_width);
-		// if (0 == $sidebar_width) {
-		// 	$classes[] = 'col-md-3';
-		// }
-	} else if ( is_product() ) {
-		$classes[] = 'col-md-3';
+	$sidebar_position = get_theme_mod( 'sidebar_position' );
+	if ( 'fullwidth' === $sidebar_position || is_product() ) {
+		$classes[] = 'col-lg-3 col-md-4 col-xs-12 col-sm-6';
 	}
-}
+	else{
+		$classes[] = 'col-lg-4 col-md-6 col-xs-12 col-sm-6';
+	}
 if ( 0 === ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns'] || 1 === $woocommerce_loop['columns'] ) {
 	$classes[] = 'first';
 }

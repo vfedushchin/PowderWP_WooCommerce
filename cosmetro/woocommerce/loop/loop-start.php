@@ -14,10 +14,6 @@
  * @package 	WooCommerce/Templates
  * @version     2.0.0
  */
-if ( function_exists( 'is_shop' ) && function_exists( 'is_product_category' ) && function_exists( 'is_product' ) ) {
-if ( is_shop() || is_product_category() || is_product() ) { ?>
+
+?>
 <div class="row products">
-<?php }
-} else { ?>
-<ul class="products">
-<?php } ?>

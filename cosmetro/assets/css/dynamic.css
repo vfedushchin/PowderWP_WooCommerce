@@ -516,7 +516,7 @@ body.woocommerce button.single_add_to_cart_button.alt:hover{
 
 a.add_to_wishlist,
 a.compare.button{
-	color: $regular_accent_color_2;
+	color: $regular_accent_color_4;
 }
 
 a.add_to_wishlist:hover,
@@ -593,13 +593,25 @@ a.compare.button:hover{
 .widget-area .widget .product_list_widget .amount del,
 .woocommerce table.shop_table tbody tr td.product-price del .amount{
 	font-family: $body_font_family;
-	color: $regular_accent_color_2;
+	color: #777;
 	opacity: 1;
 	display: inline-block;
-	font-weight: $body_font_weight;
-	font-size: 16px;
-	line-height: 20px;
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 28px;
 	text-decoration: line-through;
+}
+
+.woocommerce .block_compare_tocart,
+.add_to_cart_button {
+	font-style: $h6_font_style;
+	font-weight: $h6_font_weight;
+	font-size: $h6_font_size{px};
+	line-height: $h6_line_height;
+	font-family: $h6_font_family;
+	letter-spacing: $h6_letter_spacing{px};
+	text-align: $h6_text_align;
+	color: $regular_h6_color;
 }
 
 .tm_products_carousel_widget div.product h3,

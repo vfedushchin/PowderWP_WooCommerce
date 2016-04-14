@@ -247,10 +247,14 @@ div#primary {
 	}
 	.product_list_widget {
 		> li {
-			font-size: 16px;
+			font-size: 14px;
 			line-height: 22px;
-			font-weight: 300;
 			padding-bottom: 10px;
+
+			a {
+				text-transform: none;
+				font-weight: 300;
+			}
 			@include media-breakpoint-up(md) {
 				padding-bottom: 30px;
 			}
@@ -340,8 +344,8 @@ div#primary {
 
 				}
 				.amount {
-					font-size: 16px;
-					line-height: 20px;
+					font-size: 18px;
+					line-height: 28px;
 					text-decoration: line-through;
 					font-weight: 300;
 					@include media-breakpoint-up(sm) {
@@ -1802,35 +1806,35 @@ input.qty[type=number] {
 			}
 			.tm-products-carousel-widget-sale-end-date, .tm-products-sale-end-date {
 				position: absolute;
-				left: 50%;
+				left: 0;
 				right: 0;
-				top: auto;
-				bottom: 20px;
+				top: 50%;
+				margin-top: -25px;
 				text-align: center;
-				@include transform(translateX(-50%));
-				@include flexbox();
-				@include flex-direction($value: wrap);
-				@include justify-content($value: center);
+				background: rgba(#000000, 0.89);
 				span {
-					width: 50px;
-					max-width: 50px;
+					display: inline-block;
+					position: relative;
+					/* max-width: 90px; */
 					max-height: 50px;
-					min-width: 50px;
+					min-width: 35px;
 					min-height: 50px;
 					height: 50px;
-					@include flexbox();
-					@include flex-direction($value: column);
-					@include justify-content($value: center);
 					margin: 0 1px 0 2px;
-					font-size: 12px;
-					line-height: 16px;
-					font-weight: 300;
-					border-radius: 620px;
+					font-size: 14px;
+					line-height: 19px;
 					text-align: center;
 					background: #fe4f4f;
 					color: white;
 					i {
 						font-style: normal;
+						/* display: block; */
+					}
+
+					&:after {
+						display: inline-block;
+						content: ':';
+						margin: 0 20px;
 					}
 				}
 			}

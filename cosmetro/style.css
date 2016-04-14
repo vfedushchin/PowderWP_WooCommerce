@@ -8553,10 +8553,14 @@ div#primary {
 }
 
 .widget-area .widget .product_list_widget > li {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 22px;
-  font-weight: 300;
   padding-bottom: 10px;
+}
+
+.widget-area .widget .product_list_widget > li a {
+  text-transform: none;
+  font-weight: 300;
 }
 
 @media (min-width: 768px) {
@@ -8676,8 +8680,8 @@ div#primary {
 }
 
 .widget-area .widget .product_list_widget > li del .amount {
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 18px;
+  line-height: 28px;
   text-decoration: line-through;
   font-weight: 300;
 }
@@ -10476,59 +10480,25 @@ input.qty[type=number] {
 
 .woocommerce .tm-products-carousel-widget-wrapper div.product .block_product_thumbnail .tm-products-carousel-widget-sale-end-date, .woocommerce .tm-products-carousel-widget-wrapper div.product .block_product_thumbnail .tm-products-sale-end-date, .woocommerce .tm-products-carousel-widget-wrapper li.product .block_product_thumbnail .tm-products-carousel-widget-sale-end-date, .woocommerce .tm-products-carousel-widget-wrapper li.product .block_product_thumbnail .tm-products-sale-end-date, .woocommerce .products div.product .block_product_thumbnail .tm-products-carousel-widget-sale-end-date, .woocommerce .products div.product .block_product_thumbnail .tm-products-sale-end-date, .woocommerce .products li.product .block_product_thumbnail .tm-products-carousel-widget-sale-end-date, .woocommerce .products li.product .block_product_thumbnail .tm-products-sale-end-date {
   position: absolute;
-  left: 50%;
+  left: 0;
   right: 0;
-  top: auto;
-  bottom: 20px;
+  top: 50%;
+  margin-top: -25px;
   text-align: center;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: horizontal;
-  -webkit-flex-direction: wrap;
-  -moz-flex-direction: wrap;
-  -ms-flex-direction: wrap;
-  flex-direction: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  justify-content: center;
+  background: rgba(0, 0, 0, 0.89);
 }
 
 .woocommerce .tm-products-carousel-widget-wrapper div.product .block_product_thumbnail .tm-products-carousel-widget-sale-end-date span, .woocommerce .tm-products-carousel-widget-wrapper div.product .block_product_thumbnail .tm-products-sale-end-date span, .woocommerce .tm-products-carousel-widget-wrapper li.product .block_product_thumbnail .tm-products-carousel-widget-sale-end-date span, .woocommerce .tm-products-carousel-widget-wrapper li.product .block_product_thumbnail .tm-products-sale-end-date span, .woocommerce .products div.product .block_product_thumbnail .tm-products-carousel-widget-sale-end-date span, .woocommerce .products div.product .block_product_thumbnail .tm-products-sale-end-date span, .woocommerce .products li.product .block_product_thumbnail .tm-products-carousel-widget-sale-end-date span, .woocommerce .products li.product .block_product_thumbnail .tm-products-sale-end-date span {
-  width: 50px;
-  max-width: 50px;
+  display: inline-block;
+  position: relative;
+  /* max-width: 90px; */
   max-height: 50px;
-  min-width: 50px;
+  min-width: 35px;
   min-height: 50px;
   height: 50px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  justify-content: center;
   margin: 0 1px 0 2px;
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 300;
-  border-radius: 620px;
+  font-size: 14px;
+  line-height: 19px;
   text-align: center;
   background: #fe4f4f;
   color: white;
@@ -10536,6 +10506,13 @@ input.qty[type=number] {
 
 .woocommerce .tm-products-carousel-widget-wrapper div.product .block_product_thumbnail .tm-products-carousel-widget-sale-end-date span i, .woocommerce .tm-products-carousel-widget-wrapper div.product .block_product_thumbnail .tm-products-sale-end-date span i, .woocommerce .tm-products-carousel-widget-wrapper li.product .block_product_thumbnail .tm-products-carousel-widget-sale-end-date span i, .woocommerce .tm-products-carousel-widget-wrapper li.product .block_product_thumbnail .tm-products-sale-end-date span i, .woocommerce .products div.product .block_product_thumbnail .tm-products-carousel-widget-sale-end-date span i, .woocommerce .products div.product .block_product_thumbnail .tm-products-sale-end-date span i, .woocommerce .products li.product .block_product_thumbnail .tm-products-carousel-widget-sale-end-date span i, .woocommerce .products li.product .block_product_thumbnail .tm-products-sale-end-date span i {
   font-style: normal;
+  /* display: block; */
+}
+
+.woocommerce .tm-products-carousel-widget-wrapper div.product .block_product_thumbnail .tm-products-carousel-widget-sale-end-date span:after, .woocommerce .tm-products-carousel-widget-wrapper div.product .block_product_thumbnail .tm-products-sale-end-date span:after, .woocommerce .tm-products-carousel-widget-wrapper li.product .block_product_thumbnail .tm-products-carousel-widget-sale-end-date span:after, .woocommerce .tm-products-carousel-widget-wrapper li.product .block_product_thumbnail .tm-products-sale-end-date span:after, .woocommerce .products div.product .block_product_thumbnail .tm-products-carousel-widget-sale-end-date span:after, .woocommerce .products div.product .block_product_thumbnail .tm-products-sale-end-date span:after, .woocommerce .products li.product .block_product_thumbnail .tm-products-carousel-widget-sale-end-date span:after, .woocommerce .products li.product .block_product_thumbnail .tm-products-sale-end-date span:after {
+  display: inline-block;
+  content: ':';
+  margin: 0 20px;
 }
 
 .woocommerce .tm-products-carousel-widget-wrapper div.product .block_product_thumbnail .added_to_cart.wc-forward, .woocommerce .tm-products-carousel-widget-wrapper li.product .block_product_thumbnail .added_to_cart.wc-forward, .woocommerce .products div.product .block_product_thumbnail .added_to_cart.wc-forward, .woocommerce .products li.product .block_product_thumbnail .added_to_cart.wc-forward {

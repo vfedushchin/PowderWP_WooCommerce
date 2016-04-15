@@ -38,7 +38,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 <div class="row">
 	<div class="col-lg-4 col-lg-offset-2 col-md-6 col-sm-12 col-xs-12">
-		<div class="single-image-container">
+		<div class="single-image-container single_product_wrapper">
 			<?php
 				/**
 				 * woocommerce_before_single_product_summary hook.
@@ -50,7 +50,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			?>
 		</div>
 	</div>
-	<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+	<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 77777">
 		<div class="entry-summary">
 
 			<?php

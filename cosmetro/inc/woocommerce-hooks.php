@@ -13,15 +13,22 @@ remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 
 add_action( 'wp_enqueue_scripts', 'cosmetro_enqueue_assets' );
 
-add_action( 'woocommerce_before_single_product', 'cosmetro_enqueue_single_product_scripts' );
+add_action( 'woocommerce_before_single_product', 'cosmetro_enqueue_single_product_assets' );
+
+
 
 add_filter( 'woocommerce_sale_flash', 'cosmetro_woocommerce_sale_flash' );
+remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_show_product_sale_flash', 1 );
+
+
+
 
 add_filter( 'cosmetro_get_customizer_options', 'cosmetro_add_options' );
 
-remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );
+// remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );
 
-add_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 9 );
+// add_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 9 );
 
 add_filter( 'woocommerce_get_price_html_from_to', 'cosmetro_woocommerce_get_price_html_from_to', 10, 3 );
 
@@ -152,8 +159,6 @@ function cosmetro_has_woocommerce() {
 
 function cosmetro_enqueue_assets() {
 
-	// Jssor Slider
-	wp_register_script( 'jquery-jssor', COSMETRO_THEME_URI . '/assets/js/jssor.slider.mini.js', array( 'jquery' ), '1.0.0', true );
 
 	// Easyzoom
 	wp_register_script( 'jquery-easyzoom', COSMETRO_THEME_URI . '/assets/js/easyzoom.js', array( 'jquery' ), '2.3.1', true );
@@ -205,25 +210,6 @@ function cosmetro_add_options( $args ) {
 			'default' => true,
 			'field'   => 'checkbox',
 			'type'    => 'control',
-		);
-	}
-	if( cosmetro_has_woocommerce() ) {
-		$args['options']['woocommerce'] = array(
-			'title'       => esc_html__( 'Woocommerce', 'cosmetro' ),
-			'description' => esc_html__( 'Description', 'cosmetro' ),
-			'priority'    => 200,
-			'type'        => 'section'
-		);
-		$args['options']['single_product_slider_layout'] = array(
-			'title'       => esc_html__( 'Single product slider layout', 'cosmetro' ),
-			'section' => 'woocommerce',
-			'default' => 'vertical',
-			'field'   => 'radio',
-			'choices' => array(
-				'vertical' => esc_html__( 'Vertical', 'cosmetro' ),
-				'horizontal'  => esc_html__( 'Horizontal', 'cosmetro' ),
-			),
-			'type'        => 'control'
 		);
 	}
 	return $args;
@@ -619,10 +605,24 @@ function cosmetro_yith_wcwl_wishlist_title() {
 // }
 
 
+// hooks categories in carousel
 function cosmetro_categories_carousel_widget_name( $cat_title, $cat_name ) {
  return sprintf( '<h2 class="tm-categories-carousel-widget-title">%s</h2>', $cat_name );
 }
 add_filter('tm_categories_carousel_widget_name', 'cosmetro_categories_carousel_widget_name', 10, 2 );
+
+function cosmetro_tm_products_carousel_widget_remove_hooks() {
+ $hooks = array(
+  array(
+   'type' => 'action',
+   'action' => 'woocommerce_before_shop_loop_item_title',
+   'function' => 'cosmetro_woocommerce_list_categories',
+   'priority' => 12
+  )
+ );
+ return $hooks;
+}
+add_filter( 'tm_products_carousel_widget_remove_hooks', 'cosmetro_tm_products_carousel_widget_remove_hooks' );
 
 
 
@@ -653,7 +653,30 @@ function cosmetro_tm_products_carousel_widget_cat_priority() {
 
 
 
-add_filter( 'woocommerce_single_product_image_thumbnail_html', 'cosmetro_woocommerce_single_product_image_thumbnail_html', 10, 4 );
+
+add_filter( 'woocommerce_single_product_image_html', 'cosmetro_woocommerce_single_product_image_html', 10, 2 );
+add_filter( 'woocommerce_single_product_image_thumbnail_html', 'cosmetro_woocommerce_single_product_image_thumbnail_html', 10, 114 );
+
+
+
+function cosmetro_woocommerce_product_thumbnails_columns() {
+ return 4;
+}
+
+// add to thumbnails thumbnail image
+function cosmetro_woocommerce_product_gallery_attachment_ids( $attachment_ids ) {
+ global $product;
+ if ( has_post_thumbnail() ) {
+  array_unshift($attachment_ids, get_post_thumbnail_id());
+ }
+ return $attachment_ids;
+}
+add_filter( 'woocommerce_product_thumbnails_columns', 'cosmetro_woocommerce_product_thumbnails_columns' );
+add_filter( 'woocommerce_product_gallery_attachment_ids', 'cosmetro_woocommerce_product_gallery_attachment_ids' );
+
+
+
+
 function cosmetro_woocommerce_single_product_image_thumbnail_html( $link, $attachment_id, $post_ID, $image_class ) {
  $image_link  = wp_get_attachment_url( $attachment_id );
  $image_title  = esc_attr( get_the_title( $attachment_id ) );
@@ -683,7 +706,9 @@ function cosmetro_woocommerce_single_product_image_html( $html, $post_ID ) {
  return $html;
 }
 function cosmetro_enqueue_single_product_assets() {
- wp_enqueue_script( 'single-init', cosmetro_THEME_URI . '/assets/js/single_product.js', array( 'jquery' ), '1.0.0', true );
+	// Easyzoom
+	wp_enqueue_script( 'jquery-easyzoom' );
+ wp_enqueue_script( 'single-init', COSMETRO_THEME_URI . '/assets/js/single_product.js', array( 'jquery' ), '1.0.0', true );
 }
 
 
@@ -720,6 +745,21 @@ function cosmetro_single_product_open_wrapper() {
 function cosmetro_single_product_close_wrapper() {
  echo '</div>';
 }
-add_action( 'woocommerce_before_single_product_summary' , 'cosmetro_single_product_open_wrapper', 9 );
+//add_action( 'woocommerce_before_single_product_summary' , 'cosmetro_single_product_open_wrapper', 9 );
+//add_action( 'woocommerce_after_single_product_summary', 'cosmetro_single_product_close_wrapper', 19 );
 
-add_action( 'woocommerce_after_single_product_summary', 'cosmetro_single_product_close_wrapper', 9 );
+
+
+
+add_filter( 'cherry_page_title', 'cosmetro_cherry_page_title', 10, 2 );
+function cosmetro_cherry_page_title( $title, $args ) {
+	if( function_exists('is_product') ) {
+		if( is_product() ) {
+			return sprintf( $args['page_title_format'], __( 'Shop', 'cosmetro' ) );
+		}
+	}
+	if ( is_single() ) {
+		return sprintf( $args['page_title_format'], __( 'Blog', 'cosmetro' ) );
+	}
+	return $title;
+}

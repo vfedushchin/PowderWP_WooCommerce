@@ -33,10 +33,14 @@ if ( empty( $woocommerce_loop['columns'] ) ) {
 
 // Increase loop count.
 $woocommerce_loop['loop']++;
+
+if ( isset( $no_grid ) && $no_grid ) { ?>
+<li <?php wc_product_cat_class( '', $category ); ?>>
+<?php } else {
 $col = ( 12 / $woocommerce_loop['columns'] ); ?>
 <div <?php wc_product_cat_class( 'col-xs-12 col-sm-6 col-md-4 col-lg-' . $col . ' col-xl-' . $col, $category ); ?>>
-	<?php
-
+<?php
+}
 	/**
 	 * woocommerce_before_subcategory hook.
 	 *
@@ -69,5 +73,9 @@ $col = ( 12 / $woocommerce_loop['columns'] ); ?>
 	 * @hooked woocommerce_template_loop_category_link_close - 10
 	 */
 	do_action( 'woocommerce_after_subcategory', $category );
- ?>
+
+if ( isset( $no_grid ) && $no_grid ) { ?>
+</li>
+<?php } else { ?>
 </div>
+<?php } ?>

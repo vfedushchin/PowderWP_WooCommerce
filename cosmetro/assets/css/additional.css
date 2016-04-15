@@ -5780,6 +5780,7 @@ div.wpcf7 .contact-form-wrap > p .wpcf7-not-valid-tip {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
+  margin-top: 0;
 }
 
 .woocommerce a.remove:hover,

@@ -41,18 +41,26 @@ $woocommerce_loop['loop']++;
 
 // Extra post classes
 $classes = array();
-	$sidebar_position = get_theme_mod( 'sidebar_position' );
-	if ( 'fullwidth' === $sidebar_position || is_product() ) {
-		$classes[] = 'col-lg-3 col-md-4 col-xs-12 col-sm-6';
-	}
-	else{
-		$classes[] = 'col-lg-4 col-md-6 col-xs-12 col-sm-6';
-	}
 if ( 0 === ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns'] || 1 === $woocommerce_loop['columns'] ) {
 	$classes[] = 'first';
 }
 if ( 0 === $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 	$classes[] = 'last';
+}
+if( is_product() || ( isset( $swiper ) && $swiper ) ) {
+	$classes[] = 'swiper-slide';
+}
+else if ( is_shop() || is_product_category() || is_product_tag() ) {
+	$sidebar_position = get_theme_mod( 'sidebar_position' );
+	if ( 'fullwidth' === $sidebar_position ) {
+		$classes[] = 'col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3';
+	}
+	else{
+		$classes[] = 'col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4';
+	}
+} else {
+	$col = ( 12 / $woocommerce_loop['columns'] );
+	$classes[] = 'col-xs-12 col-sm-6 col-md-6 col-lg-' . $col . ' col-xl-' . $col;
 }
 ?>
 <div <?php post_class( $classes ); ?>>

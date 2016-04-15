@@ -1,73 +1,63 @@
 /* global jssor_options */
 
-jQuery( document ).ready(function ($) {
+jQuery(function ($) {
 
-	var jssor_1_options = {
-		$Loop: 0,
-		$DragOrientation: 1,
-		$ThumbnailNavigatorOptions: {
-			$Class: $JssorThumbnailNavigator$,
-			$Cols: parseInt(jssor_options.cols),
-			$SpacingX: parseInt(jssor_options.spaceX),
-			$SpacingY: parseInt(jssor_options.spaceY),
-			$Orientation: parseInt(jssor_options.orientation),
-			$Loop: 0,
-			$ArrowNavigatorOptions: {
-				$Class: $JssorArrowNavigator$
-			}
-		}
-	};
-
-	var jssor_1_slider = new $JssorSlider$( "jssor_1", jssor_1_options );
-
-	var $easyzoom = jQuery( '.single-product-main_image:last > div.easyzoom' ).easyZoom();
-
-	var easyZoomApi = $easyzoom.data('easyZoom');
-
-	//responsive code begin
-	//you can remove responsive code if you don't want the slider scales while window resizing
-	function ScaleSlider() {
-			var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
-			if (refSize) {
-					refSize = Math.min( refSize, 960 );
-					refSize = Math.max( refSize, 290 );
-					jssor_1_slider.$ScaleWidth( refSize );
-			}
-			else {
-					window.setTimeout(ScaleSlider, 30 );
-			}
-			if ( $( window ).width() > 767 ) {
-				easyZoomApi._init();
-			} else {
-				easyZoomApi.teardown();
-			}
-	}
-	ScaleSlider();
-	$( window ).bind( "load", ScaleSlider );
-	$( window ).bind( "resize", ScaleSlider );
-	$( window ).bind( "orientationchange", ScaleSlider );
-	//responsive code end
-
-	var items = [];
-	$( '.single-product-main_image:last' ).find( '.easyzoom' ).each(function() {
+	var $easyzoom = $( '.single_product_wrapper .images .easyzoom' ).easyZoom(),
+	easyZoomApi = $easyzoom.data('easyZoom'),
+	items = [],
+	index;
+	$( '.single_product_wrapper .images .thumbnails .thumbnail' ).eq(0).addClass( 'selected' );
+	$( '.single_product_wrapper .images .thumbnails .thumbnail' ).each( function() {
 		items.push( {
-			src: $ (this ).find( '> a' ).attr( 'href' )
+			src: $( this ).data( 'href' )
 		} );
-	});
+		$( this ).on( 'click', function() {
+			$( '.single_product_wrapper .images .thumbnails .thumbnail' ).removeClass( 'selected' );
+			$this = $( this );
+			$this.addClass( 'selected' );
+			easyZoomApi.teardown();
+			$( '.woocommerce-main-image' ).attr( {
+				href: $this.data( 'href' )
+			} ).find( 'img' ).attr( {
+				src: $this.data( 'thumb' ),
+				srcset: $this.find( 'img' ).attr( 'srcset' ),
+				title: $this.find( 'img' ).attr( 'title' ),
+				alt: $this.find( 'img' ).attr( 'alt' )
+			} );
+			zoom();
+			index = $this.index();
+			$( '.single_product_wrapper .images .enlarge' ).on( 'click', function() {
+				$.magnificPopup.open( {
+					items: items,
+					gallery: {
+						enabled: true
+					},
+					type: 'image'
+				}, index );
+			} );
+		} );
+	} );
 
-	jssor_1_slider.$On( $JssorSlider$.$EVT_STATE_CHANGE, function( slideIndex, progress ){
+	$( '.single_product_wrapper .images .enlarge' ).on( 'click', function() {
+		$this = $( this );
+		$.magnificPopup.open( {
+			items: items,
+			gallery: {
+				enabled: true
+			},
+			type: 'image'
+		}, 0 );
+	} );
 
-		$( '.single-product-images .enlarge' ).click( function() {
+	function zoom() {
+		if ( 768 > Math.min( $( window ).width(), screen.width ) ) {
+			easyZoomApi.teardown();
+		} else {
+			easyZoomApi._init();
+		}
+	}
 
-			$.magnificPopup.open({
-				items:items,
-				gallery: {
-					enabled: true
-				},
-				type: 'image'
-			}, slideIndex );
-		});
-	});
+	zoom();
+	$( window ).on( "resize orientationchange", zoom );
 
-
-});
+} );

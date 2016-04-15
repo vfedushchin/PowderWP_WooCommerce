@@ -33,12 +33,8 @@ if ( empty( $woocommerce_loop['columns'] ) ) {
 
 // Increase loop count.
 $woocommerce_loop['loop']++;
-	$sidebar_position = get_theme_mod( 'sidebar_position' );
-	if ( 'fullwidth' === $sidebar_position ) { ?>
-	<div <?php wc_product_cat_class( 'col-lg-3 col-md-4 col-xs-12 col-sm-6', $category ); ?>>
-	<?php }	else{ ?>
-	<div <?php wc_product_cat_class( 'col-lg-4 col-md-6 col-xs-12 col-sm-6', $category ); ?>>
-	<?php } ?>
+$col = ( 12 / $woocommerce_loop['columns'] ); ?>
+<div <?php wc_product_cat_class( 'col-xs-12 col-sm-6 col-md-4 col-lg-' . $col . ' col-xl-' . $col, $category ); ?>>
 	<?php
 
 	/**

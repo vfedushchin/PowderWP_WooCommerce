@@ -159,7 +159,7 @@
 	text-transform: uppercase;
 	color: $regular_text_color;
 	color: #fff;
-	background: $regular_accent_color_1;
+	background: $regular_h3_color;
 }
 
 .sidebar-primary .widget a.button.compare:hover, .sidebar-secondary .widget a.button.compare:hover {
@@ -202,7 +202,7 @@
 }
 
 .woocommerce .widget_price_filter .ui-slider .ui-slider-range{
-	background: $regular_accent_color_1;
+	background: $regular_accent_color_2;
 }
 
 .woocommerce .widget_price_filter .price_slider_wrapper .ui-widget-content{
@@ -210,10 +210,9 @@
 }
 
 .woocommerce .widget_price_filter .price_slider_amount {
-	text-align: right;
+	text-align: left;
 	line-height: 3.5;
 	font-size: 1em;
-	color: $regular_accent_color_1;
 }
 
 .sidebar-primary .widget_recent_entries li .post-author , .sidebar-secondary .widget_recent_entries li .post-author {

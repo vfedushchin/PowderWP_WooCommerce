@@ -426,7 +426,11 @@ div#primary {
 
 /*Single product page styles*/
 .woocommerce {
-	&.single-product {
+	&.single-product, .single-product {
+		a.compare.button{
+			background: none;
+			font-weight: 300;
+		}
 		a.compare.button:hover {
 			background: none;
 		}
@@ -441,6 +445,7 @@ div#primary {
 			}
 			&.label {
 				display: block;
+				font-style: italic;
 				font-weight: 300;
 				&:after {
 					content: ":";
@@ -561,14 +566,14 @@ div#primary {
 		text-align: center;
 		line-height: 48px;
 		font-size: 29px;
-		transition: transform .3s ease;
+		transition: transform .1s ease;
 		display: none;
 		&:before {
 			content: '\e03d';
 			font-family: "fl-line-icon-set";
 		}
 		&:hover {
-			transform: scale(1.1);
+			transform: scale(1.2);
 		}
 		@include media-breakpoint-up(md) {
 			display: block;
@@ -627,8 +632,30 @@ div#primary {
 		cursor: pointer;
 	}
 }
-
+.single-product{
+	.related.products{
+		.products{
+			>div{
+				@extend .col-md-3;
+				@extend .col-sm-6;
+				@extend .col-xs-12;
+			}
+		}
+	}
+}
 .single-product {
+	.single-product-images-vertical {
+			& + span.onsale {
+				left: 21.4%;
+				top: 3.34%;
+			}
+		}
+		.single-product-images-horizontal {
+			& + span.onsale {
+				left: 3.8%;
+				top: 2.3%;
+			}
+		}
 	&.woocommerce {
 		.single-product-images-vertical {
 			& + span.onsale {
@@ -644,7 +671,8 @@ div#primary {
 		}
 	}
 	.product_title {
-		font-weight: 400;
+		text-transform: uppercase;
+		padding-bottom: 15px !important;
 	}
 }
 
@@ -698,7 +726,7 @@ div#primary {
 
 .yith-wcwl-add-to-wishlist {
 	margin: 0;
-	float: left;
+	display: inline-block;
 	padding-right: 21px;
 	position: relative;
 }
@@ -731,27 +759,50 @@ a.add_to_wishlist {
 		font-weight: 400;
 		content: '\e87e';
 		font-family: 'Material Icons';
-		font-size: 21px;
+		font-size: 18px;
 		vertical-align: middle;
 		margin-right: 3px;
 	}
 }
 
-a.compare.button {
+span.compare {
 	position: relative;
 	background: none;
 	border-radius: 0;
 	padding: 0 0 0 19px;
 	text-transform: inherit;
 	font-weight: 300;
+	cursor: pointer;
+	& + a.btn.alt{
+		margin-top: 20px;
+	}
 	&:before {
 		font-weight: 400;
 		content: '\e164';
 		font-family: 'Material Icons';
+		transform: rotate(-90deg);
 		position: absolute;
 		top: -2px;
 		left: -2px;
 		font-size: 18px;
+	}
+	&.added:before{
+		content: "\e5ca";
+		transform: rotate(0deg);
+	}
+	&.loading{
+		&:after{
+			display: block;
+			position: absolute;
+			left: -2px;
+			top: 0;
+			background: url(assets/images/rolling.svg) 0 0 no-repeat #fff;
+			background-size: contain;
+			opacity: 0.6;
+			width: 20px;
+			height: 20px;
+			content: "";
+		}
 	}
 }
 
@@ -762,6 +813,7 @@ a.compare.button {
 	}
 	label,
 	span.for_rating {
+		font-style: italic;
 		font-weight: 300;
 	}
 	input[type=text] {
@@ -772,6 +824,7 @@ a.compare.button {
 		display: inline-block;
 	}
 }
+
 
 .button, input[type="button"],
 input[type="reset"],
@@ -836,7 +889,7 @@ input.qty[type=number] {
 	.wishlist_table {
 		a.remove {
 			&:before {
-				display: none;
+				//display: none;
 			}
 		}
 		td.product-add-to-cart {
@@ -991,6 +1044,7 @@ input.qty[type=number] {
 		}
 		.entry-summary {
 			margin-top: 0;
+			color: #232222;
 		}
 		.woocommerce-variation-price {
 			.price {
@@ -1005,8 +1059,8 @@ input.qty[type=number] {
 		}
 		p.price {
 			font-weight: bold;
-			font-size: 40px;
-			line-height: 48px;
+			font-size: 30px;
+			line-height: 38px;
 			margin: 0 0 20px;
 			ins {
 				color: inherit;
@@ -1194,7 +1248,7 @@ input.qty[type=number] {
 				tr {
 					background: none;
 					& + tr {
-						background-image: linear-gradient(to right, #d5d5d9 33%, transparent 0%);
+						background-image: linear-gradient(to right, #232222 33%, #232222);
 						background-position: 0 0;
 						background-size: 3px 1px;
 						background-repeat: repeat-x;
@@ -1218,7 +1272,7 @@ input.qty[type=number] {
 		}
 		tbody {
 			tr {
-				background-image: linear-gradient(to right, #d5d5d9 33%, transparent 0%);
+				background-image: linear-gradient(to right, #232222 33%, #232222);
 				background-position: 0 0;
 				background-size: 3px 1px;
 				background-repeat: repeat-x;
@@ -1287,7 +1341,7 @@ input.qty[type=number] {
 					background: none;
 					& + tr.cart_item,
 					& + tr.order_item {
-						background-image: linear-gradient(to right, #d5d5d9 33%, transparent 0%);
+						background-image: linear-gradient(to right, #232222 33%, #232222);
 						background-position: 0 0;
 						background-size: 3px 1px;
 						background-repeat: repeat-x;
@@ -1301,7 +1355,7 @@ input.qty[type=number] {
 		}
 		tfoot {
 			tr {
-				background-image: linear-gradient(to right, #d5d5d9 33%, transparent 0%);
+				background-image: linear-gradient(to right, #232222 33%, #232222);
 				background-position: 0 0;
 				background-size: 3px 1px;
 				background-repeat: repeat-x;
@@ -1355,7 +1409,7 @@ input.qty[type=number] {
 			tr {
 				background: none;
 				& + tr {
-					background-image: linear-gradient(to right, #d5d5d9 33%, transparent 0%);
+					background-image: linear-gradient(to right, #232222 33%, #232222);
 					background-position: 0 0;
 					background-size: 3px 1px;
 					background-repeat: repeat-x;
@@ -1472,7 +1526,7 @@ input.qty[type=number] {
 	.wc_payment_methods {
 		.wc_payment_method {
 			& + .wc_payment_method {
-				background-image: linear-gradient(to right, #d5d5d9 33%, transparent 0%);
+				background-image: linear-gradient(to right, #232222 33%, #232222);
 				background-position: 0 0;
 				background-size: 3px 1px;
 				background-repeat: repeat-x;
@@ -1527,7 +1581,7 @@ input.qty[type=number] {
 					display: block;
 					height: 1px;
 					content: '';
-					background-image: linear-gradient(to right, #d5d5d9 33%, transparent 0%);
+					background-image: linear-gradient(to right, #232222 33%, #232222);
 					background-position: 0 0;
 					background-size: 3px 1px;
 					background-repeat: repeat-x;
@@ -1540,7 +1594,7 @@ input.qty[type=number] {
 					display: block;
 					height: 1px;
 					content: '';
-					background-image: linear-gradient(to right, #d5d5d9 33%, transparent 0%);
+					background-image: linear-gradient(to right, #232222 33%, #232222);
 					background-position: 0 0;
 					background-size: 3px 1px;
 					background-repeat: repeat-x;
@@ -1550,7 +1604,7 @@ input.qty[type=number] {
 					display: block;
 					height: 1px;
 					content: '';
-					background-image: linear-gradient(to right, #d5d5d9 33%, transparent 0%);
+					background-image: linear-gradient(to right, #232222 33%, #232222);
 					background-position: 0 0;
 					background-size: 3px 1px;
 					background-repeat: repeat-x;
@@ -1567,7 +1621,7 @@ input.qty[type=number] {
 					height: 31px;
 					content: '';
 					clear: both;
-					background-image: linear-gradient(to right, #d5d5d9 33%, transparent 0%);
+					background-image: linear-gradient(to right, #232222 33%, #232222);
 					background-position: 0 100%;
 					background-size: 3px 1px;
 					background-repeat: repeat-x;
@@ -1812,29 +1866,43 @@ input.qty[type=number] {
 				margin-top: -25px;
 				text-align: center;
 				background: rgba(#000000, 0.89);
+				padding: 11px 0 0px;
 				span {
 					display: inline-block;
 					position: relative;
 					/* max-width: 90px; */
 					max-height: 50px;
 					min-width: 35px;
+					width: 40px;
 					min-height: 50px;
-					height: 50px;
-					margin: 0 1px 0 2px;
+					height: 40px;
 					font-size: 14px;
 					line-height: 19px;
 					text-align: center;
-					background: #fe4f4f;
 					color: white;
+					position: relative;
+					margin-right: 35px;
 					i {
 						font-style: normal;
-						/* display: block; */
+						display: block;
 					}
 
 					&:after {
 						display: inline-block;
+						position: absolute;
+						top: 4px;
+						left: 25px;
 						content: ':';
 						margin: 0 20px;
+						width: 20px;
+						height: 30px;
+					}
+
+					&:last-child{
+						margin-right: 0;
+						&:after {
+							display: none;
+						}
 					}
 				}
 			}
@@ -1997,7 +2065,7 @@ input.qty[type=number] {
 					transform: translateY(-50px) translateX(-50%);
 					-webkit-transform: translateY(-50px) translateX(-50%);
 					transition: all ease 0.3s;
-					font-size: 12px;
+					font-size: 11px;
 					line-height: 19px;
 					height: auto;
 					color: white;
@@ -2976,8 +3044,8 @@ table.compare-list td.even {
 	position: relative;
 	padding-top: 27px;
 	border-top: 1px solid #232222;
-	opacity: 0;
-	visibility: hidden;
+	//opacity: 0;
+	//visibility: hidden;
 
 	.block_wishlist_compare {
 		position: absolute !important;
@@ -3021,4 +3089,26 @@ table.compare-list td.even {
 			background: none;
 		}
 	}
+}
+
+
+
+.price_slider_amount {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	.price_label {
+		order: -1;
+		padding-bottom: 9px;
+	}
+}
+.woocommerce-review-link {
+	color: #222;
+}
+
+
+.compare:before, .compare:after {
+	content: "test";
+	display: block !important;
 }

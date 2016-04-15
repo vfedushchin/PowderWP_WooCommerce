@@ -129,7 +129,7 @@ input[type="submit"],
 	font-size: @font_size($h5_font_size, multiple, ceil, 1)px;
 	line-height: 1.5em;
 	font-family: $h5_font_family;
-	background: $regular_accent_color_1;
+	background: $regular_h3_color;
 	color: #fff;
 	line-height: 20px;
 }
@@ -480,7 +480,7 @@ mark, ins {
 }
 
 body.woocommerce button.single_add_to_cart_button.alt{
-	background: $regular_link_color;
+	background: $regular_h3_color;
 	font-family: $h5_font_family;
 }
 body.woocommerce button.single_add_to_cart_button.alt:hover{
@@ -527,7 +527,7 @@ a.compare.button:hover{
 	color: white;
 }
 .woocommerce div.product .woo-social-buttons span.custom a{
-	color: $regular_accent_color_2;
+	color: $regular_accent_color_4;
 }
 
 .woocommerce div.product .woo-social-buttons span.custom a:hover{
@@ -733,7 +733,7 @@ a.compare.button:hover{
 }
 
 .woocommerce table.shop_table tbody tr td.actions button.button{
-	background: $regular_text_color;
+	background: $regular_h3_color;
 }
 
 .woocommerce table.shop_table tbody tr td.actions button.button:hover{
@@ -757,10 +757,7 @@ a.compare.button:hover{
 
 .woocommerce .woocommerce-result-count,
 .woocommerce-page .woocommerce-result-count{
-	font-size: $h6_font_size{px};
-	font-style: $h4_font_style;
-	font-weight: $h4_font_weight;
-	font-family: $h4_font_family;
+	font-size: 14px;
 }
 .woocommerce .woocommerce-result-count span,
 .woocommerce-page .woocommerce-result-count span{
@@ -773,4 +770,9 @@ a.compare.button:hover{
 }
 .woocommerce .woocommerce-info:before {
 	color: $regular_accent_color_1;
+}
+
+.woocommerce a.remove,
+.yith-woocompare-widget ul.products-list a.remove {
+	color: $regular_accent_color_1 !important;
 }

@@ -1752,7 +1752,85 @@ big {
   -moz-user-select: none;
   user-select: none;
   border: 1px solid #e8e8eb;
-  max-width: 370px;
+  max-width: 210px;
+}
+
+.woocommerce-ordering .chosen-container.chosen-container-single {
+  background: #f4f4f4;
+  border: none;
+  padding: 13px 10px 13px 25px;
+  color: #232222;
+  font-size: 14px;
+  font-weight: 300;
+  border-bottom: 1px solid #fff;
+}
+
+.woocommerce-ordering .chosen-container.chosen-container-single .chosen-drop {
+  background: #f4f4f4;
+}
+
+.woocommerce-ordering .chosen-container.chosen-container-single .chosen-drop .chosen-results {
+  background: #f4f4f4;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  -webkit-overflow-scrolling: touch;
+  border: none;
+}
+
+.woocommerce-ordering .chosen-container.chosen-container-single .chosen-drop .chosen-results li {
+  display: none;
+  margin: 0;
+  padding: 10px 10px 10px 25px;
+  list-style: none;
+  word-wrap: break-word;
+  -webkit-touch-callout: none;
+  transition: all .3s ease;
+}
+
+.woocommerce-ordering .chosen-container.chosen-container-single .chosen-drop .chosen-results li:before, .woocommerce-ordering .chosen-container.chosen-container-single .chosen-drop .chosen-results li:after {
+  display: none;
+}
+
+.woocommerce-ordering .chosen-container.chosen-container-single .chosen-drop .chosen-results li.active-result {
+  display: block;
+  cursor: pointer;
+}
+
+.woocommerce-ordering .chosen-container.chosen-container-single .chosen-drop .chosen-results li.disabled-result {
+  display: block;
+  cursor: default;
+}
+
+.woocommerce-ordering .chosen-container.chosen-container-single .chosen-drop .chosen-results li.highlighted {
+  transition: all .3s ease;
+  background: #232222;
+}
+
+.woocommerce-ordering .chosen-container.chosen-container-single .chosen-drop .chosen-results li.no-results {
+  display: block;
+  background: #f4f4f4;
+}
+
+.woocommerce-ordering .chosen-container.chosen-container-single .chosen-drop .chosen-results li.group-result {
+  display: block;
+  font-weight: bold;
+  cursor: default;
+}
+
+.woocommerce-ordering .chosen-container.chosen-container-single .chosen-drop .chosen-results li.group-option {
+  padding-left: 15px;
+}
+
+.woocommerce-ordering .chosen-container.chosen-container-single .chosen-drop .chosen-results li em {
+  font-style: normal;
+  text-decoration: underline;
+}
+
+.woocommerce-ordering .chosen-container.chosen-container-single .chosen-drop .chosen-results li + li {
+  border-top: none;
 }
 
 .chosen-container * {
@@ -5196,18 +5274,30 @@ body .post-gallery {
 }
 
 .woocommerce .widget_price_filter .price_slider {
-  margin-bottom: 38px;
+  margin-top: 55px;
+  margin-bottom: -3px;
 }
 
 .woocommerce .widget_price_filter .ui-widget-content {
   border-radius: 0;
 }
 
-.woocommerce .widget_price_filter .ui-slider-handle {
-  top: -6px;
-  margin-left: -6px;
-  width: 16px;
-  height: 16px;
+.woocommerce .widget_price_filter .ui-slider {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.woocommerce .widget_price_filter .ui-slider .ui-slider-handle {
+  top: -12px;
+  width: 22px;
+  height: 11px;
+  background: none !important;
+  border: 11px solid #232222;
+  border-bottom: none;
+  border-color: #232222 transparent transparent transparent;
+  margin-left: -11px;
+  margin-right: 0;
+  border-radius: 0;
 }
 
 .woocommerce .widget_price_filter .ui-slider-horizontal {
@@ -5220,7 +5310,7 @@ body .post-gallery {
 }
 
 .woocommerce .widget_price_filter .price_slider_amount .button {
-  font-size: 1em;
+  font-size: 14px;
 }
 
 .footer-area .tm_about_store_widget .btn {
@@ -5262,6 +5352,10 @@ body .post-gallery {
   }
 }
 
+.yith-wcwl-share-title:before {
+  display: none;
+}
+
 /*First word title - bold*/
 .related.products h4 {
   text-align: center;
@@ -5269,6 +5363,11 @@ body .post-gallery {
   padding-top: 21px;
   margin-bottom: 40px !important;
   position: relative;
+}
+
+.related.products h4:before {
+  left: 50%;
+  margin-left: -20px;
 }
 
 .related.products h4 span {
@@ -5672,6 +5771,21 @@ div.wpcf7 .contact-form-wrap > p .wpcf7-not-valid-tip {
 
 .site-main .blog-title {
   margin-bottom: 38px;
+}
+
+.woocommerce a.remove,
+.yith-woocompare-widget ul.products-list a.remove {
+  width: 24px;
+  height: 24px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.woocommerce a.remove:hover,
+.yith-woocompare-widget ul.products-list a.remove:hover {
+  color: #fff !important;
+  background: #222;
 }
 
 /*# sourceMappingURL=additional.css.map */

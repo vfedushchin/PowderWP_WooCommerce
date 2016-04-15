@@ -2894,19 +2894,31 @@ body .post-gallery {
 	}
 
 	.price_slider {
-		margin-bottom: 38px;
+		margin-top: 55px;
+		margin-bottom: -3px;
 	}
 
 	.ui-widget-content {
 		border-radius: 0;
 	}
-
-	.ui-slider-handle {
-		top: -6px;
-		margin-left: -6px;
-		width: 16px;
-		height: 16px;
+	.ui-slider {
+		margin-right: 0;
+		margin-left: 0;
+		.ui-slider-handle {
+			top: -12px;
+			width: 22px;
+			height: 11px;
+			background: none !important;
+			border: 11px solid #232222;
+			border-bottom: none;
+			border-color: #232222 transparent transparent transparent;
+			margin-left: -11px;
+			margin-right: 0;
+			border-radius: 0;
+		}
 	}
+
+
 
 	.ui-slider-horizontal {
 		top: 2px;
@@ -2919,7 +2931,7 @@ body .post-gallery {
 
 	.price_slider_amount {
 		.button {
-			font-size: 1em;
+			font-size: 14px;
 		}
 	}
 }
@@ -2979,6 +2991,9 @@ body .post-gallery {
 	}
 }
 
+.yith-wcwl-share-title:before {
+	display: none;
+}
 /*First word title - bold*/
 .related.products {
 	h4 {
@@ -2987,6 +3002,11 @@ body .post-gallery {
 		padding-top: 21px;
 		margin-bottom: 40px !important;
 		position: relative;
+
+		&:before {
+			left: 50%;
+			margin-left: -20px;
+		}
 
 		span {
 			display: block;
@@ -3385,4 +3405,18 @@ div.wpcf7 {
 
 .site-main .blog-title {
 	margin-bottom: 38px;
+}
+
+.woocommerce a.remove,
+.yith-woocompare-widget ul.products-list a.remove {
+	width: 24px;
+	height: 24px;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 700;
+
+	&:hover {
+		color: #fff !important;
+		background: #222;
+	}
 }

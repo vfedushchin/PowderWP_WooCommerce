@@ -49,6 +49,14 @@ global $product; ?>
 
 	wp_list_categories( apply_filters( 'woocommerce_product_categories_widget_args', $list_args ) );
 	?>
+
+	<?php
+	woocommerce_show_product_loop_sale_flash();
+	cosmetro_woocommerce_show_flash();
+
+
+	?>
+
 	</ul>
 	<div class="product_title_link"><a href="<?php echo esc_url( get_permalink( $product->id ) ); ?>" title="<?php echo esc_attr( $product->get_title() ); ?>">
 		<span class="product-title"><?php echo $product->get_title(); ?></span>

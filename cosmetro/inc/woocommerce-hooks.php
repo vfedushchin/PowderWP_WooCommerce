@@ -535,11 +535,11 @@ function cosmetro_cart_link_fragment( $fragments ) {
 }
 
 function cosmetro_woocommerce_result_count() {
-	echo '</div><div class="col-lg-8">';
+	echo '</div><div class="col-lg-3">';
 }
 
 function cosmetro_woocommerce_open_order_wrap(){
-	echo '<div class="row"><div class="col-lg-4">';
+	echo '<div class="row"><div class="col-lg-3">';
 }
 
 function cosmetro_woocommerce_close_order_wrap() {
@@ -623,3 +623,103 @@ function cosmetro_categories_carousel_widget_name( $cat_title, $cat_name ) {
  return sprintf( '<h2 class="tm-categories-carousel-widget-title">%s</h2>', $cat_name );
 }
 add_filter('tm_categories_carousel_widget_name', 'cosmetro_categories_carousel_widget_name', 10, 2 );
+
+
+
+
+
+
+
+//categories in carousel
+add_filter( 'tm_products_carousel_widget_cat_action', 'cosmetro_tm_products_carousel_widget_cat_action' );
+
+add_filter( 'tm_products_carousel_widget_cat_priority', 'cosmetro_tm_products_carousel_widget_cat_priority' );
+function cosmetro_tm_products_carousel_widget_cat_action() {
+ return 'woocommerce_before_shop_loop_item_title';
+}
+
+function cosmetro_tm_products_carousel_widget_cat_priority() {
+ return 12;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+add_filter( 'woocommerce_single_product_image_thumbnail_html', 'cosmetro_woocommerce_single_product_image_thumbnail_html', 10, 4 );
+function cosmetro_woocommerce_single_product_image_thumbnail_html( $link, $attachment_id, $post_ID, $image_class ) {
+ $image_link  = wp_get_attachment_url( $attachment_id );
+ $image_title  = esc_attr( get_the_title( $attachment_id ) );
+ $image_caption  = esc_attr( get_post_field( 'post_excerpt', $attachment_id ) );
+ $image   = wp_get_attachment_image( $attachment_id, apply_filters( 'single_product_small_thumbnail_size', 'shop_thumbnail' ), 0, $attr = array(
+  'title' => $image_title,
+  'alt' => $image_title
+  ) );
+ $large_thumb_src = wp_get_attachment_image_src( $attachment_id, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ) );
+ return sprintf( '<div class="thumbnail %s" data-href="%s" data-thumb="%s" title="%s">%s</div>', $image_class, $image_link, $large_thumb_src[0], $image_caption, $image );
+}
+
+function cosmetro_woocommerce_single_product_image_html( $html, $post_ID ) {
+ global $post, $product;
+ if ( has_post_thumbnail() ) {
+  $image_link    = wp_get_attachment_url( get_post_thumbnail_id() );
+  $image         = get_the_post_thumbnail( $post_ID, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ), array(
+   'title' => get_the_title( get_post_thumbnail_id() )
+  ) );
+  $enlarge = '';
+  if ( 'yes' === get_option( 'woocommerce_enable_lightbox', 'yes' ) ) {
+   wp_enqueue_script( 'magnific-popup' );
+   $enlarge = '<div class="enlarge"><i class="material-icons">zoom_in</i></div>';
+  }
+  return sprintf( '<div class="easyzoom"><a href="%s" class="woocommerce-main-image">%s</a></div>%s', $image_link, $image, $enlarge );
+ }
+ return $html;
+}
+function cosmetro_enqueue_single_product_assets() {
+ wp_enqueue_script( 'single-init', cosmetro_THEME_URI . '/assets/js/single_product.js', array( 'jquery' ), '1.0.0', true );
+}
+
+
+function woocommerce_show_product_images() {
+	global $post, $woocommerce, $product;
+?>
+	<div class="images">
+	<?php if ( has_post_thumbnail() ) {
+		$image_caption = get_post( get_post_thumbnail_id() )->post_excerpt;
+		$image_link    = wp_get_attachment_url( get_post_thumbnail_id() );
+		$image         = get_the_post_thumbnail( $post->ID, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ), array(
+			'title'	=> get_the_title( get_post_thumbnail_id() )
+		) );
+		$attachment_count = count( $product->get_gallery_attachment_ids() );
+
+		if ( 0 < $attachment_count ) {
+			$gallery = '[product-gallery]';
+		} else {
+			$gallery = '';
+		}
+		echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<a href="%s" itemprop="image" class="woocommerce-main-image zoom" title="%s" data-rel="prettyPhoto' . $gallery . '">%s</a>', $image_link, $image_caption, $image ), $post->ID );
+	} else {
+		echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img src="%s" alt="%s" />', wc_placeholder_img_src(), __( 'Placeholder', 'cosmetro' ) ), $post->ID );
+	}
+	do_action( 'woocommerce_product_thumbnails' ); ?>
+</div>
+
+<?php }
+
+function cosmetro_single_product_open_wrapper() {
+ echo '<div class="single_product_wrapper">';
+}
+
+function cosmetro_single_product_close_wrapper() {
+ echo '</div>';
+}
+add_action( 'woocommerce_before_single_product_summary' , 'cosmetro_single_product_open_wrapper', 9 );
+
+add_action( 'woocommerce_after_single_product_summary', 'cosmetro_single_product_close_wrapper', 9 );

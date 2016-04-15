@@ -481,7 +481,7 @@ function cosmetro_get_customizer_options() {
 			'h1_font_family' => array(
 				'title'   => esc_html__( 'Font Family', 'cosmetro' ),
 				'section' => 'h1_typography',
-				'default' => 'Playfair Display',
+				'default' => 'Montserrat',
 				'field'   => 'fonts',
 				'type'    => 'control',
 			),
@@ -651,7 +651,7 @@ function cosmetro_get_customizer_options() {
 			'h3_font_family' => array(
 				'title'   => esc_html__( 'Font Family', 'cosmetro' ),
 				'section' => 'h3_typography',
-				'default' => 'Playfair Display',
+				'default' => 'Montserrat',
 				'field'   => 'fonts',
 				'type'    => 'control',
 			),
@@ -736,7 +736,7 @@ function cosmetro_get_customizer_options() {
 			'h4_font_family' => array(
 				'title'   => esc_html__( 'Font Family', 'cosmetro' ),
 				'section' => 'h4_typography',
-				'default' => 'Playfair Display',
+				'default' => 'Montserrat',
 				'field'   => 'fonts',
 				'type'    => 'control',
 			),

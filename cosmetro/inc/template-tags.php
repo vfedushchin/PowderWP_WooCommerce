@@ -428,19 +428,19 @@ function cosmetro_get_the_author_posts_link() {
  * @return void
  */
 function cosmetro_site_breadcrumbs() {
+
 	$breadcrumbs_visibillity       = get_theme_mod( 'breadcrumbs_visibillity', cosmetro_theme()->customizer->get_default( 'breadcrumbs_visibillity' ) );
 	$breadcrumbs_page_title        = get_theme_mod( 'breadcrumbs_page_title', cosmetro_theme()->customizer->get_default( 'breadcrumbs_page_title' ) );
 	$breadcrumbs_path_type         = get_theme_mod( 'breadcrumbs_path_type', cosmetro_theme()->customizer->get_default( 'breadcrumbs_path_type' ) );
 	$breadcrumbs_front_visibillity = get_theme_mod( 'breadcrumbs_front_visibillity', cosmetro_theme()->customizer->get_default( 'breadcrumbs_front_visibillity' ) );
-/*<div class="breadcrumbs__title">%1$s</div>   for line 429*/
-	$breadcrumbs_settings = apply_filters( 'cosmetro_breadcrumbs_settings', array(
-		'wrapper_format'    => '<div class="container">
 
-		<div class="breadcrumbs__items">%2$s</div><div class="clear"></div></div>',
-		'page_title_format' => '<h5 class="page-title">%s</h5>',
-		'show_title'        => $breadcrumbs_page_title,
+	$breadcrumbs_settings = apply_filters( 'cosmetro_breadcrumbs_settings', array(
+		'separator' => '|',
+		'wrapper_format'    => '<div class="breadcrumbs__items">%2$s</div><div class="clear"></div><div class="breadcrumbs__title">%1$s</div>',
+		'page_title_format' => '<h4 class="page-title">%s</h4>',
 		'path_type'         => $breadcrumbs_path_type,
 		'show_on_front'     => $breadcrumbs_front_visibillity,
+		'show_title'        => $breadcrumbs_page_title,
 		'labels'            => array(
 			'browse' => '',
 		),
@@ -460,6 +460,7 @@ function cosmetro_site_breadcrumbs() {
 		cosmetro_theme()->get_core()->init_module( 'cherry-breadcrumbs', $breadcrumbs_settings );
 		do_action('cherry_breadcrumbs_render');
 	}
+
 
 }
 

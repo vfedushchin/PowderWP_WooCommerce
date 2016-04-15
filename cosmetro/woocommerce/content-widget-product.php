@@ -24,8 +24,14 @@ global $product; ?>
 
 <li>
 	<a href="<?php echo esc_url( get_permalink( $product->id ) ); ?>" title="<?php echo esc_attr( $product->get_title() ); ?>">
-		<?php echo $product->get_image(); ?>
+		<?php echo $product->get_image('_tm-thumb-196-213'); ?>
 	</a>
+
+	<?php
+		woocommerce_show_product_loop_sale_flash();
+		cosmetro_woocommerce_show_flash();
+	?>
+
 	<ul class="product-widget-categories">
 	<?php
 	$cats = wp_get_post_terms( $product->id, 'product_cat' );
@@ -50,12 +56,6 @@ global $product; ?>
 	wp_list_categories( apply_filters( 'woocommerce_product_categories_widget_args', $list_args ) );
 	?>
 
-	<?php
-	woocommerce_show_product_loop_sale_flash();
-	cosmetro_woocommerce_show_flash();
-
-
-	?>
 
 	</ul>
 	<div class="product_title_link"><a href="<?php echo esc_url( get_permalink( $product->id ) ); ?>" title="<?php echo esc_attr( $product->get_title() ); ?>">

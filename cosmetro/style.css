@@ -8597,8 +8597,9 @@ div#primary {
 }
 
 .widget-area .widget .product_list_widget > li img {
-  width: 100px;
+  width: auto;
   margin-left: 0;
+  max-width: 200px;
 }
 
 .widget-area .widget .product_list_widget > li .product-widget-categories {
@@ -9101,6 +9102,7 @@ a.add_to_wishlist:before {
   margin-right: 3px;
 }
 
+.woocommerce .tm-products-carousel-widget-wrapper div.product .block_wishlist_compare a.compare,
 .woocommerce .site-content .compare {
   position: relative;
   background: none;
@@ -9111,10 +9113,18 @@ a.add_to_wishlist:before {
   cursor: pointer;
 }
 
-.woocommerce .site-content .compare + a.btn.alt, .woocommerce .site-content .compare + a.alt.button, .woocommerce .site-content .woocommerce-account .compare + a.alt.button, .woocommerce .site-content .wishlist_table td.product-add-to-cart .compare + a.alt.button, .woocommerce .site-content .yith-woocompare-widget .compare + a.alt.compare.button {
+.woocommerce .tm-products-carousel-widget-wrapper div.product .block_wishlist_compare a.compare + a.btn.alt, .woocommerce .tm-products-carousel-widget-wrapper div.product .block_wishlist_compare a.compare + a.alt.button, .woocommerce .tm-products-carousel-widget-wrapper div.product .block_wishlist_compare .woocommerce-account a.compare + a.alt.button, .woocommerce .tm-products-carousel-widget-wrapper div.product .block_wishlist_compare .wishlist_table td.product-add-to-cart a.compare + a.alt.button, .woocommerce .tm-products-carousel-widget-wrapper div.product .block_wishlist_compare .yith-woocompare-widget a.compare + a.alt.compare.button,
+.woocommerce .site-content .compare + a.btn.alt, .woocommerce .site-content .compare + a.alt.button,
+.woocommerce .site-content .woocommerce-account .compare + a.alt.button, .woocommerce-account
+.woocommerce .site-content .compare + a.alt.button, .woocommerce .site-content .wishlist_table td.product-add-to-cart .compare + a.alt.button, .woocommerce .wishlist_table td.product-add-to-cart .site-content .compare + a.alt.button,
+.woocommerce .site-content .woocommerce-account .wishlist_table td.product-add-to-cart .compare + a.alt.button, .woocommerce-account .wishlist_table td.product-add-to-cart
+.woocommerce .site-content .compare + a.alt.button,
+.woocommerce .site-content .yith-woocompare-widget .compare + a.alt.compare.button, .yith-woocompare-widget
+.woocommerce .site-content .compare + a.alt.compare.button {
   margin-top: 20px;
 }
 
+.woocommerce .tm-products-carousel-widget-wrapper div.product .block_wishlist_compare a.compare:before,
 .woocommerce .site-content .compare:before {
   font-weight: 400;
   content: '\e164';
@@ -9126,11 +9136,13 @@ a.add_to_wishlist:before {
   font-size: 18px;
 }
 
+.woocommerce .tm-products-carousel-widget-wrapper div.product .block_wishlist_compare a.compare.added:before,
 .woocommerce .site-content .compare.added:before {
   content: "\e5ca";
   transform: rotate(0deg);
 }
 
+.woocommerce .tm-products-carousel-widget-wrapper div.product .block_wishlist_compare a.compare.loading:after,
 .woocommerce .site-content .compare.loading:after {
   display: block;
   position: absolute;
@@ -9245,6 +9257,8 @@ input.qty[type=number] {
   -ms-transform: translatez(0);
   -o-transform: translatez(0);
   transform: translatez(0);
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
 .woocommerce span.featured,
@@ -10694,7 +10708,6 @@ input.qty[type=number] {
   margin-bottom: 0;
   text-transform: uppercase;
   padding-bottom: 14px;
-  border-bottom: 1px solid #232222;
 }
 
 .woocommerce .tm-products-carousel-widget-wrapper div.product .price, .woocommerce .tm-products-carousel-widget-wrapper div.product .compare-list.products .price td, .compare-list.products .price .woocommerce .tm-products-carousel-widget-wrapper div.product td, .woocommerce .tm-products-carousel-widget-wrapper li.product .price, .woocommerce .tm-products-carousel-widget-wrapper li.product .compare-list.products .price td, .compare-list.products .price .woocommerce .tm-products-carousel-widget-wrapper li.product td, .woocommerce .products div.product .price, .woocommerce .compare-list.products div.product .price td, .woocommerce .compare-list.products .price div.product td, .woocommerce .products li.product .price, .woocommerce .compare-list.products li.product .price td, .woocommerce .compare-list.products .price li.product td {
@@ -11138,78 +11151,68 @@ input.qty[type=number] {
   text-transform: none;
 }
 
-div.products div.product-category.product {
+.site-content .tm-categories-carousel-widget-container .tm-categories-carousel-widget-slide,
+.site-content div.product-category.product {
   padding-bottom: 30px;
   margin-bottom: 0;
 }
 
-@media (max-width: 380px) {
-  div.products div.product-category.product {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-
-div.products div.product-category.product > a {
+.site-content .tm-categories-carousel-widget-container .tm-categories-carousel-widget-slide > a,
+.site-content div.product-category.product > a {
   display: block;
   position: relative;
 }
 
-div.products div.product-category.product > a img {
+.site-content .tm-categories-carousel-widget-container .tm-categories-carousel-widget-slide > a img,
+.site-content div.product-category.product > a img {
   position: relative;
   z-index: 1;
   width: 100%;
   display: block;
 }
 
-div.products div.product-category.product > a:hover h3 {
-  background: rgba(0, 0, 0, 0.9);
-  bottom: 50%;
-  transform: translateY(50%);
+.site-content .tm-categories-carousel-widget-container .tm-categories-carousel-widget-slide > a:hover h3,
+.site-content div.product-category.product > a:hover h3 {
+  left: 52px;
 }
 
-div.products div.product-category.product > a:hover h3 mark.count {
+.site-content .tm-categories-carousel-widget-container .tm-categories-carousel-widget-slide > a:hover h3 mark.count,
+.site-content div.product-category.product > a:hover h3 mark.count {
   visibility: visible;
   opacity: 1;
   height: 22px;
+  margin-left: 10px;
 }
 
-div.products div.product-category.product > a h3 {
+.site-content .tm-categories-carousel-widget-container .tm-categories-carousel-widget-slide > a h3,
+.site-content div.product-category.product > a h3 {
   position: absolute;
   z-index: 2;
-  bottom: 30px;
+  top: 28px;
+  left: 42px;
   width: 100%;
-  text-align: center;
-  background: rgba(255, 255, 255, 0.9);
   transition: 0.5s ease all;
   transform: translateY(0);
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 70px;
-  font-weight: 700;
-  text-transform: uppercase;
+  text-align: left;
+  text-transform: none;
+  color: #fff;
 }
 
-div.products div.product-category.product > a h3 mark.count {
+.site-content .tm-categories-carousel-widget-container .tm-categories-carousel-widget-slide > a h3 mark.count,
+.site-content div.product-category.product > a h3 mark.count {
   font-style: normal;
   transition: 0.5s ease all;
   background: none;
   font-weight: 300;
-  visibility: hidden;
-  opacity: 0;
+  font-size: 14px;
+  visibility: visible;
+  opacity: 1;
+  height: 22px;
   padding: 0;
   text-transform: none;
-  height: 0;
+  display: block;
+  margin-top: 8px;
+  color: #fff;
 }
 
 .tm-categories-carousel-widget-wrapper .tm-categories-carousel-widget-slide > a {
@@ -11742,16 +11745,21 @@ table.compare-list td.even {
   display: none;
 }
 
+.woocommerce .products div.product .block_price_rating,
 .woocommerce-page div.product .block_price_rating {
   position: relative;
   padding: 11px 0;
   overflow: hidden;
 }
 
-.woocommerce-page div.product .block_price_rating .price, .woocommerce-page div.product .block_price_rating .compare-list.products .price td, .compare-list.products .price .woocommerce-page div.product .block_price_rating td {
+.woocommerce .products div.product .block_price_rating .price, .woocommerce .compare-list.products div.product .block_price_rating .price td, .woocommerce .compare-list.products .price div.product .block_price_rating td,
+.woocommerce-page div.product .block_price_rating .price,
+.woocommerce-page div.product .block_price_rating .compare-list.products .price td, .compare-list.products .price
+.woocommerce-page div.product .block_price_rating td {
   float: left;
 }
 
+.woocommerce .products div.product .block_price_rating .star-rating,
 .woocommerce-page div.product .block_price_rating .star-rating {
   float: right;
   margin-top: 10px;
@@ -11827,11 +11835,10 @@ table.compare-list td.even {
   color: #222;
 }
 
-.compare:before, .compare:after {
-  content: "test";
-  display: block !important;
-}
-
+/* .compare:before, .compare:after {
+	content: "test";
+	display: block !important;
+} */
 .woocommerce #content div.product div.images,
 .woocommerce div.product div.images,
 .woocommerce-page #content div.product div.images,
@@ -11854,8 +11861,30 @@ table.compare-list td.even {
 }
 
 .single_product_wrapper .thumbnails.columns-4 .thumbnail {
+  position: relative;
   max-width: 120px;
   flex: 0 1 auto;
+  border: 2px solid #fff;
+  transition: .4s all ease;
+  margin-bottom: 10px;
+}
+
+.single_product_wrapper .thumbnails.columns-4 .thumbnail:after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  border: 2px solid #232222;
+  transition: .4s all ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.single_product_wrapper .thumbnails.columns-4 .thumbnail:hover:after, .single_product_wrapper .thumbnails.columns-4 .thumbnail.selected:after {
+  opacity: 1;
+  visibility: visible;
 }
 
 .easyzoom {
@@ -11890,6 +11919,18 @@ table.compare-list td.even {
   cursor: crosshair;
 }
 
+/* single product page tabs */
+.woocommerce div.product .woocommerce-tabs .panel {
+  max-width: 1130px;
+  margin: 0 auto;
+}
+
+.woocommerce span.onsale {
+  top: 0;
+  left: 0;
+  position: relative;
+}
+
 /*--------------------------------------------------------------
 # _screen_preview styles
 --------------------------------------------------------------*/
@@ -11912,7 +11953,7 @@ table.compare-list td.even {
 
 .preview-container_bg {
   position: absolute;
-  top: 82px;
+  top: -952px;
   height: 11000px;
   width: 2050px;
   left: 50%;
@@ -11929,7 +11970,7 @@ table.compare-list td.even {
 }
 
 .pr-bg-1 .preview-container_bg {
-  background: url(../cosmetro/assets/images/7.jpg) 50% 0 no-repeat;
+  background: url(../cosmetro/assets/images/1.jpg) 50% 0 no-repeat;
 }
 
 .develop {

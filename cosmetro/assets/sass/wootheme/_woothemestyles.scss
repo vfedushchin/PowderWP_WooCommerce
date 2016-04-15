@@ -276,8 +276,9 @@ div#primary {
 				}
 			}
 			img {
-				width: 100px;
+				width: auto;
 				margin-left: 0;
+				max-width: 200px;
 			}
 			.product-widget-categories {
 				display: block;
@@ -765,6 +766,7 @@ a.add_to_wishlist {
 	}
 }
 
+.woocommerce .tm-products-carousel-widget-wrapper div.product .block_wishlist_compare a.compare,
 .woocommerce .site-content .compare {
 	position: relative;
 	background: none;
@@ -938,6 +940,8 @@ input.qty[type=number] {
 		-ms-transform: translatez(0);
 		-o-transform: translatez(0);
 		transform: translatez(0);
+		display: inline-block;
+		margin-bottom: 10px;
 	}
 	span.featured {
 		color: #ff4747;
@@ -2022,7 +2026,7 @@ input.qty[type=number] {
 			margin-bottom: 0;
 			text-transform: uppercase;
 			padding-bottom: 14px;
-			border-bottom: 1px solid #232222;
+
 		}
 		.price {
 			display: block;
@@ -2430,14 +2434,12 @@ input.qty[type=number] {
 	@extend .row;
 }
 
-div.products {
-	div.product-category.product {
+
+	.site-content .tm-categories-carousel-widget-container .tm-categories-carousel-widget-slide,
+	.site-content div.product-category.product {
 		padding-bottom: 30px;
 		margin-bottom: 0;
-		@media (max-width: 380px) {
-			flex: 0 0 100%;
-			max-width: 100%;
-		}
+
 		> a {
 			display: block;
 			position: relative;
@@ -2449,55 +2451,45 @@ div.products {
 			}
 			&:hover {
 				h3 {
-					background: rgba(0, 0, 0, 0.9);
-					bottom: 50%;
-					transform: translateY(50%);
+					left: 52px;
 					mark.count {
 						visibility: visible;
 						opacity: 1;
 						height: 22px;
+						margin-left: 10px;
 					}
 				}
 			}
 			h3 {
 				position: absolute;
 				z-index: 2;
-				bottom: 30px;
+				top: 28px;
+				left: 42px;
 				width: 100%;
-				text-align: center;
-				background: rgba(255, 255, 255, 0.9);
 				transition: 0.5s ease all;
 				transform: translateY(0);
-				display: -ms-flexbox;
-				display: -webkit-flex;
-				display: flex;
-				-webkit-flex-direction: column;
-				-ms-flex-direction: column;
-				flex-direction: column;
-				-webkit-justify-content: center;
-				-ms-flex-pack: center;
-				justify-content: center;
-				-webkit-align-items: center;
-				-ms-flex-align: center;
-				align-items: center;
-				height: 70px;
-				font-weight: 700;
-				text-transform: uppercase;
+				text-align: left;
+				text-transform: none;
+				color: #fff;
 				mark.count {
 					font-style: normal;
 					transition: 0.5s ease all;
 					background: none;
 					font-weight: 300;
-					visibility: hidden;
-					opacity: 0;
+					font-size: 14px;
+					visibility: visible;
+					opacity: 1;
+					height: 22px;
 					padding: 0;
 					text-transform: none;
-					height: 0;
+					display: block;
+					margin-top: 8px;
+					color: #fff;
 				}
 			}
 		}
 	}
-}
+
 
 .tm-categories-carousel-widget-wrapper {
 	.tm-categories-carousel-widget-slide {
@@ -3018,7 +3010,7 @@ table.compare-list td.even {
 
 
 
-
+.woocommerce .products div.product .block_price_rating,
 .woocommerce-page div.product .block_price_rating {
 	position: relative;
 	padding: 11px 0;
@@ -3108,10 +3100,10 @@ table.compare-list td.even {
 }
 
 
-.compare:before, .compare:after {
+/* .compare:before, .compare:after {
 	content: "test";
 	display: block !important;
-}
+} */
 
 
 
@@ -3139,8 +3131,32 @@ table.compare-list td.even {
     align-items: flex-start;
 
     .thumbnail {
+    	position: relative;
 			max-width: 120px;
 			flex: 0 1 auto;
+			border: 2px solid #fff;
+			transition: .4s all ease;
+			margin-bottom: 10px;
+
+			&:after{
+				content: '';
+				position: absolute;
+				top: 2px;
+				bottom: 2px;
+				left: 2px;
+				right: 2px;
+				border: 2px solid #232222;
+				transition: .4s all ease;
+				opacity: 0;
+				visibility: hidden;
+			}
+
+			&:hover, &.selected {
+				&:after{
+					opacity: 1;
+					visibility: visible;
+				}
+			}
 		}
 	}
 }
@@ -3172,3 +3188,18 @@ table.compare-list td.even {
 		cursor: crosshair;
 	}
 }
+
+
+/* single product page tabs */
+.woocommerce div.product .woocommerce-tabs .panel {
+	max-width: 1130px;
+	margin: 0 auto;
+}
+
+
+.woocommerce span.onsale {
+	top: 0;
+	left: 0;
+	position: relative;
+}
+

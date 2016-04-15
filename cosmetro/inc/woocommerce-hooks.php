@@ -611,6 +611,13 @@ function cosmetro_categories_carousel_widget_name( $cat_title, $cat_name ) {
 }
 add_filter('tm_categories_carousel_widget_name', 'cosmetro_categories_carousel_widget_name', 10, 2 );
 
+
+function cosmetro_categories_carousel_space_between( ) {
+ return sprintf('60');
+}
+add_filter('tm_categories_carousel_widget_space_between_slides', 'cosmetro_categories_carousel_space_between', 10 );
+add_filter('tm_products_carousel_widget_space_between_slides', 'cosmetro_categories_carousel_space_between', 30 );
+
 function cosmetro_tm_products_carousel_widget_remove_hooks() {
  $hooks = array(
   array(
@@ -623,6 +630,12 @@ function cosmetro_tm_products_carousel_widget_remove_hooks() {
  return $hooks;
 }
 add_filter( 'tm_products_carousel_widget_remove_hooks', 'cosmetro_tm_products_carousel_widget_remove_hooks' );
+
+
+//class-tm-banners-grid-widget not include bootstrap grid
+add_filter('tm_woocommerce_include_bootstrap_grid', '__return_false');
+
+
 
 
 
@@ -681,7 +694,8 @@ function cosmetro_woocommerce_single_product_image_thumbnail_html( $link, $attac
  $image_link  = wp_get_attachment_url( $attachment_id );
  $image_title  = esc_attr( get_the_title( $attachment_id ) );
  $image_caption  = esc_attr( get_post_field( 'post_excerpt', $attachment_id ) );
- $image   = wp_get_attachment_image( $attachment_id, apply_filters( 'single_product_small_thumbnail_size', 'shop_thumbnail' ), 0, $attr = array(
+ //$image   = wp_get_attachment_image( $attachment_id, apply_filters( 'single_product_small_thumbnail_size', 'shop_thumbnail' ), 0, $attr = array(
+ $image   = wp_get_attachment_image( $attachment_id, apply_filters( 'single_product_small_thumbnail_size', '_tm-thumb-120-120' ), 0, $attr = array(
   'title' => $image_title,
   'alt' => $image_title
   ) );

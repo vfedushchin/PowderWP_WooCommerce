@@ -396,11 +396,17 @@ mark, ins {
 }
 
 .widget-area .widget .product-categories-thumbnail div .title_count,
+.tm-categories-carousel-widget-container .tm-categories-carousel-widget-slide > a h3 mark,
 .products .product-category>a h3 mark{
+	font-weight: 300;
 	color: $regular_text_color;
+	font-family: $body_font_family;
 }
 .widget-area .widget .product-categories-thumbnail div .title_count,
+.tm-categories-carousel-widget-container .tm-categories-carousel-widget-slide > a h3 mark,
 .products .product-category > a h3 mark{
+	font-weight: 300;
+	color: $regular_text_color;
 	font-family: $body_font_family;
 }
 .tm_about_store_widget{
@@ -645,15 +651,16 @@ a.compare.button:hover{
 .woocommerce .products .product-category>a:hover h3{
 	color: white;
 }
+.tm-categories-carousel-widget-container .tm-categories-carousel-widget-slide > a h3, div.product-category.product > a h3,
 .woocommerce .products .product-category > a h3{
-	font-style: $h5_font_style;
-	font-weight: $h5_font_weight;
-	font-size: $h5_font_size{px};
-	line-height: $h5_line_height;
-	font-family: $h5_font_family;
-	letter-spacing: $h5_letter_spacing{px};
-	text-align: $h5_text_align;
-	color: $regular_h5_color;
+	font-style: $h2_font_style;
+	font-weight: $h2_font_weight;
+	font-size: @font_size($h2_font_size, multiple, ceil, 1)px;
+	line-height: $h2_line_height;
+	font-family: $h2_font_family;
+	letter-spacing: $h2_letter_spacing{px};
+	text-align: $h2_text_align;
+	color: $regular_h2_color;
 }
 .woocommerce .products .product-category > a h3 mark.count{
 	color: white;

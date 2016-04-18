@@ -29,14 +29,14 @@
 	margin-bottom: 0;
 	.swiper-container{
 		overflow: visible;
-		padding-bottom: 30px;
+		padding-bottom: 15px;
 	}
 
 	.swiper-button-next, .swiper-button-prev{
 		top: 50%;
 		@include transform(translateY(-50%));
 		@include media-breakpoint-up(lg){
-			top: 32%;
+			top: 30%;
 			@include transform(translateY(0));
 		}
 	}

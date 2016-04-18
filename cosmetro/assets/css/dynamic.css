@@ -474,6 +474,9 @@ mark, ins {
 .widget .product_list_widget li a{
 	color: $regular_text_color;
 }
+.widget .product_list_widget .product_title_link a{
+	color: $regular_h3_color;
+}
 .widget .product_list_widget li a:hover{
 	color: $regular_accent_color_1;
 }
@@ -782,4 +785,8 @@ a.compare.button:hover{
 .woocommerce a.remove,
 .yith-woocompare-widget ul.products-list a.remove {
 	color: $regular_accent_color_1 !important;
+}
+
+.woocommerce a.add_to_cart_button {
+	color: $regular_h3_color;
 }

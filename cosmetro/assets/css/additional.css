@@ -5641,8 +5641,8 @@ ul, ol {
 }
 
 /* if about page */
-.postid-492 .post-author-bio {
-  display: none;
+.postid-492 {
+  /* .post-author-bio {display: none;} */
 }
 
 .page .alignleft {

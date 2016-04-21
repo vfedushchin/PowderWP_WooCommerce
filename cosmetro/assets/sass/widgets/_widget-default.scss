@@ -22,7 +22,7 @@
 	.sidebar-primary &,
 	.sidebar-secondary &{
 		& + .widget {
-			padding-top: 52px;
+			padding-top: 19px;
 		}
 	}
 	.sidebar-primary &,
@@ -522,4 +522,8 @@
 
 .widget-area .widget.widget_categories {
 	.widget-title {margin-bottom: 29px;}
+}
+
+.widget-area .widget.tm_about_store_widget {
+	padding-top: 54px;
 }

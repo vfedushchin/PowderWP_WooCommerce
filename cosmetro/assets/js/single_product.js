@@ -3,19 +3,24 @@
 jQuery(function ($) {
 
 	var $easyzoom = $( '.single_product_wrapper .images .easyzoom' ).easyZoom(),
-	easyZoomApi = $easyzoom.data('easyZoom'),
-	items = [],
-	index;
-	$( '.single_product_wrapper .images .thumbnails .thumbnail' ).eq(0).addClass( 'selected' );
-	$( '.single_product_wrapper .images .thumbnails .thumbnail' ).each( function() {
+		easyZoomApi = $easyzoom.data('easyZoom'),
+		items = [],
+		index,
+		thumb = $( '.single_product_wrapper .images .thumbnails .thumbnail' ),
+		enlarge = $( '.single_product_wrapper .images .enlarge' ),
+		zoom_enabled = true;
+
+	thumb.eq(0).addClass( 'selected' );
+	thumb.each( function() {
 		items.push( {
 			src: $( this ).data( 'href' )
 		} );
 		$( this ).on( 'click', function() {
-			$( '.single_product_wrapper .images .thumbnails .thumbnail' ).removeClass( 'selected' );
+			thumb.removeClass( 'selected' );
 			$this = $( this );
 			$this.addClass( 'selected' );
 			easyZoomApi.teardown();
+			zoom_enabled = false;
 			$( '.woocommerce-main-image' ).attr( {
 				href: $this.data( 'href' )
 			} ).find( 'img' ).attr( {
@@ -26,34 +31,36 @@ jQuery(function ($) {
 			} );
 			zoom();
 			index = $this.index();
-			$( '.single_product_wrapper .images .enlarge' ).on( 'click', function() {
-				$.magnificPopup.open( {
-					items: items,
-					gallery: {
-						enabled: true
-					},
-					type: 'image'
-				}, index );
-			} );
+			open_popup( index );
 		} );
 	} );
 
-	$( '.single_product_wrapper .images .enlarge' ).on( 'click', function() {
-		$this = $( this );
-		$.magnificPopup.open( {
-			items: items,
-			gallery: {
-				enabled: true
-			},
-			type: 'image'
-		}, 0 );
-	} );
+	function open_popup( index ) {
+		enlarge.on( 'click', function() {
+			$this = $( this );
+			$.magnificPopup.open( {
+				items: items,
+				gallery: {
+					enabled: true
+				},
+				type: 'image'
+			}, index );
+		} );
+	}
+
+	open_popup( 0 );
 
 	function zoom() {
 		if ( 768 > Math.min( $( window ).width(), screen.width ) ) {
-			easyZoomApi.teardown();
+			if( true === zoom_enabled ) {
+				easyZoomApi.teardown();
+				zoom_enabled = false;
+			}
 		} else {
-			easyZoomApi._init();
+			if( false === zoom_enabled ) {
+				easyZoomApi._init();
+				zoom_enabled = true;
+			}
 		}
 	}
 

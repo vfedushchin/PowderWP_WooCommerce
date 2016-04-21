@@ -5,9 +5,9 @@
 			padding: 12px 8px;
 			background: #f4f4f4;
 			margin-top: 81px;
-			margin-bottom: 81px;
+			margin-bottom: 0;
 
-			&:before, &:after {
+			&:before{
 				position: absolute;
 				display: inline-block;
 				content: '';

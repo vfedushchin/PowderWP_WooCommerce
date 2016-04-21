@@ -520,16 +520,18 @@ function cosmetro_cart_link_fragment( $fragments ) {
 	return $fragments;
 }
 
-function cosmetro_woocommerce_result_count() {
-	echo '</div><div class="col-lg-3">';
+function cosmetro_woocommerce_open_order_wrap(){
+	//echo '<div class="row"><div class="col-lg-3">';
+	echo '<div class="filter_count_section">';
 }
 
-function cosmetro_woocommerce_open_order_wrap(){
-	echo '<div class="row"><div class="col-lg-3">';
+function cosmetro_woocommerce_result_count() {
+	//echo '</div><div class="col-lg-3">';
 }
 
 function cosmetro_woocommerce_close_order_wrap() {
-	echo '</div></div>';
+	//echo '</div></div>';
+	echo '</div>';
 }
 
 function cosmetro_remove_products_from_posts_search( $query ) {

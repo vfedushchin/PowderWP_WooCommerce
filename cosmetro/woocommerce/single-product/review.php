@@ -42,14 +42,15 @@ $verified = wc_review_is_from_verified_owner( $comment->comment_ID );
 			<?php else : ?>
 
 				<p class="meta">
-					<?php _e( 'Posted by ', 'cosmetro' ); ?>
+					<i class="material-icons">person</i>
+					<?php _e( 'By ', 'cosmetro' ); ?>
 					<span itemprop="author"><?php comment_author(); ?></span> <?php
 
 						if ( get_option( 'woocommerce_review_rating_verification_label' ) === 'yes' )
 							if ( $verified )
 								echo '<em class="verified">(' . __( 'verified owner', 'woocommerce' ) . ')</em> ';
 
-					?> <span>&nbsp;&bull;&nbsp;</span> <time itemprop="datePublished" datetime="<?php echo get_comment_date( 'c' ); ?>"><?php echo get_comment_date( wc_date_format() ); ?></time>
+					?> <i class="material-icons icon-date">access_time</i> <span><?php _e( 'Published on  ', 'cosmetro' ); ?></span> <time itemprop="datePublished" datetime="<?php echo get_comment_date( 'c' ); ?>"><?php echo get_comment_date( wc_date_format() ); ?></time>
 				</p>
 
 			<?php endif; ?>

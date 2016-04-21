@@ -3,9 +3,16 @@
 	padding: 10px;
 	text-align: center;
 	margin: 0 0 10px;
-	
+
 	.page-title {
-		margin:33px 0 22px;
+		margin:33px 0 42px;
+	}
+
+	.page-content {
+		h3 {
+			margin-top: 5px;
+			margin-bottom: 31px;
+		}
 	}
 	h4 {
 		margin-bottom:20px;
@@ -13,9 +20,47 @@
 	.btn {
 		margin-bottom:11px;
 	}
-	
+
 	@include media-breakpoint-up(lg) {
 		padding: 30px;
 		margin: 0 0 30px;
+	}
+}
+
+
+//_404.scss
+.not-found {
+	box-shadow: none;
+	padding: 0;
+
+	.page-title {
+		margin: 6px 0 8px;
+	}
+
+	.page-content {
+		margin: 0;
+	}
+
+	h2 {
+		margin-top: 8px;
+		margin-bottom: 31px;
+	}
+
+	h4 {
+		margin-bottom: 14px;
+	}
+
+	hr {
+		margin: 69px 0 72px;
+	}
+	hr + p {
+		max-width: 450px;
+		margin: 0 auto;
+		padding-bottom: 8px;
+	}
+	.search-form {
+		max-width: 386px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }

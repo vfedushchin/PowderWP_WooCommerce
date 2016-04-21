@@ -168,12 +168,12 @@
 }
 
 .sidebar-primary .widget .product_list_widget > li .reviewer span, .sidebar-secondary .widget .product_list_widget > li .reviewer span{
-	color: $regular_accent_color_1;
+	color: $regular_h3_color;
 }
 
 .sidebar-primary .widget .product_list_widget > li .widget_title_product, .sidebar-secondary .widget .product_list_widget > li .widget_title_product,
 .sidebar-primary.widget-area .widget .product_list_widget > li .product_title_link > a, .sidebar-secondary.widget-area .widget .product_list_widget > li .product_title_link > a {
-	color: $regular_text_color;
+	color: $regular_h3_color;
 }
 
 .sidebar-primary .widget .product_list_widget > li .widget_title_product:hover, .sidebar-secondary .widget .product_list_widget > li .widget_title_product:hover,
@@ -251,8 +251,9 @@
 }
 
 .sidebar-primary .widget .product_list_widget > li .widget_title_product, .sidebar-secondary .widget .product_list_widget > li .widget_title_product, .sidebar-primary.widget-area .widget .product_list_widget > li .product_title_link > a, .sidebar-secondary.widget-area .widget .product_list_widget > li .product_title_link > a{
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 22px;
+	text-transform: uppercase;
 }
 
 .about-author_btn.btn.btn-secondary{

@@ -541,7 +541,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   padding: 22px 0 22px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 600px) {
   .main-navigation ul ul {
     padding: 0;
     margin-top: 0 !important;
@@ -2778,11 +2778,13 @@ a:focus {
   margin-right: 12px;
   margin-left: 0;
   width: 80px;
+  margin-bottom: 30px;
 }
 
 @media (min-width: 992px) {
   .widget.woocommerce.widget_shopping_cart .widget_shopping_cart_content .cart_list li a img {
     width: 153px;
+    margin-bottom: 0;
   }
 }
 
@@ -3584,38 +3586,6 @@ footer .widget_recent_entries ul li + li {
   margin-top: 0;
 }
 
-.not-found {
-  box-shadow: none;
-  padding: 0;
-}
-
-.not-found .page-title {
-  margin: 6px 0 8px;
-}
-
-.not-found .page-content {
-  margin: 0;
-}
-
-.not-found h2 {
-  margin-top: 8px;
-  margin-bottom: 31px;
-}
-
-.not-found h4 {
-  margin-bottom: 14px;
-}
-
-.not-found hr {
-  margin: 48px 0 54px;
-}
-
-.not-found .search-form {
-  max-width: 397px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .site-content {
   padding-top: 17px;
 }
@@ -3888,13 +3858,26 @@ body .tm_custom_menu_widget .widget-title:before {
 .comments-area {
   margin-right: 0;
   margin-left: 0;
-  padding-top: 62px;
   padding-right: 0;
   padding-left: 0;
+  margin-top: 56px;
+}
+
+.comments-area .comments-title {
+  border-top: 1px solid #232222;
+  padding-top: 73px;
 }
 
 .comments-title {
   margin-bottom: 30px;
+}
+
+.comment-list {
+  padding-bottom: 75px;
+}
+
+.comment-list > li + li {
+  margin-top: 25px;
 }
 
 .comment-list > .comment {
@@ -3963,7 +3946,7 @@ body .tm_custom_menu_widget .widget-title:before {
 .comment-respond {
   margin-right: 0;
   margin-left: 0;
-  padding-top: 44px;
+  padding-top: 62px;
   padding-right: 0;
   padding-left: 0;
 }
@@ -3991,56 +3974,17 @@ textarea.comment-form__field {
   margin: 0 0 57px;
 }
 
-.search-results .posts-list__item .entry-header + .post-thumbnail > .post-thumbnail__img {
-  width: 100%;
+.search-results .posts-list__item {
+  overflow: hidden;
 }
 
-.search-results .posts-list__item .post-list__item-content {
-  padding-bottom: 10px;
+.search-results .posts-list__item .post-body {
+  overflow: hidden;
 }
 
-.search-results .posts-list__item .post__cats {
-  padding-bottom: 10px;
-}
-
-.search-results .posts-list__item .post__date {
-  float: left;
-  margin-top: 10px;
-  margin-right: 29px;
-}
-
-.search-results .posts-list__item .post__date .post-date__link {
-  min-width: 59px;
-  padding: 0 10px;
-  height: 59px;
-  display: block;
-  border-radius: 50%;
-  line-height: 59px;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-.search-results .posts-list__item .post__date .post-date__link time {
-  display: inline-block;
-  padding-top: 3px;
-  line-height: 18px;
-  word-wrap: normal;
-  -moz-hyphens: none;
-  hyphens: none;
-}
-
-@media (min-width: 480px) {
-  .search-results .posts-list__item .share-btns__list {
-    float: left;
-  }
-}
-
-@media (max-width: 479px) {
-  .search-results .posts-list__item footer.entry-footer a.btn {
-    float: none;
-    display: inline-block;
-    margin-top: 25px;
-  }
+.search-results .posts-list__item .share-btns__list {
+  margin-top: 23px;
+  margin-bottom: 15px;
 }
 
 .post .post-thumbnail, .post .format-quote {
@@ -5108,10 +5052,6 @@ body .post-gallery {
 }
 
 @media (min-width: 1200px) {
-  body.woocommerce-page.position-one-right-sidebar #primary.col-md-8, body.woocommerce-page.position-one-left-sidebar #primary.col-md-8 {
-    /* padding-left: 0.9375rem;
-				padding-right: 0.9375rem; */
-  }
   body.woocommerce-page [class*='sidebar-']:before {
     display: none;
   }
@@ -5422,6 +5362,19 @@ input[type="search"] {
   font-size: 14px;
 }
 
+.single .post-left-column .post__cats {
+  padding-bottom: 20px;
+}
+
+.single .post-left-column .post__author.vcard {
+  margin-top: 3px;
+}
+
+.single .post-left-column .post__tags {
+  margin-top: 23px;
+  margin-bottom: 25px;
+}
+
 @media (min-width: 1200px) {
   .single .post-left-column {
     float: left;
@@ -5541,10 +5494,12 @@ h4:before, .widget-title:before {
 
 .widget.tm_about_store_widget .btn {
   margin-top: 35px;
+  color: #fff;
   background: #232222;
 }
 
 .widget.tm_about_store_widget .btn:hover {
+  color: #fff;
   background: #777;
 }
 
@@ -5638,11 +5593,6 @@ ul, ol {
 
 .text-variants p + p {
   margin-top: 10px;
-}
-
-/* if about page */
-.postid-492 {
-  /* .post-author-bio {display: none;} */
 }
 
 .page .alignleft {

@@ -119,7 +119,7 @@ if ( ! function_exists( 'cosmetro_currency_switcher' ) ) {
  function cosmetro_currency_switcher() {
   if ( is_wc_jetpack() ) { ?>
    <div class="currency_switcher">
-    <?php the_widget( 'WCJ_Widget_Multicurrency' ,'title=') ?>
+   <?php the_widget( 'WCJ_Widget_Multicurrency' , array('title' => '', 'switcher_type' => 'wcj_currency_select_drop_down_list' )) ?>
    </div>
   <?php
   }

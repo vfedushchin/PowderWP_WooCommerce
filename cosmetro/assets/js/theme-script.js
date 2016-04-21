@@ -459,7 +459,7 @@
 	}
 
 	// Dropdown header cart
-	 $(document.body).on('wc_fragments_refreshed wc_fragments_loaded added_to_cart', function () {
+	 /*$(document.body).on('wc_fragments_refreshed wc_fragments_loaded added_to_cart', function () {
 		$('.cart-contents').on('click', function () {
 		 $('.header-cart-dropdown').toggleClass('header-cart-dropdown-active');
 		});
@@ -470,7 +470,18 @@
 			$('.header-cart-dropdown').removeClass('header-cart-dropdown-active');
 		 }
 		});
-	 });
+	 });*/
+		$(document.body).on('wc_fragments_refreshed wc_fragments_loaded added_to_cart', function () {
+		 $('.cart-contents').on('click', function () {
+		  $('.header-cart-dropdown').toggleClass('header-cart-dropdown-active');
+		 });
+		 $(document).on('click touchstart touchend', function (e) {
+		  var target = e.target;
+		  if (!$(target).is('.site-header-cart') && !$(target).is('.cart-contents') && $(target).parents('.site-header-cart').length == 0) {
+		      $('.header-cart-dropdown').removeClass('header-cart-dropdown-active');
+		     }
+		 });
+		});
 
 	 // top menu fix (to close on apple devices)
 	 $(document).on('click touchstart touchend', function (e) {

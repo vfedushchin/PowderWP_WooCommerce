@@ -31,7 +31,7 @@ function cosmetro_register_sidebars() {
 			'after_wrapper'  => '</div>',
 			'is_global'      => true,
 		),
-		'sidebar-additional' => array(
+		/*'sidebar-additional' => array(
 			'name'           => esc_html__( 'Sidebar About', 'cosmetro' ),
 			'description'    => '',
 			'before_widget'  => '<aside id="%1$s" class="widget %2$s">',
@@ -41,7 +41,7 @@ function cosmetro_register_sidebars() {
 			'before_wrapper' => '<div id="%1$s" %2$s role="complementary">',
 			'after_wrapper'  => '</div>',
 			'is_global'      => true,
-		),
+		),*/
 		'full-width-header-area' => array(
 			'name'           => esc_html__( 'Full width header area', 'cosmetro' ),
 			'description'    => '',

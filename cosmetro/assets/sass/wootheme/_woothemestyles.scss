@@ -3528,6 +3528,7 @@ table.compare-list td.even {
 
 .woocommerce table.shop_table_responsive tr:nth-child(2n) td, .woocommerce-page table.shop_table_responsive tr:nth-child(2n) td {
     background-color: rgba(0,0,0,.01);
+    background: none;
 }
 
 @media (max-width: 767px) {
@@ -3562,5 +3563,22 @@ table.compare-list td.even {
 .search.search-results.woocommerce.woocommerce-page {
 	.site-content .container {
 		max-width: 1200px;
+	}
+}
+
+
+.woocommerce .site-content nav.woocommerce-pagination {
+	text-align: left;
+	margin-top: 5px;
+
+	.page-numbers {
+		font-size: 14px;
+	}
+
+	.material-icons {
+		vertical-align: middle;
+		font-size: 16px;
+		line-height: 14px;
+
 	}
 }

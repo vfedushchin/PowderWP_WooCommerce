@@ -24,6 +24,18 @@ add_action( 'woocommerce_single_product_summary', 'woocommerce_show_product_sale
 
 
 
+
+add_filter( 'woocommerce_pagination_args', 'woo_pagination_style');
+add_filter( 'woocommerce_comment_pagination_args', 'woo_pagination_style');
+
+function woo_pagination_style() {
+	return array(
+		'prev_text' => '<i class="material-icons">navigate_before</i>' . __( 'Prev', 'powder' ),
+    'next_text' => __( 'Next', 'powder' ) . '<i class="material-icons">navigate_next</i>'
+	);
+}
+
+
 add_filter( 'cosmetro_get_customizer_options', 'cosmetro_add_options' );
 
 // remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );

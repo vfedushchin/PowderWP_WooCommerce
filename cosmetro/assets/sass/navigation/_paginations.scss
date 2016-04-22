@@ -1,3 +1,4 @@
+.woocommerce nav.woocommerce-pagination,
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
@@ -39,6 +40,7 @@
 	}
 }
 
+.woocommerce nav.woocommerce-pagination,
 .pagination {
 	padding: 0 0 25px;
 	font-size: 14px;
@@ -48,6 +50,7 @@
 		min-width: 20px;
 		text-transform: uppercase;
 		@include font-size(1);
+		font-size: 14px;
 		text-align: center;
 		height: auto;
 		border: none;

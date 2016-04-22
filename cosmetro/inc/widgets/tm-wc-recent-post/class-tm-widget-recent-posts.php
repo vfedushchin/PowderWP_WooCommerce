@@ -32,7 +32,7 @@ class Cosmetro_WP_Widget_Recent_Posts extends WP_Widget_Recent_Posts {
 			$args['widget_id'] = $this->id;
 		}
 
-		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Recent Posts' );
+		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Recent Posts', 'cosmetro' );
 
 		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
@@ -128,17 +128,17 @@ class Cosmetro_WP_Widget_Recent_Posts extends WP_Widget_Recent_Posts {
 		$show_author = isset( $instance['show_author'] ) ? (bool) $instance['show_author'] : false;
 ?>
 
-		<p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+		<p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'cosmetro' ); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
 
-		<p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:' ); ?></label>
+		<p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:', 'cosmetro' ); ?></label>
 		<input class="tiny-text" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="number" step="1" min="1" value="<?php echo $number; ?>" size="3" /></p>
 
 		<p><input class="checkbox" type="checkbox"<?php checked( $show_date ); ?> id="<?php echo $this->get_field_id( 'show_date' ); ?>" name="<?php echo $this->get_field_name( 'show_date' ); ?>" />
-		<label for="<?php echo $this->get_field_id( 'show_date' ); ?>"><?php _e( 'Display post date?' ); ?></label></p>
+		<label for="<?php echo $this->get_field_id( 'show_date' ); ?>"><?php _e( 'Display post date?', 'cosmetro' ); ?></label></p>
 
 		<p><input class="checkbox" type="checkbox"<?php checked( $show_author ); ?> id="<?php echo $this->get_field_id( 'show_author' ); ?>" name="<?php echo $this->get_field_name( 'show_author' ); ?>" />
-		<label for="<?php echo $this->get_field_id( 'show_author' ); ?>"><?php _e( 'Display post author?' ); ?></label></p>
+		<label for="<?php echo $this->get_field_id( 'show_author' ); ?>"><?php _e( 'Display post author?', 'cosmetro' ); ?></label></p>
 <?php
 	}
 }

@@ -41,11 +41,6 @@ function cosmetro_register_required_plugins() {
 			'required' => false,
 		),
 		array(
-			'name'     => esc_html__( 'BNE Testimonials', 'cosmetro' ),
-			'slug'     => 'bne-testimonials',
-			'required' => false,
-		),
-		array(
 			'name'     => esc_html__( 'Woocommerce', 'cosmetro' ),
 			'slug'     => 'woocommerce',
 			'required' => false,
@@ -79,7 +74,6 @@ function cosmetro_register_required_plugins() {
 		array(
 			'name'     => esc_html__( 'TM Woocommerce Package', 'cosmetro' ),
 			'slug'     => 'tm-woocommerce-package',
-			'source'   => COSMETRO_THEME_DIR . '/assets/includes/plugins/tm-woocommerce-package.zip',
 			'required' => true,
 		),
 		array(

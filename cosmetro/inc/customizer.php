@@ -225,7 +225,7 @@ function cosmetro_get_customizer_options() {
 			'regular_text_color' => array(
 				'title'   => esc_html__( 'Text color', 'cosmetro' ),
 				'section' => 'regular_scheme',
-				'default' => '#232222',
+				'default' => '#777777',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
@@ -239,7 +239,7 @@ function cosmetro_get_customizer_options() {
 			'regular_link_hover_color' => array(
 				'title'   => esc_html__( 'Link hover color', 'cosmetro' ),
 				'section' => 'regular_scheme',
-				'default' => '#232222',
+				'default' => '#fe9ec7',
 				'field'   => 'hex_color',
 				'type'    => 'control',
 			),
@@ -396,7 +396,7 @@ function cosmetro_get_customizer_options() {
 			'body_font_family' => array(
 				'title'   => esc_html__( 'Font Family', 'cosmetro' ),
 				'section' => 'body_typography',
-				'default' => 'Roboto',
+				'default' => 'Lato',
 				'field'   => 'fonts',
 				'type'    => 'control',
 			),
@@ -411,7 +411,7 @@ function cosmetro_get_customizer_options() {
 			'body_font_weight' => array(
 				'title'   => esc_html__( 'Font Weight', 'cosmetro' ),
 				'section' => 'body_typography',
-				'default' => '400',
+				'default' => '300',
 				'field'   => 'select',
 				'choices' => cosmetro_get_font_weight(),
 				'type'    => 'control',
@@ -419,7 +419,7 @@ function cosmetro_get_customizer_options() {
 			'body_font_size' => array(
 				'title'       => esc_html__( 'Font Size, px', 'cosmetro' ),
 				'section'     => 'body_typography',
-				'default'     => '14',
+				'default'     => '16',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 6,
@@ -432,7 +432,7 @@ function cosmetro_get_customizer_options() {
 				'title'       => esc_html__( 'Line Height', 'cosmetro' ),
 				'description' => esc_html__( 'Relative to the font-size of the element', 'cosmetro' ),
 				'section'     => 'body_typography',
-				'default'     => '1.42',
+				'default'     => '1.375',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 1.0,
@@ -504,7 +504,7 @@ function cosmetro_get_customizer_options() {
 			'h1_font_size' => array(
 				'title'       => esc_html__( 'Font Size, px', 'cosmetro' ),
 				'section'     => 'h1_typography',
-				'default'     => '80',
+				'default'     => '70',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 10,
@@ -573,7 +573,7 @@ function cosmetro_get_customizer_options() {
 			'h2_font_style' => array(
 				'title'   => esc_html__( 'Font Style', 'cosmetro' ),
 				'section' => 'h2_typography',
-				'default' => 'normal',
+				'default' => 'italic',
 				'field'   => 'select',
 				'choices' => cosmetro_get_font_styles(),
 				'type'    => 'control',
@@ -589,7 +589,7 @@ function cosmetro_get_customizer_options() {
 			'h2_font_size' => array(
 				'title'       => esc_html__( 'Font Size, px', 'cosmetro' ),
 				'section'     => 'h2_typography',
-				'default'     => '50',
+				'default'     => '40',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 10,
@@ -666,7 +666,7 @@ function cosmetro_get_customizer_options() {
 			'h3_font_weight' => array(
 				'title'   => esc_html__( 'Font Weight', 'cosmetro' ),
 				'section' => 'h3_typography',
-				'default' => '700',
+				'default' => '400',
 				'field'   => 'select',
 				'choices' => cosmetro_get_font_weight(),
 				'type'    => 'control',
@@ -743,7 +743,7 @@ function cosmetro_get_customizer_options() {
 			'h4_font_style' => array(
 				'title'   => esc_html__( 'Font Style', 'cosmetro' ),
 				'section' => 'h4_typography',
-				'default' => 'italic',
+				'default' => 'normal',
 				'field'   => 'select',
 				'choices' => cosmetro_get_font_styles(),
 				'type'    => 'control',
@@ -751,7 +751,7 @@ function cosmetro_get_customizer_options() {
 			'h4_font_weight' => array(
 				'title'   => esc_html__( 'Font Weight', 'cosmetro' ),
 				'section' => 'h4_typography',
-				'default' => '400',
+				'default' => '700',
 				'field'   => 'select',
 				'choices' => cosmetro_get_font_weight(),
 				'type'    => 'control',
@@ -759,7 +759,7 @@ function cosmetro_get_customizer_options() {
 			'h4_font_size' => array(
 				'title'       => esc_html__( 'Font Size, px', 'cosmetro' ),
 				'section'     => 'h4_typography',
-				'default'     => '24',
+				'default'     => '20',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 10,
@@ -772,7 +772,7 @@ function cosmetro_get_customizer_options() {
 				'title'       => esc_html__( 'Line Height', 'cosmetro' ),
 				'description' => esc_html__( 'Relative to the font-size of the element', 'cosmetro' ),
 				'section'     => 'h4_typography',
-				'default'     => '1.25',
+				'default'     => '1.35',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 1.0,
@@ -784,7 +784,7 @@ function cosmetro_get_customizer_options() {
 			'h4_letter_spacing' => array(
 				'title'       => esc_html__( 'Letter Spacing, px', 'cosmetro' ),
 				'section'     => 'h4_typography',
-				'default'     => '0.7',
+				'default'     => '1',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => -10,
@@ -857,7 +857,7 @@ function cosmetro_get_customizer_options() {
 				'title'       => esc_html__( 'Line Height', 'cosmetro' ),
 				'description' => esc_html__( 'Relative to the font-size of the element', 'cosmetro' ),
 				'section'     => 'h5_typography',
-				'default'     => '1.42',
+				'default'     => '1.5714',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 1.0,
@@ -906,7 +906,7 @@ function cosmetro_get_customizer_options() {
 			'h6_font_family' => array(
 				'title'   => esc_html__( 'Font Family', 'cosmetro' ),
 				'section' => 'h6_typography',
-				'default' => 'Roboto',
+				'default' => 'Montserrat',
 				'field'   => 'fonts',
 				'type'    => 'control',
 			),
@@ -929,7 +929,7 @@ function cosmetro_get_customizer_options() {
 			'h6_font_size' => array(
 				'title'       => esc_html__( 'Font Size, px', 'cosmetro' ),
 				'section'     => 'h6_typography',
-				'default'     => '16',
+				'default'     => '14',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 10,
@@ -942,7 +942,7 @@ function cosmetro_get_customizer_options() {
 				'title'       => esc_html__( 'Line Height', 'cosmetro' ),
 				'description' => esc_html__( 'Relative to the font-size of the element', 'cosmetro' ),
 				'section'     => 'h6_typography',
-				'default'     => '1.375',
+				'default'     => '1.5714',
 				'field'       => 'number',
 				'input_attrs' => array(
 					'min'  => 1.0,
@@ -990,7 +990,7 @@ function cosmetro_get_customizer_options() {
 			'breadcrumbs_font_family' => array(
 				'title'   => esc_html__( 'Font Family', 'cosmetro' ),
 				'section' => 'breadcrumbs_typography',
-				'default' => 'Montserrat',
+				'default' => 'Lato',
 				'field'   => 'fonts',
 				'type'    => 'control',
 			),
@@ -1005,7 +1005,7 @@ function cosmetro_get_customizer_options() {
 			'breadcrumbs_font_weight' => array(
 				'title'   => esc_html__( 'Font Weight', 'cosmetro' ),
 				'section' => 'breadcrumbs_typography',
-				'default' => '400',
+				'default' => '300',
 				'field'   => 'select',
 				'choices' => cosmetro_get_font_weight(),
 				'type'    => 'control',
@@ -1165,7 +1165,7 @@ function cosmetro_get_customizer_options() {
 			'header_bg_repeat' => array(
 				'title'   => esc_html__( 'Background Repeat', 'cosmetro' ),
 				'section' => 'header_styles',
-				'default' => 'repeat',
+				'default' => 'tile',
 				'field'   => 'select',
 				'choices' => array(
 					'no-repeat'  => esc_html__( 'No Repeat', 'cosmetro' ),
@@ -1201,7 +1201,7 @@ function cosmetro_get_customizer_options() {
 			'header_layout_type' => array(
 				'title'   => esc_html__( 'Layout', 'cosmetro' ),
 				'section' => 'header_styles',
-				'default' => 'default',
+				'default' => 'centered',
 				'field'   => 'select',
 				'choices' => array(
 					'minimal'  => esc_html__( 'Style 1', 'cosmetro' ),

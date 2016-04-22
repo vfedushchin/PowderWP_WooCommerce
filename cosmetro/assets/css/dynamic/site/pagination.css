@@ -12,6 +12,7 @@
 .bne-testimonial-slider.bne-flexslider .flex-control-nav li a:hover, .bne-testimonial-slider.bne-flexslider .flex-control-nav li a.flex-active{
 	background: #ffffff;
 }
+
 .pagination a.page-numbers:hover,
 .pagination span.page-numbers.current,
 .woocommerce nav.woocommerce-pagination ul li .page-numbers:hover,
@@ -19,6 +20,17 @@
 	color: $regular_accent_color_1;
 	background: none;
 }
+
+nav.woocommerce-pagination .page-numbers{
+	color: $regular_text_color;
+}
+nav.woocommerce-pagination .page-numbers:hover,
+nav.woocommerce-pagination .page-numbers.current {
+	color: $regular_accent_color_1;
+}
+
+.woocommerce nav.woocommerce-pagination .page-numbers.next,
+.woocommerce nav.woocommerce-pagination .page-numbers.prev,
 .pagination .page-numbers.next,
 .pagination .page-numbers.prev,
 .woocommerce nav.woocommerce-pagination ul li .page-numbers.next,
@@ -27,6 +39,8 @@
 	color: $regular_h3_color;
 	font-family: $h3_font_family;
 }
+.woocommerce nav.woocommerce-pagination .page-numbers.next:hover,
+.woocommerce nav.woocommerce-pagination .page-numbers.prev:hover,
 .pagination .page-numbers.next:hover,
 .pagination .page-numbers.prev:hover,
 .woocommerce nav.woocommerce-pagination ul li .page-numbers.next:hover,

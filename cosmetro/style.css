@@ -11204,9 +11204,15 @@ input.qty[type=number] {
   display: inline-block;
   max-width: 100%;
   position: relative;
-  padding-bottom: 10px;
   width: 100%;
   text-align: center;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 992px) {
+  .woocommerce .tm-products-carousel-widget-wrapper div.product .block_product_thumbnail > a:first-child, .woocommerce .tm-products-carousel-widget-wrapper li.product .block_product_thumbnail > a:first-child, .woocommerce .products div.product .block_product_thumbnail > a:first-child, .woocommerce .products li.product .block_product_thumbnail > a:first-child {
+    padding-bottom: 70px;
+  }
 }
 
 .woocommerce .tm-products-carousel-widget-wrapper div.product .block_product_thumbnail img, .woocommerce .tm-products-carousel-widget-wrapper li.product .block_product_thumbnail img, .woocommerce .products div.product .block_product_thumbnail img, .woocommerce .products li.product .block_product_thumbnail img {

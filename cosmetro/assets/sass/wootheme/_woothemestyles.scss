@@ -1953,9 +1953,12 @@ input.qty[type=number] {
 				display: inline-block;
 				max-width: 100%;
 				position: relative;
-				padding-bottom: 10px;
 				width: 100%;
 				text-align: center;
+				padding-bottom: 40px;
+				@include media-breakpoint-up(lg) {
+					padding-bottom: 70px;
+				}
 			}
 			img {
 				margin: 0;

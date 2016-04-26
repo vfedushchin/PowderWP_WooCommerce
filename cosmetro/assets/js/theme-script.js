@@ -182,7 +182,7 @@
 						paginationClickable: true,
 						nextButton: uniqId + ' .swiper-button-next',
 						prevButton: uniqId + ' .swiper-button-prev',
-						spaceBetween: 30,
+						spaceBetween: 0,
 						onInit: function(){
 							$( uniqId + ' .swiper-button-next' ).css({ 'display': 'block' });
 							$( uniqId + ' .swiper-button-prev' ).css({ 'display': 'block' });

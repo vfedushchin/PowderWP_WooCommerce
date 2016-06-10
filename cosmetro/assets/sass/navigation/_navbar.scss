@@ -177,74 +177,6 @@ $rd-menu-width: 100%;
 		box-shadow: 0 0 0 0 rgba(0, 0, 0, .1);
 	}
 }
-
-/*
-* Mobilepanel Search
-*/
-/* header .navbar-search-toggle {
-	display: none;
-	position: fixed;
-	top: 9px;
-	left: 59px;
-	width: $rd-button-size;
-	height: $rd-button-size;
-	text-align: center;
-	z-index: 99999992;
-	cursor: pointer;
-	transition: all .3s ease-in-out;
-	transition-delay: .2s;
-
-	&:before, &:after {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		text-align: center;
-		font-family: 'Material Icons';
-		font-size: 24px;
-		line-height: $rd-button-size;
-		transition: all .2s ease-in-out;
-		transition-delay: .1s;
-	}
-
-	&:before {
-		content: '\e8b6';
-		opacity: 1;
-		visibility: visible;
-		@include transform(rotate(0deg) scale(1));
-	}
-
-	&:after {
-		content: '\e5cd';
-		opacity: 0;
-		visibility: hidden;
-		@include transform(rotate(-90deg) scale(0));
-	}
-
-	&.search-active {
-		left: 100%;
-		@include transform(translateX(-100%));
-		margin-left: -9px;
-		transition-delay: 0s;
-
-		&:before, &:after {
-			transition-delay: .1s;
-		}
-
-		&:before {
-			opacity: 0;
-			visibility: hidden;
-			@include transform(rotate(90deg) scale(1));
-		}
-
-		&:after {
-			opacity: 1;
-			visibility: visible;
-			@include transform(rotate(0deg) scale(1));
-		}
-	}
-}
- */
 .widget_product_search {
 	position: relative;
 
@@ -266,15 +198,6 @@ $rd-menu-width: 100%;
 */
 @media (max-width: 767px) {
 	body .navbar-header-cart {
-		/* position: fixed;
-		top: 0;
-		right: 11px;
-		margin: 0;
-		height: $rd-mobilepanel-height;
-		z-index: 99999994;
-		transition: all .3s ease-in-out;
-		transition-delay: 0.3s; */
-
 		.count {
 			padding-top: 9px;
 			display: inline-block;
@@ -383,7 +306,7 @@ li.rd-mobile-menu-shop {
 
 	.social-list__items {
 		padding-left: 0;
-
+s
 		li {
 			display: inline-block;
 		}
@@ -470,9 +393,6 @@ li.rd-mobile-menu-shop {
 	padding: 0;
 	background: transparent;
 
-	/* @include button-lines();
-	@include button-lines__cross(); */
-
 	&:before {
 		position: absolute;
 		display: inline-block;
@@ -538,10 +458,6 @@ li.rd-mobile-menu-shop {
 				padding-bottom: 2px;
 			}
 		}
-	}
-
-	.main-navigation {
-		/* display: none !important; */
 	}
 
 	.header-container #lang_sel,

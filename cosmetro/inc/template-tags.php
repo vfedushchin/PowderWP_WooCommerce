@@ -437,10 +437,10 @@ function cosmetro_site_breadcrumbs() {
 	$breadcrumbs_settings = apply_filters( 'cosmetro_breadcrumbs_settings', array(
 		'separator' => '|',
 		'wrapper_format'    => '<div class="breadcrumbs__items">%2$s</div><div class="clear"></div><div class="breadcrumbs__title">%1$s</div>',
-		'page_title_format' => '<h4 class="page-title">%s</h4>',
+		'page_title_format' => '<h4 class="page-title breadcrumbs-title">%s</h4>',
 		'path_type'         => $breadcrumbs_path_type,
 		'show_on_front'     => $breadcrumbs_front_visibillity,
-		'show_title'        => $breadcrumbs_page_title,
+		'show_title'        => false,
 		'labels'            => array(
 			'browse' => '',
 		),
@@ -474,11 +474,13 @@ function cosmetro_get_page_preloader() {
 	$page_preloader = get_theme_mod( 'page_preloader', cosmetro_theme()->customizer->get_default( 'page_preloader' ) );
 
 	if ( $page_preloader ) {
-		echo '<div class="page-preloader-cover"><div class="tm-folding-cube">
-				<div class="tm-cube1 tm-cube"></div>
-				<div class="tm-cube2 tm-cube"></div>
-				<div class="tm-cube4 tm-cube"></div>
-				<div class="tm-cube3 tm-cube"></div>
+		echo '<div class="page-preloader-cover">
+			<div class="cssload-container">
+				<ul class="cssload-flex-container">
+					<li>
+						<span class="cssload-loading"></span>
+					</li>
+				</ul>
 			</div>
 		</div>';
 	}

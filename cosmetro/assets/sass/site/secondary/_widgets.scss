@@ -19,3 +19,18 @@
 .full-width-header-area {
 	margin: -30px 0 0 0;
 }
+
+
+.tm_banners_grid_widget_banner {
+	.tm_banners_grid_widget_banner_wrapper {
+		width: 100%;
+		.tm_banners_grid_widget_banner_link,
+		.tm_banners_grid_widget_banner_link img,
+		img {
+			width: 100%;
+		}
+	}
+	.tm_banners_grid_widget_banner_link img {
+		width: 100%;
+	}
+}

@@ -1070,13 +1070,13 @@ function cosmetro_get_customizer_options() {
 				'field'   => 'checkbox',
 				'type'    => 'control',
 			),
-			'footer_social_links' => array(
+			/*'footer_social_links' => array(
 				'title'   => esc_html__( 'Show social links in footer', 'cosmetro' ),
 				'section' => 'social_links',
 				'default' => false,
 				'field'   => 'checkbox',
 				'type'    => 'control',
-			),
+			),*/
 			'blog_post_share_buttons' => array(
 				'title'   => esc_html__( 'Show social sharing to blog posts', 'cosmetro' ),
 				'section' => 'social_links',
@@ -1210,6 +1210,13 @@ function cosmetro_get_customizer_options() {
 				),
 				'type' => 'control',
 			),
+			'top_currency_switcher' => array(
+				'title'   => esc_html__( 'On/Off Currency Switcher', 'cosmetro' ),
+				'section' => 'header_styles',
+				'default' => true,
+				'field'   => 'checkbox',
+				'type'    => 'control',
+			),
 
 			/** `Top Panel` section */
 			'header_top_panel' => array(
@@ -1233,13 +1240,7 @@ function cosmetro_get_customizer_options() {
 				'field'   => 'checkbox',
 				'type'    => 'control',
 			),
-			'top_currency_switcher' => array(
-				'title'   => esc_html__( 'On/Off Currency Switcher', 'cosmetro' ),
-				'section' => 'header_top_panel',
-				'default' => true,
-				'field'   => 'checkbox',
-				'type'    => 'control',
-			),
+
 			'top_panel_bg' => array(
 				'title'   => esc_html__( 'Background color', 'cosmetro' ),
 				'section' => 'header_top_panel',
@@ -1299,7 +1300,7 @@ function cosmetro_get_customizer_options() {
 				'title'   => esc_html__( 'Logo upload', 'cosmetro' ),
 				'section' => 'footer_options',
 				'field'   => 'image',
-				'default' => get_stylesheet_directory_uri() . '/assets/images/footer-logo.png',
+				//'default' => get_stylesheet_directory_uri() . '/assets/images/footer-logo.png',
 				'type'    => 'control',
 			),
 			'footer_copyright' => array(
@@ -1326,7 +1327,7 @@ function cosmetro_get_customizer_options() {
 			'footer_layout_type' => array(
 				'title'   => esc_html__( 'Layout', 'cosmetro' ),
 				'section' => 'footer_options',
-				'default' => 'centered',
+				'default' => 'default',
 				'field'   => 'select',
 				'choices' => array(
 					'default'  => esc_html__( 'Style 1', 'cosmetro' ),
@@ -1334,6 +1335,14 @@ function cosmetro_get_customizer_options() {
 					'minimal'  => esc_html__( 'Style 3', 'cosmetro' ),
 				),
 				'type' => 'control'
+			),
+			'footer_social_links' => array(
+				'title'   => esc_html__( 'Show social links in footer', 'cosmetro' ),
+				'section' => 'footer_options',
+				'default' => true,
+				'field'   => 'checkbox',
+				'type'    => 'control',
+				'active_callback' => 'cosmetro_is_footer_style_2',
 			),
 			'footer_widgets_bg' => array(
 				'title'   => esc_html__( 'Footer Widgets Area color', 'cosmetro' ),
@@ -1365,12 +1374,6 @@ function cosmetro_get_customizer_options() {
 				'type'            => 'section',
 				'active_callback' => 'is_home',
 			),
-			'blog_title' => array(
-				'title'   => __( 'Title', 'cosmetro' ),
-				'section' => 'blog',
-				'field'   => 'text',
-				'type'    => 'control',
-			),
 			'blog_layout_type' => array(
 				'title'   => esc_html__( 'Layout', 'cosmetro' ),
 				'section' => 'blog',
@@ -1379,9 +1382,7 @@ function cosmetro_get_customizer_options() {
 				'choices' => array(
 					'default'        => esc_html__( 'Default', 'cosmetro' ),
 					'grid-2-cols'    => esc_html__( 'Grid (2 Columns)', 'cosmetro' ),
-					'grid-3-cols'    => esc_html__( 'Grid (3 Columns)', 'cosmetro' ),
 					'masonry-2-cols' => esc_html__( 'Masonry (2 Columns)', 'cosmetro' ),
-					'masonry-3-cols' => esc_html__( 'Masonry (3 Columns)', 'cosmetro' ),
 				),
 				'type' => 'control'
 			),
@@ -1838,7 +1839,7 @@ function cosmetro_get_fonts_options() {
  */
 function cosmetro_get_default_top_panel_text() {
 	return sprintf(
-		__( 'Call us: <em>+3(800) 2345-6789</em>  7 Days a week from 9:00 am to 7:00 pm', 'cosmetro' )
+		__( 'Call us: <a href="tel:#"><em>+3(800) 2345-6789</em></a>   7 Days a week from 9:00 am to 7:00 pm', 'cosmetro' )
 	);
 }
 
@@ -1851,4 +1852,15 @@ function cosmetro_get_default_top_panel_text() {
  */
 function cosmetro_get_default_footer_copyright() {
 	return '<em>Cosmetro</em> is proudly powered by WordPress Entries (RSS) and Comments (RSS) <a href="%%privacy-policy%%">Privacy Policy</a>';
+}
+
+
+/**
+ * Get footer style
+ *
+ * @since  1.0.0
+ * @return boolean
+ */
+function cosmetro_is_footer_style_2() {
+ return 'centered' === get_theme_mod( 'footer_layout_type' );
 }

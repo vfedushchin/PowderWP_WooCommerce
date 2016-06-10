@@ -14,12 +14,15 @@ input.cherry-radio-input {
 .cherry-radio-item {
   margin-bottom: 5px;
 }
+
 .cherry-radio-item:last-child {
   margin-bottom: 0;
 }
+
 .cherry-radio-item label {
   display: inline-block;
 }
+
 .cherry-radio-item span {
   width: 17px;
   height: 17px;
@@ -32,6 +35,7 @@ input.cherry-radio-input {
   display: inline-block;
   float: left;
 }
+
 .cherry-radio-item span i {
   width: 9px;
   height: 9px;
@@ -52,15 +56,18 @@ input.cherry-radio-input {
   max-width: 105px;
   position: relative;
 }
+
 .cherry-radio-img label {
   display: inline-block;
 }
+
 .cherry-radio-img img {
   width: 100%;
   height: auto;
   margin: 0 0 5px 0;
   pointer-events: none;
 }
+
 .cherry-radio-img .check {
   display: none;
   background-color: #fff;
@@ -74,17 +81,20 @@ input.cherry-radio-input {
   border-radius: 15px;
   box-sizing: content-box;
 }
+
 .cherry-radio-img .check i {
   color: #8bc735;
   font-size: 36px;
   width: 28px;
   height: 28px;
 }
+
 .cherry-radio-img .check i:before {
   position: relative;
   top: -3px;
   left: -5px;
 }
+
 .cherry-radio-img .check .media-modal-icon {
   background-position: -21px 0;
   height: 15px;
@@ -96,9 +106,11 @@ input.cherry-radio-input {
 .cherry-radio-img.checked {
   font-weight: 600;
 }
+
 .cherry-radio-img.checked .check {
   display: block;
 }
+
 .cherry-radio-img.checked img {
   box-shadow: 0 0 0 3px #FFF,0 0 0 5px #8bc735;
 }

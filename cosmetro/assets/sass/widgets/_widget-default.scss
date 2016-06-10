@@ -241,7 +241,7 @@
 
 .footer-area{
 	.widget_calendar{
-		#calendar_wrap{
+		.calendar_wrap{
 			tbody td, th{
 				left: 0px;
 			}
@@ -262,7 +262,7 @@
 		margin: 0 0 24px 0;
 	}
 
-	#calendar_wrap {
+	.calendar_wrap {
 		table {
 			margin: 0;
 		}
@@ -368,7 +368,7 @@
 			margin: 0 0 15px 0;
 		}
 
-		#calendar_wrap {
+		.calendar_wrap {
 			table {
 				margin: 0;
 			}
@@ -377,12 +377,12 @@
 }
 
 
-@media (max-width: 1699px) {
-	.widget_calendar #calendar_wrap tbody td a:before {
+@media (max-width: 1329px) {
+	.widget_calendar .calendar_wrap tbody td a:before {
 			width: 20px;
 			height: 20px;
 			top: 0;
-			left: 0px;
+		left: 0px;
 		}
 }
 
@@ -527,4 +527,16 @@
 .widget-area .widget.widget-subscribe,
 .widget-area .widget.tm_about_store_widget {
 	padding-top: 54px;
+}
+
+.widget.widget-custom-postson {
+	.meta {
+		font-size: 14px;
+	}
+}
+
+footer .footer-area-wrap .footer-area .widget.widget_recent_entries{
+	ul li {
+		margin-bottom: 20px;
+	}
 }

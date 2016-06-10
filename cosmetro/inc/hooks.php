@@ -41,6 +41,9 @@ add_filter( 'widget_text', 'cosmetro_render_widget_macros' );
 // Adds the meta viewport to the header.
 add_action( 'wp_head', 'cosmetro_meta_viewport', 0 );
 
+// Adds loader for contact form 7
+add_filter( 'wpcf7_ajax_loader', 'cosmetro_wpcf7_ajax_loader' );
+
 /**
  * Append description into nav items
  *
@@ -107,7 +110,7 @@ function cosmetro_set_thumb_sizes( $size ) {
 		return $size;
 	}
 
-	return 'cosmetro-thumb-1170-854';
+	return '_tm-thumb-l';
 }
 
 /**
@@ -355,4 +358,18 @@ function cosmetro_render_widget_macros( $text ) {
  */
 function cosmetro_meta_viewport() {
 	echo '<meta name="viewport" content="width=device-width, initial-scale=1" />' . "\n";
+}
+
+
+/**
+ * Adds loader for contact form 7
+*/
+function cosmetro_wpcf7_ajax_loader() {
+ return COSMETRO_THEME_URI . '/assets/images/rolling.svg';
+}
+
+
+add_action( 'admin_menu',  'theme_remove_tiny_grid_menu', 999 );
+function theme_remove_tiny_grid_menu() {
+ remove_submenu_page( 'options-general.php', 'tiny-grid' );
 }

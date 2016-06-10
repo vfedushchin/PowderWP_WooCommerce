@@ -24,13 +24,13 @@ $order = wc_get_order( $order_id );
 $show_purchase_note = $order->has_status( apply_filters( 'woocommerce_purchase_note_order_statuses', array( 'completed', 'processing' ) ) );
 ?>
 <br><br>
-<h4><?php _e( 'Order Details', 'woocommerce' ); ?></h4>
+<h4><?php _e( 'Order Details', 'cosmetro' ); ?></h4>
 <table class="shop_table shop_table_responsive order_details">
 	<thead>
 		<tr>
-			<th colspan="2" class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
+			<th colspan="2" class="product-name"><?php _e( 'Product', 'cosmetro' ); ?></th>
 			<th class="product-quantity"><?php _e( 'Quantity', 'cosmetro' ); ?></th>
-			<th class="product-total"><?php _e( 'Total', 'woocommerce' ); ?></th>
+			<th class="product-total"><?php _e( 'Total', 'cosmetro' ); ?></th>
 		</tr>
 	</thead>
 	<tbody>

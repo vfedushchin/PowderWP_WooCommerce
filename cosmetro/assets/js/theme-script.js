@@ -31,6 +31,7 @@
 			self.subscribe_init( self );
 			self.main_menu( self, $( '.main-navigation' ) );
 			self.to_top_init( self );
+			self.mobile_panel( self );
 		},
 
 		window_load_render: function ( self ) {
@@ -224,10 +225,16 @@
 				}
 
 				if ( $('#wpadminbar').length ) {
-					$navbar.addClass('has-bar');
+					//$navbar.addClass('has-bar');
 				}
 
-				$navbar.stickUp();
+				$navbar.stickUp({
+					correctionSelector: '#wpadminbar',
+					listenSelector: '.listenSelector',
+					pseudo: true,
+					active: true
+				});
+				CherryJsCore.variable.$document.trigger( 'scroll.stickUp' );
 
 			});
 		},
@@ -428,7 +435,31 @@
 					scrollSpeed: 600
 				});
 			}
-		}
+		},
+
+
+		mobile_panel: function ( self ) {
+
+			var $btnToggle = $( '.mobile-panel .btn-toggle' ),
+			$itemHasChildren = $( '.main-navigation .menu li.menu-item-has-children, .main-navigation .menu li.page_item_has_children' );
+
+			$itemHasChildren.prepend( '<span class="sub-menu-toggle"></span>' );
+
+			var $subMenuToggle = $( '.sub-menu-toggle' ),
+			$mobileNavigation = $( '.mobile-panel .btn-toggle, .mobile-panel .nav-panel');
+
+			$subMenuToggle.on( 'click', function(){
+				$(this).toggleClass( 'active' );
+			});
+
+			$btnToggle.on( 'click', function(){
+				$mobileNavigation.toggleClass( 'active' );
+				if( $subMenuToggle.hasClass( 'active' ) ){
+					$subMenuToggle.removeClass( 'active' );
+				}
+			});
+		},
+
 	}
 	CherryJsCore.theme_script.init();
 /*Styles for Woocommerce part*/
@@ -459,18 +490,6 @@
 	}
 
 	// Dropdown header cart
-	 /*$(document.body).on('wc_fragments_refreshed wc_fragments_loaded added_to_cart', function () {
-		$('.cart-contents').on('click', function () {
-		 $('.header-cart-dropdown').toggleClass('header-cart-dropdown-active');
-		});
-
-		$(document).on('click touchstart touchend', function (e) {
-		 var target = e.target;
-		 if (!$(target).is('.site-header-cart') && !$(target).is('.cart-contents') && $(target).parents('.site-header-cart').length == 0) {
-			$('.header-cart-dropdown').removeClass('header-cart-dropdown-active');
-		 }
-		});
-	 });*/
 		$(document.body).on('wc_fragments_refreshed wc_fragments_loaded added_to_cart', function () {
 		 $('.cart-contents').on('click', function () {
 		  $('.header-cart-dropdown').toggleClass('header-cart-dropdown-active');
@@ -508,7 +527,7 @@
 
 	$('.wp-audio-shortcode').wrap('<div class="audio-player-wrap"></div>')
 ;
-	$('#wcj-currency').find('option').each(function(){
+	$('#wcj-currency-select').find('option').each(function(){
 		$(this).text($(this).val());
 	});
 
@@ -529,74 +548,3 @@
 	});
 
 }(jQuery));
-
-
-
-
-
-
-
-
-/* start for screenshort image - developing
-=============================================*/
-// ------------------------------------------------------------------------
-function setCookie(name, value, options) {
-		options = options || {};
-		var expires = options.expires;
-		if (typeof expires == "number" && expires) {
-				var d = new Date();
-				d.setTime(d.getTime() + expires * 1000);
-				expires = options.expires = d;
-		}
-		if (expires && expires.toUTCString) {
-				options.expires = expires.toUTCString();
-		}
-		value = encodeURIComponent(value);
-		var updatedCookie = name + "=" + value;
-		for (var propName in options) {
-				updatedCookie += "; " + propName;
-				var propValue = options[propName];
-				if (propValue !== true) {
-						updatedCookie += "=" + propValue;
-				}
-		}
-		document.cookie = updatedCookie;
-};
-
-// ------------------------------------------------------------------------
-function getCookie(name) {
-		var matches = document.cookie.match(new RegExp(
-				"(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-		));
-		return matches ? decodeURIComponent(matches[1]) : undefined;
-};
-// ------------------------------------------------------------------------
-function deleteCookie(name) {
-		setCookie(name, "", {
-				expires: -1
-		});
-};
-// ------------------------------------------------------------------------
-var _display_screen_class;
-_display_screen_class = getCookie('_display_screen_class');
-
-
-;(function ($) {
-		$("body").prepend("<div class='preview-container pr-bg-1'><div class='preview-container_bg'></div></div>");
-		$('.preview-container').addClass(_display_screen_class);
-		addEventListener("keydown", function(event) {
-				if (event.keyCode == 81 && event.ctrlKey) {
-						//press Ctl+q to show/hide screenshort
-						// $('.preview-container').toggleClass('display');
-						if ($('.preview-container').hasClass("display")) {
-								$('.preview-container').removeClass('display');
-								setCookie('_display_screen_class', '');
-						} else {
-								$('.preview-container').addClass('display');
-								setCookie('_display_screen_class', 'display');
-						}
-				}
-		});
-})(jQuery);
-/* end for screenshort image - developing
-=============================================*/

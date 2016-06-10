@@ -16,12 +16,12 @@
 			<?php echo $category; ?>
 			<?php echo $title; ?>
 			<?php echo $excerpt; ?>
-			<?php echo $author; ?>
 			<div class="meta">
+				<?php echo $author; ?>
 				<?php echo $date; ?>
 				<?php echo $count; ?>
+				<?php echo $tag; ?>
 			</div>
-			<?php echo $tag; ?>
 			<?php echo $button; ?>
 		</div>
 	</div>

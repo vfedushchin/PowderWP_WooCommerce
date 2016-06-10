@@ -29,7 +29,7 @@
 }
 .site-header .social-list li a:hover,
 .rd-mobilemenu_ul .social-list li a:hover {
-  color: $regular_link_color;
+  color: $regular_h3_color;
 }
 
 .rd-mobile-social-list {

@@ -113,7 +113,7 @@
 }
 .swiper-pagination, .swiper-container-horizontal>.swiper-pagination-bullets {
 		position: absolute;
-		bottom: 5px;
+		bottom: -5px;
 		.swiper-pagination-bullet{
 			opacity: 0.5;
 			@include transition(ease 0.3s all);

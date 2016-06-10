@@ -52,7 +52,7 @@ if ( $products->have_posts() ) : ?>
 
 	<div class="upsells products">
 
-		<h4><?php _e( 'You may also like&hellip;', 'woocommerce' ) ?></h4>
+		<h4><?php _e( 'You may also like&hellip;', 'cosmetro' ) ?></h4>
 
 			<div class="products <?php echo $wrapper_class; ?>">
 

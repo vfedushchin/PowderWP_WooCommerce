@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		?>
 
 		<h4 id="ship-to-different-address">
-			<label for="ship-to-different-address-checkbox" class="checkbox"><?php _e( 'Ship to a different address?', 'woocommerce' ); ?></label>
+			<label for="ship-to-different-address-checkbox" class="checkbox"><?php _e( 'Ship to a different address?', 'cosmetro' ); ?></label>
 			<input id="ship-to-different-address-checkbox" class="input-checkbox" <?php checked( $ship_to_different_address, 1 ); ?> type="checkbox" name="ship_to_different_address" value="1" />
 		</h4>
 
@@ -63,7 +63,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php if ( ! WC()->cart->needs_shipping() || wc_ship_to_billing_address_only() ) : ?>
 
-			<h4><?php _e( 'Additional Information', 'woocommerce' ); ?></h4>
+			<h4><?php _e( 'Additional Information', 'cosmetro' ); ?></h4>
 
 		<?php endif; ?>
 

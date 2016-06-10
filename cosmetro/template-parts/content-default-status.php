@@ -29,23 +29,32 @@
 				?>
 			</header><!-- .entry-header -->
 
-			<div class="entry-content">
-				<?php
 
-					$embed_args = array(
-						'fields' => array( 'twitter', 'facebook' ),
-						'height' => 300,
-						'width'  => 1200,
-					);
-					$embed_content = apply_filters( 'cherry_get_embed_post_formats', false, $embed_args );
 
-					if ( false === $embed_content ) {
-						cosmetro_blog_content();
-					} else {
-						printf( '<div class="embed-wrapper">%s</div>', $embed_content );
-					}
-				?>
-			</div><!-- .entry-content -->
+				<?php $blog_content = get_theme_mod( 'blog_posts_content', cosmetro_theme()->customizer->get_default( 'blog_posts_content' ) );
+				if ( $blog_content == 'full') : ?>
+					<div class="entry-content">
+						<?php cosmetro_blog_content(110); ?>
+					</div><!-- .entry-content -->
+				<?php else: ?>
+					<div class="entry-content">
+					<?php
+
+						$embed_args = array(
+							'fields' => array( 'twitter', 'facebook' ),
+							'height' => 300,
+							'width'  => 1200,
+						);
+						$embed_content = apply_filters( 'cherry_get_embed_post_formats', false, $embed_args );
+
+						if ( false === $embed_content ) {
+							cosmetro_blog_content();
+						} else {
+							printf( '<div class="embed-wrapper">%s</div>', $embed_content );
+						}
+					?>
+					</div><!-- .entry-content -->
+				<?php endif; ?>
 
 
 			<footer class="entry-footer">

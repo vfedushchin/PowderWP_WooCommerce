@@ -54,7 +54,7 @@ class Cosmetro_WC_Widget_Recent_Reviews extends WC_Widget_Recent_Reviews {
 
 				echo $_product->get_image() . '</a>';
 
-				printf( '<em class="reviewer">' . _x( 'by <span>%1$s</span>', 'by comment author', 'woocommerce' ) . '</em>', get_comment_author() );
+				printf( '<em class="reviewer">' . _x( 'by <span>%1$s</span>', 'by comment author', 'cosmetro' ) . '</em>', get_comment_author() );
 
 				echo '<a class="widget_title_product" href="' . esc_url( get_comment_link( $comment->comment_ID ) ) . '">' . $_product->get_title() . '</a>';
 

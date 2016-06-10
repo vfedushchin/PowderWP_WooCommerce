@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: cosmetro\n"
-"POT-Creation-Date: 2016-03-15 11:35+0200\n"
+"POT-Creation-Date: 2016-05-05 11:18+0300\n"
 "PO-Revision-Date: 2016-02-15 11:18+0200\n"
 "Last-Translator: \n"
 "Language-Team: TemplateMonster\n"
@@ -32,7 +32,7 @@ msgstr ""
 msgid "Visit home page"
 msgstr ""
 
-#: 404.php:19
+#: 404.php:20
 msgid ""
 "Unfortunately the page you were looking for could not be found. Maybe search "
 "can help."
@@ -135,8 +135,8 @@ msgstr ""
 #: comments.php:31
 #, php-format
 msgctxt "comments title"
-msgid "One Response"
-msgid_plural "%1$s Responses"
+msgid "One Review"
+msgid_plural "%1$s Review"
 msgstr[0] ""
 msgstr[1] ""
 
@@ -165,7 +165,7 @@ msgstr ""
 msgid "Main"
 msgstr ""
 
-#: config/menus.php:15 inc/customizer.php:1294
+#: config/menus.php:15 inc/customizer.php:1295
 msgid "Footer"
 msgstr ""
 
@@ -173,81 +173,81 @@ msgstr ""
 msgid "Social"
 msgstr ""
 
-#: config/sidebars.php:13
+#: config/sidebars.php:32
 msgid "Sidebar Blog"
 msgstr ""
 
-#: config/sidebars.php:24
+#: config/sidebars.php:43
 msgid "Sidebar Shop"
 msgstr ""
 
-#: config/sidebars.php:35
+#: config/sidebars.php:54
 msgid "Full width header area"
 msgstr ""
 
-#: config/sidebars.php:47
+#: config/sidebars.php:66
 msgid "Before content widget area"
 msgstr ""
 
-#: config/sidebars.php:59
+#: config/sidebars.php:78
 msgid "Before loop widget area"
 msgstr ""
 
-#: config/sidebars.php:71
+#: config/sidebars.php:90
 msgid "After loop widget area"
 msgstr ""
 
-#: config/sidebars.php:83
+#: config/sidebars.php:102
 msgid "After content widget area"
 msgstr ""
 
-#: config/sidebars.php:95
+#: config/sidebars.php:116
 msgid "After content full width widget area"
 msgstr ""
 
-#: config/sidebars.php:107
+#: config/sidebars.php:128
 msgid "Footer widget area"
 msgstr ""
 
-#: functions.php:351 functions.php:365
+#: functions.php:354 functions.php:368
 msgid "Set thumbnail"
 msgstr ""
 
-#: functions.php:352
+#: functions.php:355
 msgid "Category thumbnail"
 msgstr ""
 
-#: functions.php:366
+#: functions.php:369
 msgid "Tag thumbnail"
 msgstr ""
 
-#: functions.php:372
+#: functions.php:375
 msgid "Layout Options"
 msgstr ""
 
-#: functions.php:380 inc/customizer.php:1202 inc/customizer.php:1333
-#: inc/customizer.php:1381
+#: functions.php:383 inc/customizer.php:1202 inc/customizer.php:1328
+#: inc/customizer.php:1378
 msgid "Layout"
 msgstr ""
 
-#: functions.php:385 inc/customizer.php:1583 inc/customizer.php:1601
+#: functions.php:388 inc/customizer.php:1580 inc/customizer.php:1598
 msgid "Inherit"
 msgstr ""
 
-#: functions.php:389 inc/customizer.php:1285
+#: functions.php:392 inc/customizer.php:1286
 msgid "Sidebar on left side"
 msgstr ""
 
-#: functions.php:393 inc/customizer.php:1286
+#: functions.php:396 inc/customizer.php:1287
 msgid "Sidebar on right side"
 msgstr ""
 
-#: functions.php:397
+#: functions.php:400
 msgid "No sidebar"
 msgstr ""
 
-#: functions.php:482
-msgid "<i class=\"material-icons\">flight</i>"
+#: functions.php:486
+msgid "<i class=\"material-icons\">keyboard_arrow_up</i>"
 msgstr ""
 
 #: header.php:25
@@ -754,163 +754,163 @@ msgstr ""
 msgid "Upload logo for retina-ready devices"
 msgstr ""
 
-#: inc/customizer.php:93 inc/customizer.php:396 inc/customizer.php:482
+#: inc/customizer.php:94 inc/customizer.php:397 inc/customizer.php:482
 #: inc/customizer.php:567 inc/customizer.php:652 inc/customizer.php:737
 #: inc/customizer.php:822 inc/customizer.php:907 inc/customizer.php:991
 msgid "Font Family"
 msgstr ""
 
-#: inc/customizer.php:101 inc/customizer.php:403 inc/customizer.php:489
+#: inc/customizer.php:102 inc/customizer.php:404 inc/customizer.php:489
 #: inc/customizer.php:574 inc/customizer.php:659 inc/customizer.php:744
 #: inc/customizer.php:829 inc/customizer.php:914 inc/customizer.php:998
 msgid "Font Style"
 msgstr ""
 
-#: inc/customizer.php:110 inc/customizer.php:411 inc/customizer.php:497
+#: inc/customizer.php:111 inc/customizer.php:412 inc/customizer.php:497
 #: inc/customizer.php:582 inc/customizer.php:667 inc/customizer.php:752
 #: inc/customizer.php:837 inc/customizer.php:922 inc/customizer.php:1006
 msgid "Font Weight"
 msgstr ""
 
-#: inc/customizer.php:119 inc/customizer.php:419 inc/customizer.php:505
+#: inc/customizer.php:120 inc/customizer.php:420 inc/customizer.php:505
 #: inc/customizer.php:590 inc/customizer.php:675 inc/customizer.php:760
 #: inc/customizer.php:845 inc/customizer.php:930 inc/customizer.php:1014
 msgid "Font Size, px"
 msgstr ""
 
-#: inc/customizer.php:132 inc/customizer.php:456 inc/customizer.php:542
+#: inc/customizer.php:133 inc/customizer.php:457 inc/customizer.php:542
 #: inc/customizer.php:627 inc/customizer.php:712 inc/customizer.php:797
 #: inc/customizer.php:882 inc/customizer.php:967 inc/customizer.php:1051
 msgid "Character Set"
 msgstr ""
 
-#: inc/customizer.php:143
+#: inc/customizer.php:144
 msgid "Breadcrumbs"
 msgstr ""
 
-#: inc/customizer.php:149
+#: inc/customizer.php:150
 msgid "Show full/minified breadcrumbs path"
 msgstr ""
 
-#: inc/customizer.php:154
+#: inc/customizer.php:155
 msgid "Full"
 msgstr ""
 
-#: inc/customizer.php:155
+#: inc/customizer.php:156
 msgid "Minified"
 msgstr ""
 
-#: inc/customizer.php:160
+#: inc/customizer.php:161
 msgid "Enable page title in breadcrumbs area"
 msgstr ""
 
-#: inc/customizer.php:167
+#: inc/customizer.php:168
 msgid "Enable Breadcrumbs"
 msgstr ""
 
-#: inc/customizer.php:174
+#: inc/customizer.php:175
 msgid "Enable Breadcrumbs on front page"
 msgstr ""
 
-#: inc/customizer.php:183
+#: inc/customizer.php:184
 msgid "Color Scheme"
 msgstr ""
 
-#: inc/customizer.php:184
+#: inc/customizer.php:185
 msgid "Configure Color Scheme"
 msgstr ""
 
-#: inc/customizer.php:191
+#: inc/customizer.php:192
 msgid "Regular scheme"
 msgstr ""
 
-#: inc/customizer.php:197 inc/customizer.php:296
+#: inc/customizer.php:198 inc/customizer.php:297
 msgid "Accent color (1)"
 msgstr ""
 
-#: inc/customizer.php:204 inc/customizer.php:303
+#: inc/customizer.php:205 inc/customizer.php:304
 msgid "Accent color (2)"
 msgstr ""
 
-#: inc/customizer.php:211 inc/customizer.php:310
+#: inc/customizer.php:212 inc/customizer.php:311
 msgid "Accent color (3)"
 msgstr ""
 
-#: inc/customizer.php:218
+#: inc/customizer.php:219
 msgid "Accent color (4)"
 msgstr ""
 
-#: inc/customizer.php:225 inc/customizer.php:317
+#: inc/customizer.php:226 inc/customizer.php:318
 msgid "Text color"
 msgstr ""
 
-#: inc/customizer.php:232 inc/customizer.php:324
+#: inc/customizer.php:233 inc/customizer.php:325
 msgid "Link color"
 msgstr ""
 
-#: inc/customizer.php:239 inc/customizer.php:331
+#: inc/customizer.php:240 inc/customizer.php:332
 msgid "Link hover color"
 msgstr ""
 
-#: inc/customizer.php:246 inc/customizer.php:338
+#: inc/customizer.php:247 inc/customizer.php:339
 msgid "H1 color"
 msgstr ""
 
-#: inc/customizer.php:253 inc/customizer.php:345
+#: inc/customizer.php:254 inc/customizer.php:346
 msgid "H2 color"
 msgstr ""
 
-#: inc/customizer.php:260 inc/customizer.php:352
+#: inc/customizer.php:261 inc/customizer.php:353
 msgid "H3 color"
 msgstr ""
 
-#: inc/customizer.php:267 inc/customizer.php:359
+#: inc/customizer.php:268 inc/customizer.php:360
 msgid "H4 color"
 msgstr ""
 
-#: inc/customizer.php:274 inc/customizer.php:366
+#: inc/customizer.php:275 inc/customizer.php:367
 msgid "H5 color"
 msgstr ""
 
-#: inc/customizer.php:281 inc/customizer.php:373
+#: inc/customizer.php:282 inc/customizer.php:374
 msgid "H6 color"
 msgstr ""
 
-#: inc/customizer.php:290
+#: inc/customizer.php:291
 msgid "Invert scheme"
 msgstr ""
 
-#: inc/customizer.php:382
+#: inc/customizer.php:383
 msgid "Typography"
 msgstr ""
 
-#: inc/customizer.php:383
+#: inc/customizer.php:384
 msgid "Configure typography settings"
 msgstr ""
 
-#: inc/customizer.php:390
+#: inc/customizer.php:391
 msgid "Body text"
 msgstr ""
 
-#: inc/customizer.php:431 inc/customizer.php:517 inc/customizer.php:602
+#: inc/customizer.php:432 inc/customizer.php:517 inc/customizer.php:602
 #: inc/customizer.php:687 inc/customizer.php:772 inc/customizer.php:857
 #: inc/customizer.php:942 inc/customizer.php:1026
 msgid "Line Height"
 msgstr ""
 
-#: inc/customizer.php:432 inc/customizer.php:518 inc/customizer.php:603
+#: inc/customizer.php:433 inc/customizer.php:518 inc/customizer.php:603
 #: inc/customizer.php:688 inc/customizer.php:773 inc/customizer.php:858
 #: inc/customizer.php:943 inc/customizer.php:1027
 msgid "Relative to the font-size of the element"
 msgstr ""
 
-#: inc/customizer.php:444 inc/customizer.php:530 inc/customizer.php:615
+#: inc/customizer.php:445 inc/customizer.php:530 inc/customizer.php:615
 #: inc/customizer.php:700 inc/customizer.php:785 inc/customizer.php:870
 #: inc/customizer.php:955 inc/customizer.php:1039
 msgid "Letter Spacing, px"
 msgstr ""
 
-#: inc/customizer.php:464 inc/customizer.php:550 inc/customizer.php:635
+#: inc/customizer.php:465 inc/customizer.php:550 inc/customizer.php:635
 #: inc/customizer.php:720 inc/customizer.php:805 inc/customizer.php:890
 #: inc/customizer.php:975
 msgid "Text Align"
@@ -976,10 +976,6 @@ msgstr ""
 msgid "Show social links in header"
 msgstr ""
 
-#: inc/customizer.php:1074
-msgid "Show social links in footer"
-msgstr ""
-
 #: inc/customizer.php:1081
 msgid "Show social sharing to blog posts"
 msgstr ""
@@ -996,7 +992,7 @@ msgstr ""
 msgid "Boxed"
 msgstr ""
 
-#: inc/customizer.php:1109 inc/customizer.php:1420
+#: inc/customizer.php:1109 inc/customizer.php:1417
 msgid "Fullwidth"
 msgstr ""
 
@@ -1048,16 +1044,16 @@ msgstr ""
 msgid "Background Position"
 msgstr ""
 
-#: inc/customizer.php:1184 inc/customizer.php:1604
+#: inc/customizer.php:1184 inc/customizer.php:1601
 #: inc/widgets/tm-smart-slider-widget/class-tm-smart-slider-widget.php:203
 msgid "Left"
 msgstr ""
 
-#: inc/customizer.php:1185 inc/customizer.php:1602
+#: inc/customizer.php:1185 inc/customizer.php:1599
 msgid "Center"
 msgstr ""
 
-#: inc/customizer.php:1186 inc/customizer.php:1605
+#: inc/customizer.php:1186 inc/customizer.php:1602
 #: inc/widgets/tm-smart-slider-widget/class-tm-smart-slider-widget.php:202
 msgid "Right"
 msgstr ""
@@ -1074,283 +1070,280 @@ msgstr ""
 msgid "Fixed"
 msgstr ""
 
-#: inc/customizer.php:1207 inc/customizer.php:1338
+#: inc/customizer.php:1207 inc/customizer.php:1333
 msgid "Style 1"
 msgstr ""
 
-#: inc/customizer.php:1208 inc/customizer.php:1339
+#: inc/customizer.php:1208 inc/customizer.php:1334
 msgid "Style 2"
 msgstr ""
 
-#: inc/customizer.php:1209 inc/customizer.php:1340
+#: inc/customizer.php:1209 inc/customizer.php:1335
 msgid "Style 3"
 msgstr ""
 
-#: inc/customizer.php:1216
-msgid "Top Panel"
-msgstr ""
-
-#: inc/customizer.php:1222
-msgid "Disclaimer Text"
-msgstr ""
-
-#: inc/customizer.php:1223
-msgid "HTML formatting support"
-msgstr ""
-
-#: inc/customizer.php:1230
-msgid "Enable search"
-msgstr ""
-
-#: inc/customizer.php:1237
+#: inc/customizer.php:1214
 msgid "On/Off Currency Switcher"
 msgstr ""
 
-#: inc/customizer.php:1244
+#: inc/customizer.php:1223
+msgid "Top Panel"
+msgstr ""
+
+#: inc/customizer.php:1229
+msgid "Disclaimer Text"
+msgstr ""
+
+#: inc/customizer.php:1230
+msgid "HTML formatting support"
+msgstr ""
+
+#: inc/customizer.php:1237
+msgid "Enable search"
+msgstr ""
+
+#: inc/customizer.php:1245
 msgid "Background color"
 msgstr ""
 
-#: inc/customizer.php:1253
+#: inc/customizer.php:1254
 msgid "Main Menu"
 msgstr ""
 
-#: inc/customizer.php:1259
+#: inc/customizer.php:1260
 msgid "Enable sticky menu"
 msgstr ""
 
-#: inc/customizer.php:1266
+#: inc/customizer.php:1267
 msgid "Enable title attributes"
 msgstr ""
 
-#: inc/customizer.php:1275
+#: inc/customizer.php:1276
 msgid "Sidebar"
 msgstr ""
 
-#: inc/customizer.php:1280
+#: inc/customizer.php:1281
 msgid "Sidebar Position"
 msgstr ""
 
-#: inc/customizer.php:1287
+#: inc/customizer.php:1288
 msgid "No sidebars"
 msgstr ""
 
-#: inc/customizer.php:1299
+#: inc/customizer.php:1300
 msgid "Logo upload"
 msgstr ""
 
-#: inc/customizer.php:1306
+#: inc/customizer.php:1307
 msgid "Copyright text"
 msgstr ""
 
-#: inc/customizer.php:1313
-msgid "Text layout style 2"
-msgstr ""
-
-#: inc/customizer.php:1320
+#: inc/customizer.php:1315
 msgid "Widget Area Columns"
 msgstr ""
 
-#: inc/customizer.php:1345
+#: inc/customizer.php:1340
+msgid "Show social links in footer"
+msgstr ""
+
+#: inc/customizer.php:1348
 msgid "Footer Widgets Area color"
 msgstr ""
 
-#: inc/customizer.php:1352
+#: inc/customizer.php:1355
 msgid "Footer Background color"
 msgstr ""
 
-#: inc/customizer.php:1361
+#: inc/customizer.php:1364
 msgid "Blog Settings"
 msgstr ""
 
-#: inc/customizer.php:1368
+#: inc/customizer.php:1371 inc/woocommerce-hooks.php:754
 msgid "Blog"
 msgstr ""
 
-#: inc/customizer.php:1386
+#: inc/customizer.php:1383
 msgid "Default"
 msgstr ""
 
-#: inc/customizer.php:1387
+#: inc/customizer.php:1384
 msgid "Grid (2 Columns)"
 msgstr ""
 
-#: inc/customizer.php:1388
+#: inc/customizer.php:1385
 msgid "Grid (3 Columns)"
 msgstr ""
 
-#: inc/customizer.php:1389
+#: inc/customizer.php:1386
 msgid "Masonry (2 Columns)"
 msgstr ""
 
-#: inc/customizer.php:1390
+#: inc/customizer.php:1387
 msgid "Masonry (3 Columns)"
 msgstr ""
 
-#: inc/customizer.php:1395
+#: inc/customizer.php:1392
 msgid "Featured Post Label"
 msgstr ""
 
-#: inc/customizer.php:1396
+#: inc/customizer.php:1393
 msgid "Label for sticky post."
 msgstr ""
 
-#: inc/customizer.php:1403
+#: inc/customizer.php:1400
 msgid "Post content"
 msgstr ""
 
-#: inc/customizer.php:1408
+#: inc/customizer.php:1405
 msgid "Only excerpt"
 msgstr ""
 
-#: inc/customizer.php:1409
+#: inc/customizer.php:1406
 msgid "Full content"
 msgstr ""
 
-#: inc/customizer.php:1414
+#: inc/customizer.php:1411
 msgid "Featured image"
 msgstr ""
 
-#: inc/customizer.php:1419
+#: inc/customizer.php:1416
 msgid "Small"
 msgstr ""
 
-#: inc/customizer.php:1425
+#: inc/customizer.php:1422
 msgid "Read More button text"
 msgstr ""
 
-#: inc/customizer.php:1427
+#: inc/customizer.php:1424
 #: inc/widgets/tm-carousel-widget/class-tm-carousel-widget.php:89
 #: inc/widgets/tm-smart-slider-widget/class-tm-smart-slider-widget.php:89
 msgid "Read more"
 msgstr ""
 
-#: inc/customizer.php:1432 inc/customizer.php:1476
+#: inc/customizer.php:1429 inc/customizer.php:1473
 msgid "Show post author"
 msgstr ""
 
-#: inc/customizer.php:1439 inc/customizer.php:1483
+#: inc/customizer.php:1436 inc/customizer.php:1480
 msgid "Show publish date"
 msgstr ""
 
-#: inc/customizer.php:1446 inc/customizer.php:1490
+#: inc/customizer.php:1443 inc/customizer.php:1487
 msgid "Show categories"
 msgstr ""
 
-#: inc/customizer.php:1453 inc/customizer.php:1497
+#: inc/customizer.php:1450 inc/customizer.php:1494
 msgid "Show tags"
 msgstr ""
 
-#: inc/customizer.php:1460 inc/customizer.php:1504
+#: inc/customizer.php:1457 inc/customizer.php:1501
 msgid "Show comments"
 msgstr ""
 
-#: inc/customizer.php:1469
+#: inc/customizer.php:1466
 msgid "Post"
 msgstr ""
 
-#: inc/customizer.php:1511
+#: inc/customizer.php:1508
 msgid "Enable the author block after each post"
 msgstr ""
 
-#: inc/customizer.php:1518
+#: inc/customizer.php:1515
 msgid "MailChimp"
 msgstr ""
 
-#: inc/customizer.php:1519
+#: inc/customizer.php:1516
 msgid "Setup MailChimp settings for subscribe widget"
 msgstr ""
 
-#: inc/customizer.php:1524
+#: inc/customizer.php:1521
 msgid "MailChimp API key"
 msgstr ""
 
-#: inc/customizer.php:1530
+#: inc/customizer.php:1527
 msgid "MailChimp list ID"
 msgstr ""
 
-#: inc/customizer.php:1572
+#: inc/customizer.php:1569
 msgid "Body Background Color"
 msgstr ""
 
-#: inc/customizer.php:1580 inc/customizer.php:1611
+#: inc/customizer.php:1577 inc/customizer.php:1608
 msgid "Normal"
 msgstr ""
 
-#: inc/customizer.php:1581
+#: inc/customizer.php:1578
 msgid "Italic"
 msgstr ""
 
-#: inc/customizer.php:1582
+#: inc/customizer.php:1579
 msgid "Oblique"
 msgstr ""
 
-#: inc/customizer.php:1589
+#: inc/customizer.php:1586
 msgid "Latin"
 msgstr ""
 
-#: inc/customizer.php:1590
+#: inc/customizer.php:1587
 msgid "Greek"
 msgstr ""
 
-#: inc/customizer.php:1591
+#: inc/customizer.php:1588
 msgid "Greek Extended"
 msgstr ""
 
-#: inc/customizer.php:1592
+#: inc/customizer.php:1589
 msgid "Vietnamese"
 msgstr ""
 
-#: inc/customizer.php:1593
+#: inc/customizer.php:1590
 msgid "Cyrillic Extended"
 msgstr ""
 
-#: inc/customizer.php:1594
+#: inc/customizer.php:1591
 msgid "Latin Extended"
 msgstr ""
 
-#: inc/customizer.php:1595
+#: inc/customizer.php:1592
 msgid "Cyrillic"
 msgstr ""
 
-#: inc/customizer.php:1603
+#: inc/customizer.php:1600
 msgid "Justify"
 msgstr ""
 
-#: inc/customizer.php:1612
+#: inc/customizer.php:1609
 msgid "Bold"
 msgstr ""
 
-#: inc/customizer.php:1846
+#: inc/customizer.php:1844
 msgid ""
-"Call us: +3(800) 2345-6789  <em>7 Days a week from 9:00 am to 7:00 pm</em>"
+"Call us: <a href=\"tel:#\"><em>+3(800) 2345-6789</em></a>   7 Days a week "
+"from 9:00 am to 7:00 pm"
 msgstr ""
 
-#: inc/hooks.php:273
-msgid "Submit Comment"
+#: inc/hooks.php:285 woocommerce/single-product-reviews.php:80
+msgid "Submit"
 msgstr ""
 
-#: inc/hooks.php:275
+#: inc/hooks.php:287
 msgid "Your name"
 msgstr ""
 
-#: inc/hooks.php:277
+#: inc/hooks.php:289
 msgid "Your e-mail"
 msgstr ""
 
-#: inc/hooks.php:279
+#: inc/hooks.php:291
 msgid "Your website"
 msgstr ""
 
-#: inc/hooks.php:281
-msgid "Comments *"
+#: inc/hooks.php:293
+msgid "Your Review: "
 msgstr ""
 
 #: inc/register-plugins.php:29
 msgid "Contact Form 7"
-msgstr ""
-
-#: inc/register-plugins.php:34
-msgid "Easy Facebook Likebox"
 msgstr ""
 
 #: inc/register-plugins.php:39
@@ -1358,47 +1351,43 @@ msgid "Easy Twitter Feed Widget"
 msgstr ""
 
 #: inc/register-plugins.php:44
-msgid "BNE Testimonials"
-msgstr ""
-
-#: inc/register-plugins.php:49 inc/woocommerce-hooks.php:192
 msgid "Woocommerce"
 msgstr ""
 
-#: inc/register-plugins.php:54
+#: inc/register-plugins.php:49
 msgid "Booster for WooCommerce"
 msgstr ""
 
-#: inc/register-plugins.php:59
+#: inc/register-plugins.php:54
 msgid "YITH WooCommerce Compare"
 msgstr ""
 
-#: inc/register-plugins.php:64
+#: inc/register-plugins.php:59
 msgid "YITH WooCommerce Wishlist"
 msgstr ""
 
-#: inc/register-plugins.php:69
+#: inc/register-plugins.php:64
 msgid "MailChimp for WordPress"
 msgstr ""
 
-#: inc/register-plugins.php:74
+#: inc/register-plugins.php:69
 msgid "MotoPress Slider"
 msgstr ""
 
-#: inc/register-plugins.php:80
+#: inc/register-plugins.php:75
 msgid "TM Woocommerce Package"
 msgstr ""
 
-#: inc/register-plugins.php:86
-msgid "Track Kickstarter Project"
-msgstr ""
-
-#: inc/register-plugins.php:91
+#: inc/register-plugins.php:80
 msgid "Woocommerce Social Media Share Buttons"
 msgstr ""
 
-#: inc/register-plugins.php:96
+#: inc/register-plugins.php:85
 msgid "Cherry Sidebar Manager"
+msgstr ""
+
+#: inc/register-plugins.php:91
+msgid "Tiny Grid"
 msgstr ""
 
 #: inc/template-comment.php:176
@@ -1413,31 +1402,31 @@ msgstr ""
 msgid "Set footer menu"
 msgstr ""
 
-#: inc/template-menu.php:123
+#: inc/template-menu.php:122
 msgid "Set social menu"
 msgstr ""
 
-#: inc/template-meta.php:319
+#: inc/template-meta.php:318 woocommerce/share.php:16
 msgid "Facebook"
 msgstr ""
 
-#: inc/template-meta.php:324
+#: inc/template-meta.php:323 woocommerce/share.php:22
 msgid "Twitter"
 msgstr ""
 
-#: inc/template-meta.php:329
+#: inc/template-meta.php:328 woocommerce/share.php:28
 msgid "Google+"
 msgstr ""
 
-#: inc/template-meta.php:334
+#: inc/template-meta.php:333
 msgid "LinkedIn"
 msgstr ""
 
-#: inc/template-meta.php:339
+#: inc/template-meta.php:338 woocommerce/share.php:40
 msgid "Pinterest"
 msgstr ""
 
-#: inc/template-meta.php:391
+#: inc/template-meta.php:390
 msgid "Share on "
 msgstr ""
 
@@ -1447,13 +1436,17 @@ msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
 #: inc/template-post.php:76 template-parts/content-page.php:22
-#: template-parts/content-single-link.php:58
-#: template-parts/content-single.php:55
+#: template-parts/content-single-link.php:72
+#: template-parts/content-single.php:69
 msgid "Pages:"
 msgstr ""
 
-#: inc/template-tags.php:159
-msgid "My Cart"
+#: inc/template-tags.php:141
+msgid "items"
+msgstr ""
+
+#: inc/template-tags.php:168
+msgid "Cart"
 msgstr ""
 
 #: inc/widgets/about-author-widget/class-about-author-widget.php:16
@@ -1655,8 +1648,15 @@ msgstr ""
 msgid " ..."
 msgstr ""
 
+#: inc/widgets/custom-posts/class-custom-posts-widget.php:206
+#: inc/widgets/tm-carousel-widget/views/tm-carousel-view.php:24
+#: template-parts/content-single-link.php:24
+#: template-parts/content-single.php:24
+msgid "Published on "
+msgstr ""
+
 #: inc/widgets/custom-posts/class-custom-posts-widget.php:231
-msgid "by "
+msgid "By  "
 msgstr ""
 
 #: inc/widgets/image-grid/class-image-grid-widget.php:18
@@ -1957,11 +1957,25 @@ msgid "View file not found"
 msgstr ""
 
 #: inc/widgets/tm-carousel-widget/class-tm-carousel-widget.php:447
-msgid " comment"
+#: template-parts/content-aside.php:38 template-parts/content-aside.php:39
+#: template-parts/content-audio.php:40 template-parts/content-audio.php:41
+#: template-parts/content-default-aside.php:38
+#: template-parts/content-default-aside.php:39
+#: template-parts/content-image.php:42 template-parts/content-image.php:43
+#: template-parts/content-link.php:42 template-parts/content-link.php:43
+#: template-parts/content-quote.php:42 template-parts/content-quote.php:43
+#: template-parts/content-status.php:41 template-parts/content-status.php:42
+#: template-parts/content-video.php:42 template-parts/content-video.php:43
+msgid " Comment"
 msgstr ""
 
 #: inc/widgets/tm-carousel-widget/class-tm-carousel-widget.php:447
-msgid " comments"
+#: template-parts/content-aside.php:40 template-parts/content-audio.php:42
+#: template-parts/content-default-aside.php:40
+#: template-parts/content-image.php:44 template-parts/content-link.php:44
+#: template-parts/content-quote.php:44 template-parts/content-status.php:43
+#: template-parts/content-video.php:44
+msgid " Comments"
 msgstr ""
 
 #: inc/widgets/tm-carousel-widget/class-tm-carousel-widget.php:447
@@ -1972,12 +1986,14 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: inc/widgets/tm-carousel-widget/class-tm-carousel-widget.php:448
-msgid "0 comments"
+msgid "0 Comments"
 msgstr ""
 
-#: inc/widgets/tm-carousel-widget/views/tm-carousel-view.php:20
-#: woocommerce/single-product/review.php:45
-msgid "Posted by "
+#: inc/widgets/tm-carousel-widget/views/tm-carousel-view.php:30
+#: template-parts/content-single-link.php:30
+#: template-parts/content-single.php:30
+#: woocommerce/single-product/review.php:46
+msgid "By "
 msgstr ""
 
 #: inc/widgets/tm-smart-slider-widget/class-tm-smart-slider-widget.php:16
@@ -2001,12 +2017,10 @@ msgid "Slider height"
 msgstr ""
 
 #: inc/widgets/tm-smart-slider-widget/class-tm-smart-slider-widget.php:115
-#: inc/woocommerce-hooks.php:204
 msgid "Horizontal"
 msgstr ""
 
 #: inc/widgets/tm-smart-slider-widget/class-tm-smart-slider-widget.php:116
-#: inc/woocommerce-hooks.php:203
 msgid "Vertical"
 msgstr ""
 
@@ -2081,35 +2095,9 @@ msgstr ""
 #: inc/widgets/tm-wc-recent-post/class-tm-widget-recent-posts.php:75
 #: template-parts/content-aside.php:31 template-parts/content-audio.php:33
 #: template-parts/content-default-aside.php:31
-#: template-parts/content-default-audio.php:33
-#: template-parts/content-default-gallery.php:33
-#: template-parts/content-default-image.php:35
-#: template-parts/content-default-link.php:35
-#: template-parts/content-default-quote.php:35
-#: template-parts/content-default-status.php:34
-#: template-parts/content-default-video.php:35
-#: template-parts/content-default.php:31 template-parts/content-gallery.php:33
-#: template-parts/content-grid-aside.php:36
-#: template-parts/content-grid-audio.php:34
-#: template-parts/content-grid-gallery.php:38
-#: template-parts/content-grid-image.php:40
-#: template-parts/content-grid-link.php:43
-#: template-parts/content-grid-quote.php:40
-#: template-parts/content-grid-status.php:34
-#: template-parts/content-grid-video.php:40 template-parts/content-grid.php:37
 #: template-parts/content-image.php:35 template-parts/content-link.php:35
-#: template-parts/content-masonry-aside.php:36
-#: template-parts/content-masonry-audio.php:34
-#: template-parts/content-masonry-gallery.php:38
-#: template-parts/content-masonry-image.php:40
-#: template-parts/content-masonry-link.php:43
-#: template-parts/content-masonry-quote.php:40
-#: template-parts/content-masonry-status.php:34
-#: template-parts/content-masonry-video.php:40
-#: template-parts/content-masonry.php:37 template-parts/content-quote.php:35
-#: template-parts/content-single-link.php:28
-#: template-parts/content-single.php:28 template-parts/content-status.php:34
-#: template-parts/content-video.php:35 template-parts/content.php:31
+#: template-parts/content-quote.php:35 template-parts/content-status.php:34
+#: template-parts/content-video.php:35
 msgid "Posted by"
 msgstr ""
 
@@ -2131,21 +2119,20 @@ msgctxt "by comment author"
 msgid "by <span>%1$s</span>"
 msgstr ""
 
-#: inc/woocommerce-hooks.php:171
+#: inc/woocommerce-hooks.php:41 template-parts/content-pagination.php:9
+msgid "Prev"
+msgstr ""
+
+#: inc/woocommerce-hooks.php:42 template-parts/content-pagination.php:10
+msgid "Next"
+msgstr ""
+
+#: inc/woocommerce-hooks.php:190
 msgid "Sale"
 msgstr ""
 
-#: inc/woocommerce-hooks.php:183
+#: inc/woocommerce-hooks.php:202
 msgid "On/Off Language Selector"
-msgstr ""
-
-#: inc/woocommerce-hooks.php:193
-#: woocommerce/single-product/tabs/description.php:24
-msgid "Description"
-msgstr ""
-
-#: inc/woocommerce-hooks.php:198
-msgid "Single product slider layout"
 msgstr ""
 
 #: inc/woocommerce-hooks.php:224
@@ -2160,12 +2147,30 @@ msgstr ""
 msgid "Featured"
 msgstr ""
 
-#: inc/woocommerce-hooks.php:357
-msgid "Added to cart! "
+#: inc/woocommerce-hooks.php:413
+msgid "Added to cart "
 msgstr ""
 
-#: inc/woocommerce-hooks.php:416
+#: inc/woocommerce-hooks.php:473
 msgid "Compare"
+msgstr ""
+
+#: inc/woocommerce-hooks.php:545
+msgid "%D days %H:%M:%S"
+msgstr ""
+
+#: inc/woocommerce-hooks.php:552 inc/woocommerce-hooks.php:557
+msgid ""
+"<span>%D <i>days</i></span> <span>%H <i>Hrs</i></span><span>%M <i>Min</i></"
+"span>"
+msgstr ""
+
+#: inc/woocommerce-hooks.php:736
+msgid "Placeholder"
+msgstr ""
+
+#: inc/woocommerce-hooks.php:750
+msgid "Shop"
 msgstr ""
 
 #: search.php:13
@@ -2185,143 +2190,84 @@ msgstr ""
 
 #: template-parts/comment.php:6
 #, php-format
-msgid "<span class=\"posted-by\">Posted by</span> %s"
+msgid ""
+"<i class=\"material-icons\">person</i><span class=\"posted-by post-author"
+"\">By</span> %s"
 msgstr ""
 
-#: template-parts/content-aside.php:38 template-parts/content-aside.php:39
-#: template-parts/content-audio.php:40 template-parts/content-audio.php:41
-#: template-parts/content-default-aside.php:38
-#: template-parts/content-default-aside.php:39
-#: template-parts/content-default-audio.php:40
-#: template-parts/content-default-audio.php:41
-#: template-parts/content-default-gallery.php:40
-#: template-parts/content-default-gallery.php:41
-#: template-parts/content-default-image.php:42
-#: template-parts/content-default-image.php:43
-#: template-parts/content-default-link.php:42
-#: template-parts/content-default-link.php:43
-#: template-parts/content-default-quote.php:42
-#: template-parts/content-default-quote.php:43
-#: template-parts/content-default-status.php:41
-#: template-parts/content-default-status.php:42
-#: template-parts/content-default-video.php:42
-#: template-parts/content-default-video.php:43
-#: template-parts/content-default.php:38 template-parts/content-default.php:39
-#: template-parts/content-gallery.php:40 template-parts/content-gallery.php:41
-#: template-parts/content-grid-aside.php:43
-#: template-parts/content-grid-aside.php:44
-#: template-parts/content-grid-audio.php:41
-#: template-parts/content-grid-audio.php:42
-#: template-parts/content-grid-gallery.php:45
-#: template-parts/content-grid-gallery.php:46
-#: template-parts/content-grid-image.php:47
-#: template-parts/content-grid-image.php:48
-#: template-parts/content-grid-link.php:50
-#: template-parts/content-grid-link.php:51
-#: template-parts/content-grid-quote.php:47
-#: template-parts/content-grid-quote.php:48
-#: template-parts/content-grid-status.php:41
-#: template-parts/content-grid-status.php:42
-#: template-parts/content-grid-video.php:47
-#: template-parts/content-grid-video.php:48 template-parts/content-grid.php:44
-#: template-parts/content-grid.php:45 template-parts/content-image.php:42
-#: template-parts/content-image.php:43 template-parts/content-link.php:42
-#: template-parts/content-link.php:43
-#: template-parts/content-masonry-aside.php:43
-#: template-parts/content-masonry-aside.php:44
-#: template-parts/content-masonry-audio.php:41
-#: template-parts/content-masonry-audio.php:42
-#: template-parts/content-masonry-gallery.php:45
-#: template-parts/content-masonry-gallery.php:46
-#: template-parts/content-masonry-image.php:47
-#: template-parts/content-masonry-image.php:48
-#: template-parts/content-masonry-link.php:50
-#: template-parts/content-masonry-link.php:51
-#: template-parts/content-masonry-quote.php:47
-#: template-parts/content-masonry-quote.php:48
-#: template-parts/content-masonry-status.php:41
-#: template-parts/content-masonry-status.php:42
-#: template-parts/content-masonry-video.php:47
-#: template-parts/content-masonry-video.php:48
-#: template-parts/content-masonry.php:44 template-parts/content-masonry.php:45
-#: template-parts/content-quote.php:42 template-parts/content-quote.php:43
-#: template-parts/content-single-link.php:35
-#: template-parts/content-single-link.php:36
-#: template-parts/content-single.php:35 template-parts/content-single.php:36
-#: template-parts/content-status.php:41 template-parts/content-status.php:42
-#: template-parts/content-video.php:42 template-parts/content-video.php:43
-#: template-parts/content.php:38 template-parts/content.php:39
-msgid " Comment"
-msgstr ""
-
-#: template-parts/content-aside.php:40 template-parts/content-audio.php:42
-#: template-parts/content-default-aside.php:40
-#: template-parts/content-default-audio.php:42
-#: template-parts/content-default-gallery.php:42
-#: template-parts/content-default-image.php:44
-#: template-parts/content-default-link.php:44
-#: template-parts/content-default-quote.php:44
-#: template-parts/content-default-status.php:43
-#: template-parts/content-default-video.php:44
-#: template-parts/content-default.php:40 template-parts/content-gallery.php:42
-#: template-parts/content-grid-aside.php:45
-#: template-parts/content-grid-audio.php:43
-#: template-parts/content-grid-gallery.php:47
-#: template-parts/content-grid-image.php:49
-#: template-parts/content-grid-link.php:52
-#: template-parts/content-grid-quote.php:49
-#: template-parts/content-grid-status.php:43
-#: template-parts/content-grid-video.php:49 template-parts/content-grid.php:46
-#: template-parts/content-image.php:44 template-parts/content-link.php:44
-#: template-parts/content-masonry-aside.php:45
-#: template-parts/content-masonry-audio.php:43
-#: template-parts/content-masonry-gallery.php:47
-#: template-parts/content-masonry-image.php:49
-#: template-parts/content-masonry-link.php:52
-#: template-parts/content-masonry-quote.php:49
-#: template-parts/content-masonry-status.php:43
-#: template-parts/content-masonry-video.php:49
-#: template-parts/content-masonry.php:46 template-parts/content-quote.php:44
-#: template-parts/content-single-link.php:37
-#: template-parts/content-single.php:37 template-parts/content-status.php:43
-#: template-parts/content-video.php:44 template-parts/content.php:40
-msgid " Comments"
+#: template-parts/comment.php:8 template-parts/content-default-audio.php:50
+#: template-parts/content-default-gallery.php:47
+#: template-parts/content-default-image.php:47
+#: template-parts/content-default-link.php:50
+#: template-parts/content-default-quote.php:33
+#: template-parts/content-default-status.php:64
+#: template-parts/content-default-video.php:47
+#: template-parts/content-default.php:44
+#: template-parts/content-grid-aside.php:39
+#: template-parts/content-grid-audio.php:39
+#: template-parts/content-grid-gallery.php:39
+#: template-parts/content-grid-image.php:39
+#: template-parts/content-grid-link.php:42
+#: template-parts/content-grid-quote.php:31
+#: template-parts/content-grid-status.php:60
+#: template-parts/content-grid-video.php:39 template-parts/content-grid.php:40
+#: template-parts/content-masonry-aside.php:39
+#: template-parts/content-masonry-audio.php:39
+#: template-parts/content-masonry-gallery.php:39
+#: template-parts/content-masonry-image.php:39
+#: template-parts/content-masonry-link.php:42
+#: template-parts/content-masonry-quote.php:31
+#: template-parts/content-masonry-status.php:60
+#: template-parts/content-masonry-video.php:39
+#: template-parts/content-masonry.php:40 template-parts/content.php:39
+msgid "Published on"
 msgstr ""
 
 #: template-parts/content-aside.php:62 template-parts/content-audio.php:79
 #: template-parts/content-default-aside.php:62
-#: template-parts/content-default-audio.php:79
-#: template-parts/content-default-gallery.php:64
-#: template-parts/content-default-image.php:67
-#: template-parts/content-default-link.php:70
-#: template-parts/content-default-quote.php:68
-#: template-parts/content-default-video.php:67
-#: template-parts/content-default.php:62 template-parts/content-gallery.php:64
-#: template-parts/content-grid-aside.php:63
-#: template-parts/content-grid-audio.php:80
-#: template-parts/content-grid-gallery.php:65
-#: template-parts/content-grid-image.php:67
-#: template-parts/content-grid-link.php:71
-#: template-parts/content-grid-quote.php:68
-#: template-parts/content-grid-video.php:67 template-parts/content-grid.php:64
 #: template-parts/content-image.php:67 template-parts/content-link.php:70
-#: template-parts/content-masonry-aside.php:63
-#: template-parts/content-masonry-audio.php:80
-#: template-parts/content-masonry-gallery.php:65
-#: template-parts/content-masonry-image.php:67
-#: template-parts/content-masonry-link.php:71
-#: template-parts/content-masonry-quote.php:68
-#: template-parts/content-masonry-video.php:67
-#: template-parts/content-masonry.php:64 template-parts/content-quote.php:68
-#: template-parts/content-single-link.php:67
-#: template-parts/content-single.php:64 template-parts/content-video.php:67
-#: template-parts/content.php:62
+#: template-parts/content-quote.php:68 template-parts/content-video.php:67
 msgid "Categories: "
+msgstr ""
+
+#: template-parts/content-aside.php:66 template-parts/content-audio.php:83
+#: template-parts/content-default-aside.php:66
+#: template-parts/content-image.php:71 template-parts/content-link.php:74
+#: template-parts/content-quote.php:72 template-parts/content-video.php:71
+msgid "Tags: "
 msgstr ""
 
 #: template-parts/content-author-bio.php:17
 #, php-format
 msgid "Written by %s"
+msgstr ""
+
+#: template-parts/content-default-audio.php:59
+#: template-parts/content-default-gallery.php:56
+#: template-parts/content-default-image.php:56
+#: template-parts/content-default-link.php:59
+#: template-parts/content-default-quote.php:42
+#: template-parts/content-default-status.php:73
+#: template-parts/content-default-video.php:56
+#: template-parts/content-default.php:53
+#: template-parts/content-grid-aside.php:48
+#: template-parts/content-grid-audio.php:48
+#: template-parts/content-grid-gallery.php:48
+#: template-parts/content-grid-image.php:48
+#: template-parts/content-grid-link.php:51
+#: template-parts/content-grid-quote.php:40
+#: template-parts/content-grid-status.php:69
+#: template-parts/content-grid-video.php:48 template-parts/content-grid.php:49
+#: template-parts/content-masonry-aside.php:48
+#: template-parts/content-masonry-audio.php:48
+#: template-parts/content-masonry-gallery.php:48
+#: template-parts/content-masonry-image.php:48
+#: template-parts/content-masonry-link.php:51
+#: template-parts/content-masonry-quote.php:40
+#: template-parts/content-masonry-status.php:69
+#: template-parts/content-masonry-video.php:48
+#: template-parts/content-masonry.php:49 template-parts/content.php:48
+msgid "By"
 msgstr ""
 
 #: template-parts/content-none.php:14
@@ -2346,11 +2292,6 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: template-parts/content-page.php:33
-#, php-format
-msgid "Edit %s"
-msgstr ""
-
 #: woocommerce/cart/cart-totals.php:27
 msgid "Cart Totals"
 msgstr ""
@@ -2371,7 +2312,7 @@ msgid "estimated for %s"
 msgstr ""
 
 #: woocommerce/cart/cart-totals.php:91 woocommerce/cart/cart-totals.php:92
-#: woocommerce/cart/cart.php:37 woocommerce/cart/cart.php:119
+#: woocommerce/cart/cart.php:37 woocommerce/cart/cart.php:120
 #: woocommerce/checkout/review-order.php:27
 #: woocommerce/checkout/review-order.php:59
 #: woocommerce/checkout/review-order.php:120
@@ -2381,19 +2322,20 @@ msgstr ""
 msgid "Total"
 msgstr ""
 
-#: woocommerce/cart/cart.php:34 woocommerce/cart/cart.php:76
+#: woocommerce/cart/cart.php:34 woocommerce/cart/cart.php:77
 #: woocommerce/checkout/review-order.php:25
 #: woocommerce/checkout/review-order.php:51
 #: woocommerce/order/order-details-item.php:38
-#: woocommerce/order/order-details.php:31
+#: woocommerce/order/order-details.php:31 woocommerce/wishlist-view.php:76
 msgid "Product"
 msgstr ""
 
-#: woocommerce/cart/cart.php:35 woocommerce/cart/cart.php:96
+#: woocommerce/cart/cart.php:35 woocommerce/cart/cart.php:97
+#: woocommerce/wishlist-view.php:83
 msgid "Price"
 msgstr ""
 
-#: woocommerce/cart/cart.php:36 woocommerce/cart/cart.php:102
+#: woocommerce/cart/cart.php:36 woocommerce/cart/cart.php:103
 #: woocommerce/checkout/review-order.php:26
 #: woocommerce/checkout/review-order.php:56
 #: woocommerce/order/order-details-item.php:52
@@ -2405,23 +2347,23 @@ msgstr ""
 msgid "Remove this item"
 msgstr ""
 
-#: woocommerce/cart/cart.php:91
+#: woocommerce/cart/cart.php:92
 msgid "Available on backorder"
 msgstr ""
 
-#: woocommerce/cart/cart.php:137
+#: woocommerce/cart/cart.php:138
 msgid "Coupon"
 msgstr ""
 
-#: woocommerce/cart/cart.php:137
+#: woocommerce/cart/cart.php:138
 msgid "Enter Code"
 msgstr ""
 
-#: woocommerce/cart/cart.php:137
+#: woocommerce/cart/cart.php:138
 msgid "Apply Coupon"
 msgstr ""
 
-#: woocommerce/cart/cart.php:143
+#: woocommerce/cart/cart.php:144
 msgid "Update Cart"
 msgstr ""
 
@@ -2460,6 +2402,7 @@ msgid "Ship to a different address?"
 msgstr ""
 
 #: woocommerce/checkout/form-shipping.php:66
+#: woocommerce/single-product/tabs/additional-information.php:24
 msgid "Additional Information"
 msgstr ""
 
@@ -2484,6 +2427,22 @@ msgstr ""
 
 #: woocommerce/checkout/payment.php:42
 msgid "Update totals"
+msgstr ""
+
+#: woocommerce/compare.php:47
+msgid "Product Comparison"
+msgstr ""
+
+#: woocommerce/compare.php:70
+msgid "Close window [X]"
+msgstr ""
+
+#: woocommerce/compare.php:97
+msgid "No products added in the compare table."
+msgstr ""
+
+#: woocommerce/compare.php:105 woocommerce/wishlist-view.php:249
+msgid "Remove"
 msgstr ""
 
 #: woocommerce/loop/result-count.php:38
@@ -2539,6 +2498,14 @@ msgstr ""
 msgid "Search for:"
 msgstr ""
 
+#: woocommerce/share.php:34
+msgid "I wanted you to see this site"
+msgstr ""
+
+#: woocommerce/share.php:34
+msgid "Email"
+msgstr ""
+
 #: woocommerce/single-product-reviews.php:32
 #, php-format
 msgid "%s review for %s"
@@ -2565,7 +2532,7 @@ msgstr ""
 
 #: woocommerce/single-product-reviews.php:71
 #, php-format
-msgid "Leave a Reply to %s"
+msgid "Add a review to %s"
 msgstr ""
 
 #: woocommerce/single-product-reviews.php:75
@@ -2574,10 +2541,6 @@ msgstr ""
 
 #: woocommerce/single-product-reviews.php:77
 msgid "Your Email:"
-msgstr ""
-
-#: woocommerce/single-product-reviews.php:80
-msgid "Submit"
 msgstr ""
 
 #: woocommerce/single-product-reviews.php:86
@@ -2638,23 +2601,100 @@ msgid_plural "Tags:"
 msgstr[0] ""
 msgstr[1] ""
 
+#: woocommerce/single-product/related.php:50
+msgid "<span>Related</span> Products"
+msgstr ""
+
 #: woocommerce/single-product/review.php:40
 msgid "Your comment is awaiting approval"
 msgstr ""
 
-#: woocommerce/single-product/review.php:50
+#: woocommerce/single-product/review.php:51
 msgid "verified owner"
 msgstr ""
 
-#: woocommerce/single-product/review.php:63
+#: woocommerce/single-product/review.php:53
+msgid "Published on  "
+msgstr ""
+
+#: woocommerce/single-product/review.php:64
 #, php-format
 msgid "Rated %d out of 5"
 msgstr ""
 
-#: woocommerce/single-product/review.php:64
+#: woocommerce/single-product/review.php:65
 msgid "out of 5"
+msgstr ""
+
+#: woocommerce/single-product/tabs/description.php:24
+msgid "Description"
 msgstr ""
 
 #: woocommerce/single-product/up-sells.php:55
 msgid "You may also like&hellip;"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:28
+msgid "Edit title"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:37
+msgid "Save"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:41
+msgid "Cancel"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:96
+msgid "Stock Status"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:142 woocommerce/wishlist-view.php:249
+msgid "Remove this product"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:173
+msgid "Free!"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:184
+msgid "Out of Stock"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:187
+msgid "In Stock"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:198
+#, php-format
+msgid "Added on : %s"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:217
+msgid "Move"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:229
+msgid "Shared"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:232
+msgid "Private"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:235
+msgid "Public"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:259
+msgid "No products were added to the wishlist"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:276
+msgid "Add the selected products to the cart"
+msgstr ""
+
+#: woocommerce/wishlist-view.php:284 woocommerce/wishlist-view.php:326
+msgid "Ask for an estimate"
 msgstr ""

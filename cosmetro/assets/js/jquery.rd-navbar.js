@@ -40,62 +40,6 @@
 			var menu = $('<ul>', {'class': settings.menuClass}),
 				li = this.$source.children();
 
-			/*for (var i = 0; i < li.length; i++) {
-				var o = li[i].children,
-					item = null;
-
-				for (var j = 0; j < o.length; j++) {
-					if (o[j].tagName) {
-						if (!item) {
-							item = document.createElement('li');
-							if (li[i].className.indexOf('current_page_item') > -1) {
-								item.className = 'current_page_item';
-							}
-						}
-
-						switch (o[j].tagName.toLowerCase()) {
-							case 'a':
-								var link = o[j].cloneNode(true);
-								item.appendChild(link);
-								break;
-							case 'ul':
-								var submenu = o[j].cloneNode(true);
-								submenu.className = settings.submenuClass;
-								$(submenu).css({"display": "none"});
-								item.appendChild(submenu);
-								$(item).find('> a')
-									.each(function () {
-										$this = $(this);
-										$this.addClass('rd-with-ul')
-											.append($('<span/>', {class: 'rd-submenu-toggle'}))
-											.find('.rd-submenu-toggle')
-											.on('click', function (e) {
-												e.preventDefault();
-												$this = $(this).parent();
-
-												if ($this.hasClass('rd-with-ul') && !$this.hasClass('opened')) {
-													$('.rd-with-ul').removeClass('opened');
-													var submenu = $this.addClass('opened').parent().find('.' + settings.submenuClass);
-													submenu.stop().css({"display": "block"});
-													$('.' + settings.submenuClass).not(submenu).stop();
-												} else {
-													var submenu = $this.removeClass('opened').parent().find('.' + settings.submenuClass);
-													submenu.stop().css({"display": "none"});
-												}
-											});
-									});
-
-								break;
-							default:
-								break;
-						}
-					}
-				}
-
-				if (item) {
-					menu.append(item);
-				}
-			}*/
 
 			return menu;
 		},
@@ -233,7 +177,7 @@
 			function fixSearchOffset() {
 				var margin_offset;
 				var search_element = $('form.offset-navbar-adminbar-active-search');
-				if ($(window).scrollTop() < wpadminbarHeight && $(window).width() < 768) {
+				if ($(window).scrollTop() < wpadminbarHeight && $(window).width() < 751) {
 					margin_offset = 46 - $(this).scrollTop();
 				}
 				else {
@@ -244,7 +188,7 @@
 
 			function wpAdminBarActiveScroll() {
 				$(window).scroll(function () {
-					if ($(window).width() < 768) {
+					if ($(window).width() < 751) {
 						if ($(this).scrollTop() > wpadminbarHeight) {
 							wpAdminBarActiveRemoveClass();
 						} else {
@@ -257,7 +201,7 @@
 			}
 
 			function wpadminbarActiveAdd() {
-				if ($(window).width() < 768) {
+				if ($(window).width() < 751) {
 					$('body').addClass(wpAdminBarActive);
 					if (this.pageYOffset < wpadminbarHeight) {
 						wpAdminBarActiveAddClass();

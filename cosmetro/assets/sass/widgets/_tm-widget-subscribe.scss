@@ -13,7 +13,6 @@
 
 }
 .follow-block {
-	max-width: 560px;
 	.sidebar-primary &,
 	.sidebar-secondary &,
 	.footer-area & {
@@ -38,6 +37,8 @@
 	&__input-group {
 		display: block;
 		text-align: left;
+		max-width: 350px;
+		margin: 0 auto;
 
 		.footer-area & {
 			@include media-breakpoint-up(lg) {

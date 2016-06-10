@@ -1,0 +1,8 @@
+.widget-banner__link {
+  display: block;
+}
+
+.widget-banner__img {
+  width: 100%;
+  vertical-align: top;
+}

@@ -1,29 +1,11 @@
 .site-header.minimal {
-  .site-branding {
-    text-align: center;
+  .header-container {
+    padding: 40px 10px 34px;
   }
+
   .social-list {
     text-align: center;
     padding: 49px 0 0 0;
-  }
-  .main-navigation {
-    text-align: center;
-    padding: 15px 0 0 0;
-
-    ul.menu {
-      > li:last-child {
-        margin-right: 0;
-      }
-    }
-  }
-}
-
-
-
-
-.site-header.minimal {
-  .header-container {
-    padding: 40px 10px 34px;
   }
 
   .site-branding {
@@ -168,9 +150,11 @@
       .main-navigation  {
         @include flex(20 1 auto);
         order: 2;
-        margin-top: 4px;
+        margin-top: 0;
       }
     }
+
+
 
     @media (min-width: 1399px) {
       .main-navigation  {

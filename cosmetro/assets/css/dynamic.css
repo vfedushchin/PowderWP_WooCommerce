@@ -12,7 +12,7 @@ body {
 h1, .h1 {
 	font-style: $h1_font_style;
 	font-weight: $h1_font_weight;
-	font-size: @font_size($h1_font_size, multiple, ceil, 0.475)px;
+	font-size: @font_size($h1_font_size, multiple, ceil, 0.425)px;
 	line-height: $h1_line_height;
 	font-family: $h1_font_family;
 	letter-spacing: $h1_letter_spacing{px};
@@ -22,7 +22,7 @@ h1, .h1 {
 h2, .h2 {
 	font-style: $h2_font_style;
 	font-weight: $h2_font_weight;
-	font-size: @font_size($h2_font_size, multiple, ceil, 0.68)px;
+	font-size: @font_size($h2_font_size, multiple, ceil, 0.65)px;
 	line-height: $h2_line_height;
 	font-family: $h2_font_family;
 	letter-spacing: $h2_letter_spacing{px};
@@ -70,36 +70,39 @@ h6, .h6 {
 	color: $regular_h6_color;
 }
 	@media (min-width: 320px) {
-		h1, .h1 { font-size: @font_size($h1_font_size, multiple, ceil, 0.6875)px; }
-		h2, .h2 { font-size: @font_size($h2_font_size, multiple, ceil, 0.9)px; }
+		h1, .h1 { font-size: @font_size($h1_font_size, multiple, ceil, 0.4875)px; }
+		h2, .h2 { font-size: @font_size($h2_font_size, multiple, ceil, 0.7)px; }
 		h3, .h3 { font-size: $h3_font_size{px}; }
 		h4, .h4 { font-size: $h4_font_size{px}; }
 		h5, .h5 { font-size: $h5_font_size{px}; }
 		h6, .h6 { font-size: $h6_font_size{px}; }
 	}
 	@media (min-width: 480px) {
-		h1, .h1 { font-size: @font_size($h1_font_size, multiple, ceil, 0.6875)px; }
-		h2, .h2 { font-size: @font_size($h2_font_size, multiple, ceil, 0.9)px; }
+		h1, .h1 { font-size: @font_size($h1_font_size, multiple, ceil, 0.4875)px; }
+		h2, .h2 { font-size: @font_size($h2_font_size, multiple, ceil, 0.7)px; }
 		h3, .h3 { font-size: @font_size($h3_font_size, multiple, ceil, 0.6)px; }
 		h4, .h4 { font-size: $h4_font_size{px}; }
 		h5, .h5 { font-size: $h5_font_size{px}; }
 		h6, .h6 { font-size: $h6_font_size{px}; }
 	}
 	@media (min-width: 768px) {
-		h1, .h1 { font-size: @font_size($h1_font_size, multiple, ceil, 0.6875)px; }
-		h2, .h2 { font-size: @font_size($h2_font_size, multiple, ceil, 0.9)px; }
+		h1, .h1 { font-size: @font_size($h1_font_size, multiple, ceil, 0.5875)px; }
+		h2, .h2 { font-size: @font_size($h2_font_size, multiple, ceil, 0.7)px; }
 		h3, .h3 { font-size: @font_size($h3_font_size, multiple, ceil, 0.6)px; }
 		h4, .h4 { font-size: $h4_font_size{px}; }
 		h5, .h5 { font-size: $h5_font_size{px}; }
 		h6, .h6 { font-size: $h6_font_size{px}; }
 	}
 	@media (min-width: 992px) {
-		h1, .h1 { font-size: $h1_font_size{px}; }
-		h2, .h2 { font-size: $h2_font_size{px}; }
+		h1, .h1 { font-size: @font_size($h1_font_size, multiple, ceil, 0.6075)px; }
+		h2, .h2 { font-size: @font_size($h2_font_size, multiple, ceil, 0.8)px; }
 		h3, .h3, .woocommerce h2  { font-size: $h3_font_size{px}; }
 		h4, .h4 { font-size: $h4_font_size{px}; }
 		h5, .h5 { font-size: $h5_font_size{px}; }
 		h6, .h6 { font-size: $h6_font_size{px}; }
+	}
+	@media (min-width: 1400px) {
+		h1, .h1 { font-size: $h1_font_size{px}; }
 	}
 .breadcrumbs__items {
 	font-style: $breadcrumbs_font_style;
@@ -133,6 +136,22 @@ input[type="submit"],
 	color: #fff;
 	line-height: 20px;
 }
+
+.footer-area-wrap a.button,
+.footer-area-wrap input[type="button"],
+.footer-area-wrap input[type="reset"],
+.footer-area-wrap input[type="submit"],
+.footer-area-wrap .woocommerce button.button,
+.footer-area-wrap .woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
+.footer-area-wrap .btn,
+.footer-area-wrap .woocommerce .wishlist_table td.product-add-to-cart a.button,
+.footer-area-wrap .woocommerce .button,
+.footer-area-wrap .woocommerce input.button,
+.footer-area-wrap .woocommerce-account a.button,
+.footer-area-wrap .yith-woocompare-widget a.compare.button{
+	background: $regular_accent_color_1;
+}
+
 a.button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
@@ -145,7 +164,7 @@ input[type="submit"]:hover,
 .woocommerce input.button:hover,
 .woocommerce-account a.button:hover,
 .yith-woocompare-widget a.compare.button:hover{
-	background: $regular_text_color;
+	background: $regular_accent_color_1;
 	color: #fff;
 }
 
@@ -249,17 +268,30 @@ mark, ins {
 	line-height: 0.75;
 }
 
-
 .site-logo__link,
 .site-logo__link:focus,
 .site-logo__link:visited,
 .site-logo__link:hover,
 .site-logo__link:active {
-	color: $regular_accent_color_1;
+	color: $regular_h3_color;
+	letter-spacing: 11px;
+}
+@media (max-width: 500px) {
+	.site-logo__link,
+	.site-logo__link:focus,
+	.site-logo__link:visited,
+	.site-logo__link:hover,
+	.site-logo__link:active {
+		font-size: 35px;
+	}
 }
 
 .site-description {
-	color: $regular_accent_color_2;
+	font-size: 10px;
+	text-transform: uppercase;
+	letter-spacing: 3.5px;
+	font-weight: 400;
+	color: $regular_h3_color;
 }
 
 /* Invert Color Scheme */
@@ -311,12 +343,28 @@ mark, ins {
 .woocommerce .woocommerce-error,
 .woocommerce .woocommerce-info,
 .woocommerce .woocommerce-message{
-	background-color: #efefef;
-	color: $regular_text_color;
-	border-top: 3px solid $regular_accent_color_1;
+	background-color: @alpha( $regular_accent_color_1, 20 );
+	color: $regular_accent_color_1;
+	border: none;
+	font-size: 14px;
+	font-family: $h3_font_family;
+	font-weight: 700;
+	letter-spacing: 1px;
+	line-height: 42px;
+	padding: 1em 2em 1em 2em!important;
 }
+@media (max-width: 767px) {
+	.woocommerce .woocommerce-error,
+	.woocommerce .woocommerce-info,
+	.woocommerce .woocommerce-message{
+		line-height: 22px;
+	}
+}
+.woocommerce .woocommerce-error:before,
+.woocommerce .woocommerce-info:before,
 .woocommerce .woocommerce-message:before{
 	color: $regular_accent_color_1;
+	display: none;
 }
 .woocommerce .woocommerce-error .button,
 .woocommerce .woocommerce-info .button,
@@ -335,13 +383,12 @@ mark, ins {
 .woocommerce .woocommerce-error .button:hover,
 .woocommerce .woocommerce-info .button:hover,
 .woocommerce .woocommerce-message .button:hover{
-	background: $regular_text_color;
+	background: $regular_h3_color;
 	color: #fff;
 }
 /*Widget style*/
 .widget-custom-postson .custom-posts-holder .widget-title a,
 .widget-custom-postson .custom-posts-holder .post .post-author,
-.widget-custom-postson .custom-posts-holder .post .btn,
 .widget-area .widget .product_list_widget > li .reviewer span{
 	color: $regular_h3_color;
 }
@@ -349,7 +396,20 @@ mark, ins {
 .widget-area .widget .product_list_widget > li .reviewer{
 	color: $regular_h3_color;
 }
-.widget-custom-postson .custom-posts-holder .post .btn:hover{color:  $regular_accent_color_1;}
+
+.footer-area .widget-custom-postson .custom-posts-holder .widget-title a,
+.footer-area .widget-custom-postson .custom-posts-holder .post .post-author,
+.footer-area .widget-custom-postson .custom-posts-holder .post .btn,
+.footer-area .widget-area .widget .product_list_widget > li .reviewer span{
+	color: $invert_text_color;
+}
+.footer-area .widget-custom-postson .custom-posts-holder .post .post-author span,
+.footer-area.widget-area .widget .product_list_widget > li .reviewer{
+	color: $invert_text_color;
+}
+
+
+
 .widget-custom-postson .custom-posts-holder h6 a{
 	color: $regular_text_color;
 }
@@ -490,6 +550,10 @@ mark, ins {
 .widget .product_list_widget .product_title_link a{
 	color: $regular_h3_color;
 }
+.footer-area .widget .product_list_widget .product_title_link a{
+	color: $invert_text_color;
+}
+.footer-area .widget .product_list_widget .product_title_link a:hover,
 .widget .product_list_widget li a:hover{
 	color: $regular_accent_color_1;
 }
@@ -607,6 +671,29 @@ a.compare.button:hover{
 	font-family: $h3_font_family;
 	color: $regular_h3_color;
 }
+
+
+.footer-area.woocommerce div.product p.price,
+.footer-area.woocommerce div.product span.price,
+.footer-area.woocommerce div.product p.price ins,
+.footer-area.woocommerce div.product span.price ins,
+.footer-area.woocommerce .products .product .price,
+.footer-area.woocommerce .products .product .price ins,
+.footer-area.widget-area .widget .product_list_widget .amount,
+.footer-area.widget-area .widget .product_list_widget ins,
+.footer-area.woocommerce table.shop_table tbody tr td.product-subtotal .amount,
+.footer-area.woocommerce table.shop_table tbody tr td.product-total .amount,
+.footer-area.woocommerce table.shop_table tbody tr td.product-price .amount,
+.footer-area.woocommerce .cart-collaterals .cart_totals tr td .amount,
+.footer-area.woocommerce-page .cart-collaterals .cart_totals tr td .amount,
+.footer-area.woocommerce table.shop_table tfoot td .amount,
+.footer-area.woocommerce-page table.shop_table tfoot td .amount,
+.footer-area.woocommerce ul.order_details li strong,
+.footer-area.woocommerce-page ul.order_details li strong{
+	color: $invert_text_color;
+}
+
+
 .compare-list.products .price td,
 .compare-list.products .price ins{
 	font-family: $h4_font_family;
@@ -823,4 +910,18 @@ a.compare.button:hover{
 
 .woocommerce-cart .wc-proceed-to-checkout a.checkout-button {
 	background: $regular_accent_color_1;;
+}
+
+
+div.wpcf7 .contact-form-wrap input.wpcf7-submit, div.wpcf7 .contact-form-wrap textarea.wpcf7-submit {
+	background: $regular_h3_color;
+	border-color: $regular_h3_color;
+}
+div.wpcf7 .contact-form-wrap input.wpcf7-submit:hover, div.wpcf7 .contact-form-wrap textarea.wpcf7-submit:hover {
+	background: $regular_accent_color_1;
+	border-color: $regular_accent_color_1;
+}
+
+.cssload-loading {
+	background: $regular_accent_color_1;
 }

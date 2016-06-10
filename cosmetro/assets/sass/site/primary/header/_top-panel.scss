@@ -1,22 +1,39 @@
 .top-panel {
 	padding: 10px 30px;
 	&__wrap {
+		@include flexbox;
+		@include justify-content(space-between);
+		@include flex-direction(row);
+		@include flex-wrap(wrap);
+		@include align-content(flex-end);
+		@include align-items(flex-start);
 		&:after {
 			clear: both;
 			content: "";
 			width: 100%;
 			display: block;
 		}
+
+		& > div {
+			&:first-child {
+				text-align: left;
+			}
+			@media (min-width: 1330px) {
+				flex: 1 1 33.3333333333%;
+			}
+		}
 	}
 	&__message {
-		float: left;
+		text-align: left;
+		@media (max-width: 1199px) {
+			width: 100%;
+		}
 		.info-block{
 			margin:3px 35px 10px 0;
 			&:last-child {
 				margin-bottom:0;
 			}
 			@include media-breakpoint-up(lg) {
-				float:left;
 				margin-bottom:0;
 			}
 		}
@@ -35,11 +52,7 @@
 			}
 		}
 	}
-	&__search {
-		float: right;
-	}
 	&__menu {
-		float: right;
 		margin: 0;
 		padding: 4px 10px;
 		&-list {
@@ -48,7 +61,11 @@
 			padding: 0;
 			li {
 				display: inline-block;
-				padding: 0 13px;
+				padding-left: 5px;
+				padding-right: 21px;
+				@include media-breakpoint-up(xl) {
+					padding-right: 10px;
+				}
 				a {
 					text-decoration: none;
 				}

@@ -14,7 +14,7 @@
 			width: calc(2em - 20px);
 			font-size: 21px;
 			line-height: 2;
-			.posts-list & { // temp
+			.posts-list & {
 				color: inherit;
 				font-size: 21px;
 				margin-right: 0;
@@ -158,9 +158,6 @@
 				margin-top: 0;
 			}
 		}
-		@include media-breakpoint-up(lg) {
-			/* font-size: 30px; */
-		}
 		.posts-list--grid-2-cols &,
 		.posts-list--grid-3-cols &,
 		.posts-list--masonry-2-cols &,
@@ -244,10 +241,7 @@
 				text-align: left;
 			}
 			@include media-breakpoint-up(xxl) {
-				max-width: 536px;
 				min-width: 536px;
-
-
 			}
 		}
 		&__link {
@@ -255,7 +249,7 @@
 		&__img {
 			display: inline-block;
 			vertical-align: top;
-			.posts-list & { // temp
+			.posts-list & {
 				transform: none !important;
 				transition: none !important;
 			}
@@ -430,19 +424,18 @@
 		.entry-content {
 			margin-top: 0;
 		}
-		.btn {
-			float: none;
-		}
-		.share-btns__list {
-			float: none;
-		}
 		* + .entry-meta {
-			margin-top: 26px;
+			margin-top: 16px;
+			margin-bottom: 10px;
+		}
+		.btn,
+		.share-btns__list,
+		&.post_format-post-format-quote .post-thumbnail {
+			float: none;
 		}
 		&.post_format-post-format-quote .post-thumbnail {
 			max-width: 100%;
 			margin-right: 0;
-			float: none;
 		}
 	}
 
@@ -455,6 +448,63 @@
 .single {
 	.post-thumbnail + .entry-content {
 		padding-top: 0;
-		// margin-top: -15px;
+	}
+}
+
+
+.post-thumbnail.no-thumbnail {
+	display: none;
+}
+
+
+.posts-list.content-full {
+	.post_format-post-format-gallery {
+		.entry-content {
+			.post-gallery {
+				display: none;
+			}
+		}
+	}
+
+	.post_format-post-format-video {
+		.entry-content {
+			p iframe,
+			iframe {
+				display: none;
+			}
+		}
+	}
+
+	.post_format-post-format-quote {
+		.entry-content {
+			blockquote {
+				display: none;
+			}
+		}
+	}
+
+	.post_format-post-format-audio {
+		.entry-content {
+			.audio-player-wrap {
+				display: none;
+			}
+		}
+	}
+
+}
+
+.post-thumbnail.post-thumbnail--fullwidth {
+	& + .post-body {
+		.post__cats {
+			margin-top: 10px;
+		}
+	}
+}
+
+
+.blog-masonry-2-cols,
+.blog-masonry-2-cols {
+	.entry-footer {
+		position: inherit;
 	}
 }

@@ -68,7 +68,7 @@ function cosmetro_render_macros( $string ) {
  */
 function cosmetro_get_privacy_link() {
 	$page = get_page_by_path( 'privacy-policy' );
-
+	if( ! is_object( $page ) ) return;
 	return get_permalink( $page->ID );
 }
 
@@ -167,7 +167,7 @@ function cosmetro_get_thumbnail_size() {
 		return '_tm-thumb-536-449';
 	}
 
-	return 'cosmetro-thumb-1170-854';
+	return '_tm-thumb-l';
 }
 
 /**

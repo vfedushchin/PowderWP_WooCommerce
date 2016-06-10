@@ -37,4 +37,6 @@ function cosmetro_register_image_sizes() {
     add_image_size( '_tm-thumb-983-823', 983, 823, true );
 
     add_image_size( '_tm-thumb-149-126', 149, 126, true );
+
+
 }

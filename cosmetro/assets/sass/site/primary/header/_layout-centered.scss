@@ -1,29 +1,11 @@
 .site-header.centered {
-	.site-branding {
-		text-align: center;
+	.header-container {
+		padding: 40px 10px 34px;
 	}
+
 	.social-list {
 		text-align: center;
 		padding: 49px 0 0 0;
-	}
-	.main-navigation {
-		text-align: center;
-		padding: 15px 0 0 0;
-
-		ul.menu {
-			> li:last-child {
-				margin-right: 0;
-			}
-		}
-	}
-}
-
-
-
-
-.site-header.centered {
-	.header-container {
-		padding: 40px 10px 34px;
 	}
 
 	.site-branding {
@@ -55,7 +37,7 @@
 				}
 			}
 			> li:hover > ul, > li > ul {
-				margin-top: 26px;
+				margin-top: 34px;
 			}
 		}
 	}
@@ -120,7 +102,7 @@
 				}
 				@media (max-width: 37.5em) {
 					margin-bottom: -12px;
-					z-index: 1;
+					z-index: 3;
 				}
 			}
 			.widget {
@@ -143,35 +125,37 @@
 			}
 		}
 
-
+		@media (max-width: 767px) {
+			.social-list {
+				padding-top: 10px;
+			}
+		}
 
 		@media (min-width: 768px) {
 			.header-container_wrap {
 				text-align: center;
 			}
 			.social-list {
-				@include flex(1 1 33.333%);
+				@include flex(1 1 22.333%);
 				order: 3;
 			}
 			.site-branding {
 				@include flex(1 2 100%);
 			}
 			.site-shop-elements {
-				@include flex(1 1 33.333%);
+				@include flex(1 1 22.333%);
 				text-align: right;
 			}
 		}
 
 		 @media (min-width: 991px) {
 			.site-branding {
-				@include flex(1 2 33.333%);
+				@include flex(1 2 32.333%);
 			}
 			.social-list {
 				order: 1;
 			}
 		 }
-
-
 
 	}
 

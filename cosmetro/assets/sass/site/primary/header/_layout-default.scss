@@ -1,30 +1,12 @@
 
 .site-header.default {
-	.site-branding {
-		text-align: center;
+	.header-container {
+		padding: 40px 10px 34px;
 	}
+
 	.social-list {
 		text-align: center;
 		padding: 49px 0 0 0;
-	}
-	.main-navigation {
-		text-align: center;
-		padding: 15px 0 0 0;
-
-		ul.menu {
-			> li:last-child {
-				margin-right: 0;
-			}
-		}
-	}
-}
-
-
-
-
-.site-header.default {
-	.header-container {
-		padding: 40px 10px 34px;
 	}
 
 	.site-branding {
@@ -56,7 +38,7 @@
 				}
 			}
 			> li:hover > ul, > li > ul {
-				margin-top: 26px;
+				margin-top: 34px;
 			}
 		}
 	}

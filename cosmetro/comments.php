@@ -50,7 +50,7 @@ if ( post_password_required() ) {
 			<?php
 				wp_list_comments( array(
 					'style'       => 'ol',
-					'avatar_size' => 98,
+					'avatar_size' => 88,
 					'short_ping'  => true,
 					'callback'    => 'cosmetro_rewrite_comment_item',
 				) );

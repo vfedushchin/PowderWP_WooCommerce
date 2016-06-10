@@ -10,7 +10,7 @@
 <div class="post-author-bio invert">
 	<div class="post-author__holder clear">
 		<div class="post-author__avatar"><?php
-			echo get_avatar( get_the_author_meta( 'user_email' ), 97, '', esc_attr( get_the_author_meta( 'nickname' )
+			echo get_avatar( get_the_author_meta( 'user_email' ), 108, '', esc_attr( get_the_author_meta( 'nickname' )
 			) );
 		?></div>
 		<h4 class="post-author__title"><?php

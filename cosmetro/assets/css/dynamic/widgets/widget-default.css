@@ -2,6 +2,11 @@
 	color: $regular_link_color;
 }
 
+.widget .chosen-drop ul li {
+	color: $regular_h3_color;
+}
+
+
 /* invert color */
 .invert .widget ul li, .invert .widget ul li a {
 	color: $invert_link_color;
@@ -15,7 +20,7 @@
 /*--------------------------------------------------------------
 # Widget calendar
 --------------------------------------------------------------*/
-.widget_calendar #calendar_wrap caption {
+.widget_calendar .calendar_wrap caption {
 	font-style: $h5_font_style;
 	font-weight: $h5_font_weight;
 	font-size: @font_size($h5_font_size, multiple, ceil, 1)px;
@@ -27,7 +32,7 @@
 	color: #fff;
 	background: $regular_accent_color_1;
 }
-.widget_calendar #calendar_wrap {
+.widget_calendar .calendar_wrap {
 	font-style: $h5_font_style;
 	font-weight: $h5_font_weight;
 	font-size: @font_size($h5_font_size, multiple, ceil, 1)px;
@@ -37,61 +42,64 @@
 	text-transform: none;
 	text-transform: uppercase;
 }
-.widget_calendar #calendar_wrap th{
+.widget_calendar .calendar_wrap th{
 	color: $regular_text_color;
 }
-.widget_calendar #calendar_wrap tbody td a{
+.widget_calendar .calendar_wrap tbody td a{
 	color: #fff;
+}
+.widget_calendar .calendar_wrap tbody td a:hover:before {
+	background: $regular_accent_color_1;
 }
 
 /* invert color */
-.invert .widget_calendar #calendar_wrap caption{
+.invert .widget_calendar .calendar_wrap caption{
 	color: $invert_accent_color_1;
 	background: $regular_accent_color_2;
 }
-.invert .widget_calendar #calendar_wrap th{
+.invert .widget_calendar .calendar_wrap th{
 	color: $regular_accent_color_2;
 }
-.invert .widget_calendar #calendar_wrap a{
+.invert .widget_calendar .calendar_wrap a{
 	color: $invert_link_color;
 }
-.invert .widget_calendar #calendar_wrap a:hover{
+.invert .widget_calendar .calendar_wrap a:hover{
 	color: $regular_accent_color_1;
 }
-.invert .widget_calendar #calendar_wrap tr td a:before{
+.invert .widget_calendar .calendar_wrap tr td a:before{
 	background-color: $invert_accent_color_3;
 }
-.invert .widget_calendar #calendar_wrap tr td a:hover:before{
+.invert .widget_calendar .calendar_wrap tr td a:hover:before{
 	background-color: #fff;
 }
-.invert .widget_calendar #calendar_wrap tr td a:hover{
+.invert .widget_calendar .calendar_wrap tr td a:hover{
 	color: $regular_accent_color_1;
 }
 .site-footer .yith-woocompare-widget .clear-all:hover{
 	color: $regular_accent_color_1;
 }
 /* invert color */
-// .invert .widget_calendar #calendar_wrap caption{
+// .invert .widget_calendar .calendar_wrap caption{
 // 	color: $regular_text_color;
 // 	background: #fff;
 // }
-// .invert .widget_calendar #calendar_wrap th{
+// .invert .widget_calendar .calendar_wrap th{
 // 	color: $regular_accent_color_1;
 // }
-// .invert .widget_calendar #calendar_wrap tfoot a{
+// .invert .widget_calendar .calendar_wrap tfoot a{
 // 	color: $regular_accent_color_1;
 // }
-// .invert .widget_calendar #calendar_wrap a{
+// .invert .widget_calendar .calendar_wrap a{
 // 	color: $regular_text_color;
 // }
-// .invert .widget_calendar #calendar_wrap a:hover{
+// .invert .widget_calendar .calendar_wrap a:hover{
 // 	color: #fff;
 // }
-// .invert .widget_calendar #calendar_wrap tr td a:before{
+// .invert .widget_calendar .calendar_wrap tr td a:before{
 // 	color: $regular_text_color;
 // 	background-color: #fff;
 // }
-// .invert .widget_calendar #calendar_wrap tr td a:hover:before{
+// .invert .widget_calendar .calendar_wrap tr td a:hover:before{
 // 	background-color: $regular_accent_color_1;
 // }
 /*--------------------------------------------------------------
@@ -281,6 +289,13 @@
 	display: block;
 	font-size: 20px;
 }
+.footer-area .widget.woocommerce.widget_shopping_cart,
+.footer-area .widget.woocommerce.widget_shopping_cart .widget_shopping_cart_content .cart_list li .quantity .amount {
+	color: $invert_text_color;
+}
+
+
+
 
 .widget.woocommerce.widget_shopping_cart .widget_shopping_cart_content .cart_list li .remove + a{
 	font-family: $h6_font_family;
@@ -289,6 +304,21 @@
 	text-transform: uppercase;
 	color: $regular_h3_color;
 	padding-top: 30px;
+}
+@media (max-width: 991px) {
+	.widget.woocommerce.widget_shopping_cart .widget_shopping_cart_content .cart_list li .remove + a{
+		padding-top: 10px;
+	}
+	.widget.woocommerce.widget_shopping_cart .widget_shopping_cart_content .cart_list li .quantity .amount {
+		display: inline-block;
+	}
+}
+
+.footer-area .widget.woocommerce.widget_shopping_cart .widget_shopping_cart_content .cart_list li .remove + a{
+	color: $invert_text_color;
+}
+.footer-area .widget.woocommerce.widget_shopping_cart .widget_shopping_cart_content .cart_list li .remove + a:hover{
+	color: $regular_accent_color_1;
 }
 .widget.woocommerce.widget_shopping_cart .widget_shopping_cart_content .cart_list li .remove + a img{
 	margin-top: 0;
@@ -320,6 +350,9 @@
 	font-family: $h3_font_family;
 	color: $regular_h3_color;
 	font-weight: 700;
+}
+.footer-area .widget.woocommerce.widget_shopping_cart .widget_shopping_cart_content .total .amount {
+	color: $invert_text_color;
 }
 
 .widget.woocommerce.widget_shopping_cart .widget_shopping_cart_content .buttons .button {
@@ -436,6 +469,10 @@
 	text-align: $h4_text_align;
 }
 
-.widget_calendar #calendar_wrap tfoot a:hover {
+.widget_calendar .calendar_wrap tfoot a:hover {
 	color: $regular_accent_color_1;
+}
+
+.widget.tm_about_store_widget .btn:hover {
+	background: $regular_accent_color_1;
 }

@@ -32,6 +32,13 @@
 .post-featured-content {
 	color: $regular_h3_color;
 }
+
+.footer-area .post-author,
+.footer-area .posted-by,
+.footer-area .post-featured-content {
+	color: #fff;
+}
+
 .post-featured-content.format-quote.invert {
 	color: $invert_text_color;
 	// background-color: $regular_accent_color_2;
@@ -68,8 +75,9 @@
 	background: @alpha( $regular_text_color, 100 );
 }
 
+.post_format-post-format-quote blockquote,
 .post-format-quote {
-	color: $invert_text_color;
+	color: #fff;
 }
 .post-format-quote:before,
 .post-format-quote cite,
@@ -189,9 +197,7 @@ body .post-author__content{
 	background: $regular_accent_color_1;
 }
 
-.post-format-quote q, .post-format-quote cite, .post_format-post-format-quote blockquote q, .post_format-post-format-quote blockquote cite{
-	color: #fff;
-}
+
 .site .post-format-quote cite,
 blockquote cite {
 	font-family: $h3_font_family;

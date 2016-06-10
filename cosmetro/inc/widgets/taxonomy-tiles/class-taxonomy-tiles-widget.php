@@ -217,7 +217,7 @@ if ( ! class_exists( 'Cosmetro_Taxonomy_Tiles_Widget' ) ) {
 		 * @since  1.0.0
 		 * @return string
 		 */
-		public function get_term_image( $term, $image_size = 'cosmetro-thumb-m', $image_mobile_size = 'cosmetro-thumb-s', $image_type = 'img' ) {
+		public function get_term_image( $term, $image_size = '_tm-thumb-m', $image_mobile_size = '_tm-thumb-s', $image_type = 'img' ) {
 			$id         = get_term_meta( $term->term_id, '_tm_thumb' , true );
 			$size       = wp_is_mobile() ? $image_mobile_size : $image_size;
 			$size_array = $this->get_image_size( $size );
@@ -279,8 +279,8 @@ if ( ! class_exists( 'Cosmetro_Taxonomy_Tiles_Widget' ) ) {
 			}
 
 			if ( isset( $terms ) && $terms ) {
-				$image_size        = apply_filters( 'cosmetro_taxonomy_tiles_widget_size', 'cosmetro-thumb-m', $this->instance );
-				$image_mobile_size = apply_filters( 'cosmetro_taxonomy_tiles_widget_size_mobile', 'cosmetro-thumb-s', $this->instance );
+				$image_size        = apply_filters( 'cosmetro_taxonomy_tiles_widget_size', '_tm-thumb-m', $this->instance );
+				$image_mobile_size = apply_filters( 'cosmetro_taxonomy_tiles_widget_size_mobile', '_tm-thumb-s', $this->instance );
 
 				$columns_class = 4 < $columns_number ? 3 : ( int ) ( 12 / $columns_number ) ;
 				$inline_style  = '';

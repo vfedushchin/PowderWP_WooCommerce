@@ -87,6 +87,12 @@ function cosmetro_register_required_plugins() {
 			'source'       => 'https://github.com/CherryFramework/cherry-sidebar-manager/archive/master.zip',
 			'external_url' => 'https://github.com/CherryFramework/cherry-sidebar-manager',
 		),
+		array(
+			'name'     => esc_html__( 'Tiny Grid', 'cosmetro' ),
+			'slug'     => 'tiny-grid',
+			'required' => true,
+		),
+
 	);
 
 	/*

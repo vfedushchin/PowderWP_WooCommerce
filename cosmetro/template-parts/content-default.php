@@ -7,18 +7,15 @@
  * @package cosmetro
  */
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'posts-list__item card hentry' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'deafault-page-content posts-list__item card hentry posts-list--default post' ); ?>>
 	<div class="post-list__item-content">
-
-
-
 
 		<figure class="post-thumbnail <?php cosmetro_post_thumbnail_size_class() ?> ">
 			<?php cosmetro_post_thumbnail( true ); ?>
 			<?php cosmetro_sticky_label(); ?>
 		</figure><!-- .post-thumbnail -->
 
-		<div class="post-body">
+		<div class="post-body post-body-default">
 
 			<header class="entry-header">
 				<?php
@@ -26,7 +23,6 @@
 						'separator' => ',',
 					) );
 				?>
-
 				<?php
 					if ( is_single() ) {
 						the_title( '<h1 class="entry-title">', '</h1>' );
@@ -37,7 +33,7 @@
 			</header><!-- .entry-header -->
 
 			<div class="entry-content">
-				<?php cosmetro_blog_content(110); ?>
+				<?php cosmetro_blog_content(50); ?>
 			</div><!-- .entry-content -->
 
 
@@ -77,6 +73,8 @@
 						?>
 					</div><!-- .entry-meta -->
 				<?php endif; ?>
+
+				<div></div>
 
 
 				<?php cosmetro_read_more(); ?>

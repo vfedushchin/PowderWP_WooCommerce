@@ -47,7 +47,7 @@ if ( $products->have_posts() ) : ?>
 
 	<div class="related products">
 
-		<h4><?php _e( '<span>Related</span> Products', 'woocommerce' ); ?></h4>
+		<h4><?php _e( '<span>Related</span> Products', 'cosmetro' ); ?></h4>
 
 		<?php woocommerce_product_loop_start(); ?>
 

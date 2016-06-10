@@ -1,9 +1,9 @@
 /*!
 Theme Name: Cosmetro
-Theme URI: http://underscores.me/
+Theme URI: http://www.templatemonster.com/
 Author: Template Monster
 Author URI: http://www.templatemonster.com/
-Description: Your theme description.
+Description:
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -38,7 +38,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Widgets
 # Content
 	## Posts and pages
-	## Asides
+	## Asides_normalize
 	## Comments
 # Infinite scroll
 # Media
@@ -155,8 +155,3 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # TM Wooccommerce styles
 --------------------------------------------------------------*/
 @import "wootheme/woothemestyles";
-
-/*--------------------------------------------------------------
-# _screen_preview styles
---------------------------------------------------------------*/
-@import "_screen_preview";

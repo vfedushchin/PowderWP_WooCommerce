@@ -203,7 +203,7 @@ class Cosmetro_Custom_Posts_Widget extends Cherry_Abstract_Widget {
 			$date_icon = apply_filters( 'cosmetro_custom_posts_date_icon', '<i class="material-icons">schedule</i>' );
 			$permalink = $this->get_post_permalink();
 
-			return '<span class="post-date"><a href="' . $permalink . '"><time class="entry-date published" datetime="' . get_the_time( 'Y-m-d\TH:i:sP' ) . '">' . $date_icon . $time . '</time></a></span>';
+			return '<span class="post-date">' . $date_icon . esc_html__( 'Published on ', 'cosmetro' ) . '<a href="' . $permalink . '"><time class="entry-date published" datetime="' . get_the_time( 'Y-m-d\TH:i:sP' ) . '">' . $time . '</time></a></span>';
 		} else {
 			return '';
 		}
@@ -228,7 +228,7 @@ class Cosmetro_Custom_Posts_Widget extends Cherry_Abstract_Widget {
 	public function get_the_author( $user_id, $visible = 'true' ) {
 		if ( $visible === 'true' ) {
 			$author = get_the_author();
-			$html= '<div class="post-author"><span>' . esc_html__( 'Posted by ', 'cosmetro' ) .'</span>' . $author . '</div>';
+			$html= '<div class="post-author"><i class="material-icons">person</i><span>' . esc_html__( 'By  ', 'cosmetro' ) .' </span> ' . $author . '</div>';
 
 			return $html;
 		} else {

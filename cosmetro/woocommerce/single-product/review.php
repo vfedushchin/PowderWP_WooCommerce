@@ -29,7 +29,7 @@ $verified = wc_review_is_from_verified_owner( $comment->comment_ID );
 
 	<div id="comment-<?php comment_ID(); ?>" class="comment_container">
 
-		<?php echo get_avatar( $comment, apply_filters( 'woocommerce_review_gravatar_size', '60' ), '' ); ?>
+		<?php echo get_avatar( $comment, apply_filters( 'woocommerce_review_gravatar_size', '88' ), '' ); ?>
 
 		<div class="comment-text">
 
@@ -37,7 +37,7 @@ $verified = wc_review_is_from_verified_owner( $comment->comment_ID );
 
 			<?php if ( $comment->comment_approved == '0' ) : ?>
 
-				<p class="meta"><em><?php _e( 'Your comment is awaiting approval', 'woocommerce' ); ?></em></p>
+				<p class="meta"><em><?php _e( 'Your comment is awaiting approval', 'cosmetro' ); ?></em></p>
 
 			<?php else : ?>
 
@@ -48,7 +48,7 @@ $verified = wc_review_is_from_verified_owner( $comment->comment_ID );
 
 						if ( get_option( 'woocommerce_review_rating_verification_label' ) === 'yes' )
 							if ( $verified )
-								echo '<em class="verified">(' . __( 'verified owner', 'woocommerce' ) . ')</em> ';
+								echo '<em class="verified">(' . __( 'verified owner', 'cosmetro' ) . ')</em> ';
 
 					?> <i class="material-icons icon-date">access_time</i> <span><?php _e( 'Published on  ', 'cosmetro' ); ?></span> <time itemprop="datePublished" datetime="<?php echo get_comment_date( 'c' ); ?>"><?php echo get_comment_date( wc_date_format() ); ?></time>
 				</p>
@@ -61,8 +61,8 @@ $verified = wc_review_is_from_verified_owner( $comment->comment_ID );
 
 			<?php if ( $rating && get_option( 'woocommerce_enable_review_rating' ) === 'yes' ) : ?>
 
-				<div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating" class="star-rating" title="<?php echo sprintf( __( 'Rated %d out of 5', 'woocommerce' ), $rating ) ?>">
-					<span style="width:<?php echo ( $rating / 5 ) * 100; ?>%"><strong itemprop="ratingValue"><?php echo $rating; ?></strong> <?php _e( 'out of 5', 'woocommerce' ); ?></span>
+				<div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating" class="star-rating" title="<?php echo sprintf( __( 'Rated %d out of 5', 'cosmetro' ), $rating ) ?>">
+					<span style="width:<?php echo ( $rating / 5 ) * 100; ?>%"><strong itemprop="ratingValue"><?php echo $rating; ?></strong> <?php _e( 'out of 5', 'cosmetro' ); ?></span>
 				</div>
 
 			<?php endif; ?>

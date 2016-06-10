@@ -146,14 +146,26 @@
 
 .embed-wrapper {
 	.twitter-tweet {
-		/* margin: 10px auto !important; */
 		max-width: 90% !important;
 	}
 }
 
 .fb_iframe_widget {
 	max-width: 100%;
+	overflow: hidden;
 	> span {
 		max-width: 100%;
 	}
+}
+.post-body-default {
+	padding-top: 10px;
+	.entry-footer {
+		padding-top: 10px;
+	}
+	.entry-footer .btn {
+		margin-top: 10px;
+	}
+}
+.audio-player-wrap {
+	margin-bottom: 10px;
 }

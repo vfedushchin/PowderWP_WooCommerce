@@ -35,7 +35,7 @@ if ( ! apply_filters( 'woocommerce_order_item_visible', true, $item ) ) {
 			}
 		?>
 	</td>
-	<td class="product-name" data-title="<?php _e( 'Product', 'woocommerce' ); ?>">
+	<td class="product-name" data-title="<?php _e( 'Product', 'cosmetro' ); ?>">
 		<?php
 			$is_visible = $product && $product->is_visible();
 
@@ -55,7 +55,7 @@ if ( ! apply_filters( 'woocommerce_order_item_visible', true, $item ) ) {
 			echo apply_filters( 'woocommerce_order_item_quantity_html', $item['qty'], $item );
 		?>
 	</td>
-	<td class="product-total" data-title="<?php _e( 'Total', 'woocommerce' ); ?>">
+	<td class="product-total" data-title="<?php _e( 'Total', 'cosmetro' ); ?>">
 		<?php echo $order->get_formatted_line_subtotal( $item ); ?>
 	</td>
 </tr>

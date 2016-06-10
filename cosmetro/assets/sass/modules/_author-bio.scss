@@ -15,7 +15,7 @@
 				height: 1px;
 				left: 0;
 				top: -81px;
-				background: #232222;
+				background: $color__background-dark;
 			}
 			&:after {
 				top: auto;
@@ -35,12 +35,11 @@
 				margin: 18px 30px 10px 0;
 			}
 			.avatar {
-				width: 70px;
+				max-width: 70px;
 				vertical-align: top;
 				border-radius: 50%;
 				@include media-breakpoint-up(lg) {
-					width: 100%;
-					width: 108px;
+					max-width: 100%;
 				}
 			}
 		}

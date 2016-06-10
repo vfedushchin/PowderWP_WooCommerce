@@ -8,6 +8,25 @@
 add_action( 'after_setup_theme', 'cosmetro_register_sidebars', 5 );
 function cosmetro_register_sidebars() {
 
+	$widget_class = '12';
+
+	$widgets = wp_get_sidebars_widgets();
+
+	$widgets_count = count( $widgets[ 'after-content-area' ] );
+	if ( $widgets_count > 0 ) {
+		$widget_class = '' . ceil( 12 / count( $widgets[ 'after-content-area' ] ) );
+		if ( $widgets_count > 3 ) {
+			if( 0 === $widgets_count % 3 ) {
+				$widget_class = '4';
+			} else if ( 0 === $widgets_count % 2 ) {
+				$widget_class = '6';
+			} else {
+				$widget_class = '4';
+			}
+
+		}
+	}
+
 	cosmetro_widget_area()->widgets_settings = apply_filters( 'tm_widget_area_default_settings', array(
 		'sidebar-primary' => array(
 			'name'           => esc_html__( 'Sidebar Blog', 'cosmetro' ),
@@ -31,17 +50,6 @@ function cosmetro_register_sidebars() {
 			'after_wrapper'  => '</div>',
 			'is_global'      => true,
 		),
-		/*'sidebar-additional' => array(
-			'name'           => esc_html__( 'Sidebar About', 'cosmetro' ),
-			'description'    => '',
-			'before_widget'  => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'   => '</aside>',
-			'before_title'   => '<h4 class="widget-title">',
-			'after_title'    => '</h4>',
-			'before_wrapper' => '<div id="%1$s" %2$s role="complementary">',
-			'after_wrapper'  => '</div>',
-			'is_global'      => true,
-		),*/
 		'full-width-header-area' => array(
 			'name'           => esc_html__( 'Full width header area', 'cosmetro' ),
 			'description'    => '',
@@ -95,6 +103,8 @@ function cosmetro_register_sidebars() {
 			'description'    => '',
 			'before_widget'  => '<aside id="%1$s" class="widget %2$s col-xs-12 col-md-4">',
 			'after_widget'   => '</aside>',
+			'before_widget'  => '<div class="col-xs-12 col-sm-12 col-md-' . $widget_class . ' col-lg-' . $widget_class . ' col-xl-' . $widget_class . '"><aside id="%1$s" class="widget %2$s">',
+			'after_widget'   => '</aside></div>',
 			'before_title'   => '<h4 class="widget-title">',
 			'after_title'    => '</h4>',
 			'before_wrapper' => '<div id="%1$s" %2$s>',
@@ -115,7 +125,7 @@ function cosmetro_register_sidebars() {
 			'conditional'    => array( 'is_home', 'is_front_page' ),
 		),
 		'footer-area' => array(
-			'name'           => esc_html__( 'Footer style 1 widget area', 'cosmetro' ),
+			'name'           => esc_html__( 'Footer widget area', 'cosmetro' ),
 			'description'    => '',
 			'before_widget'  => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget'   => '</aside>',
@@ -124,18 +134,6 @@ function cosmetro_register_sidebars() {
 			'before_wrapper' => '<section id="%1$s" %2$s>',
 			'after_wrapper'  => '</section>',
 			'is_global'      => true,
-		),
-		'footer-area2' => array(
-			'name'           => esc_html__( 'Footer style 2 widget area', 'powder' ),
-			'description'    => '',
-			'before_widget'  => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'   => '</aside>',
-			'before_title'   => '<h4 class="widget-title">',
-			'after_title'    => '</h4>',
-			'before_wrapper' => '<section id="%1$s" %2$s>',
-			'after_wrapper'  => '</section>',
-			'is_global'      => true,
-			'conditional'    => array(),
 		),
 	) );
 }

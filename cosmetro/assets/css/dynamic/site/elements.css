@@ -66,10 +66,9 @@ body blockquote, blockquote q, blockquote p, body blockquote.single-format-quote
 	font-size: @font_size($h2_font_size, multiple, ceil, 1)px !important;
 	line-height: $h2_line_height;
 	font-family: $h2_font_family;
-	color: #fff;
 }
-.single.single-post blockquote, .single.single-post blockquote q {
-	color: $regular_h3_color;
+.posts-list--grid-2-cols .post-format-quote {
+	color: #fff;
 }
 blockquote:before{
 	color: $regular_accent_color_1;
@@ -80,14 +79,7 @@ blockquote cite {
 }
 @media (max-width: 479px) {
 	blockquote p, blockquote q, blockquote.single-format-quote, .posts-list--grid-2-cols blockquote, .posts-list--grid-2-cols .post-format-quote {
-		font-size: 22px;
-	}
-	.post_format-post-format-quote blockquote{
-		padding: 83px 50px 67px;
-	}
-	.post_format-post-format-quote blockquote:before{
-		right: 0;
-		left: 0;
+		font-size: 24px !important;
 	}
 }
 
@@ -186,11 +178,11 @@ footer.site-footer .widget_recent_entries ul li .post-date:before{
 }
 
 .tm-products-smart-box-widget__rd-material-tabs{
-	border-top: 2px solid $regular_text_color;
+	border-top: 2px solid $regular_h3_color;
+	border-color: $regular_h3_color;
 }
 
 .tm-products-smart-box-widget__rd-material-tabs > .row > .col-lg-3{
-	background: #f5f5f7;
 	-webkit-background-clip: content-box;
 	-moz-background-clip: content-box;
 	background-clip: content-box;
@@ -204,14 +196,14 @@ footer.site-footer .widget_recent_entries ul li .post-date:before{
 	font-family: $h6_font_family;
 	letter-spacing: $h6_letter_spacing{px};
 	text-align: $h6_text_align;
-	color: $regular_h6_color;
-	text-transform: none;
+	color: $regular_h3_color;
+	text-transform: uppercase;
 }
 
 .tm-products-smart-box-widget__rd-material-tabs .product .price .amount{
 	font-style: normal;
 	font-weight: 700;
-	font-size: @font_size($h4_font_size, multiple, ceil, 0.8333333333333333)px;
+	font-size: @font_size($h4_font_size, multiple, ceil, 1)px;
 	line-height: $h4_line_height;
 	font-family: $h4_font_family;
 	letter-spacing: $h4_letter_spacing{px};
@@ -226,16 +218,18 @@ footer.site-footer .widget_recent_entries ul li .post-date:before{
 	font-family: $body_font_family;
 }
 
-.tm-products-smart-box-widget__rd-material-tabs .widget-title{
-	font-style: $h3_font_style;
-	font-weight: $h3_font_weight;
-	font-size: @font_size($h3_font_size, multiple, ceil, 1)px;
-	line-height: $h3_line_height;
-	font-family: $h3_font_family;
-	letter-spacing: $h3_letter_spacing{px};
-	text-align: $h3_text_align;
-	text-transform: none;
+.tm-products-smart-box-widget__rd-material-tabs ul li a{
+	color: $regular_h3_color;
+	font-style: $h5_font_style;
+	font-weight: $h5_font_weight;
+	font-size: @font_size($h5_font_size, multiple, ceil, 1)px;
+	line-height: $h5_line_height;
+	font-family: $h5_font_family;
+	letter-spacing: $h5_letter_spacing{px};
 	text-transform: uppercase;
+}
+.tm-products-smart-box-widget__rd-material-tabs ul li a:hover {
+	color: $regular_accent_color_1;
 }
 
 .tm_custom_menu_widget{
@@ -278,6 +272,7 @@ footer.site-footer .widget_recent_entries ul li .post-date:before{
 	text-transform: uppercase;
 }
 
+.widget.widget_nav_menu a,
 .widget > ul li a {
 	color: $regular_h3_color;
 	font-style: $h5_font_style;
@@ -295,6 +290,7 @@ footer.site-footer .widget_recent_entries ul li .post-date:before{
 	text-transform: none;
 }
 
+.widget.widget_nav_menu a:hover,
 .widget > ul li a:hover {
 	color: $regular_accent_color_1;
 }
@@ -347,14 +343,7 @@ footer.site-footer .widget_recent_entries ul li .post-date:before{
 	color: $regular_h3_color;
 }
 
-.currency_switcher .chosen-container .chosen-results li,
-.currency_switcher .chosen-container .chosen-results li.result-selected:hover{
-	color: $regular_h3_color;
-
-}
-
-.currency_switcher .chosen-container .chosen-results li:hover,
-.currency_switcher .chosen-container .chosen-results li.result-selected{
+.currency_switcher .chosen-container .chosen-results li{
 	color: $regular_h3_color;
 }
 

@@ -269,7 +269,7 @@ if ( ! class_exists( 'Cosmetro_Image_Grid_Widget' ) ) {
 
 				echo apply_filters( 'cosmetro_image_grid_widget_before', '<div class="row columns-number-' . $columns_number . '" ' . $row_inline_style . '>', $instance );
 
-				$image_size = apply_filters( 'cosmetro_image_grid_widget_size', 'cosmetro-thumb-m', $instance );
+				$image_size = apply_filters( 'cosmetro_image_grid_widget_size', '_tm-thumb-m', $instance );
 
 				$view_dir = locate_template( '/inc/widgets/image-grid/views/image-grid-view.php' );
 

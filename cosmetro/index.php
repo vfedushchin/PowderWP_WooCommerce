@@ -22,11 +22,6 @@ if ( have_posts() ) :
 	<?php
 	endif; ?>
 
-	<?php
-		$blog_title_txt = get_theme_mod( 'blog_title', 'Blog' );
-		echo '<h4 class="blog-title">' . $blog_title_txt . '</h4>'
-	?>
-
 	<div <?php cosmetro_posts_list_class(); ?>>
 
 

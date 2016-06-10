@@ -76,6 +76,9 @@ if ( ! class_exists( 'Cosmetro_Theme_Setup' ) ) {
 			// Enqueue public assets.
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_assets' ), 10 );
 
+
+			add_filter( 'cosmetro_get_theme_core', array( $this, 'get_core' ) );
+
 		}
 
 		/**
@@ -170,7 +173,7 @@ if ( ! class_exists( 'Cosmetro_Theme_Setup' ) ) {
 						'args'     => array(
 							'rewrite_default_gallery' => true,
 							'gallery_args'            => array(
-								'size'           => 'cosmetro-thumb-1170-854',
+								'size'           => '_tm-thumb-l',
 								'base_class'     => 'post-gallery',
 								'container'      => '<div class="%2$s swiper-container" id="%4$s" %3$s><div class="swiper-wrapper">%1$s</div><div class="swiper-button-prev"><i class="material-icons">navigate_before</i></div><div class="swiper-button-next"><i class="material-icons">navigate_next</i></div></div>',
 								'slide'          => '<figure class="%2$s swiper-slide">%1$s</figure>',

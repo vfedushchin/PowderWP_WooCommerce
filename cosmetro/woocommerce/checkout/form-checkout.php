@@ -25,7 +25,7 @@ do_action( 'woocommerce_before_checkout_form', $checkout );
 
 // If checkout registration is disabled and not logged in, the user cannot checkout
 if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_user_logged_in() ) {
-	echo apply_filters( 'woocommerce_checkout_must_be_logged_in_message', __( 'You must be logged in to checkout.', 'woocommerce' ) );
+	echo apply_filters( 'woocommerce_checkout_must_be_logged_in_message', __( 'You must be logged in to checkout.', 'cosmetro' ) );
 	return;
 }
 
@@ -51,7 +51,7 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
 
 	<?php endif; ?>
 
-	<h4 id="order_review_heading"><?php _e( 'Your order', 'woocommerce' ); ?></h4>
+	<h4 id="order_review_heading"><?php _e( 'Your order', 'cosmetro' ); ?></h4>
 
 	<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 

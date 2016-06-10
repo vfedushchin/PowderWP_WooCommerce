@@ -75,3 +75,7 @@
 	color: $regular_accent_color_1;
 	margin-right: 4px;
 }
+
+.top-panel__message a:hover em {
+	text-decoration: underline;
+}

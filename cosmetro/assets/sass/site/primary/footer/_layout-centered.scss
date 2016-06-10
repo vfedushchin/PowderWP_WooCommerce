@@ -1,3 +1,12 @@
 .site-footer.centered {
-	text-align: center;
+	text-align: left;
+
+  .footer-copyright {
+    float: left;
+  }
+
+  .social-list.social-list--footer {
+    float: right;
+    margin-top: 5px;
+  }
 }

@@ -20,7 +20,6 @@
 				cosmetro_footer_copyright();
 				cosmetro_footer_menu();
 			?></div>
-			<?php cosmetro_social_list( 'footer' ); ?>
 		</div>
 	</div><!-- .site-info -->
 </div><!-- .container -->

@@ -15,6 +15,10 @@
 function cosmetro_header_class( $classes = array() ) {
 	$classes[] = 'site-header';
 	$classes[] = get_theme_mod( 'header_layout_type' );
+	if (get_theme_mod( 'header_menu_attributes' ) ) {
+		$classes[] = 'header_menu_attributes';
+	}
+
 	echo cosmetro_get_container_classes( $classes );
 }
 
@@ -132,10 +136,12 @@ if ( function_exists( 'is_shop' ) && function_exists( 'is_product' ) ) {
 function cosmetro_posts_list_class( $classes = array(), $echo = true ) {
 	$layout_type      = get_theme_mod( 'blog_layout_type', cosmetro_theme()->customizer->get_default( 'blog_layout_type' ) );
 	$sidebar_position = get_theme_mod( 'sidebar_position', cosmetro_theme()->customizer->get_default( 'sidebar_position' ) );
+	$blog_posts_content = "content-" . get_theme_mod( 'blog_posts_content', cosmetro_theme()->customizer->get_default( 'blog_posts_content' ) );
 
 	$classes[] = 'posts-list';
 	$classes[] = 'posts-list--' . sanitize_html_class( $layout_type );
 	$classes[] = sanitize_html_class( $sidebar_position );
+	$classes[] = sanitize_html_class( $blog_posts_content );
 
 	if ( in_array( $layout_type, array( 'grid-2-cols', 'grid-3-cols' ) ) ) {
 		$classes[] = 'card-deck';

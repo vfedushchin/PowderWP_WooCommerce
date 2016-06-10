@@ -19,8 +19,7 @@ label.cherry-label {
   margin: 0;
   padding: 6px;
   background-color: #fff;
-  -webkit-transition: border-color 0.05s ease-in-out 0s;
-          transition: border-color 0.05s ease-in-out 0s;
+  transition: border-color 0.05s ease-in-out 0s;
   outline: 0 none;
   color: #333;
 }
@@ -32,19 +31,23 @@ label.cherry-label {
   right: 2px;
   top: 2px;
 }
+
 .cherry-stepper-controls .step-up {
   border-radius: 0 3px 0 0;
   border-bottom: 0;
   height: 13px;
 }
+
 @media screen and (max-width: 782px) {
   .cherry-stepper-controls .step-up {
     border-bottom: 1px solid #CCC;
   }
 }
+
 .cherry-stepper-controls .step-down {
   border-radius: 0 0 3px 0;
 }
+
 .cherry-stepper-controls em {
   background-color: #eeeded;
   border: 1px solid #cccccc;
@@ -62,8 +65,10 @@ label.cherry-label {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  -o-user-select: none;
   user-select: none;
 }
+
 @media screen and (max-width: 782px) {
   .cherry-stepper-controls em {
     line-height: 16px;

@@ -25,11 +25,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="woocommerce-billing-fields">
 	<?php if ( wc_ship_to_billing_address_only() && WC()->cart->needs_shipping() ) : ?>
 
-		<h4><?php _e( 'Billing &amp; Shipping', 'woocommerce' ); ?></h4>
+		<h4><?php _e( 'Billing &amp; Shipping', 'cosmetro' ); ?></h4>
 
 	<?php else : ?>
 
-		<h4><?php _e( 'Billing Details', 'woocommerce' ); ?></h4>
+		<h4><?php _e( 'Billing Details', 'cosmetro' ); ?></h4>
 
 	<?php endif; ?>
 
@@ -48,7 +48,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php if ( $checkout->enable_guest_checkout ) : ?>
 
 			<p class="form-row form-row-wide create-account">
-				<input class="input-checkbox" id="createaccount" <?php checked( ( true === $checkout->get_value( 'createaccount' ) || ( true === apply_filters( 'woocommerce_create_account_default_checked', false ) ) ), true) ?> type="checkbox" name="createaccount" value="1" /> <label for="createaccount" class="checkbox"><?php _e( 'Create an account?', 'woocommerce' ); ?></label>
+				<input class="input-checkbox" id="createaccount" <?php checked( ( true === $checkout->get_value( 'createaccount' ) || ( true === apply_filters( 'woocommerce_create_account_default_checked', false ) ) ), true) ?> type="checkbox" name="createaccount" value="1" /> <label for="createaccount" class="checkbox"><?php _e( 'Create an account?', 'cosmetro' ); ?></label>
 			</p>
 
 		<?php endif; ?>
@@ -59,7 +59,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<div class="create-account">
 
-				<p><?php _e( 'Create an account by entering the information below. If you are a returning customer please login at the top of the page.', 'woocommerce' ); ?></p>
+				<p><?php _e( 'Create an account by entering the information below. If you are a returning customer please login at the top of the page.', 'cosmetro' ); ?></p>
 
 				<?php foreach ( $checkout->checkout_fields['account'] as $key => $field ) : ?>
 

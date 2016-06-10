@@ -10,7 +10,7 @@
  *
  * @return void
  */
-function cosmetro_blog_content($length = 45) {
+function cosmetro_blog_content($length = 5) {
 
 	if ( ! is_singular() && wp_is_mobile() ) {
 		return;
@@ -90,7 +90,14 @@ function cosmetro_post_thumbnail_size_class( ) {
 		'blog_featured_image',
 		cosmetro_theme()->customizer->get_default( 'blog_featured_image' )
 	);
-	echo 'post-thumbnail--' . $size;
+
+	$no_thumbnail = " ";
+	if ( ! has_post_thumbnail() ) {
+		$no_thumbnail = " no-thumbnail ";
+	}
+
+
+	echo 'post-thumbnail--' . $size . $no_thumbnail;
 }
 
 

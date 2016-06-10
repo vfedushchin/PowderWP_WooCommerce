@@ -10,6 +10,19 @@
 
 			<div id="primary" <?php cosmetro_primary_content_class(); ?>>
 
+
+			<?php
+				$customizer_breadcrumbs_page_title = get_theme_mod( 'breadcrumbs_page_title', cosmetro_theme()->customizer->get_default( 'breadcrumbs_page_title' ) );
+				if ( $customizer_breadcrumbs_page_title) {
+					$cherry_breadcrumbs = cosmetro_theme()->get_core()->modules['cherry-breadcrumbs'];
+					$title = apply_filters(
+						'cherry_page_title',
+						sprintf( $cherry_breadcrumbs->args['page_title_format'], $cherry_breadcrumbs->page_title ), $cherry_breadcrumbs->args
+					);
+					echo $title;
+				}
+			 ?>
+
 				<?php do_action( 'cosmetro_render_widget_area', 'before-loop-area' ); ?>
 
 				<main id="main" class="site-main">

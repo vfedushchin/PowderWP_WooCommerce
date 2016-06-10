@@ -27,7 +27,13 @@
 				?>
 			</header><!-- .entry-header -->
 
-			<div class="entry-content">
+			<?php $blog_content = get_theme_mod( 'blog_posts_content', cosmetro_theme()->customizer->get_default( 'blog_posts_content' ) );
+			if ( $blog_content == 'full') : ?>
+				<div class="entry-content">
+					<?php cosmetro_blog_content(110); ?>
+				</div><!-- .entry-content -->
+			<?php else: ?>
+				<div class="entry-content">
 				<?php
 
 					$embed_args = array(
@@ -43,7 +49,8 @@
 						printf( '<div class="embed-wrapper">%s</div>', $embed_content );
 					}
 				?>
-			</div><!-- .entry-content -->
+				</div><!-- .entry-content -->
+			<?php endif; ?>
 
 
 			<footer class="entry-footer">
